@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SingleCourseSection = styled.section`
   background: #023047;
-  height: 550px;
+  height: 660px;
   margin-top: 80px;
   overflow-x: hidden;
 `;

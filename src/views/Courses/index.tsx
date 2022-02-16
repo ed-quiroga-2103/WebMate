@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar";
 import ScrollToTop from "../ScrollToTop";
+import Footer from "../../components/Footer";
 import "./index.css";
 import {
   CoursesH1,
@@ -20,7 +21,7 @@ const Courses = ({ data }: { data: any }) => {
   return (
     <>
       <ScrollToTop />
-      <Navbar toggle={toggle} on="courses" />
+      <Navbar toggle={toggle} on={2} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <CoursesSection>
         <CoursesWrapper>
@@ -50,6 +51,7 @@ const Courses = ({ data }: { data: any }) => {
           </Courses2Wrapper>
         </CoursesWrapper>
       </CoursesSection>
+      <Footer />
     </>
   );
 };

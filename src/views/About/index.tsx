@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar";
 import ScrollToTop from "../ScrollToTop";
@@ -20,7 +21,7 @@ function About() {
   return (
     <>
       <ScrollToTop />
-      <Navbar toggle={toggle} on="about" />
+      <Navbar toggle={toggle} on={4} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <AboutSection>
         <AboutWrapper>
@@ -46,6 +47,7 @@ function About() {
           </InfoContainer>
         </AboutWrapper>
       </AboutSection>
+      <Footer />
     </>
   );
 }

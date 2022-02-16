@@ -8,13 +8,17 @@ import {
   MobileLogo,
   NavItem,
   NavMenu,
-  NavLinks,
+  NavLinksProfile,
+  NavLinksCourses,
+  NavLinksContact,
+  NavLinksAbout,
   NavbarBigContainer,
   Logo,
   NavBtn,
 } from "./NavbarElements";
 
 const Navbar = ({ toggle, on }: { toggle: any; on: any }) => {
+  console.log(on);
   return (
     <>
       <NavbarBigContainer>
@@ -28,24 +32,24 @@ const Navbar = ({ toggle, on }: { toggle: any; on: any }) => {
             </MobileLogo>
             <NavMenu>
               <NavItem>
-                <NavLinks to="/cursos" o={on}>
+                <NavLinksCourses to="/cursos" o={on}>
                   Cursos
-                </NavLinks>
+                </NavLinksCourses>
               </NavItem>
               <NavItem>
-                <NavLinks to="/perfil" o={on}>
+                <NavLinksProfile to="/perfil" o={on}>
                   Perfil
-                </NavLinks>
+                </NavLinksProfile>
               </NavItem>
               <NavItem>
-                <NavLinks to="/contacto" o={on}>
+                <NavLinksContact to="/contacto" o={on}>
                   Contacto
-                </NavLinks>
+                </NavLinksContact>
               </NavItem>
               <NavItem>
-                <NavLinks to="/sobre" o={on}>
+                <NavLinksAbout to="/sobre" o={on}>
                   Sobre Nosotros
-                </NavLinks>
+                </NavLinksAbout>
               </NavItem>
               <NavBtn>
                 <Button to="/">Cerrar sesión</Button>

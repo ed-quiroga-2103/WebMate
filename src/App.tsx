@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
 import About from "./views/About";
 import Contact from "./views/Contact";
 import Courses from "./views/Courses";
@@ -15,6 +14,8 @@ import SingleCourse from "./views/SingleCourse";
 import Evaluations from "./views/Evaluations";
 import AddTest from "./views/AddTest";
 import { QuizData } from "./views/AddTest/Quiz";
+import AddCourse from "./views/AddCourse";
+import { GraphData } from "./views/AddCourse/GraphData";
 window.onscroll = function () {
   scrollFunction();
 };
@@ -40,8 +41,11 @@ function App() {
           <Route path="/contacto" element={<Contact />} />
           <Route path="/sobre" element={<About />} />
 
-          <Route path="/admin" element={<AddTest list={QuizData} />} />
-
+          <Route path="/adminTest" element={<AddTest list={QuizData} />} />
+          <Route
+            path="/adminCourses"
+            element={<AddCourse graph={GraphData} />}
+          />
           <Route
             path="/evaluacion"
             element={<Evaluations list={EvaluationsData} />}
@@ -61,7 +65,6 @@ function App() {
             element={<Units data={ProfileData} grades={GradesData} />}
           />
         </Routes>
-        <Footer />
       </Router>
     </>
   );

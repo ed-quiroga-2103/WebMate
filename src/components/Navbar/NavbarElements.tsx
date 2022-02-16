@@ -3,7 +3,7 @@ import { Link as LinkR } from "react-router-dom";
 
 interface Props {
   o?: {
-    on?: boolean;
+    on?: any;
   };
 }
 
@@ -87,7 +87,26 @@ export const NavItem = styled.li`
   height: 40px;
 `;
 
-export const NavLinks = styled(LinkR)<Props>`
+export const NavLinksProfile = styled(LinkR)<Props>`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  background: ${(Props) => (Props.o?.on ? "red" : "none")};
+  border-radius: 50px;
+  cursor: pointer;
+  &:active {
+    border-bottom: 3px solid #101522;
+  }
+
+  &:hover {
+    background: #ffb703;
+  }
+`;
+
+export const NavLinksCourses = styled(LinkR)<Props>`
   color: #fff;
   display: flex;
   align-items: center;
@@ -95,6 +114,44 @@ export const NavLinks = styled(LinkR)<Props>`
   padding: 0 1rem;
   height: 100%;
   background: ${(Props) => (Props.o?.on ? "#f57c00" : "none")};
+  border-radius: 50px;
+  cursor: pointer;
+  &:active {
+    border-bottom: 3px solid #101522;
+  }
+
+  &:hover {
+    background: #ffb703;
+  }
+`;
+
+export const NavLinksContact = styled(LinkR)<Props>`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  background: ${(Props) => (Props.o?.on ? "#f57c00" : "none")};
+  border-radius: 50px;
+  cursor: pointer;
+  &:active {
+    border-bottom: 3px solid #101522;
+  }
+
+  &:hover {
+    background: #ffb703;
+  }
+`;
+
+export const NavLinksAbout = styled(LinkR)<Props>`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  background: ${(Props) => (Props.o?.on === 4 ? "#fff" : "none")};
   border-radius: 50px;
   cursor: pointer;
   &:active {

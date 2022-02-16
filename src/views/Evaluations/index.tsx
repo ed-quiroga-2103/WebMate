@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar";
 import ScrollToTop from "../ScrollToTop";
@@ -173,6 +174,7 @@ function Evaluations({ list }: { list: any }) {
           )}
         </EvaluationsWrapper>
       </EvaluationsSection>
+      <Footer />
     </>
   );
 }

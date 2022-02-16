@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar";
 import ScrollToTop from "../ScrollToTop";
@@ -28,7 +29,7 @@ const Profile = ({ data, grades }: { data: any; grades: any }) => {
   return (
     <>
       <ScrollToTop></ScrollToTop>
-      <Navbar toggle={toggle} on="units" />
+      <Navbar toggle={toggle} on={1} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <UnitSection>
         <UnitWrapper>
@@ -102,6 +103,7 @@ const Profile = ({ data, grades }: { data: any; grades: any }) => {
           </div>
         </UnitWrapper>
       </UnitSection>
+      <Footer />
     </>
   );
 };
