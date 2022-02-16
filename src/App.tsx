@@ -15,6 +15,8 @@ import SingleCourse from './views/SingleCourse';
 import Evaluations from './views/Evaluations';
 import AddTest from './views/AddTest';
 import { QuizData } from './views/AddTest/Quiz';
+import { Test } from './views/Test';
+
 window.onscroll = function () {
     scrollFunction();
 };
@@ -80,8 +82,10 @@ function App() {
                             <Units data={ProfileData} grades={GradesData} />
                         }
                     />
+
+                    <Route path="/test" element={<Test />} />
                 </Routes>
-                <Footer />
+                {/* <Footer /> */}
             </Router>
         </>
     );
