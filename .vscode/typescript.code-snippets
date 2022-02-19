@@ -1,0 +1,14 @@
+{
+    "Default axios request": {
+        "prefix": "axios.request",
+        "body": [
+            "const response = await axios(`${API_URL}/$1`, {",
+            "method: '$2',",
+            "    data: {",
+            "        $3: '$3',",
+            "    },",
+            "}).catch((error) => error.response);"
+        ],
+        "description": "Default axios request"
+    }
+}

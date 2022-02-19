@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
@@ -17,8 +16,9 @@ import Evaluations from './views/Evaluations';
 import AddTest from './views/AddTest';
 import { QuizData } from './views/AddTest/Quiz';
 import { Test } from './views/Test';
-import AddCourse from "./views/AddCourse";
-import { GraphData } from "./views/AddCourse/GraphData";
+import AddCourse from './views/AddCourse';
+import { GraphData } from './views/AddCourse/GraphData';
+import { Test2 } from './views/Test/test';
 
 window.onscroll = function () {
     scrollFunction();
@@ -53,15 +53,18 @@ function App() {
                         element={<AddTest list={QuizData} />}
                     />
 
-          <Route path="/adminTest" element={<AddTest list={QuizData} />} />
-          <Route
-            path="/adminCourses"
-            element={<AddCourse graph={GraphData} />}
-          />
-          <Route
-            path="/evaluacion"
-            element={<Evaluations list={EvaluationsData} />}
-          />
+                    <Route
+                        path="/adminTest"
+                        element={<AddTest list={QuizData} />}
+                    />
+                    <Route
+                        path="/adminCourses"
+                        element={<AddCourse graph={GraphData} />}
+                    />
+                    <Route
+                        path="/evaluacion"
+                        element={<Evaluations list={EvaluationsData} />}
+                    />
                     <Route
                         path="/evaluacion"
                         element={<Evaluations list={EvaluationsData} />}
@@ -95,7 +98,7 @@ function App() {
                         }
                     />
 
-                    <Route path="/test" element={<Test />} />
+                    <Route path="/test" element={<Test2 />} />
                 </Routes>
                 {/* <Footer /> */}
             </Router>
