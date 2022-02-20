@@ -9,7 +9,7 @@ const postCourse = async (courseData: CourseData) => {
         data: courseData,
     }).catch((error) => error.response);
 
-    return response.data;
+    return response.data.course ? response.data.course : response.data;
 };
 
 export default postCourse;

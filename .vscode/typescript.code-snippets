@@ -10,5 +10,11 @@
             "}).catch((error) => error.response);"
         ],
         "description": "Default axios request"
+    },
+
+    "Generic Promise": {
+        "prefix": "promise.generic",
+        "body": ["Promise<$1>"],
+        "description": "Generic Promise"
     }
 }

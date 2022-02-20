@@ -3,7 +3,7 @@ import formatFilters from '../../../utils/formatters/formatFilters';
 import { API_URL } from '../config';
 import axios from 'axios';
 
-const getCourses = async (filters?: CourseFilters): Promise<Course> => {
+const getCourses = async (filters?: CourseFilters): Promise<Course[]> => {
     let formattedFilters = '';
 
     if (filters) {
@@ -14,7 +14,7 @@ const getCourses = async (filters?: CourseFilters): Promise<Course> => {
         method: 'GET',
     }).catch((error) => error.response);
 
-    return response.data;
+    return response.data.courses ? response.data.courses : response.data;
 };
 
 export default getCourses;

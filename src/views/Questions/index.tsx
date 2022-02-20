@@ -4,7 +4,7 @@ import { QuestionForm } from '../../components/QuestionForm';
 import './index.scss';
 interface ITest2Props {}
 
-export const Test2: FC<ITest2Props> = (props) => {
+export const Questions: FC<ITest2Props> = (props) => {
     const [questions, setQuestions] = useState([]);
 
     const [submitted, setSubmitted] = useState(false);
@@ -12,9 +12,7 @@ export const Test2: FC<ITest2Props> = (props) => {
     useEffect(() => {
         const fetchQuestions = async () => {
             const questions = await api.questions.get();
-
             setQuestions(questions);
-            console.log(questions);
         };
 
         fetchQuestions();
@@ -48,9 +46,9 @@ export const Test2: FC<ITest2Props> = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {questions.map((question) => {
+                        {questions.map((question, i) => {
                             return (
-                                <tr className="question-row">
+                                <tr className="question-row" key={i}>
                                     <td>{question.text}</td>
                                     <td>{question.difficulty}</td>
                                     <td>{question.course.code}</td>

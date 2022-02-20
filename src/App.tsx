@@ -19,6 +19,7 @@ import { Test } from './views/Test';
 import AddCourse from './views/AddCourse';
 import { GraphData } from './views/AddCourse/GraphData';
 import { Test2 } from './views/Test/test';
+import { Questions } from './views/Questions/';
 
 window.onscroll = function () {
     scrollFunction();
@@ -97,6 +98,8 @@ function App() {
                             <Units data={ProfileData} grades={GradesData} />
                         }
                     />
+
+                    <Route path="/questions" element={<Questions />} />
 
                     <Route path="/test" element={<Test2 />} />
                 </Routes>
