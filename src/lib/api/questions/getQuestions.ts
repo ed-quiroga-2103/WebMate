@@ -8,7 +8,7 @@ const getQuestions = async (filters?: QuestionFilters): Promise<Question[]> => {
         ? formatFilters<QuestionFilters>(filters)
         : '';
 
-    const response = await axios(`${API_URL}/questions?${formattedFilters}`, {
+    const response = await axios(`${API_URL}/questions${formattedFilters}`, {
         method: 'GET',
     }).catch((error) => {
         console.log('ERROR', error);

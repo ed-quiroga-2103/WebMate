@@ -3,9 +3,13 @@ import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import data from '../../utils/data/exampleGraph';
 import { GraphOverlay } from './GraphOverlay';
 import * as THREE from 'three';
-import { CSS2DRenderer, CSS2DObject } from 'three-css2drender';
 
-interface IGraph3DProps {}
+interface IGraph3DProps {
+    data: {
+        nodes: any[];
+        links: any[];
+    };
+}
 
 const graphData = data;
 
@@ -100,31 +104,7 @@ export const Graph3D: FC<IGraph3DProps> = (props) => {
                     console.log('back');
                 }}
             ></GraphOverlay>{' '}
-            <ForceGraph3D
-                backgroundColor="white"
-                // width={window.innerWidth}
-                ref={fgRef}
-                nodeRelSize={12}
-                graphData={graphData}
-                // cooldownTicks={100}
-                // onEngineStop={onStop}
-                linkDirectionalArrowLength={3.5}
-                linkDirectionalArrowRelPos={1}
-                // onNodeClick={clickHandler}
-                // nodeCanvasObject={(node, ctx) => {
-                //     paintRing(node, ctx);
-                // }}
-                // onNodeHover={handleNodeHover}
-                nodeColor="red"
-                nodeThreeObject={(node) => {
-                    const nodeEl = document.createElement('div');
-                    nodeEl.textContent = node.label;
-                    nodeEl.style.color = 'white';
-
-                    return new CSS2DObject(nodeEl);
-                }}
-                extraRenderers={[new CSS2DRenderer()]}
-            />
+            <ForceGraph3D ref={fgRef} nodeRelSize={12} graphData={props.data} />
         </div>
     );
 };

@@ -1,9 +1,9 @@
 import getCourses from './getCourses';
-import getCourseByCode from './getCourseByCode';
+import getCourseById from './getCourseById';
 import postCourse from './postCourse';
 
 export default {
     get: getCourses,
-    find: getCourseByCode,
+    find: getCourseById,
     post: postCourse,
 };

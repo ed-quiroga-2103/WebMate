@@ -46,6 +46,12 @@
     border-radius: 10%;
 }
 
+.tag > button {
+    background-color: transparent;
+    border: 0 transparent;
+    cursor: pointer;
+}
+
 .option-table {
     background-color: darkgray;
     margin: 5px;

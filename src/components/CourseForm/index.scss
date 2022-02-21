@@ -1,0 +1,42 @@
+.topics-table {
+    width: 100%;
+}
+
+.topics-table th {
+    background-color: gray;
+}
+
+.topics-table tr {
+    flex-direction: row;
+}
+
+.topics-table td {
+    background-color: lightgray;
+    flex-direction: row;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.topics-table td > input {
+    width: 80%;
+    margin: 5px;
+}
+
+.course-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.course-row > input,
+textarea {
+    width: 100%;
+}
+
+.course-row * {
+    margin: 2px;
+}
+
+.course-row-dropdown {
+    width: 100%;
+}

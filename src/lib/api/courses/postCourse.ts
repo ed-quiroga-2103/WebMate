@@ -4,6 +4,8 @@ import { CourseData } from '../../../types';
 import { API_URL } from '../config';
 
 const postCourse = async (courseData: CourseData) => {
+    console.log(courseData);
+
     const response = await axios(`${API_URL}/courses`, {
         method: 'POST',
         data: courseData,

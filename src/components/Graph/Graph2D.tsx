@@ -1,5 +1,4 @@
 import ForceGraph2D from 'react-force-graph-2d';
-import generateRandomGraph from '../../utils/generateRandomGraph';
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
 
 import { GraphOverlay } from './GraphOverlay';
@@ -10,7 +9,7 @@ interface IGraph2DProps {
     singleClick: () => any;
     doubleClick: () => any;
     arrowLength: number;
-    linkLength: number;
+    linkLength?: number;
     nodeSize: number;
     linkWidth: number;
     graphDataInput: {
@@ -81,7 +80,12 @@ export const Graph2D: FC<IGraph2DProps> = ({
 
             ctx.font = '5px sans-serif';
             ctx.fillStyle = '#000000';
-            ctx.fillText(node.label, node.x, node.y, 1000);
+            ctx.fillText(
+                node.label ? node.label : node.id,
+                node.x,
+                node.y,
+                1000
+            );
         },
         [hoverNode]
     );
@@ -110,9 +114,11 @@ export const Graph2D: FC<IGraph2DProps> = ({
     };
 
     useEffect(() => {
-        fgRef.current.d3Force('link', d3.forceLink().distance(linkLength));
-        setOffTicks(500);
-        setTimeout(onStop, 1000);
+        if (linkLength) {
+            fgRef.current.d3Force('link', d3.forceLink().distance(linkLength));
+            setOffTicks(500);
+            setTimeout(onStop, 1000);
+        }
     }, []);
 
     return (

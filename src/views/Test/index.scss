@@ -100,3 +100,20 @@
     background-color: lightgray;
     text-align: center;
 }
+
+.topics-table {
+    width: 100%;
+}
+
+.topics-table th {
+    background-color: gray;
+}
+
+.topics-table tr {
+    flex-direction: row;
+}
+
+.topics-table td {
+    background-color: lightgray;
+    flex-direction: row;
+}

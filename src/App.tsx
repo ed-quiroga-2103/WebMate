@@ -21,6 +21,10 @@ import { GraphData } from './views/AddCourse/GraphData';
 import { Test2 } from './views/Test/test';
 import { Questions } from './views/Questions/';
 
+import { QuizView } from './views/Quiz';
+
+import { GraphView } from './views/Graph';
+
 window.onscroll = function () {
     scrollFunction();
 };
@@ -42,10 +46,13 @@ function App() {
                     <Route path="/" element={<SignIn />} />
 
                     <Route path="/home" element={<Home />} />
+                    <Route path="/cursos" element={<Courses />} />
+
                     <Route
-                        path="/cursos"
-                        element={<Courses data={CoursesData} />}
+                        path="/cursos/:id"
+                        element={<GraphView threeD={true} />}
                     />
+
                     <Route path="/contacto" element={<Contact />} />
                     <Route path="/sobre" element={<About />} />
 
@@ -101,7 +108,9 @@ function App() {
 
                     <Route path="/questions" element={<Questions />} />
 
-                    <Route path="/test" element={<Test2 />} />
+                    <Route path="/quiz/:id" element={<QuizView />} />
+
+                    <Route path="/test" element={<Test />} />
                 </Routes>
                 {/* <Footer /> */}
             </Router>
