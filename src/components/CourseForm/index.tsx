@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import { TopicTable } from './TopicTable';
 import formatCourseRequest from '../../utils/formatters/formatCourseRequest';
 import api from '../../lib/api';
+import './index.scss';
 
 interface ICourseFormProps {}
 
@@ -32,30 +33,32 @@ export const CourseForm: FC<ICourseFormProps> = (props) => {
     };
     return (
         <div>
-            <div className="course-row">
-                <div>Nombre</div>
+            <div className="top-table">
+                <div className="course-row">
+                    <div className="name">Nombre</div>
 
-                <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => {
-                        setName(e.target.value);
-                    }}
-                />
+                    <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => {
+                            setName(e.target.value);
+                        }}
+                    />
+                </div>
+                <div className="course-row">
+                    <div className="name">Código</div>
+
+                    <input
+                        type="text"
+                        value={code}
+                        onChange={(e) => {
+                            setCode(e.target.value);
+                        }}
+                    />
+                </div>
             </div>
             <div className="course-row">
-                <div>Codigo</div>
-
-                <input
-                    type="text"
-                    value={code}
-                    onChange={(e) => {
-                        setCode(e.target.value);
-                    }}
-                />
-            </div>
-            <div className="course-row">
-                <div>Descripción</div>
+                <div className="name">Descripción</div>
 
                 <textarea
                     value={description}
@@ -66,9 +69,15 @@ export const CourseForm: FC<ICourseFormProps> = (props) => {
             </div>
 
             <TopicTable data={data} setData={setData} submitting={submitting} />
-            <button onClick={handleSubmit} disabled={submitting}>
-                Confirmar
-            </button>
+            <div className="buttonWrapper">
+                <button
+                    className="buttonM"
+                    onClick={handleSubmit}
+                    disabled={submitting}
+                >
+                    Confirmar
+                </button>
+            </div>
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import { FC, useState, useRef, useEffect } from 'react';
 import { Dropdown } from './Dropdown';
+import './index.scss';
 interface IFieldRowProps {
     handleEnter: () => void;
     ind: number;
@@ -143,6 +144,7 @@ export const FieldRow: FC<IFieldRowProps> = ({
                                 <div className="tag" key={i}>
                                     {tag.text}
                                     <button
+                                        className="buttonS"
                                         onClick={() => {
                                             handleDelete(i);
                                         }}
@@ -163,6 +165,7 @@ export const FieldRow: FC<IFieldRowProps> = ({
                 </td>
                 <td>
                     <button
+                        className="buttonS"
                         onClick={() => {
                             handleGlobalDelete(ind);
                         }}

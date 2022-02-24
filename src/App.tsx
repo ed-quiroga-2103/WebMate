@@ -106,11 +106,11 @@ function App() {
                         }
                     />
 
-                    <Route path="/questions" element={<Questions />} />
+                    <Route path="/preguntas" element={<Questions />} />
 
                     <Route path="/quiz/:id" element={<QuizView />} />
 
-                    <Route path="/test" element={<Test />} />
+                    <Route path="/pruebas" element={<Test />} />
                 </Routes>
                 {/* <Footer /> */}
             </Router>

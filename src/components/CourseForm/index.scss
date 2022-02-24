@@ -1,9 +1,24 @@
+.buttonWrapper {
+    margin-top: 2%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.name {
+    color: #f9f9f9;
+}
+
+.top-table {
+    display: flex;
+    align-items: flex-start;
+}
+
 .topics-table {
     width: 100%;
 }
 
 .topics-table th {
-    background-color: gray;
+    background-color: #ffb703;
 }
 
 .topics-table tr {
@@ -25,7 +40,8 @@
 .course-row {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    align-items: center;
+    width: 80%;
 }
 
 .course-row > input,
@@ -39,4 +55,55 @@ textarea {
 
 .course-row-dropdown {
     width: 100%;
+}
+
+.buttonS {
+    border-radius: 25px;
+    background: #ffb703;
+    white-space: nowrap;
+    padding: 6px 15px;
+    color: #010606;
+    font-size: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: #d39804;
+    }
+}
+
+.buttonM {
+    border-radius: 50px;
+    background: #ffb703;
+    white-space: nowrap;
+    padding: 12px 30px;
+    color: #010606;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: #d39804;
+    }
+}
+
+.tag {
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
