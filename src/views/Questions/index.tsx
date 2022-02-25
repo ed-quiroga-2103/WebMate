@@ -49,14 +49,16 @@ export const Questions: FC<ITest2Props> = (props) => {
                             <QuestionForm setQuestions={reloadQuestions} />
                         </div>
                         <div>
-                            <h1>Preguntas Existentes</h1>
+                            <h1 className="h1Questions">
+                                Preguntas Existentes
+                            </h1>
 
                             <table className="question-table">
                                 <thead>
                                     <tr className="question-row">
-                                        <th>Question</th>
-                                        <th>Difficulty</th>
-                                        <th>Course</th>
+                                        <th>Pregunta</th>
+                                        <th>Dificultad</th>
+                                        <th>Curso</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -87,6 +89,7 @@ export const Questions: FC<ITest2Props> = (props) => {
                                                 </td>
                                                 <td>
                                                     <button
+                                                        className="buttonXS"
                                                         onClick={async () => {
                                                             await api.questions.delete(
                                                                 question.id

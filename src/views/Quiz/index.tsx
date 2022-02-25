@@ -2,6 +2,10 @@ import { FC, useEffect, useState } from 'react';
 import './index.scss';
 import { useParams } from 'react-router-dom';
 import api from '../../lib/api';
+import ScrollToTop from '../ScrollToTop';
+import Navbar from '../../components/Navbar/Navbar';
+import Sidebar from '../../components/Sidebar';
+import { QuizSection, QuizWrapper } from './QuizElements';
 
 interface IQuizViewProps {}
 
@@ -69,64 +73,107 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
         validate();
     };
 
+    const [isOpen, setisOpen] = useState(false);
+    const toggle = () => {
+        setisOpen(!isOpen);
+    };
     return (
-        <div>
-            <h1>{quiz ? quiz.questions[currentQuestion].text : ''}</h1>
+        <>
+            <ScrollToTop />
+            <Navbar toggle={toggle} on="partner" />
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+            <QuizSection>
+                <QuizWrapper>
+                    <div>
+                        <h1>
+                            {quiz ? quiz.questions[currentQuestion].text : ''}
+                        </h1>
 
-            <div className="question-image">
-                <img width={250} src="" />
-            </div>
-            {quiz
-                ? quiz.questions[currentQuestion].options.map((option, i) => {
-                      return (
-                          <div className="option-container" key={i}>
-                              <div
-                                  style={{
-                                      marginRight: 100,
-                                      marginLeft: 50,
-                                  }}
-                              >
-                                  {option.value}
-                              </div>
-                              <button
-                                  onClick={() => {
-                                      handleAnswer(
-                                          quiz.questions[currentQuestion].id,
-                                          option.value
+                        <div className="question-image">
+                            <img width={250} src="" />
+                        </div>
+                        {quiz
+                            ? quiz.questions[currentQuestion].options.map(
+                                  (option, i) => {
+                                      return (
+                                          <div
+                                              className="option-container"
+                                              key={i}
+                                          >
+                                              <div
+                                                  style={{
+                                                      marginRight: 100,
+                                                      marginLeft: 50,
+                                                  }}
+                                              >
+                                                  {option.value}
+                                              </div>
+                                              <button
+                                                  onClick={() => {
+                                                      handleAnswer(
+                                                          quiz.questions[
+                                                              currentQuestion
+                                                          ].id,
+                                                          option.value
+                                                      );
+                                                  }}
+                                              >
+                                                  Responder
+                                              </button>
+                                          </div>
                                       );
-                                  }}
-                              >
-                                  Responder
-                              </button>
-                          </div>
-                      );
-                  })
-                : ''}
+                                  }
+                              )
+                            : ''}
 
-            <div className="option-container">
-                <span>
-                    <button onClick={handlePrev}>Anterior</button>
-                    <button onClick={handleNext}>Siguiente</button>
-                </span>
-            </div>
-            <div className="option-container">
-                <span>
-                    <button onClick={handleFinalize}>Finalizar</button>
-                </span>
-            </div>
+                        <div className="option-container">
+                            <span>
+                                <button
+                                    className="buttonXS"
+                                    onClick={handlePrev}
+                                >
+                                    Anterior
+                                </button>
+                                <button
+                                    className="buttonXS"
+                                    onClick={handleNext}
+                                >
+                                    Siguiente
+                                </button>
+                            </span>
+                        </div>
+                        <div className="option-container">
+                            <span>
+                                <button
+                                    className="buttonXS"
+                                    onClick={handleFinalize}
+                                >
+                                    Finalizar
+                                </button>
+                            </span>
+                        </div>
 
-            {result ? (
-                <div>
-                    <span>Aprobado? {result.approved ? 'Sí' : 'No'}</span>
-                    <br />
-                    <span>
-                        Porcentaje:{' '}
-                        {result.percentage ? result.percentage : '?'}
-                    </span>
-                </div>
-            ) : (
-                'Esperando los resultados...'
-            )}
-        </div>
+                        {result ? (
+                            <div>
+                                <span>
+                                    Aprobado? {result.approved ? 'Sí' : 'No'}
+                                </span>
+                                <br />
+                                <span>
+                                    Porcentaje:{' '}
+                                    {result.percentage
+                                        ? result.percentage
+                                        : '?'}
+                                </span>
+                            </div>
+                        ) : (
+                            <h2 style={{ color: '#f9f9f9' }}>
+                                Esperando los resultados...
+                            </h2>
+                        )}
+                    </div>
+                </QuizWrapper>
+            </QuizSection>
+        </>
     );
 };

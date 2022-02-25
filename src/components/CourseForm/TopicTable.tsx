@@ -1,6 +1,7 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import './index.scss';
 import { FieldRow } from './FieldRow';
+import './index.scss';
 interface ITopicTableProps {
     data: { id: number; text: string; tags: any[] }[];
     setData: any;
@@ -32,7 +33,7 @@ export const TopicTable: FC<ITopicTableProps> = ({
     };
 
     return (
-        <div className="">
+        <div className="bigWrapper">
             <table className="topics-table">
                 <thead>
                     <tr>
@@ -40,6 +41,7 @@ export const TopicTable: FC<ITopicTableProps> = ({
                         <th>Dependencias</th>
                         <th className="shrink">
                             <button
+                                className="buttonXS"
                                 onClick={() => {
                                     setData([
                                         ...data,

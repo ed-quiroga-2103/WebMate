@@ -1,3 +1,3 @@
-const QUESTION_DIFFICULTIES = ['easy', 'medium', 'hard'];
+const QUESTION_DIFFICULTIES = ['fácil', 'medio', 'difícil'];
 
 export { QUESTION_DIFFICULTIES };

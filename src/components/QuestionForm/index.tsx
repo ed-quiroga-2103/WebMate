@@ -95,7 +95,7 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
 
     return (
         <div>
-            <h1>Creación de Preguntas</h1>
+            <h1 className="h1Questions">Creación de Preguntas</h1>
             <Formik initialValues={{ question: '' }} onSubmit={() => {}}>
                 {({}) => (
                     <Form
@@ -152,7 +152,7 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
                         <div className="question-field">
                             <span>
                                 <div className="flex-container">
-                                    <div>Option</div>
+                                    <div className="h1Questions">Opción</div>
                                     <input
                                         value={optionValue}
                                         id="optionInput"
@@ -162,7 +162,7 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
                                         }}
                                     />
                                 </div>
-                                <div>Is correct?</div>
+                                <div className="h1Questions">Es correcta?</div>
 
                                 <input
                                     checked={optionIsCorrect}
@@ -173,6 +173,7 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
                                     }}
                                 />
                                 <button
+                                    className="buttonS"
                                     type="button"
                                     onClick={() => {
                                         setOptions([
@@ -187,7 +188,7 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
                                         setOptionIsCorrect(false);
                                     }}
                                 >
-                                    Add Option
+                                    Agregar Opción
                                 </button>
                             </span>
                         </div>
@@ -195,8 +196,10 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
                         <table className="option-table">
                             <tbody>
                                 <tr className="option-row">
-                                    <th>Option</th>
-                                    <th>Is Correct?</th>
+                                    <th className="thQuestions">Opción</th>
+                                    <th className="thQuestions">
+                                        Es correcta?
+                                    </th>
                                 </tr>
                                 {table}
                                 <tr className="blank-row">
@@ -210,13 +213,14 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
                             </span>
                         </div>
                         <button
+                            className="buttonS"
                             type="button"
                             onClick={() => {
                                 handleSubmit();
                             }}
                             disabled={submitting}
                         >
-                            Submit
+                            Enviar
                         </button>
                     </Form>
                 )}
@@ -254,7 +258,7 @@ export const Tags: FC<ITagsProps> = ({ tags, setTags }) => {
     return (
         <>
             <div className="tag-row ">
-                <div>Tags</div>
+                <div className="h1Questions">Tags</div>
                 <input
                     type="text"
                     id="tag-input"
@@ -285,7 +289,7 @@ export const Tags: FC<ITagsProps> = ({ tags, setTags }) => {
                     );
                 })}
             </div>
-            <button type="button" onClick={handleAddition}>
+            <button className="buttonS" type="button" onClick={handleAddition}>
                 Agregar
             </button>
         </>

@@ -32,7 +32,7 @@ export const CourseForm: FC<ICourseFormProps> = (props) => {
         }, 500);
     };
     return (
-        <div>
+        <div className="bigWrapper">
             <div className="top-table">
                 <div className="course-row">
                     <div className="name">Nombre</div>
