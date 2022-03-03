@@ -1,8 +1,9 @@
+import api from '../../lib/api';
+import './index.scss';
+
+import { WithContext as ReactTags } from 'react-tag-input';
 import { FC, useEffect, useRef, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import './index.scss';
-import api from '../../lib/api';
-import { WithContext as ReactTags } from 'react-tag-input';
 import { QUESTION_DIFFICULTIES } from '../../assets/constants';
 
 interface IQuestionFormProps {

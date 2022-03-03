@@ -14,7 +14,6 @@ import {
     WebsiteRights,
     SocialIcons,
     SocialIconLink,
-    FooterP,
     FooterA,
 } from './FooterElements';
 
@@ -34,12 +33,12 @@ const Footer = () => {
                     <FooterLinksContainer>
                         <FooterLinksWrapper>
                             <FooterLinkItems>
-                                <FooterLinkTitle to="/cursos">
+                                <FooterLinkTitle to="/courses">
                                     Cursos
                                 </FooterLinkTitle>
                             </FooterLinkItems>
                             <FooterLinkItems>
-                                <FooterLinkTitle to="/contacto">
+                                <FooterLinkTitle to="/contact">
                                     Contactanos
                                 </FooterLinkTitle>
                                 <FooterA
@@ -56,7 +55,7 @@ const Footer = () => {
                                 ></FooterA>
                             </FooterLinkItems>
                             <FooterLinkItems>
-                                <FooterLinkTitle to="/perfil">
+                                <FooterLinkTitle to="/profile">
                                     Perfil
                                 </FooterLinkTitle>
                             </FooterLinkItems>

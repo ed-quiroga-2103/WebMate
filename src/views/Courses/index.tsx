@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import api from '../../lib/api';
+import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar/Navbar';
 import Sidebar from '../../components/Sidebar';
 import ScrollToTop from '../ScrollToTop';
-import './index.css';
+import './index.scss';
+
+import { useEffect, useState } from 'react';
 import {
     CoursesH1,
     CoursesWrapper,
@@ -10,7 +13,6 @@ import {
     Courses2Wrapper,
     SimpleWrapper,
 } from './CoursesElements';
-import api from '../../lib/api';
 
 const Courses = () => {
     const [isOpen, setisOpen] = useState(false);
@@ -66,6 +68,7 @@ const Courses = () => {
                     </Courses2Wrapper>
                 </CoursesWrapper>
             </CoursesSection>
+            <Footer />
         </>
     );
 };

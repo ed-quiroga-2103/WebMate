@@ -1,10 +1,11 @@
-import { FC, useEffect, useState } from 'react';
 import './index.scss';
-import { useParams } from 'react-router-dom';
 import api from '../../lib/api';
-import ScrollToTop from '../ScrollToTop';
 import Navbar from '../../components/Navbar/Navbar';
+import ScrollToTop from '../ScrollToTop';
 import Sidebar from '../../components/Sidebar';
+
+import { useParams } from 'react-router-dom';
+import { FC, useEffect, useState } from 'react';
 import { QuizSection, QuizWrapper } from './QuizElements';
 
 interface IQuizViewProps {}

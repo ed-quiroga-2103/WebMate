@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import api from '../../lib/api';
 import { QuestionForm } from '../../components/QuestionForm';
-import { QuestionSection, QuestionWrapper } from './QuestonElements';
+import { QuestionSection, QuestionWrapper } from './QuestionElements';
 import './index.scss';
 import ScrollToTop from '../ScrollToTop';
 import Navbar from '../../components/Navbar/Navbar';
@@ -54,7 +54,7 @@ export const Questions: FC<ITest2Props> = (props) => {
                             </h1>
 
                             <table className="question-table">
-                                <thead>
+                                <thead className="question-head">
                                     <tr className="question-row">
                                         <th>Pregunta</th>
                                         <th>Dificultad</th>

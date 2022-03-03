@@ -2,18 +2,18 @@ import styled from 'styled-components';
 
 export const QuestionSection = styled.section`
     background: #023047;
-    height: 660px;
+    height: 100vh;
     margin-top: 80px;
     overflow: visible;
 `;
 
 export const QuestionWrapper = styled.div`
-    z-index: 1;
-    height: 550px;
+    align-items: center;
+    display: grid;
+    height: 80vh;
     margin-right: auto;
     margin-left: auto;
-    justify-content: center;
-    align-items: center;
     padding: 0 24px;
-    justify-content: center;
+    width: 90vw;
+    z-index: 1;
 `;

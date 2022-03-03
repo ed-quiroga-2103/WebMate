@@ -1,24 +1,35 @@
-import React, { useState } from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import Sidebar from "../../components/Sidebar";
-import ScrollToTop from "../ScrollToTop";
-import { AddCourseSection, AddCourseWrapper } from "./AddCourseElements";
+import { FC, useEffect, useRef, useState } from 'react';
+import './index.scss';
+import { TagBar } from '../../components/Tagbar';
+import { text } from 'd3';
+import { CourseForm } from '../../components/CourseForm';
+import { TestSection, TestWrapper } from './testElements';
+import Navbar from '../../components/Navbar/Navbar';
+import ScrollToTop from '../ScrollToTop';
+import Sidebar from '../../components/Sidebar';
 
-function AddCourse({ graph }: { graph: any }) {
-  const [isOpen, setisOpen] = useState(false);
-  const toggle = () => {
-    setisOpen(!isOpen);
-  };
-  return (
-    <>
-      <ScrollToTop />
-      <Navbar toggle={toggle} on="partner" />
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <AddCourseSection>
-        <AddCourseWrapper></AddCourseWrapper>
-      </AddCourseSection>
-    </>
-  );
-}
+interface ITestProps {}
 
-export default AddCourse;
+export const Test: FC<ITestProps> = (props) => {
+    const [isOpen, setisOpen] = useState(false);
+    const toggle = () => {
+        setisOpen(!isOpen);
+    };
+    return (
+        <>
+            <ScrollToTop />
+            <Navbar toggle={toggle} on="partner" />
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+            <TestSection>
+                <TestWrapper>
+                    <div className="">
+                        <CourseForm></CourseForm>
+                    </div>
+                </TestWrapper>
+            </TestSection>
+        </>
+    );
+};
+
+// Notes
+// document.body.style.overflow = 'hidden';

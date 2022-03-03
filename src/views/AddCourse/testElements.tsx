@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const TestSection = styled.section`
     background: #023047;
-    height: 660px;
+    height: 100vh;
     margin-top: 80px;
     overflow-x: hidden;
     -ms-overflow-style: none;
@@ -10,12 +10,11 @@ export const TestSection = styled.section`
 `;
 
 export const TestWrapper = styled.div`
-    z-index: 1;
+    align-items: center;
     height: 95%;
+    justify-content: center;
     margin-right: auto;
     margin-left: auto;
-    justify-content: center;
-    align-items: center;
     padding: 24px 24px;
-    justify-content: center;
+    z-index: 1;
 `;
