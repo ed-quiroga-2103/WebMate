@@ -4,7 +4,7 @@ export const QuestionSection = styled.section`
     background: #023047;
     height: 100vh;
     margin-top: 80px;
-    overflow: visible;
+    overflow-x: hidden;
 `;
 
 export const QuestionWrapper = styled.div`

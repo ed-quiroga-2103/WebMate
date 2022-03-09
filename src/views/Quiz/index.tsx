@@ -85,7 +85,7 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <QuizSection>
                 <QuizWrapper>
-                    <div>
+                    <div className="quizWrapper">
                         <h1>
                             {quiz ? quiz.questions[currentQuestion].text : ''}
                         </h1>
@@ -130,13 +130,15 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
                         <div className="option-container">
                             <span>
                                 <button
-                                    className="buttonXS"
+                                    className="buttonXXS"
                                     onClick={handlePrev}
                                 >
                                     Anterior
                                 </button>
+                            </span>
+                            <span>
                                 <button
-                                    className="buttonXS"
+                                    className="buttonXXS"
                                     onClick={handleNext}
                                 >
                                     Siguiente
@@ -146,7 +148,7 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
                         <div className="option-container">
                             <span>
                                 <button
-                                    className="buttonXS"
+                                    className="buttonXXS"
                                     onClick={handleFinalize}
                                 >
                                     Finalizar
@@ -168,7 +170,12 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
                                 </span>
                             </div>
                         ) : (
-                            <h2 style={{ color: '#f9f9f9' }}>
+                            <h2
+                                style={{
+                                    color: '#f9f9f9',
+                                    textAlign: 'center',
+                                }}
+                            >
                                 Esperando los resultados...
                             </h2>
                         )}

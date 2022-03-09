@@ -44,7 +44,7 @@ function App() {
                     />
                     {/* ADMIN */}
                     <Route path="/adminQuestions" element={<Questions />} />
-                    <Route path="/adminTest" element={<Test />} />
+                    <Route path="/adminCourses" element={<Test />} />
                     {/* COURSES */}
                     <Route
                         path="/courses/mategeneral"

@@ -1,12 +1,10 @@
-import { FC, useEffect, useRef, useState } from 'react';
-import './index.scss';
-import { TagBar } from '../../components/Tagbar';
-import { text } from 'd3';
-import { CourseForm } from '../../components/CourseForm';
-import { TestSection, TestWrapper } from './testElements';
 import Navbar from '../../components/Navbar/Navbar';
 import ScrollToTop from '../ScrollToTop';
 import Sidebar from '../../components/Sidebar';
+
+import { FC, useState } from 'react';
+import { CourseForm } from '../../components/CourseForm';
+import { TestSection, TestWrapper } from './testElements';
 
 interface ITestProps {}
 

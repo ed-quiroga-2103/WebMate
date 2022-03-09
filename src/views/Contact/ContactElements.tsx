@@ -28,7 +28,7 @@ export const ContactContainer = styled.div`
 export const ContactRow = styled.div`
     align-items: center;
     display: grid;
-    height: 80%;
+    height: 100%;
     justify-content: center;
     margin: auto;
     width: 80%;

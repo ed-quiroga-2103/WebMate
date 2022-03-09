@@ -15,5 +15,6 @@ export const QuizWrapper = styled.div`
     margin-right: auto;
     margin-left: auto;
     padding: 0 24px;
+    width: 80vw;
     z-index: 1;
 `;

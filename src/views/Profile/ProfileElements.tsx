@@ -27,16 +27,17 @@ export const InfoContainer = styled.div`
     height: 70vh;
     justify-content: center;
     margin: auto;
-    overflow-x: hidden;
     width: 90%;
 `;
 
 export const InfoRow = styled.div`
+    height: 95%;
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     grid-template-areas: 'col1 col2 col3';
     justify-content: center;
     margin: auto;
+    overflow-x: hidden;
     width: 90%;
 
     @media screen and (max-width: 900px) {

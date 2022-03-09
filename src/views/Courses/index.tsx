@@ -44,7 +44,7 @@ const Courses = () => {
                     <Courses2Wrapper>
                         {courses.map((data: any, index: any) => {
                             return (
-                                <div className="card-grid-space">
+                                <div className="card-grid-space" key={index}>
                                     <div className="card" key={index}>
                                         <div className="div1">
                                             <h1>{data.name} </h1>

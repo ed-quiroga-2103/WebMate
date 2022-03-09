@@ -1,7 +1,6 @@
-import api from '../../lib/api';
 import './index.scss';
+import api from '../../lib/api';
 
-import { WithContext as ReactTags } from 'react-tag-input';
 import { FC, useEffect, useRef, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { QUESTION_DIFFICULTIES } from '../../assets/constants';
@@ -95,7 +94,7 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
     }, [deleted, options]);
 
     return (
-        <div>
+        <div className="sectionWrapper">
             <h1 className="h1Questions">Creación de Preguntas</h1>
             <Formik initialValues={{ question: '' }} onSubmit={() => {}}>
                 {({}) => (

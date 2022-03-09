@@ -35,7 +35,7 @@ const Profile = ({ data, grades }: { data: any; grades: any }) => {
                 <ProfileWrapper>
                     {data.map((data: any, index: any) => {
                         return (
-                            <InfoContainer>
+                            <InfoContainer key={index}>
                                 <InfoRow id={data.id}>
                                     <Column1>
                                         <TextWrapper>
@@ -84,7 +84,11 @@ const Profile = ({ data, grades }: { data: any; grades: any }) => {
                             </li>
                             {grades.map((grade: any, index: any) => {
                                 return (
-                                    <li className="table-row" id={grade.id}>
+                                    <li
+                                        className="table-row"
+                                        id={grade.id}
+                                        key={index}
+                                    >
                                         <div className="col-1" data-label="ID">
                                             {grade.id}
                                         </div>

@@ -1,3 +1,7 @@
+.sectionWrapper {
+    width: 50vw;
+}
+
 .flex-container {
     display: flex;
 }
@@ -71,16 +75,17 @@
     background: #1ea2a4;
     white-space: nowrap;
     padding: 6px 15px;
-    color: #010606;
+    color: #f9f9f9;
     font-size: 10px;
     outline: none;
     border: none;
     cursor: pointer;
-
+    margin: auto;
     text-decoration: none;
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease-in-out;
+    width: 50%;
 
     &:hover {
         transition: all 0.2s ease-in-out;

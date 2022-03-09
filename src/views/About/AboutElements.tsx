@@ -21,10 +21,9 @@ export const AboutContainer = styled.div`
     background: #f9f9f9;
     border-radius: 50px;
     height: 80%;
-    max-width: 80vh;
     margin: auto;
     overflow-x: hidden;
-    width: 80%;
+    width: 80vw;
 `;
 
 export const AboutRow = styled.div`

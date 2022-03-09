@@ -20,7 +20,7 @@ export const CoursesWrapper = styled.div`
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 24px;
+    overflow-x: hidden;
     z-index: 1;
 `;
 export const SimpleWrapper = styled(LinkR)`
@@ -55,31 +55,26 @@ export const Courses2Wrapper = styled.div`
     align-items: center;
     display: grid;
     grid-gap: 16px;
-    max-width: 1000px;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-left: -5%;
-
+    margin: auto;
+    margin-bottom: 5%;
     overflow: visible;
-    padding: 0 50px;
 
     @media screen and (max-width: 1200px) {
         grid-template-columns: 1fr 1fr;
-        margin-left: 0%;
     }
 
     @media screen and (max-width: 760px) {
         grid-template-columns: 1fr;
         padding: 0 20px;
-        margin-left: 0%;
     }
 `;
 
 export const CoursesH1 = styled.h1`
     color: #f9f9f9;
     font-size: 2.5rem;
-    left: 50%;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 
     @media screen and (max-width: 480px) {

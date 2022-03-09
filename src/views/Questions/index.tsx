@@ -45,9 +45,8 @@ export const Questions: FC<ITest2Props> = (props) => {
             <QuestionSection>
                 <QuestionWrapper>
                     <div className="questions-view">
-                        <div>
-                            <QuestionForm setQuestions={reloadQuestions} />
-                        </div>
+                        <QuestionForm setQuestions={reloadQuestions} />
+
                         <div>
                             <h1 className="h1Questions">
                                 Preguntas Existentes

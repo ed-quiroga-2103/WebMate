@@ -13,7 +13,7 @@ function Landing() {
                     <div className="cards">
                         <div className="card3 content">
                             <div className="card3-content">
-                                <FooterA href="/perfil">
+                                <FooterA href="/profile">
                                     <div className="card3-img">
                                         <img
                                             src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
@@ -29,7 +29,7 @@ function Landing() {
                         </div>
                         <div className="card3 content">
                             <div className="card3-content">
-                                <FooterA href="/cursos">
+                                <FooterA href="/courses">
                                     <div className="card3-img">
                                         <img
                                             src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
@@ -45,7 +45,7 @@ function Landing() {
                         </div>
                         <div className="card3 content">
                             <div className="card3-content">
-                                <FooterA href="/contacto">
+                                <FooterA href="/contact">
                                     <div className="card3-img">
                                         <img
                                             src="https://images.unsplash.com/photo-1519326844852-704caea5679e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2034&q=80"
