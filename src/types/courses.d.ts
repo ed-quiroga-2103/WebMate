@@ -22,5 +22,14 @@ export interface Course {
     status: string;
     code: string;
     dependencies: string[];
+    subjects: Subject[];
     graph: Graph;
+}
+
+export interface Subject {
+    id: string;
+    name: string;
+    resources: any[];
+    courseId: string;
+    dependencies: string[];
 }

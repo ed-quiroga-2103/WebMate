@@ -22,8 +22,13 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
     const [table, setTable] = useState<JSX.Element[]>();
     const [reload, setReload] = useState(false);
 
-    const [courses, setCourses] = useState([{ code: '...' }]);
+    const [courses, setCourses] = useState([
+        { code: '...', subjects: undefined },
+    ]);
     const [selectedCourse, setSelectedCourse] = useState('...');
+
+    const [subjects, setSubjects] = useState([{ name: '...' }]);
+    const [selectedSubject, setSelectedSubject] = useState('...');
 
     const [selectedDifficulty, setSelectedDifficulty] = useState(
         QUESTION_DIFFICULTIES[0]
@@ -54,19 +59,50 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
         var imagedata = (document.querySelector('input[type="file"]') as any)
             .files[0];
 
-        const questionRes = await api.questions.post({
+        let finalSubject;
+        for (const subject of subjects) {
+            console.log(subject, selectedSubject);
+
+            if (subject.name === selectedSubject) {
+                finalSubject = subject;
+            }
+        }
+
+        console.log({
             tags: tags.map((tag) => tag.text),
             text: question,
             difficulty: selectedDifficulty,
             course: selectedCourse,
+            subjectId: finalSubject.id,
             options,
         });
 
-        if (imagedata) {
-            api.questions.upload(imagedata, questionRes.id);
-        }
+        // const questionRes = await api.questions.post({
+        //     tags: tags.map((tag) => tag.text),
+        //     text: question,
+        //     difficulty: selectedDifficulty,
+        //     course: selectedCourse,
+        //     subjectId: finalSubject.id,
+        //     options,
+        // });
+
+        // if (imagedata) {
+        //     api.questions.upload(imagedata, questionRes.id);
+        // }
 
         props.setQuestions();
+    };
+
+    const setSubjectsFromCode = (code) => {
+        console.log(code);
+
+        for (const course of courses) {
+            console.log('Course: ', course);
+            if (course.code === code) {
+                console.log('Subjects: ', course.subjects);
+                setSubjects([{ name: '...' }, ...course.subjects]);
+            }
+        }
     };
 
     useEffect(() => {
@@ -126,11 +162,28 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
                                 defaultValue={selectedCourse}
                                 onChange={(e) => {
                                     setSelectedCourse(e.target.value);
+                                    setSubjectsFromCode(e.target.value);
                                 }}
                             >
                                 {courses.map((value, i) => {
                                     return (
                                         <option key={i}>{value.code}</option>
+                                    );
+                                })}
+                            </select>
+
+                            <select
+                                style={{ width: '50%', marginRight: '10px' }}
+                                className="question-field"
+                                id="course-dropdown"
+                                defaultValue={selectedCourse}
+                                onChange={(e) => {
+                                    setSelectedSubject(e.target.value);
+                                }}
+                            >
+                                {subjects.map((value, i) => {
+                                    return (
+                                        <option key={i}>{value.name}</option>
                                     );
                                 })}
                             </select>

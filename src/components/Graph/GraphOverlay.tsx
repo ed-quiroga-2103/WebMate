@@ -20,9 +20,7 @@ export const GraphOverlay: FC<IGraphOverlayProps> = (props) => {
                 }}
                 squeezePercentage={0.04}
                 squeeze={true}
-            >
-                Back
-            </SVGButton>
+            ></SVGButton>
             <GraphToolbar className="toolBar" buttonVerticalPadding={130}>
                 <SVGButton
                     className="toolBarButton"
@@ -34,9 +32,7 @@ export const GraphOverlay: FC<IGraphOverlayProps> = (props) => {
                     }}
                     squeezePercentage={0.04}
                     squeeze={true}
-                >
-                    Center
-                </SVGButton>
+                ></SVGButton>
             </GraphToolbar>
         </div>
     );

@@ -18,7 +18,6 @@ import {
 } from './NavbarElements';
 
 const Navbar = ({ toggle, on }: { toggle: any; on: any }) => {
-    console.log(on);
     return (
         <>
             <NavbarBigContainer>

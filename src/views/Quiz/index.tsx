@@ -4,15 +4,23 @@ import Navbar from '../../components/Navbar/Navbar';
 import ScrollToTop from '../ScrollToTop';
 import Sidebar from '../../components/Sidebar';
 
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import { FC, useEffect, useState } from 'react';
 import { QuizSection, QuizWrapper } from './QuizElements';
 
 interface IQuizViewProps {}
 
 export const QuizView: FC<IQuizViewProps> = (props) => {
-    const { id } = useParams();
+    const { id, subjectId } = useParams();
     const [quiz, setQuiz] = useState(undefined);
+
+    if (subjectId) {
+        console.log('Subject quiz');
+    }
+
+    const [searchParams, _] = useSearchParams();
+
+    console.log(searchParams.get('flag'));
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
 

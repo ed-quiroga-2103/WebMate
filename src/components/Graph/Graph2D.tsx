@@ -1,12 +1,13 @@
 import ForceGraph2D from 'react-force-graph-2d';
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { GraphOverlay } from './GraphOverlay';
 
 import * as d3 from 'd3';
 
 interface IGraph2DProps {
-    singleClick: () => any;
+    singleClick: (params) => any;
     doubleClick: () => any;
     arrowLength: number;
     linkLength?: number;
@@ -28,7 +29,7 @@ export const Graph2D: FC<IGraph2DProps> = ({
     linkWidth,
 }) => {
     const fgRef = useRef<any>();
-    const [centered, setCentered] = useState(false);
+    const [centered, setCentered] = useState(true);
 
     const [highlightNodes, setHighlightNodes] = useState(new Set());
     const [highlightLinks, setHighlightLinks] = useState(new Set());
@@ -102,7 +103,7 @@ export const Graph2D: FC<IGraph2DProps> = ({
             ) {
                 doubleClick();
             } else {
-                singleClick();
+                singleClick(event);
             }
             clicks = [];
         }, 250);
@@ -121,12 +122,14 @@ export const Graph2D: FC<IGraph2DProps> = ({
         }
     }, []);
 
+    const navigate = useNavigate();
+
     return (
         <div>
             <GraphOverlay
                 onZoomToFit={onZoomToFit}
                 onBack={() => {
-                    console.log('back');
+                    navigate('/courses');
                 }}
             ></GraphOverlay>
 

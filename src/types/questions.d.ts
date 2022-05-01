@@ -7,6 +7,7 @@ export interface QuestionData {
     text: string;
     course: string;
     difficulty: string;
+    subjectId: string;
     tags: string[];
     options: {
         isCorrect: boolean;

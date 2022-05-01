@@ -6,7 +6,6 @@ import Courses from './views/Courses';
 import Evaluations from './views/Evaluations';
 import Home from './views/Home';
 import SignIn from './views/SignIn';
-import SingleCourse from './views/SingleCourse';
 import Units from './views/Profile';
 
 import { EvaluationsData } from './views/Evaluations/EvaluationsData';
@@ -36,6 +35,7 @@ function App() {
                         element={<Evaluations list={EvaluationsData} />}
                     />
                     <Route path="/quiz/:id" element={<QuizView />} />
+                    <Route path="/quiz/:id/:subjectId" element={<QuizView />} />
                     <Route
                         path="/profile"
                         element={
@@ -45,33 +45,6 @@ function App() {
                     {/* ADMIN */}
                     <Route path="/adminQuestions" element={<Questions />} />
                     <Route path="/adminCourses" element={<Test />} />
-                    {/* COURSES */}
-                    <Route
-                        path="/courses/mategeneral"
-                        element={<SingleCourse />}
-                    />
-                    <Route path="/courses/calculo" element={<SingleCourse />} />
-                    <Route path="/courses/algebra" element={<SingleCourse />} />
-                    <Route
-                        path="/courses/superior"
-                        element={<SingleCourse />}
-                    />
-                    <Route
-                        path="/courses/probabilidad"
-                        element={<SingleCourse />}
-                    />
-                    <Route
-                        path="/courses/ecuaciones"
-                        element={<SingleCourse />}
-                    />
-                    <Route
-                        path="/courses/discreta"
-                        element={<SingleCourse />}
-                    />
-                    <Route
-                        path="/courses/geometria"
-                        element={<SingleCourse />}
-                    />
                 </Routes>
             </Router>
         </>
