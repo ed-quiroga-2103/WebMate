@@ -5,6 +5,26 @@ import { FC, useEffect, useRef, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { QUESTION_DIFFICULTIES } from '../../assets/constants';
 
+const mapDifficulty = (dif) => {
+    switch (dif) {
+        case 'fácil':
+            return 'easy';
+            break;
+
+        case 'intermedio':
+            return 'intermediate';
+            break;
+
+        case 'difícil':
+            return 'hard';
+            break;
+
+        default:
+            return 'easy';
+            break;
+    }
+};
+
 interface IQuestionFormProps {
     setQuestions: () => any;
 }
@@ -68,27 +88,18 @@ export const QuestionForm: FC<IQuestionFormProps> = (props) => {
             }
         }
 
-        console.log({
+        const questionRes = await api.questions.post({
             tags: tags.map((tag) => tag.text),
             text: question,
-            difficulty: selectedDifficulty,
+            difficulty: mapDifficulty(selectedDifficulty),
             course: selectedCourse,
             subjectId: finalSubject.id,
             options,
         });
 
-        // const questionRes = await api.questions.post({
-        //     tags: tags.map((tag) => tag.text),
-        //     text: question,
-        //     difficulty: selectedDifficulty,
-        //     course: selectedCourse,
-        //     subjectId: finalSubject.id,
-        //     options,
-        // });
-
-        // if (imagedata) {
-        //     api.questions.upload(imagedata, questionRes.id);
-        // }
+        if (imagedata) {
+            api.questions.upload(imagedata, questionRes.id);
+        }
 
         props.setQuestions();
     };

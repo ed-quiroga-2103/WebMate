@@ -22,7 +22,7 @@ const DiagnosticToast = ({ navigate, courseId }) => {
         <div
             onClick={() => {
                 // THIS IS WRONG
-                navigate(`/quiz/${courseId}/`);
+                navigate(`/quiz/${courseId}?type=D`);
             }}
         >
             Notamos que no has realizado el examen de diagnóstico.

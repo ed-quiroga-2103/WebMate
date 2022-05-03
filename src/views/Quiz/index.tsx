@@ -12,15 +12,18 @@ interface IQuizViewProps {}
 
 export const QuizView: FC<IQuizViewProps> = (props) => {
     const { id, subjectId } = useParams();
+
     const [quiz, setQuiz] = useState(undefined);
 
     if (subjectId) {
         console.log('Subject quiz');
+    } else {
+        console.log('Not subject quiz');
     }
 
     const [searchParams, _] = useSearchParams();
 
-    console.log(searchParams.get('flag'));
+    const type = searchParams.get('type');
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
@@ -30,7 +33,16 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
 
     useEffect(() => {
         const fetchQuiz = async () => {
-            const response = await api.quices.generate(id);
+            let response;
+            if (subjectId) {
+                response = await api.quices.generateSubject(id, subjectId);
+            } else {
+                if (type === 'D') {
+                    response = await api.quices.generateDiagnostic(id);
+                } else {
+                    response = await api.quices.generate(id, 'NA');
+                }
+            }
 
             setQuiz(response);
         };
