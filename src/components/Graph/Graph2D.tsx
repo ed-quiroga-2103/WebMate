@@ -17,6 +17,7 @@ interface IGraph2DProps {
         nodes: any[];
         links: any[];
     };
+    progress: { subjects: any[] };
 }
 
 export const Graph2D: FC<IGraph2DProps> = ({
@@ -27,6 +28,7 @@ export const Graph2D: FC<IGraph2DProps> = ({
     graphDataInput,
     nodeSize,
     linkWidth,
+    progress,
 }) => {
     const fgRef = useRef<any>();
     const [centered, setCentered] = useState(true);
@@ -66,17 +68,36 @@ export const Graph2D: FC<IGraph2DProps> = ({
 
     const paintRing = useCallback(
         (node, ctx) => {
-            // add ring just for highlighted nodes
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, nodeSize, 0, 2 * Math.PI, false);
-            ctx.fillStyle =
-                node === hoverNode ? 'red' : node.available ? 'green' : 'red';
-            ctx.fill();
+            let subject;
+
+            if (progress) {
+                subject = progress.subjects.find((sub) => {
+                    if (sub.id === node.subjectId) {
+                        return sub;
+                    }
+                });
+            }
+
+            const getColor = () => {
+                if (!subject) return 'red';
+
+                if (subject.percentage === 100) return 'green';
+                if (subject.percentage >= 75) return 'orange';
+
+                return 'blue';
+            };
+
+            const color = getColor();
+
+            // // add ring just for highlighted nodes
+            // ctx.beginPath();
+            // ctx.arc(node.x, node.y, nodeSize, 0, 2 * Math.PI, false);
+            // ctx.fillStyle = color;
+            // ctx.fill();
             ctx.beginPath();
 
             ctx.arc(node.x, node.y, nodeSize, 0, 2 * Math.PI, false);
-            ctx.fillStyle =
-                node === hoverNode ? 'blue' : node.available ? 'green' : 'red';
+            ctx.fillStyle = node === hoverNode ? 'yellow' : color;
             ctx.fill();
 
             ctx.font = '5px sans-serif';

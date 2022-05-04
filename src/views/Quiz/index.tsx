@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import ScrollToTop from '../ScrollToTop';
 import Sidebar from '../../components/Sidebar';
 
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { FC, useEffect, useState } from 'react';
 import { QuizSection, QuizWrapper } from './QuizElements';
 
@@ -75,6 +75,8 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
         );
     };
 
+    const navigate = useNavigate();
+
     const handleFinalize = () => {
         const answersRes = [];
         for (const [questionId, value] of Object.entries(answers)) {
@@ -89,6 +91,8 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
 
             setResult(response);
             console.log(result);
+
+            // navigate(`/courses/${id}`);
         };
 
         validate();

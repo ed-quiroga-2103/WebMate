@@ -33,7 +33,6 @@ const DiagnosticToast = ({ navigate, courseId }) => {
 };
 
 const DataToast = ({ params }) => {
-    console.log(params.resources);
     return (
         <div>
             <table>
@@ -54,6 +53,17 @@ const DataToast = ({ params }) => {
 export const GraphView: FC<IGraphViewProps> = (props) => {
     const { id } = useParams();
     const [course, setCourse] = useState(undefined);
+
+    const [me, setMe] = useState(undefined);
+
+    useEffect(() => {
+        const fetchMe = async () => {
+            const data = await api.auth.me();
+            setMe(data);
+        };
+
+        fetchMe();
+    }, []);
 
     useEffect(() => {
         const fetchCourse = async () => {
@@ -90,6 +100,7 @@ export const GraphView: FC<IGraphViewProps> = (props) => {
                         {props.threeD ? (
                             course ? (
                                 <Graph2D
+                                    progress={me.user.progress[`${id}`]}
                                     nodeSize={10}
                                     // linkLength={75}
                                     linkWidth={2}
