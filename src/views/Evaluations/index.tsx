@@ -26,10 +26,10 @@ function Evaluations({ list }: { list: any }) {
     const handleAnswerOptionClick = (
         event: any,
         isCorrect: boolean,
-        current: number
+        current: number,
+        id: any
     ) => {
         event.preventDefault();
-
         oneAnswer = true;
         answer = false;
         if (isCorrect) {
@@ -118,12 +118,14 @@ function Evaluations({ list }: { list: any }) {
                                         ].answerOptions.map(
                                             (answerOption: any) => (
                                                 <button
+                                                    id={answerOption.id}
                                                     className="buttonOption"
                                                     onClick={(evt) => {
                                                         handleAnswerOptionClick(
                                                             evt,
                                                             answerOption.isCorrect,
-                                                            currentQuestion
+                                                            currentQuestion,
+                                                            'num'
                                                         );
                                                     }}
                                                 >
