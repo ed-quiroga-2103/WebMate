@@ -6,6 +6,8 @@ import ScrollToTop from '../ScrollToTop';
 import { EvaluationsSection, EvaluationsWrapper } from './EvaluationsElements';
 import './index.scss';
 
+let lastB = '';
+
 function Evaluations({ list }: { list: any }) {
     const questions = list[0][1];
     const [isOpen, setisOpen] = useState(false);
@@ -37,9 +39,19 @@ function Evaluations({ list }: { list: any }) {
         }
         answers[current] = answer;
         console.log(answers);
+        if (lastB == '') {
+            lastB = id;
+            document.getElementById(id).style.backgroundColor = ' #ffb703';
+        } else {
+            document.getElementById(lastB).style.backgroundColor = '#023047';
+            document.getElementById(id).style.backgroundColor = ' #ffb703';
+            lastB = id;
+        }
     };
 
     const next = () => {
+        document.getElementById(lastB).style.backgroundColor = '#023047';
+        lastB = '';
         if (oneAnswer) {
             const nextQuestion = currentQuestion + 1;
             oneAnswer = false;
@@ -81,7 +93,24 @@ function Evaluations({ list }: { list: any }) {
         } else {
             setCurrentQuestion(0);
         }
+        document.getElementById(lastB).style.backgroundColor = '#023047';
+        lastB = '';
     };
+
+    const minutes = 10;
+    let time = minutes * 60;
+    const timerEl = document.getElementById('counter');
+
+    setInterval(update, 1000);
+
+    function update() {
+        const minutes = Math.floor(time / 60);
+        let seconds = (time % 60) as any;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        timerEl.innerHTML = `${minutes}:${seconds}`;
+        time--;
+    }
 
     return (
         <>
@@ -118,14 +147,16 @@ function Evaluations({ list }: { list: any }) {
                                         ].answerOptions.map(
                                             (answerOption: any) => (
                                                 <button
-                                                    id={answerOption.id}
+                                                    id={'b' + answerOption.id}
                                                     className="buttonOption"
                                                     onClick={(evt) => {
+                                                        let ID =
+                                                            evt.target as any;
                                                         handleAnswerOptionClick(
                                                             evt,
                                                             answerOption.isCorrect,
                                                             currentQuestion,
-                                                            'num'
+                                                            ID.id
                                                         );
                                                     }}
                                                 >
@@ -200,6 +231,9 @@ function Evaluations({ list }: { list: any }) {
                             )}
                         </>
                     )}
+                    <p id="counter" className="timer">
+                        10:00
+                    </p>
                 </EvaluationsWrapper>
             </EvaluationsSection>
             <Footer />

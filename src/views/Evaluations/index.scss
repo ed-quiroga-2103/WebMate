@@ -90,6 +90,7 @@
 .mathDisplay {
     margin: auto;
     text-align: center;
+    pointer-events: none;
 }
 
 .buttonBack {
@@ -133,4 +134,13 @@
     padding: 24px 24px;
     display: flex;
     justify-content: space-between;
+}
+
+.timer {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin: auto;
 }
