@@ -15,12 +15,6 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
 
     const [quiz, setQuiz] = useState(undefined);
 
-    if (subjectId) {
-        console.log('Subject quiz');
-    } else {
-        console.log('Not subject quiz');
-    }
-
     const [searchParams, _] = useSearchParams();
 
     const type = searchParams.get('type');
@@ -90,9 +84,16 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
             const response = await api.quices.validate(answersRes, quiz.id);
 
             setResult(response);
-            console.log(result);
+            console.log(response.percentage);
 
-            // navigate(`/courses/${id}`);
+            if (response.percentage < 85 && response.percentage > 75) {
+                alert('Nota adecuada para tomar un segundo diagnostico');
+                window.location.reload();
+            } else if (response.percentage > 85) {
+                alert('Aprobado');
+            } else {
+                navigate(`/courses/${id}`);
+            }
         };
 
         validate();

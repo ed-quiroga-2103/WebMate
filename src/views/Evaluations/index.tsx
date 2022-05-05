@@ -128,12 +128,6 @@ function Evaluations({ list }: { list: any }) {
                             <>
                                 <div className="containerQuestion">
                                     <div className="question-section">
-                                        <div className="question-count">
-                                            <span>
-                                                Pregunta {currentQuestion + 1}
-                                            </span>
-                                            /{questions.length}
-                                        </div>
                                         <div className="question-text">
                                             {
                                                 questions[currentQuestion]
@@ -168,6 +162,12 @@ function Evaluations({ list }: { list: any }) {
                                                 </button>
                                             )
                                         )}
+                                    </div>
+                                    <div className="question-count">
+                                        <span>
+                                            Pregunta {currentQuestion + 1}
+                                        </span>
+                                        /{questions.length}
                                     </div>
                                 </div>
                             </>
@@ -206,15 +206,15 @@ function Evaluations({ list }: { list: any }) {
                                         <div className="buttonsWrapper">
                                             <button
                                                 className="buttonSelect"
-                                                onClick={() => next()}
-                                            >
-                                                Siguiente
-                                            </button>
-                                            <button
-                                                className="buttonSelect"
                                                 onClick={() => previous()}
                                             >
                                                 Anterior
+                                            </button>
+                                            <button
+                                                className="buttonSelect"
+                                                onClick={() => next()}
+                                            >
+                                                Siguiente
                                             </button>
                                         </div>
                                     )}

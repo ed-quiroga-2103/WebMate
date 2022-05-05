@@ -20,8 +20,6 @@ import {
 const Navbar = ({ toggle, on }: { toggle: any; on: any }) => {
     const token = localStorage.getItem('mochi');
 
-    console.log(token);
-
     return (
         <>
             <NavbarBigContainer>
