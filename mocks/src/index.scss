@@ -1,0 +1,23 @@
+@import "./styles/colors.scss";
+@import "./styles/constants.scss";
+@import "./styles/root.scss";
+@import "./styles/underlineMovement.scss";
+@import "./components/Loader/Loader.scss";
+@import "./views/Register/Register.scss";
+@import "./views/Home/Home.scss";
+@import "./views/Profile/Profile.scss";
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
