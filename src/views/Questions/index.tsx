@@ -58,10 +58,13 @@ export const Questions: FC<ITest2Props> = (props) => {
                                         <th>Pregunta</th>
                                         <th>Dificultad</th>
                                         <th>Curso</th>
+                                        <th>Tema</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {questions.map((question, i) => {
+                                        console.log(question);
+
                                         return (
                                             <tr
                                                 className="question-row"
@@ -70,6 +73,7 @@ export const Questions: FC<ITest2Props> = (props) => {
                                                 <td>{question.text}</td>
                                                 <td>{question.difficulty}</td>
                                                 <td>{question.course.code}</td>
+                                                <td>{question.subject.name}</td>
                                                 <td>
                                                     <button
                                                         onClick={async () => {

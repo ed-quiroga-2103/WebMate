@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { API_URL } from '../config';
 
-const generateQuiz = async (courseId, type, length = 3) => {
+const generateSubjectQuiz = async (courseId, subjectId, length = 3) => {
     const response = await axios(
-        `${API_URL}/quices?courseId=${courseId}&length=${length}&type=${type}`,
+        `${API_URL}/quices?courseId=${courseId}&length=${length}&subjectId=${subjectId}`,
         {
             method: 'GET',
         }
@@ -12,4 +12,4 @@ const generateQuiz = async (courseId, type, length = 3) => {
     return response.data.quiz ? response.data.quiz : response.data;
 };
 
-export default generateQuiz;
+export default generateSubjectQuiz;

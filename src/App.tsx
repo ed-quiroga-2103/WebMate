@@ -35,6 +35,7 @@ function App() {
                         element={<Evaluations list={EvaluationsData} />}
                     />
                     <Route path="/quiz/:id" element={<QuizView />} />
+                    <Route path="/quiz/:id/:subjectId" element={<QuizView />} />
                     <Route
                         path="/profile"
                         element={

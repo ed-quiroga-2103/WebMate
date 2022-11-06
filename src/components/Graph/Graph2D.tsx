@@ -1,12 +1,13 @@
 import ForceGraph2D from 'react-force-graph-2d';
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { GraphOverlay } from './GraphOverlay';
 
 import * as d3 from 'd3';
 
 interface IGraph2DProps {
-    singleClick: () => any;
+    singleClick: (params) => any;
     doubleClick: () => any;
     arrowLength: number;
     linkLength?: number;
@@ -16,6 +17,7 @@ interface IGraph2DProps {
         nodes: any[];
         links: any[];
     };
+    progress: { subjects: any[] };
 }
 
 export const Graph2D: FC<IGraph2DProps> = ({
@@ -26,9 +28,10 @@ export const Graph2D: FC<IGraph2DProps> = ({
     graphDataInput,
     nodeSize,
     linkWidth,
+    progress,
 }) => {
     const fgRef = useRef<any>();
-    const [centered, setCentered] = useState(false);
+    const [centered, setCentered] = useState(true);
 
     const [highlightNodes, setHighlightNodes] = useState(new Set());
     const [highlightLinks, setHighlightLinks] = useState(new Set());
@@ -65,17 +68,36 @@ export const Graph2D: FC<IGraph2DProps> = ({
 
     const paintRing = useCallback(
         (node, ctx) => {
-            // add ring just for highlighted nodes
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, nodeSize, 0, 2 * Math.PI, false);
-            ctx.fillStyle =
-                node === hoverNode ? 'red' : node.available ? 'green' : 'red';
-            ctx.fill();
+            let subject;
+
+            if (progress) {
+                subject = progress.subjects.find((sub) => {
+                    if (sub.id === node.subjectId) {
+                        return sub;
+                    }
+                });
+            }
+
+            const getColor = () => {
+                if (!subject) return 'red';
+
+                if (subject.percentage === 100) return 'green';
+                if (subject.percentage >= 75) return 'orange';
+
+                return 'blue';
+            };
+
+            const color = getColor();
+
+            // // add ring just for highlighted nodes
+            // ctx.beginPath();
+            // ctx.arc(node.x, node.y, nodeSize, 0, 2 * Math.PI, false);
+            // ctx.fillStyle = color;
+            // ctx.fill();
             ctx.beginPath();
 
             ctx.arc(node.x, node.y, nodeSize, 0, 2 * Math.PI, false);
-            ctx.fillStyle =
-                node === hoverNode ? 'blue' : node.available ? 'green' : 'red';
+            ctx.fillStyle = node === hoverNode ? 'yellow' : color;
             ctx.fill();
 
             ctx.font = '5px sans-serif';
@@ -102,7 +124,7 @@ export const Graph2D: FC<IGraph2DProps> = ({
             ) {
                 doubleClick();
             } else {
-                singleClick();
+                singleClick(event);
             }
             clicks = [];
         }, 250);
@@ -121,12 +143,14 @@ export const Graph2D: FC<IGraph2DProps> = ({
         }
     }, []);
 
+    const navigate = useNavigate();
+
     return (
         <div>
             <GraphOverlay
                 onZoomToFit={onZoomToFit}
                 onBack={() => {
-                    console.log('back');
+                    navigate('/courses');
                 }}
             ></GraphOverlay>
 

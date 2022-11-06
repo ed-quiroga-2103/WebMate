@@ -4,15 +4,20 @@ import Navbar from '../../components/Navbar/Navbar';
 import ScrollToTop from '../ScrollToTop';
 import Sidebar from '../../components/Sidebar';
 
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { FC, useEffect, useState } from 'react';
 import { QuizSection, QuizWrapper } from './QuizElements';
 
 interface IQuizViewProps {}
 
 export const QuizView: FC<IQuizViewProps> = (props) => {
-    const { id } = useParams();
+    const { id, subjectId } = useParams();
+
     const [quiz, setQuiz] = useState(undefined);
+
+    const [searchParams, _] = useSearchParams();
+
+    const type = searchParams.get('type');
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
@@ -22,7 +27,16 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
 
     useEffect(() => {
         const fetchQuiz = async () => {
-            const response = await api.quices.generate(id);
+            let response;
+            if (subjectId) {
+                response = await api.quices.generateSubject(id, subjectId);
+            } else {
+                if (type === 'D') {
+                    response = await api.quices.generateDiagnostic(id);
+                } else {
+                    response = await api.quices.generate(id, 'NA');
+                }
+            }
 
             setQuiz(response);
         };
@@ -55,6 +69,8 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
         );
     };
 
+    const navigate = useNavigate();
+
     const handleFinalize = () => {
         const answersRes = [];
         for (const [questionId, value] of Object.entries(answers)) {
@@ -68,7 +84,16 @@ export const QuizView: FC<IQuizViewProps> = (props) => {
             const response = await api.quices.validate(answersRes, quiz.id);
 
             setResult(response);
-            console.log(result);
+            console.log(response.percentage);
+
+            if (response.percentage < 85 && response.percentage > 75) {
+                alert('Nota adecuada para tomar un segundo diagnostico');
+                window.location.reload();
+            } else if (response.percentage > 85) {
+                alert('Aprobado');
+            } else {
+                navigate(`/courses/${id}`);
+            }
         };
 
         validate();

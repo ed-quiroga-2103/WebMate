@@ -18,7 +18,8 @@ import {
 } from './NavbarElements';
 
 const Navbar = ({ toggle, on }: { toggle: any; on: any }) => {
-    console.log(on);
+    const token = localStorage.getItem('mochi');
+
     return (
         <>
             <NavbarBigContainer>
@@ -51,9 +52,16 @@ const Navbar = ({ toggle, on }: { toggle: any; on: any }) => {
                                     Sobre Nosotros
                                 </NavLinksAbout>
                             </NavItem>
-                            <NavBtn>
-                                <Button to="/">Cerrar sesión</Button>
-                            </NavBtn>
+
+                            {token ? (
+                                <NavBtn>
+                                    <Button to="/">Cerrar Sesión</Button>
+                                </NavBtn>
+                            ) : (
+                                <NavBtn>
+                                    <Button to="/">Iniciar Sesión</Button>
+                                </NavBtn>
+                            )}
                         </NavMenu>
                     </NavbarContainer>
                 </Nav>
