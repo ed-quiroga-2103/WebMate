@@ -19,6 +19,9 @@ function Home(){
         </Link>
         <Link className="Link" to="/profile">
           Profile
+        </Link>
+        <Link className="Link" to="/login">
+          Login
         </Link></div>
     );
     

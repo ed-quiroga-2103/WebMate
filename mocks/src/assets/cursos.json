@@ -7,21 +7,21 @@
             {
                 "name": "Quiz 1",
                 "value": "10%",
-                "status": "Entregado",
+                "status": "Aprobado",
                 "date": "10/10/10",
                 "grade": "100"
             },
             {
                 "name": "Examen 1",
                 "value": "40%",
-                "status": "Entregado",
+                "status": "Aprobado",
                 "date": "10/10/10",
                 "grade": "100"
             },
             {
                 "name": "Proyecto 1",
                 "value": "50%",
-                "status": "Sin Entregar",
+                "status": "Reprobado",
                 "date": "10/11/10",
                 "grade": "0"
             }
@@ -35,35 +35,35 @@
             {
                 "name": "Quiz 1",
                 "value": "10%",
-                "status": "Entregado",
+                "status": "Aprobado",
                 "date": "10/9/10",
                 "grade": "100"
             },
             {
                 "name": "Quiz 2",
                 "value": "10%",
-                "status": "Entregado",
+                "status": "Aprobado",
                 "date": "10/10/10",
                 "grade": "100"
             },
             {
                 "name": "Examen 1",
                 "value": "30%",
-                "status": "Entregado",
+                "status": "Aprobado",
                 "date": "10/10/10",
                 "grade": "100"
             },
             {
                 "name": "Examen 2",
                 "value": "30%",
-                "status": "Sin Entregar",
+                "status": "Reprobado",
                 "date": "3/11/10",
                 "grade": "0"
             },
             {
                 "name": "Proyecto 1",
                 "value": "20%",
-                "status": "Sin Entregar",
+                "status": "Reprobado",
                 "date": "10/11/10",
                 "grade": "0"
             }
@@ -77,28 +77,28 @@
             {
                 "name": "Quiz 1",
                 "value": "10%",
-                "status": "Entregado",
+                "status": "Aprobado",
                 "date": "10/9/10",
                 "grade": "100"
             },
             {
                 "name": "Quiz 2",
                 "value": "10%",
-                "status": "Entregado",
+                "status": "Aprobado",
                 "date": "10/10/10",
                 "grade": "100"
             },
             {
                 "name": "Examen 1",
                 "value": "30%",
-                "status": "Entregado",
+                "status": "Aprobado",
                 "date": "10/10/10",
                 "grade": "50"
             },
             {
                 "name": "Proyecto 1",
                 "value": "50%",
-                "status": "Sin Entregar",
+                "status": "Reprobado",
                 "date": "10/11/10",
                 "grade": "0"
             }

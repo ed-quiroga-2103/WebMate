@@ -6,6 +6,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import Home from "./views/Home/Home";
 import Profile from "./views/Profile/Profile";
 import Register from "./views/Register/Register";
+import Login from "./views/Login/Login";
 import { MainProvider } from "./context/mainContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,6 +19,7 @@ root.render(
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

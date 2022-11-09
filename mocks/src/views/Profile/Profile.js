@@ -1,6 +1,8 @@
 import edit from "../../assets/pencil.png";
-import profilePic from "../../assets/profile.jpg"
-import cursos from "../../assets/cursos.json"
+import profilePic from "../../assets/profile.jpg";
+import cursos from "../../assets/cursos.json";
+import plus from "../../assets/add.png";
+import minus from "../../assets/minus.png";
 function Profile() {
     const base = "profile";
     //const currentUser = JSON.parse(window.localStorage.getItem("user"));
@@ -10,9 +12,23 @@ function Profile() {
         "fullName": "Josue Araya G.",
         "email": "guitarruner@estudiantec.ac.cr",
         "carnet": "2017103205",
-        "carrer": "Ingeniería en Computadores",
+        "career": "Ingeniería en Computadores",
         "currenCourse": "Matemática Discreta"
 
+    }
+
+    const showInfo = (event) => {
+        event.preventDefault();
+        event.stopPropagation()
+        let temp = event.target.nextElementSibling;
+        if (temp.style.display === "block") { 
+            temp.style.display = "none";
+            event.target.children[1].children[1].src = plus;
+        }
+        else {
+            temp.style.display = "block";
+            event.target.children[1].children[1].src = minus;
+        }
     }
     return (
         <main className={`${base}__root`}>
@@ -53,7 +69,7 @@ function Profile() {
                             </div>
                             <div className={`${base}__info__other__container`}>
                                 <p className={`${base}__info__other__container__email`}>
-                                    Carrera: {currentUser.carrer}
+                                    careera: {currentUser.career}
                                 </p>
                             </div>
                             <div className={`${base}__info__other__container`}>
@@ -71,11 +87,20 @@ function Profile() {
                     <div className={`${base}__courses__wrapper`}>
                         {cursos.map((course, i) => {
                             return (<>
-                                <div key={i} className={`${base}__courses__wrapper__course`}>
+                                <div key={i} className={`${base}__courses__wrapper__course`} onClick={event => { showInfo(event) }}>
                                     <p className={`${base}__courses__wrapper__course__field`} >{course.name}</p>
-                                    <p className={`${base}__courses__wrapper__course__field`} >{course.grade}</p>
+                                    <div className={`${base}__courses__wrapper__course__container`}>
+                                        <p className={`${base}__courses__wrapper__course__field`} >{course.grade}</p>
+                                        <img
+                                            src={plus}
+                                            className={`${base}__courses__wrapper__course__img`}
+                                            alt="Toggle field visibility"
+                                        />
+                                    </div>
+
                                 </div>
-                                <>
+
+                                <div className={`${base}__courses__wrapper__container`} >
                                     {course.fields.map((field, j) => {
                                         return (
                                             <>
@@ -90,7 +115,7 @@ function Profile() {
                                             </>
                                         )
                                     })}
-                                </>
+                                </div>
                             </>
                             )
                         })}

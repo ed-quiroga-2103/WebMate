@@ -280,7 +280,7 @@ function Register() {
         </div>
       </div>
       <div className={`${base}__login`}>
-        <Link className={`${base}__login__link`} to="/">
+        <Link className={`${base}__login__link`} to="/login">
           ¿Ya tenés una cuenta?
         </Link>
       </div>
