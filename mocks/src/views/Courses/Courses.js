@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
-function Home(){
+function Courses(){
     const [size, setSize] = useState(0);
 
 
@@ -31,12 +31,9 @@ function Home(){
         </Link>
         <Link className="Link" to="/landing">
           Landing
-        </Link>
-        <Link className="Link" to="/quiz">
-          Quiz
         </Link></div>
     );
     
 }
 
-export default Home;
+export default Courses;

@@ -1,0 +1,125 @@
+.quiz{
+  &__root {
+    @include root;
+    background-color: $second-color;
+    height: 100vh;
+    color: $main-color;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: block;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    @media (max-width: $mobile) {
+      height: 100vh;
+    }
+  }
+
+  &__wrapper {
+    min-width: 17.75rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 100%;
+
+    @media (min-width: $mobile) {
+      height: 95%;
+      margin-top: 2.5%;
+      min-height: 47rem;
+      align-items: center;
+      width: 95%;
+    }
+  }
+  &__header{
+    width: 100%;
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    border: 0.03rem solid $main-color;
+    &__title{
+      width: 90%;
+      text-align: center;
+    }
+  }
+  &__question{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height:30%;
+    border-radius: 2rem;
+    border: 0.03rem solid $main-color;
+
+    &__wrapper{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__title{
+      width: 33%;
+      margin-left: 33%;
+      text-align: center;
+    }
+    &__progressBar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      height: 100%;
+      width: 33%;
+      &__bar {
+        width: 60%;
+        height: 20%;
+        border: 0.03rem solid $main-color;
+        border-radius: 0.5rem;
+        &__progress {
+          border-radius: 0.5rem;
+          background:red;
+          height: 99%;
+          width: 0%;
+        }
+      }
+    }
+    
+    
+    &__image{
+      width: 90%;
+      margin-bottom: 1rem;
+    }
+  }
+  &__options{
+    width: 100%;
+    height:30%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    border: 0.03rem solid $main-color;
+    &__container{
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin-bottom: 0.5rem;
+      &__image{
+        width: 75%;
+      }
+      
+    }
+
+  }
+  &__buttons{
+    width: 100%;
+    height:10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    border: 0.03rem solid $main-color;
+  }
+}

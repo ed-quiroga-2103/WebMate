@@ -1,0 +1,29 @@
+ {
+        "name": "Quiz 1: La materia de las cosas",
+        "cheatsheet": ["A","B","C"],
+        "totalPoints":"6",
+        "questions": [
+            {
+                "question": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043840/Questions/preguntaMock_uqyvxs.png",
+                "value": "2",
+                "option1": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043839/Questions/respuesta_cdyqwb.png",
+                "option2": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043839/Questions/respuesta_cdyqwb.png",
+                "option3": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043839/Questions/respuesta_cdyqwb.png",
+                "option4":"https://res.cloudinary.com/daidw64zz/image/upload/v1676043839/Questions/respuesta_cdyqwb.png"
+            },
+            {
+                "question": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043840/Questions/preguntaMock_uqyvxs.png",
+                "value": "3",
+                "option1": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043839/Questions/respuesta_cdyqwb.png",
+                "option2": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043839/Questions/respuesta_cdyqwb.png",
+                "option3": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043839/Questions/respuesta_cdyqwb.png",
+                "option4":"https://res.cloudinary.com/daidw64zz/image/upload/v1676043839/Questions/respuesta_cdyqwb.png"
+            },
+            {
+                "question": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043840/Questions/preguntaMock_uqyvxs.png",
+                "value": "1",
+                "option1": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043839/Questions/respuesta_cdyqwb.png",
+                "option2": "https://res.cloudinary.com/daidw64zz/image/upload/v1676043839/Questions/respuesta_cdyqwb.png"
+             }
+        ]
+    }

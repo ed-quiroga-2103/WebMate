@@ -7,6 +7,10 @@ import Home from "./views/Home/Home";
 import Profile from "./views/Profile/Profile";
 import Register from "./views/Register/Register";
 import Login from "./views/Login/Login";
+import Courses from "./views/Courses/Courses";
+import About from "./views/About/About";
+import Landing from "./views/Landing/Landing";
+import Quiz from "./views/Quiz/Quiz";
 import { MainProvider } from "./context/mainContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -20,6 +24,10 @@ root.render(
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/landing" element={<Landing />} />
+          <Route path="/quiz" element={<Quiz />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

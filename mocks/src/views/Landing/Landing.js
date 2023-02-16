@@ -31,9 +31,6 @@ function Home(){
         </Link>
         <Link className="Link" to="/landing">
           Landing
-        </Link>
-        <Link className="Link" to="/quiz">
-          Quiz
         </Link></div>
     );
     
