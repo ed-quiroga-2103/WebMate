@@ -14,9 +14,7 @@ function Quiz(){
   const bar = useRef();
 
   const checkIfMarked = (i) => {
-    console.log(i)
     if(answers[i]!==undefined){
-      console.log(answers[i])
       if(answers[i]==="A") opt1.current.checked=true;
       if(answers[i]==="B") opt2.current.checked=true;
       if(answers[i]==="C") opt3.current.checked=true;
@@ -25,8 +23,8 @@ function Quiz(){
     else{
       opt1.current.checked=false;
       opt2.current.checked=false;
-      opt3.current.checked=false;
-      opt4.current.checked=false;
+      if(opt3.current!==null) opt3.current.checked=false;
+      if(opt4.current!==null) opt4.current.checked=false;
     }
   }
   const answerChecked = () =>{
@@ -72,19 +70,18 @@ function Quiz(){
     if(flag) {
       bar.current.style.width=(100/quiz.questions.length *(index+1)).toFixed(2)+"%";
       setIndex(index+1);
-      checkIfMarked(index+1);
       }
   };
   const goBack = () => {
     bar.current.style.width=(100/quiz.questions.length *(index-1)).toFixed(2)+"%";
     setIndex(index-1);
-    checkIfMarked(index-1);
   };
 
   window.onresize = () => { setSize(window.innerWidth) };
   useEffect(() => {
-    setSize(window.innerWidth)
-  }, [])
+    setSize(window.innerWidth);
+    checkIfMarked(index)
+  }, [index])
 
   return (
     <div className={`${base}__root`}>
@@ -94,7 +91,7 @@ function Quiz(){
           </div>
           <div className={`${base}__question`}>
             <div className={`${base}__question__wrapper`}>
-            <h2 className={`${base}__question__title`}>Pregunta {index+1}</h2>
+            <h2 className={`${base}__question__title`}>Pregunta {index+1} - {quiz.questions[index].value}pts</h2>
             <div className={`${base}__question__progressBar`}>
               <div className={`${base}__question__progressBar__bar`}>
                 <div ref={bar} className={`${base}__question__progressBar__bar__progress`}></div>
