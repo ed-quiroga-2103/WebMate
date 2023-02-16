@@ -13,6 +13,22 @@ function Quiz(){
   const opt4 = useRef();
   const bar = useRef();
 
+  const checkIfMarked = (i) => {
+    console.log(i)
+    if(answers[i]!==undefined){
+      console.log(answers[i])
+      if(answers[i]==="A") opt1.current.checked=true;
+      if(answers[i]==="B") opt2.current.checked=true;
+      if(answers[i]==="C") opt3.current.checked=true;
+      if(answers[i]==="D") opt4.current.checked=true;
+    }
+    else{
+      opt1.current.checked=false;
+      opt2.current.checked=false;
+      opt3.current.checked=false;
+      opt4.current.checked=false;
+    }
+  }
   const answerChecked = () =>{
     if(opt1.current.checked){
       answers[index]="A";
@@ -55,12 +71,14 @@ function Quiz(){
     const flag= answerChecked()
     if(flag) {
       bar.current.style.width=(100/quiz.questions.length *(index+1)).toFixed(2)+"%";
-      setIndex(index+1)
+      setIndex(index+1);
+      checkIfMarked(index+1);
       }
   };
   const goBack = () => {
     bar.current.style.width=(100/quiz.questions.length *(index-1)).toFixed(2)+"%";
     setIndex(index-1);
+    checkIfMarked(index-1);
   };
 
   window.onresize = () => { setSize(window.innerWidth) };
