@@ -1,8 +1,9 @@
 import {useEffect, useState, useRef} from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import quiz from "../../assets/quiz1.json"
 function Quiz(){
   const base = "quiz";
+  const navigate = useNavigate();
   const [size, setSize] = useState(0);
   const [index, setIndex] = useState(0);
   const [flag,setFlag] = useState(false)
@@ -64,6 +65,7 @@ function Quiz(){
     if(flag) {
       setFlag(false)}
     console.log(answers);
+    navigate("/");
   };
   const goNext = () => {
     const flag= answerChecked()
@@ -93,6 +95,7 @@ function Quiz(){
             <div className={`${base}__question__wrapper`}>
             <h2 className={`${base}__question__title`}>Pregunta {index+1} - {quiz.questions[index].value}pts</h2>
             <div className={`${base}__question__progressBar`}>
+              <p>Progress:{(100/quiz.questions.length *(index))+"%"}</p>
               <div className={`${base}__question__progressBar__bar`}>
                 <div ref={bar} className={`${base}__question__progressBar__bar__progress`}></div>
               </div>
@@ -128,9 +131,9 @@ function Quiz(){
             
           </div>
           <div className={`${base}__buttons`}>
-            {index===0 ? null : <button onClick={()=>{goBack()}}>Anterior</button>}
+            {index===0 ? null : <button className={`${base}__buttons__button`} onClick={()=>{goBack()}}>Anterior</button>}
             
-            {index===quiz.questions.length-1 ? <button onClick={()=>{finish()}}>Finalizar</button> : <button onClick={()=>{goNext()}}>Siguiente</button>}
+            {index===quiz.questions.length-1 ? <button className={`${base}__buttons__button`} onClick={()=>{finish()}}>Finalizar</button> : <button className={`${base}__buttons__button`} onClick={()=>{goNext()}}>Siguiente</button>}
           </div>
       </div>
     </div>
