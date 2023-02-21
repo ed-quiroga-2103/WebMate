@@ -1,0 +1,29 @@
+.course {
+  &__root {
+    @include root;
+    background-color: $second-color;
+    
+    color: $main-color;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: block;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    @media (max-width: $mobile) {
+      height: 100vh;
+    }
+  }
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    overflow-x: hidden;
+  }
+}

@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Mate general",
+        "teacher": "Michael Barrantes",
+        "grade": "50",
+        "fields": [
+            {
+                "name": "Quiz 1",
+                "value": "10%",
+                "status": "Aprobado",
+                "date": "10/10/10",
+                "grade": "100"
+            },
+            {
+                "name": "Examen 1",
+                "value": "40%",
+                "status": "Aprobado",
+                "date": "10/10/10",
+                "grade": "100"
+            },
+            {
+                "name": "Proyecto 1",
+                "value": "50%",
+                "status": "Reprobado",
+                "date": "10/11/10",
+                "grade": "0"
+            }
+        ]
+    },
+    {
+        "name": "Estadística",
+        "teacher": "Daniel Chacón",
+        "grade": "80",
+        "fields": [
+            {
+                "name": "Quiz 1",
+                "value": "10%",
+                "status": "Aprobado",
+                "date": "10/9/10",
+                "grade": "100"
+            },
+            {
+                "name": "Quiz 2",
+                "value": "10%",
+                "status": "Aprobado",
+                "date": "10/10/10",
+                "grade": "100"
+            },
+            {
+                "name": "Examen 1",
+                "value": "30%",
+                "status": "Aprobado",
+                "date": "10/10/10",
+                "grade": "100"
+            },
+            {
+                "name": "Examen 2",
+                "value": "30%",
+                "status": "Reprobado",
+                "date": "3/11/10",
+                "grade": "0"
+            },
+            {
+                "name": "Proyecto 1",
+                "value": "20%",
+                "status": "Reprobado",
+                "date": "10/11/10",
+                "grade": "0"
+            }
+        ]
+    },
+    {
+        "name": "Mate Discreta",
+        "teacher": "Allen Guevara",
+        "grade": "35",
+        "fields": [
+            {
+                "name": "Quiz 1",
+                "value": "10%",
+                "status": "Aprobado",
+                "date": "10/9/10",
+                "grade": "100"
+            },
+            {
+                "name": "Quiz 2",
+                "value": "10%",
+                "status": "Aprobado",
+                "date": "10/10/10",
+                "grade": "100"
+            },
+            {
+                "name": "Examen 1",
+                "value": "30%",
+                "status": "Aprobado",
+                "date": "10/10/10",
+                "grade": "50"
+            },
+            {
+                "name": "Proyecto 1",
+                "value": "50%",
+                "status": "Reprobado",
+                "date": "10/11/10",
+                "grade": "0"
+            }
+        ]
+    }
+]

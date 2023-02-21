@@ -1,0 +1,22 @@
+[
+  {
+    "name":"Matemática General",
+    "code":"MA101"
+  },
+  {
+    "name":"Matemática Discreta",
+    "code":"MA102"
+  },
+  {
+    "name":"Cálculo Diferencial",
+    "code":"MA201"
+  },
+  {
+    "name":"Probabilidad y Estadística",
+    "code":"MA202"
+  },
+  {
+    "name":"Algebra Lineal",
+    "code":"MA301"
+  }
+]
