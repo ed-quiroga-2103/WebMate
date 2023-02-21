@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Roboto';
+    background: #f9f9f9;
+}
+
+a {
+    color: inherit;
+}
+
+.cards-wrapper {
+    display: grid;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    padding: 4rem;
+    margin: 0 auto;
+    width: max-content;
+}
+.card {
+    --bg-filter-opacity: 0.5;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    border: 7px solid #f9f9f9;
+    border-radius: 1em;
+    box-shadow: 0 0 5em -1em black;
+    box-sizing: border-box;
+    color: #f9f9f9;
+    display: flex;
+    height: 16em;
+    font-family: 'Heebo';
+    font-size: 1.5em;
+    padding: 1em;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: all, var(--transition-time);
+    width: 15em;
+}
+
+.card:hover {
+    transform: rotate(0);
+    border: 7px solid #ffb703;
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+.card p {
+    font-size: 0.75em;
+    font-family: 'Open Sans';
+    margin-top: 0.5em;
+    line-height: 2em;
+}
+
+.card .tags {
+    display: flex;
+}
+.card .div1 {
+    height: 100%;
+    justify-content: space-between;
+    padding: auto;
+}
+.card .tags .tag {
+    background: #1ea2a4;
+    border-radius: 0.3rem;
+    font-size: 0.75em;
+    line-height: 1.5em;
+    margin-right: 0.5em;
+    padding: 0 0.5em;
+    transition: all, var(--transition-time);
+}
+
+.card:hover .tags .tag {
+    color: #023047;
+}
+
+.card:before,
+.card:after {
+    content: '';
+    transform: scale(0);
+    transform-origin: top left;
+    border-radius: 50%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: -5;
+    transition: all, var(--transition-time);
+    transition-timing-function: ease-in-out;
+}
+
+.card:before {
+    width: 250%;
+    height: 250%;
+}
+
+.card:after {
+    background: #f9f9f9;
+    width: 200%;
+    height: 200%;
+}
+
+.card:hover {
+    color: #023047;
+    transform: scale(1.02);
+}
+
+.card:hover:before,
+.card:hover:after {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        max-width: calc(100vw - 4rem);
+    }
+}

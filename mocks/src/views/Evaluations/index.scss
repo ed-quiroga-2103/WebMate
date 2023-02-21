@@ -1,0 +1,146 @@
+.quiz-section {
+    background-color: #1ea2a4;
+    border-radius: 15px;
+    box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    height: min-content;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 75vw;
+}
+
+.score-section {
+    display: flex;
+    font-size: 200%;
+    align-items: center;
+}
+
+.containerQuestion {
+    width: 100%;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+    grid-template-areas:
+        'c a a c'
+        'c b b c'
+        'c b b c'
+        'c b b c'
+        'c b b c';
+}
+
+.question-section {
+    display: grid;
+    grid-area: a;
+    justify-content: center;
+    text-align: center;
+}
+
+.question-count {
+    color: #f9f9f9;
+    font-size: 150%;
+    margin-bottom: 20px;
+}
+
+.question-count span {
+    color: #f9f9f9;
+    font-size: 210%;
+}
+
+.question-text {
+    font-size: 210%;
+    margin-bottom: 12px;
+}
+
+.answer-section {
+    display: grid;
+    flex-direction: column;
+    grid-area: b;
+    justify-content: center;
+    width: 100%;
+}
+
+.buttonOption {
+    align-items: center;
+    background-color: #023047;
+    border: 2px solid #f9f9f9;
+    border-radius: 15px;
+    color: #f9f9f9;
+    cursor: pointer;
+    display: flex;
+    font-size: 150%;
+    justify-content: flex-start;
+    padding: 5px;
+    text-align: center;
+    width: 60vw;
+}
+
+.buttonOption:hover {
+    background-color: #ffb703;
+}
+
+.buttonOption:focus {
+    outline: none;
+}
+
+.buttonOption svg {
+    margin-right: 5px;
+}
+
+.mathDisplay {
+    margin: auto;
+    text-align: center;
+    pointer-events: none;
+}
+
+.buttonBack {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+}
+
+.buttonSelect {
+    align-items: center;
+    background-color: #1ea2a4;
+    border: none;
+    border-radius: 30px;
+    color: #f9f9f9;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    height: 3vw;
+    justify-content: center;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 20vw;
+    white-space: nowrap;
+    @media screen and (max-width: 647px) {
+        height: 9vw;
+        width: 38vw;
+    }
+}
+.buttonSelect:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: #ffb703;
+}
+
+.a {
+    text-decoration: none;
+}
+
+.buttonsWrapper {
+    margin-top: 0;
+    padding: 24px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin: auto;
+}
