@@ -1,0 +1,45 @@
+.graph-resource-modal {
+    &.header {
+        h4 {
+            margin: 0 0 0 0;
+            text-decoration: underline;
+        }
+    }
+
+    &.eval-button {
+        background-color: #023047; /* Green */
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    &.eval-button:active {
+        background-color: #022333; /* Green */
+        color: white;
+    }
+
+    &.container {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        &_resource {
+            margin-left: 5px;
+        }
+    }
+
+    &.button-container {
+        margin-top: 25px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+}

@@ -1,96 +1,95 @@
 .courses {
-  &__root {
-    @include root;
-    background-color: $second-color;
-    
-    color: $main-color;
-    overflow-x: auto;
-    overflow-y: auto;
-    display: block;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    
-    @media (max-width: $mobile) {
-      height: 100vh;
-    }
-  }
+    &__root {
+        @include root;
+        background-color: $second-color;
 
-  &__wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
-    overflow-x: hidden;
-    &__title{
-      height: 10%;
-      width: 90%;
-      color: $main-color;
-      font-size: 2.5rem;
-      text-align: center;
-    }
-    &__container{
-      min-height: 80%;
-      width: 100%;
-      overflow-y: auto;
-      justify-content: center;
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-  }
+        color: $main-color;
+        overflow-x: auto;
+        overflow-y: auto;
+        display: block;
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
-  &__card{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: $main-color;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 5%;
-    --bg-filter-opacity: 0.5;
-    border: 0.5rem solid $second-color;
-    border-radius: 1rem;
-    box-shadow: 0 0 2rem -1rem $main-color;
-    box-sizing: border-box;
-    height: 45vh;
-    text-decoration: none;
-    width: 25vw;
-    transition: all ease-in-out 250ms;
-    &:hover {
-      border: 0.5rem solid $main-color;
-      transform: scale(1.05);
+        @media (max-width: $mobile) {
+            height: 100vh;
+        }
     }
-  
 
-    &__name{
-      width: 90%;
-      font-size: 2rem;
-      height: 20%;
-    }
-  
-    &__container {
-        height: 70%;
-        width: 90%;
+    &__wrapper {
+        align-items: center;
         display: flex;
-        align-items: flex-end;
-        justify-content: right;
-  
-      &__tag {
-          background: $main-color;
-          color: $second-color;
-          border-radius: 0.3rem;
-          font-size: 1rem;
-          width: 50%;
-          text-align: center;
-      } 
-  }
-  
-  }
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        overflow-x: hidden;
+        &__title {
+            height: 10%;
+            width: 90%;
+            color: $main-color;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        &__container {
+            min-height: 80%;
+            width: 100%;
+            overflow-y: auto;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            border: 2px solid #2b2b2b;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: $main-color;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 5%;
+        --bg-filter-opacity: 0.5;
+        border: 0.5rem solid $second-color;
+        border-radius: 1rem;
+        box-shadow: 0 0 2rem -1rem $main-color;
+        box-sizing: border-box;
+        height: 45vh;
+        text-decoration: none;
+        width: 25vw;
+        transition: all ease-in-out 250ms;
+        &:hover {
+            border: 0.5rem solid $main-color;
+            transform: scale(1.05);
+        }
+
+        &__name {
+            width: 90%;
+            font-size: 2rem;
+            height: 20%;
+        }
+
+        &__container {
+            height: 70%;
+            width: 90%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: right;
+
+            &__tag {
+                background: $main-color;
+                color: $second-color;
+                border-radius: 0.3rem;
+                font-size: 1rem;
+                width: 50%;
+                text-align: center;
+            }
+        }
+    }
 }
