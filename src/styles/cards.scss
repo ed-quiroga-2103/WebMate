@@ -1,0 +1,13 @@
+@mixin card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: $main-color;
+    --bg-filter-opacity: 0.5;
+    border: 0.5rem solid $second-color;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem -1rem $main-color;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all ease-in-out 250ms;
+}

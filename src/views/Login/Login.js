@@ -58,7 +58,7 @@ function Login() {
               setMessage({ status: true, message: "Succesful" });
               setTimeout(() => {
                 window.localStorage.setItem("user", JSON.stringify(res.user));
-                navigate("/home");
+                navigate("/landing");
               }, 1500);
             })
             .catch((res) => {
