@@ -13,6 +13,23 @@ import Landing from './views/Landing/Landing';
 import Quiz from './views/Quiz/Quiz';
 import { MainProvider } from './context/mainContext';
 import { GraphView } from './views/Graph';
+import { QuizLatex } from './views/QuizLatex/QuizLatex';
+
+import Navbar from './components/Navbar/Navbar';
+import axios from 'axios';
+
+axios.interceptors.response.use(
+    function (response) {
+        return response;
+    },
+    function (error) {
+        if (error.response.status === 403) {
+            window.location.replace('/login');
+        }
+
+        return Promise.reject(error);
+    }
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +37,7 @@ root.render(
         <MainProvider>
             <BrowserRouter>
                 <ScrollToTop />
-                <div className="navbar">...</div>
+                <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/register" element={<Register />} />
@@ -31,6 +48,7 @@ root.render(
                     <Route path="/about" element={<About />} />
                     <Route path="/landing" element={<Landing />} />
                     <Route path="/quiz" element={<Quiz />} />
+                    <Route path="/quizLatex" element={<QuizLatex />} />
                     <Route path="/graph" element={<GraphView />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
