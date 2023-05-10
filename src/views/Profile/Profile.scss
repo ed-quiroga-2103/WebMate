@@ -20,14 +20,11 @@
     min-width: 17.75rem;
     display: flex;
     margin: auto;
-    height: 100%;
-
+    min-height: 100%;
     flex-direction: column;
     justify-content: space-between;
-
+    
     @media (min-width: $mobile) {
-      height: 90%;
-      min-height: 47rem;
       align-items: center;
       margin-top: 5%;
       width: 90%;
@@ -77,6 +74,9 @@
         width: 100%;
         font-size: 2rem;
         margin-bottom: 0;
+        @media (max-width: $mobile) {
+          margin-top: 3rem;
+        }
       }
 
       &__id {
@@ -195,7 +195,7 @@
       color: $main-color;
       flex-direction: column;
       text-align: center;
-
+      
       &__course {
         width: 90%;
         margin-left: 10%;
@@ -205,6 +205,9 @@
         justify-content: space-between;
         border-bottom: 0.003rem solid $main-color;
         transition: background-color ease-in-out 250ms;
+        @media (max-width: $mobile) {
+          margin-bottom: 1rem;
+        }
         &__container{
           margin-right:1rem;
           display: flex;
@@ -228,6 +231,7 @@
       &__container{
         display: none;
         animation: slide-down forwards normal 500ms;
+        
       }
       &__field {
         margin-top: 0.3rem;
@@ -247,7 +251,9 @@
         display: flex;
 
         border-bottom: 0.003rem solid $main-color;
-
+        @media (max-width: $mobile) {
+          margin-bottom: 1rem;
+        }
         &__field {
           margin-right: 1rem;
         }

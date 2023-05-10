@@ -25,6 +25,10 @@
     margin-right: auto;
     margin-left: auto;
     overflow-x: hidden;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      height: min-content;
+    }
     &__title{
       height: 10%;
       width: 90%;
@@ -63,6 +67,12 @@
     text-decoration: none;
     width: 25vw;
     transition: all ease-in-out 250ms;
+    @media (max-width: $mobile) {
+      width: 90%;
+      height: 20vh;
+      margin-right: 5%;
+      margin-left: 5%;
+    }
     &:hover {
       border: 0.5rem solid $main-color;
       transform: scale(1.05);
