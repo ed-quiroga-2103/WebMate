@@ -20,7 +20,8 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    margin-top: 6rem;
+    height: calc(100vh - 6rem);
     justify-content: center;
     margin-right: auto;
     margin-left: auto;

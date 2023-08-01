@@ -1,6 +1,5 @@
 import {React} from "react";
 import { useNavigate } from "react-router-dom";
-import logIcon from "../../assets/logout.png"
 import average from "../../assets/average.json"
 import next from "../../assets/next.json"
 import lastGrades from "../../assets/lastGrades.json"
@@ -68,13 +67,7 @@ function Landing(){
     return (
       <main className={`${base}__root`}>
       <div className={`${base}__wrapper`}>
-        <div className={`${base}__wrapper__header`}>
-          <h1 className={`${base}__wrapper__header__title`}>Web Mate</h1>
-          <div className={`${base}__wrapper__header__logout`}>
-            <img src={logIcon} alt={"Log out"} onClick={(event)=>goTo(event,"login")} className={`${base}__wrapper__header__logout__img`}/>
-          </div>
-
-        </div>
+        
         <div className={`${base}__wrapper__container`}>
           <div className={`${base}__wrapper__container__firstRow`}>
             <div className={`${base}__singleCard`}>

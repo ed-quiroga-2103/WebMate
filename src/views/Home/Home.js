@@ -1,15 +1,6 @@
-import {React,useEffect, useState} from "react";
+import {React} from "react";
 import { Link } from "react-router-dom";
 function Home(){
-    const [size, setSize] = useState(0);
-
-
-    window.onresize = () => { setSize(window.innerWidth) };
-
-    useEffect(() => {
-        setSize(window.innerWidth)
-    }, [])
-
 
 
     return (

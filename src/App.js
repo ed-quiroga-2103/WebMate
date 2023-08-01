@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import useBreakPoint from "./hooks/useBreakPoint";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [size, setSize] = useState(0);
@@ -16,14 +17,14 @@ function App() {
   if (device === "mobile") {
     return (
       <>
-        <p>mobile</p>
+        <Navbar />
         <Outlet />
       </>
     );
   } else {
     return (
       <>
-      <p>desktop</p>
+        <Navbar />
         <Outlet />
       </>
     );

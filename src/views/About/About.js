@@ -1,39 +1,33 @@
-import {React,useEffect, useState} from "react";
+import {React} from "react";
 function About(){
-  const base = "login";
-  const [size, setSize] = useState(0);
-  window.onresize = () => { setSize(window.innerWidth) };
-  useEffect(() => {
-    setSize(window.innerWidth)
-  }, [])
-  
+  const base = "about";
   return (
     <div className={`${base}__root`}>
-      <div className={`${base}__wrapper`}>
-        <div className={`${base}__body`}>
-          <div className={`${base}__sidediv`}>
-            <div className={`${base}__sidediv__container`}>
-              
-            </div>
+      <div className={`${base}__body`}>
+          <div className={`${base}__body__titleContainer`}>
+            <h1 className={`${base}__body__titleContainer__title`}>Mate App</h1>
           </div>
-          <div className={`${base}__main`}>
-            <div className={`${base}__main__section`}>
-
+          <div className={`${base}__body__info`}>
+            <div className={`${base}__body__info__col1`}>
+              <p className={`${base}__body__info__col1__mainText`}>
+                Mate App, es una aplicacion que te permitira consultar de forma mas sencilla la materia de tus cursos.
+                De una forma bastante accesible podras acceder a practicas, quices, lecturas y tareas, asi como podras tambien
+                realizar tus evaluaciones en un ambiente especial para los cursos de matematica. Esta iniciativa fue dada por 
+                el profesor XX y realizada por estudiantes del ITCR de forma que conocemos de primera mano las necesidades principales
+                para poder llevar tu curso de la mejor manera.
+                Mate App, es una aplicacion que te permitira consultar de forma mas sencilla la materia de tus cursos.
+                De una forma bastante accesible podras acceder a practicas, quices, lecturas y tareas, asi como podras tambien
+                realizar tus evaluaciones en un ambiente especial para los cursos de matematica. Esta iniciativa fue dada por 
+                el profesor XX y realizada por estudiantes del ITCR de forma que conocemos de primera mano las necesidades principales
+                para poder llevar tu curso de la mejor manera.
+                
+              </p>
             </div>
-            <div className={`${base}__main__section`}>
-              <div className={`${base}__main__section__a`}>
-              
-              </div>
-              <div className={`${base}__main__section__b`}>
-              
-              </div>
+            <div className={`${base}__body__info__col2`}>
+              <h2 className={`${base}__body__info__col2__subtitle`}>Dudas o consultas? Escribenos</h2>
+              <p className={`${base}__body__info__col2__info`}>Escuela de Matemtica ITCR</p>
+              <p className={`${base}__body__info__col2__info`}>Tel: 86263988</p>
             </div>
-          </div>
-        </div>
-        <div className={`${base}__footer`}>
-          <div className={`${base}__footer__container`}>
-
-          </div>
         </div>
       </div>
     </div>
