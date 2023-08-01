@@ -1,0 +1,60 @@
+.record {
+  &__root {
+    @include root;
+    background-color: $second-color;
+    
+    color: $main-color;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: block;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    @media (max-width: $mobile) {
+      height: 100vh;
+    }
+  }
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    overflow-x: hidden;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      height: min-content;
+    }
+    &__title{
+      height: 10%;
+      width: 90%;
+      color: $main-color;
+      font-size: 2.75rem;
+      text-align: center;
+    }
+    &__list{
+      width: 90%;
+      height: 90%;
+    }
+  }
+
+  &__table{
+    width: 90%;
+    height: 80%;
+    overflow: scroll;
+    &__row{
+      width: 95%;
+      height: 8%;
+    }
+    &__element{
+      text-align: center;
+    }
+
+  }
+  
+}
+

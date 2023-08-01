@@ -155,7 +155,7 @@
       height: 30%;
       margin-bottom: 2rem;
       &__title{
-        font-size: 2rem;
+        font-size: 1.5rem;
         @media (max-width: $mobile) {
           font-size: 1.5rem;
         }
@@ -210,7 +210,7 @@
     margin-bottom: 10%;
     margin-left: 5%;
     margin-right: 5%;
-    height: 80%;
+    height: 85%;
     width: 60%;
     @media (max-width: $mobile) {
       width: 95%;
@@ -227,7 +227,7 @@
     margin-top: 10%;
     margin-bottom: 10%;
     margin-right: 5%;
-    height: 80%;
+    height: 85%;
     width: 25%;
     @media (max-width: $mobile) {
       width: 95%;

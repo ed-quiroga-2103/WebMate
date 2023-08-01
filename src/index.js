@@ -12,9 +12,12 @@ import Course from "./views/Course/Course";
 import About from "./views/About/About";
 import Landing from "./views/Landing/Landing";
 import Quiz from "./views/Quiz/Quiz";
+import Admin from "./views/Admin/Admin";
+import Record from "./views/Record/Record";
+import QuizMaker from "./views/QuizMaker/QuizMaker";
+
 import { MainProvider } from "./context/mainContext";
 import App from "./App";
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,11 +26,12 @@ root.render(
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/record" element={<Record />} />
+        <Route path="/quizMaker" element={<QuizMaker />} />
           <Route path="/" element={<App />}>
             <Route path="/profile" element={<Profile />} />
             <Route path="/courses" element={<Courses />} />

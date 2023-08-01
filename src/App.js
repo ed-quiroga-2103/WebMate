@@ -17,8 +17,6 @@ function App() {
   if (device === "mobile") {
     return (
       <>
-        <Navbar />
-        <Outlet />
       </>
     );
   } else {

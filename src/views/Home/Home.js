@@ -25,6 +25,15 @@ function Home(){
         </Link>
         <Link className="Link" to="/quiz">
           Quiz
+        </Link>
+        <Link className="Link" to="/admin">
+          Admin
+        </Link>
+        <Link className="Link" to="/quizMaker">
+          QuizMaker
+        </Link>
+        <Link className="Link" to="/record">
+          Record
         </Link></div>
     );
     
