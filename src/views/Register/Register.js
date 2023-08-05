@@ -89,7 +89,7 @@ function Register() {
             setTimeout(() => {
               setMessage({ status: false, message: "" });
               setLoader(false);
-              navigate("/create")
+              navigate("/register")
             }, 1500);
           }
         })
@@ -98,7 +98,7 @@ function Register() {
           setTimeout(() => {
             setMessage({ status: false, message: "" });
             setLoader(false);
-            navigate("/create")
+            navigate("/register")
           }, 1500);
         });
     }

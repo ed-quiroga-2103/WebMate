@@ -20,70 +20,32 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 6rem;
-    height: calc(100vh - 6rem);
+    height: 100vh;
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
-    overflow-x: hidden;
-    @media (max-width: $mobile) {
-      flex-direction: column;
-      height: min-content;
-    }
-    &__title{
+    overflow: hidden;
+    &__header{
+
       height: 10%;
       width: 90%;
-      color: $main-color;
-      font-size: 2.75rem;
-      text-align: center;
-    }
-    &__container{
-      min-height: 80%;
-      width: 100%;
-      overflow-y: auto;
-      justify-content: center;
       display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-      &::-webkit-scrollbar {
-        display: none;
+      align-items: center;
+      &__title{
+        margin-left: 30%;
+        width: 40%;
+        color: $main-color;
+        font-size: 2.75rem;
+        text-align: center;
       }
-    }
-  }
 
-  &__card{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: $main-color;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 5%;
-    --bg-filter-opacity: 0.5;
-    border: 0.5rem solid $second-color;
-    border-radius: 1rem;
-    box-shadow: 0 0 2rem -1rem $main-color;
-    box-sizing: border-box;
-    height: 45vh;
-    text-decoration: none;
-    width: 25vw;
-    transition: all ease-in-out 250ms;
-    @media (max-width: $mobile) {
-      width: 90%;
-      height: 20vh;
-      margin-right: 5%;
-      margin-left: 5%;
-    }
-    &:hover {
-      border: 0.5rem solid $main-color;
-      transform: scale(1.05);
-    }
-  
+      &__back{
+        margin-left: 20%;
+        display: flex;
+        width: 10%;
+        height: 40%;
+      }
 
-    &__name{
-      width: 90%;
-      font-size: 1.5rem;
-      height: 20%;
     }
   
   
