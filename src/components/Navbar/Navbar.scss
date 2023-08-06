@@ -21,6 +21,7 @@
     .profile {
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
 
     .nav-button {
@@ -45,5 +46,10 @@
             padding: 0 0 0 0;
             margin: 5px 0 5px 0;
         }
+    }
+
+    .logout-button {
+        width: fit-content;
+        height: fit-content;
     }
 }

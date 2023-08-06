@@ -14,6 +14,7 @@ import Quiz from './views/Quiz/Quiz';
 import { MainProvider } from './context/mainContext';
 import { GraphView } from './views/Graph';
 import { QuizLatex } from './views/QuizLatex/QuizLatex';
+import QuestionsTest from './views/QuestionsTest/QuestionsTest';
 
 import Navbar from './components/Navbar/Navbar';
 import axios from 'axios';
@@ -39,16 +40,17 @@ root.render(
                 <ScrollToTop />
                 <Navbar />
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    {/* <Route path="/" element={<Home />} /> */}
                     <Route path="/register" element={<Register />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/courses" element={<Courses />} />
                     <Route path="/course" element={<GraphView />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/landing" element={<Landing />} />
+                    <Route path="/" element={<Landing />} />
                     <Route path="/quiz" element={<Quiz />} />
                     <Route path="/quizLatex" element={<QuizLatex />} />
+                    <Route path="/questionsTest" element={<QuestionsTest />} />
                     <Route path="/graph" element={<GraphView />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>

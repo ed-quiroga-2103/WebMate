@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as Home } from '../../assets/home.svg';
+import logIcon from '../../assets/logout.png';
 
 const Navbar = ({ isVisible }) => {
     const navigate = useNavigate();
@@ -54,8 +55,14 @@ const Navbar = ({ isVisible }) => {
                     className="nav-button"
                     onClick={() => navigate('/profile')}
                 >
-                    <h4>Profile</h4>
+                    <h4>Perfil</h4>
                 </button>
+                <img
+                    src={logIcon}
+                    alt={'Log out'}
+                    onClick={(event) => navigate('/login')}
+                    className="logout-button"
+                />
             </div>
         </div>
     );
