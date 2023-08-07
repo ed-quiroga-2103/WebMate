@@ -17,6 +17,16 @@
 @import './views/Graph/Graph.scss';
 @import './components/Navbar/Navbar.scss';
 @import './views/QuizLatex/QuizLatex.scss';
+@import './views/Admin/Admin.scss';
+@import './views/Record/Record.scss';
+@import './views/QuizMaker/QuizMaker.scss';
+@import './views/QuestionAdmin/QuestionAdmin.scss';
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
 .latex-test-area {
     margin: auto;
@@ -62,8 +72,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    width: 100vw;
-    height: 100vh;
     background-color: #282c34;
 }
 

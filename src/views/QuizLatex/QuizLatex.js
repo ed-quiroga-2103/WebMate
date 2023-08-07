@@ -7,7 +7,6 @@ import quizData from '../../assets/quiz1.json'; //QUIROGA: quiz, info de base de
 import { useTimer } from 'react-timer-hook';
 import Loader from '../../components/Loader/Loader';
 import Latex from 'react-latex';
-import { line } from 'd3';
 
 export function QuizLatex() {
     const base = 'quiz';

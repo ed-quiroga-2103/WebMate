@@ -23,8 +23,6 @@ function Profile() {
             const course = grade.quiz.course;
 
             if (filteredCourses[course.id]) {
-                console.log(filteredCourses[course.id]);
-
                 if (
                     course.name.length > filteredCourses[course.id].name.length
                 ) {
@@ -157,7 +155,6 @@ function Profile() {
                         <div className={`${base}__courses__wrapper`}>
                             {Object.entries(courses).map(
                                 ([courseId, course], i) => {
-                                    console.log(course);
                                     return (
                                         <>
                                             <div

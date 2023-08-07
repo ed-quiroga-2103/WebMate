@@ -4,8 +4,14 @@
 .App-header {
     background-color: #282c34;
     display: flex;
+    min-width: $mobile-s;
+    height: calc($tablet * 0.8);
+    animation: slide-down 500ms forwards normal;
+    background-color: $main-color;
+    box-shadow: rgba(0, 0, 0, 0.3) 0rem 1.1875rem 2.375rem,
+        rgba(0, 0, 0, 0.22) 0rem 0.9375rem 0.75rem;
+    border-radius: 2rem;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;

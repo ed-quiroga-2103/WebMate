@@ -4,8 +4,9 @@ import eye from '../../assets/view.png';
 import closeEye from '../../assets/private.png';
 import Message from '../../components/Message/Message';
 import Loader from '../../components/Loader/Loader';
+import { useDispatch } from 'react-redux';
+import { set } from '../../redux/isAdmin';
 
-import { API_URL } from '../../api/config';
 import auth from '../../api/auth';
 
 function Login() {
@@ -17,7 +18,11 @@ function Login() {
     const navigate = useNavigate();
     const [message, setMessage] = useState({ status: false, message: '' });
     const [loader, setLoader] = useState(false);
+
+    const dispatch = useDispatch();
+
     window.localStorage.clear();
+    dispatch(set(undefined));
     const inputHandler = (key, value) => {
         let temp = { ...logInput };
         temp[key] = value;
@@ -56,7 +61,15 @@ function Login() {
             };expires=${now.toUTCString()};path=/`;
             localStorage.setItem('token', loginResponse.token);
             const me = await auth.me();
-            localStorage.setItem('me', JSON.stringify(me));
+
+            console.log(me);
+
+            dispatch(set(me.user));
+
+            localStorage.setItem(
+                'me',
+                JSON.stringify({ user: { email: me.user.email } })
+            );
             setLoader(false);
             navigate('/');
         } else {

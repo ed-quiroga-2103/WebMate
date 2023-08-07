@@ -15,9 +15,14 @@ import { MainProvider } from './context/mainContext';
 import { GraphView } from './views/Graph';
 import { QuizLatex } from './views/QuizLatex/QuizLatex';
 import QuestionsTest from './views/QuestionsTest/QuestionsTest';
-
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import Admin from './views/Admin/Admin';
+import Record from './views/Record/Record';
+import QuizMaker from './views/QuizMaker/QuizMaker';
 import Navbar from './components/Navbar/Navbar';
 import axios from 'axios';
+import QuestionAdmin from './views/QuestionAdmin/QuestionAdmin';
 
 axios.interceptors.response.use(
     function (response) {
@@ -35,26 +40,39 @@ axios.interceptors.response.use(
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <MainProvider>
-            <BrowserRouter>
-                <ScrollToTop />
-                <Navbar />
-                <Routes>
-                    {/* <Route path="/" element={<Home />} /> */}
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/courses" element={<Courses />} />
-                    <Route path="/course" element={<GraphView />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/" element={<Landing />} />
-                    <Route path="/quiz" element={<Quiz />} />
-                    <Route path="/quizLatex" element={<QuizLatex />} />
-                    <Route path="/questionsTest" element={<QuestionsTest />} />
-                    <Route path="/graph" element={<GraphView />} />
-                    <Route path="*" element={<Navigate to="/" />} />
-                </Routes>
-            </BrowserRouter>
-        </MainProvider>
+        <Provider store={store}>
+            <MainProvider>
+                <BrowserRouter>
+                    <ScrollToTop />
+                    <Navbar />
+                    <Routes>
+                        {/* <Route path="/" element={<Home />} /> */}
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/courses" element={<Courses />} />
+                        <Route path="/course" element={<GraphView />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/" element={<Landing />} />
+                        <Route path="/quiz" element={<Quiz />} />
+                        <Route path="/quizLatex" element={<QuizLatex />} />
+                        <Route
+                            path="/questionsTest"
+                            element={<QuestionsTest />}
+                        />
+                        <Route path="/graph" element={<GraphView />} />
+                        <Route path="/admin" element={<Admin />} />
+                        <Route
+                            path="/admin/questions"
+                            element={<QuestionAdmin />}
+                        />
+
+                        <Route path="/record" element={<Record />} />
+                        <Route path="/quizMaker" element={<QuizMaker />} />
+                        <Route path="*" element={<Navigate to="/" />} />
+                    </Routes>
+                </BrowserRouter>
+            </MainProvider>
+        </Provider>
     </React.StrictMode>
 );
