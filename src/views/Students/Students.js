@@ -1,18 +1,22 @@
-import QuestionsTable from '../../components/QuestionsTable/QuestionsTable';
-import questions from '../../api/questions';
+import StudentsTable from '../../components/StudentsTable/StudentsTable';
 import { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import QuestionsTest from '../QuestionsTest/QuestionsTest';
+import users from '../../api/users';
+import QRCode from 'react-qr-code';
+import { v4 as uuidv4 } from 'uuid';
 
-function QuestionAdmin() {
+function Students() {
     const [isViewModalOpen, setIsViewModalOpen] = useState(false);
+
+    const [code] = useState(uuidv4());
 
     const onViewModalClose = () => setIsViewModalOpen(false);
 
     const [questionList, setQuestions] = useState([]);
     useEffect(() => {
         const fetchQuestions = async () => {
-            const response = await questions.get();
+            const response = await users.get();
             setQuestions(response);
         };
 
@@ -28,15 +32,17 @@ function QuestionAdmin() {
                 onRequestClose={onViewModalClose}
                 contentLabel="Question Modal"
                 style={{
-                    content: { margin: 0, padding: 0, height: 'fit-content' },
+                    content: {
+                        margin: 0,
+                        padding: 0,
+                        height: 'fit-content',
+                    },
                     overlay: { marginTop: '100px' },
                 }}
             >
-                <QuestionsTest></QuestionsTest>
-                <div>
-                    <button onClick={() => setIsViewModalOpen(false)}>
-                        Cerrar
-                    </button>
+                <div className="student-modal">
+                    <QRCode value={code} />
+                    <h1>Link: http://localhost:3000/register?code={code}</h1>
                 </div>
             </Modal>
             <div className="container">
@@ -46,19 +52,24 @@ function QuestionAdmin() {
             <div className="container">
                 <div className="row header">
                     <h3>Listado de Preguntas</h3>
-                    <button className="pushed-element">Nueva pregunta</button>
+                    <button
+                        className="pushed-element"
+                        onClick={() => setIsViewModalOpen(true)}
+                    >
+                        Nueva pregunta
+                    </button>
                 </div>
                 <div className="container">
-                    <QuestionsTable
-                        questions={questionList}
+                    <StudentsTable
+                        students={questionList}
                         openModal={(question) => {
                             setIsViewModalOpen(true);
                         }}
-                    ></QuestionsTable>
+                    ></StudentsTable>
                 </div>
             </div>
         </div>
     );
 }
 
-export default QuestionAdmin;
+export default Students;

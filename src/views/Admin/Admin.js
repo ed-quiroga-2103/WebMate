@@ -29,7 +29,7 @@ function Admin() {
                         </h2>
                     </div>
                     <div
-                        onClick={(event) => goTo(event, '')}
+                        onClick={(event) => goTo(event, 'admin/students')}
                         className={`${base}__card`}
                     >
                         <h2 className={`${base}__card__name`}>

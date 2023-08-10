@@ -1,0 +1,71 @@
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    background-color: $second-color;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        background-color: $main-color;
+        border-radius: 25px;
+        padding: 2%;
+    }
+
+    .timer {
+        border: 1px solid $main-color;
+        background-color: $main-color;
+        color: $second-color;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        border-radius: 10px;
+        .clock {
+            border: 1px solid $second-color;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    }
+
+    .header {
+        margin: 10px 0px;
+        padding: 5%;
+        background-color: $second-color;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        border-radius: 100px;
+    }
+
+    .options {
+        width: 70%;
+        margin: 10px;
+        .row {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin: 25px 5px;
+        }
+
+        .item {
+            padding: 1% 5%;
+            background-color: $second-color;
+            border-radius: 10px;
+            margin: 10px 0px;
+            cursor: pointer;
+        }
+
+        .item-selected {
+            padding: 1% 5%;
+            background-color: $second-color;
+            border-radius: 10px;
+            border: 5px solid $highlight-color;
+        }
+    }
+}

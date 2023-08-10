@@ -1,4 +1,6 @@
-const QuestionsTable = ({ questions }) => {
+const QuestionsTable = ({ questions, openModal }) => {
+    console.log(questions);
+
     return (
         <table className="questions-table">
             <tr>
@@ -16,7 +18,7 @@ const QuestionsTable = ({ questions }) => {
                             question.difficulty.slice(1)}
                     </td>
                     <td>
-                        <button>Ver</button>
+                        <button onClick={() => openModal(question)}>Ver</button>
                         <button>Edit</button>
                     </td>
                 </tr>

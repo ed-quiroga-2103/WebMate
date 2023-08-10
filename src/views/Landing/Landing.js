@@ -65,12 +65,6 @@ function Landing() {
     return (
         <main className={`${base}__root`}>
             <div className={`${base}__wrapper`}>
-                <div className={`${base}__wrapper__header`}>
-                    <h1 className={`${base}__wrapper__header__title`}>
-                        Web Mate
-                    </h1>
-                    <div className={`${base}__wrapper__header__logout`}></div>
-                </div>
                 <div className={`${base}__wrapper__container`}>
                     <div className={`${base}__wrapper__container__firstRow`}>
                         <div className={`${base}__singleCard`}>

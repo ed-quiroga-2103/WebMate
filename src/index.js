@@ -19,6 +19,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import Admin from './views/Admin/Admin';
 import Record from './views/Record/Record';
+import Students from './views/Students/Students';
 import QuizMaker from './views/QuizMaker/QuizMaker';
 import Navbar from './components/Navbar/Navbar';
 import axios from 'axios';
@@ -66,6 +67,8 @@ root.render(
                             path="/admin/questions"
                             element={<QuestionAdmin />}
                         />
+
+                        <Route path="/admin/students" element={<Students />} />
 
                         <Route path="/record" element={<Record />} />
                         <Route path="/quizMaker" element={<QuizMaker />} />

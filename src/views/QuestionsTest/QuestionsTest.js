@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import Latex from 'react-latex';
+import { useTimer } from 'react-timer-hook';
+import moment from 'moment/moment';
 
 const QuestionsTest = () => {
     const [data, setData] = useState('This is some test data');
@@ -13,6 +15,13 @@ const QuestionsTest = () => {
 
     const defaultEq = '$$M = (3x\\times 4) \\div (5-3x)$$';
     const defaultImg = 'https://source.unsplash.com/user/c_v_r';
+
+    const [selected, setSelected] = useState(-1);
+
+    const { minutes, seconds, start } = useTimer({
+        expiryTimestamp: moment().add(10, 'minutes'),
+        autoStart: false,
+    });
 
     const a = [
         '\\[E=mc^2\\]',
@@ -98,9 +107,29 @@ const QuestionsTest = () => {
         return lines;
     };
 
+    const renderOptions = (items = [1, 2, 3, 4, 5]) => {
+        const itemsToRender = [];
+
+        for (let i = 0; i < items.length; i += 1) {
+            const item = items[i];
+
+            itemsToRender.push(
+                <div
+                    className={i === selected ? 'item-selected' : 'item'}
+                    onClick={() => {
+                        setSelected(i);
+                        start();
+                    }}
+                >{`Some item: ${item}`}</div>
+            );
+        }
+
+        return itemsToRender;
+    };
+
     return (
-        <div className="test-area">
-            <div className="latex-test-area">
+        <div className="question">
+            {/* <div className="latex-test-area">
                 <span>Latex & Image testing</span>
                 <textarea
                     defaultValue={data}
@@ -121,6 +150,16 @@ const QuestionsTest = () => {
                     defaultValue={images}
                     onChange={(event) => setImages(event.target.value)}
                 />
+            </div> */}
+
+            <div className="container">
+                <div className="timer">
+                    <h1 className="clock">
+                        {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+                    </h1>
+                </div>
+                <div className="header">Which of the next is an equation?</div>
+                <div className="options">{renderOptions(a)}</div>
             </div>
         </div>
     );
