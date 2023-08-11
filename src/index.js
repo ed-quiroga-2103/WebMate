@@ -24,6 +24,7 @@ import QuizMaker from './views/QuizMaker/QuizMaker';
 import Navbar from './components/Navbar/Navbar';
 import axios from 'axios';
 import QuestionAdmin from './views/QuestionAdmin/QuestionAdmin';
+import QuestionEditor from './components/QuestionEditor/QuestionEditor';
 
 axios.interceptors.response.use(
     function (response) {
@@ -72,6 +73,11 @@ root.render(
 
                         <Route path="/record" element={<Record />} />
                         <Route path="/quizMaker" element={<QuizMaker />} />
+                        <Route
+                            path="/questionEditor"
+                            element={<QuestionEditor />}
+                        />
+
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                 </BrowserRouter>

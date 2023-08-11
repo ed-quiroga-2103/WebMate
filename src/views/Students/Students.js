@@ -3,13 +3,12 @@ import { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import QuestionsTest from '../QuestionsTest/QuestionsTest';
 import users from '../../api/users';
-import QRCode from 'react-qr-code';
+import QRCode from 'qrcode';
 import { v4 as uuidv4 } from 'uuid';
+import NewStudentModal from '../../components/NewStudentModal/NewStudentModal';
 
 function Students() {
     const [isViewModalOpen, setIsViewModalOpen] = useState(false);
-
-    const [code] = useState(uuidv4());
 
     const onViewModalClose = () => setIsViewModalOpen(false);
 
@@ -26,7 +25,7 @@ function Students() {
     });
 
     return (
-        <div className="question-admin">
+        <div className="students-admin">
             <Modal
                 isOpen={isViewModalOpen}
                 onRequestClose={onViewModalClose}
@@ -36,14 +35,17 @@ function Students() {
                         margin: 0,
                         padding: 0,
                         height: 'fit-content',
+                        inset: undefined,
+                        width: 'fit-content',
                     },
-                    overlay: { marginTop: '100px' },
+                    overlay: {
+                        marginTop: '100px',
+                        display: 'flex',
+                        justifyContent: 'center',
+                    },
                 }}
             >
-                <div className="student-modal">
-                    <QRCode value={code} />
-                    <h1>Link: http://localhost:3000/register?code={code}</h1>
-                </div>
+                <NewStudentModal onClose={() => setIsViewModalOpen(false)} />
             </Modal>
             <div className="container">
                 <h1>Administrador de Preguntas</h1>

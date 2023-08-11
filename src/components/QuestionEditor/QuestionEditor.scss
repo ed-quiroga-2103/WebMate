@@ -1,0 +1,127 @@
+.question-editor {
+    background-color: $second-color;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+
+    .editor-title {
+        color: $second-color;
+    }
+
+    .editor-container {
+        margin: 100px;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        background-color: $main-color;
+        align-items: center;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    .question-data-card {
+        padding: 0px 10px 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: $second-color;
+        width: 90%;
+    }
+
+    .options-container {
+        background-color: $main-color;
+        border-radius: 5px;
+        padding: 10px 0px;
+    }
+
+    .option-card {
+        margin: 10px;
+        background-color: $second-color;
+        border-radius: 2px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .option-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px 0px;
+
+        button {
+            width: 60px;
+        }
+    }
+
+    .content-line {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .field {
+        display: flex;
+        width: 50%;
+        * {
+            margin-right: 25px;
+        }
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-rows: auto;
+        grid-template-areas: 'label1 field1 label2 field2';
+        column-gap: 10px;
+        row-gap: 10px;
+
+        .cell {
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+    }
+
+    .question-grid {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        column-gap: 10px;
+        row-gap: 10px;
+
+        .cell {
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+    }
+
+    .eq-container {
+        background-color: white;
+        border: 1px solid $main-color;
+    }
+
+    .equation {
+        color: $second-color;
+        background-color: $main-color;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .edit-equation {
+        color: $second-color;
+        background-color: $main-color;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        flex-direction: row;
+    }
+}

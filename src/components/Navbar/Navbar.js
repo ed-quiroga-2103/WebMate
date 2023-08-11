@@ -92,10 +92,10 @@ const Navbar = ({ isVisible }) => {
                     <h4>Perfil</h4>
                 </button>
                 <img
+                    className="logout-button"
                     src={logIcon}
                     alt={'Log out'}
                     onClick={(event) => navigate('/login')}
-                    className="logout-button"
                 />
             </div>
         </div>

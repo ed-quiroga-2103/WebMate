@@ -3,6 +3,24 @@ import Latex from 'react-latex';
 import { useTimer } from 'react-timer-hook';
 import moment from 'moment/moment';
 
+const questionData = {
+    courseId: 'asdfasdf',
+    course: {
+        name: 'Mate General',
+    },
+    header: ['Cual opcion es equivalente a la siguiente ecuacion?', '$eq[0]'],
+    options: [
+        {
+            text: [],
+        },
+        { text: [] },
+        { text: [] },
+        { text: [] },
+    ],
+    equations: [],
+    imgs: [],
+};
+
 const QuestionsTest = () => {
     const [data, setData] = useState('This is some test data');
     const [parsedData, setParsedData] = useState([]);
@@ -120,7 +138,18 @@ const QuestionsTest = () => {
                         setSelected(i);
                         start();
                     }}
-                >{`Some item: ${item}`}</div>
+                >
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignContent: 'center',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <Latex displayMode={true}>{item}</Latex>
+                    </div>
+                </div>
             );
         }
 

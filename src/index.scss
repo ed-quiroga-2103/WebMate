@@ -24,10 +24,13 @@
 @import './views/QuestionsTest/QuestionsTest.scss';
 @import './views/Students/Students.scss';
 @import './components/Modal/Modal.scss';
+@import './components/NewStudentModal/NewStudentModal.scss';
+@import './components/QuestionEditor/QuestionEditor.scss';
 
 #root {
     display: flex;
     flex-direction: column;
+
     height: 100vh;
 }
 

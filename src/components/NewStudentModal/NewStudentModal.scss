@@ -1,0 +1,82 @@
+.student-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $second-color;
+    border: 3px solid $main-color;
+
+    .header {
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        * {
+            margin-bottom: 5px;
+        }
+    }
+    .content-row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 20%;
+            padding: 0 5%;
+        }
+
+        input {
+            width: fit-content;
+        }
+    }
+    .buttons-row {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 25px 0px;
+        width: 100%;
+    }
+
+    .link-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0 10px;
+        width: 75%;
+    }
+
+    .modal-button {
+        background-color: $main-color;
+        color: $second-color;
+        padding: 20px 50px;
+        border: none;
+        border-radius: 15px;
+    }
+
+    .modal-button:hover {
+        background-color: $main-color;
+        color: $second-color;
+        padding: 20px 50px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .modal-button:active {
+        top: 2px;
+        position: relative;
+    }
+
+    .student-link {
+        display: inline-block;
+        border: 1px solid $main-color;
+        border-radius: 15px;
+        background-color: white;
+        padding: 10px 10px 0px 10px;
+        width: 65%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: middle;
+        line-height: 200%;
+    }
+}

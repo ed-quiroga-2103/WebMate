@@ -1,6 +1,19 @@
-.student-modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px;
+.students-admin {
+    height: 100%;
+    padding: 10px 5%;
+    background-color: $second-color;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        .row {
+            padding: 5px 0px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .header {
+        margin-left: 10px;
+    }
 }
