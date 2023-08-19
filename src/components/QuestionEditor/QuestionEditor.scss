@@ -17,6 +17,7 @@
         align-items: center;
         border-radius: 15px;
         padding: 10px;
+        justify-content: center;
     }
 
     .question-data-card {
@@ -123,5 +124,11 @@
         align-items: center;
         align-content: center;
         flex-direction: row;
+    }
+
+    .button-bar {
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
     }
 }

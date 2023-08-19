@@ -14,6 +14,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { useSelector } from 'react-redux';
 
 export const options = {
     responsive: true,
@@ -52,6 +53,8 @@ function Landing() {
         navigate(`/${where}`);
     };
 
+    const userState = useSelector((state) => state.user.value);
+
     ChartJS.register(
         CategoryScale,
         LinearScale,
@@ -79,7 +82,7 @@ function Landing() {
                                 <p
                                     className={`${base}__singleCard__average__grade`}
                                 >
-                                    {average.grade}
+                                    {0 || userState.averageGrade}
                                 </p>
                                 {average.status ? (
                                     <p

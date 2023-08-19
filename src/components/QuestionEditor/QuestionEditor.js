@@ -1,4 +1,12 @@
 import { useState, useEffect } from 'react';
+import Latex from 'react-latex';
+import QuestionsTable from '../../components/QuestionsTable/QuestionsTable';
+import questions from '../../api/questions';
+import Modal from 'react-modal';
+import QuestionsTest from '../../views/QuestionsTest/QuestionsTest';
+import { useNavigate } from 'react-router-dom';
+
+const defaultEq = '$$M = (3x\\times 4) \\div (5-3x)$$';
 
 const QuestionEditor = ({ isEditing, question }) => {
     const [options, setOptions] = useState([]);
@@ -11,6 +19,19 @@ const QuestionEditor = ({ isEditing, question }) => {
     const [equations, setEquations] = useState([]);
 
     const [equationsComponents, setEquationComponents] = useState();
+    const [optionComponents, setOptionComponents] = useState();
+
+    const [previewModal, setPreviewModal] = useState(false);
+
+    const [finalQuestion, setFinalQuestion] = useState(undefined);
+
+    useEffect(() => {
+        setFinalQuestion({
+            header: questionLines,
+            options,
+            equations: equations.map((eq) => `$$${eq}$$`),
+        });
+    }, [options, equations, questionLines]);
 
     const appendOption = (option) => {
         setOptions([...options, option]);
@@ -66,9 +87,11 @@ const QuestionEditor = ({ isEditing, question }) => {
                         Seleccione una opcion
                     </option>
 
-                    <option value="actual value 1">Facil</option>
-                    <option value="actual value 1">Intermedio</option>
-                    <option value="actual value 1">Dificil</option>
+                    <option value="actual value 1">
+                        Distribucion Binomial
+                    </option>
+                    <option value="actual value 1">Distribucion Normal</option>
+                    <option value="actual value 1">Rectas de Regresion</option>
                 </select>
             </>
         );
@@ -85,6 +108,32 @@ const QuestionEditor = ({ isEditing, question }) => {
         }
 
         setEquations(newEquations);
+    };
+
+    const updateOption = (value, i) => {
+        const newOptions = [];
+        for (let index = 0; index < options.length; index++) {
+            if (i === index) {
+                newOptions.push(value);
+            } else {
+                newOptions.push(options[index]);
+            }
+        }
+
+        setOptions(newOptions);
+    };
+
+    const removeEquation = (i) => {
+        const copy = equations;
+        copy.splice(i, 1);
+        setEquations(copy);
+        setEquationComponents(renderEquations(copy));
+    };
+
+    const removeOption = (i) => {
+        const copy = options;
+        copy.splice(i, 1);
+        setOptions(options);
     };
 
     const renderEquations = (input) =>
@@ -116,20 +165,54 @@ const QuestionEditor = ({ isEditing, question }) => {
             )
         );
 
+    const renderOptions = (input) => {
+        return input.map((option, i) => (
+            <div className="option-card">
+                <div style={{ width: '50%' }}>
+                    <textarea
+                        onChange={(event) => {
+                            updateOption(event.target.value, i);
+                        }}
+                        style={{ width: '80%' }}
+                    ></textarea>
+                </div>
+                <div style={{ width: '50%' }}>
+                    <Latex>{option}</Latex>
+                </div>
+                <input
+                    type="checkbox"
+                    id="demoCheckbox"
+                    name="checkbox"
+                    value="1"
+                />
+                <button onClick={() => removeOption(i)}>X</button>
+            </div>
+        ));
+    };
+
     useEffect(() => {
         console.log('Equations changed');
         setEquationComponents(renderEquations(equations));
     }, [equations, editing]);
 
-    const removeEquation = (i) => {
-        const copy = equations;
-        copy.splice(i, 1);
-        setEquations(copy);
-        setEquationComponents(renderEquations(copy));
-    };
+    useEffect(() => {
+        console.log('Options changed', options);
+        setOptionComponents(renderOptions(options));
+    }, [options]);
 
     return (
         <div className="question-editor">
+            <Modal
+                isOpen={previewModal}
+                onRequestClose={() => setPreviewModal(false)}
+                contentLabel="Question Modal"
+                style={{
+                    content: { margin: 0, padding: 0, height: 'fit-content' },
+                    overlay: { marginTop: '100px' },
+                }}
+            >
+                <QuestionsTest question={finalQuestion}></QuestionsTest>
+            </Modal>
             <div className="editor-container">
                 <h2 className="editor-title">Editor de Preguntas</h2>
                 <div className="question-data-card">
@@ -144,7 +227,16 @@ const QuestionEditor = ({ isEditing, question }) => {
                     </div>
                 </div>
                 <div className="question-data-card">
-                    <h3>Datos de la Pregunta</h3>
+                    <div className="option-bar">
+                        <h3>Datos de la Pregunta</h3>
+                        <button
+                            onClick={() => {
+                                setPreviewModal(true);
+                            }}
+                        >
+                            Vista Previa
+                        </button>
+                    </div>
                     <div className="question-grid">
                         <div>Enunciado</div>
                         <div className="option-bar">
@@ -176,20 +268,17 @@ const QuestionEditor = ({ isEditing, question }) => {
                         </div>
                         <button
                             onClick={() => {
-                                appendOption('This is an option');
+                                appendOption('');
                             }}
                         >
                             +
                         </button>
                     </div>
 
-                    <div className="options-container">
-                        {options.map((option) => (
-                            <div className="option-card">
-                                <div>Option</div>
-                                <div>Preview</div>
-                            </div>
-                        ))}
+                    <div className="options-container">{optionComponents}</div>
+                    <div className="button-bar">
+                        <button>Cancelar</button>
+                        <button>Confirmar</button>
                     </div>
                 </div>
             </div>

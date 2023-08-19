@@ -10,20 +10,20 @@ const questionData = {
     },
     header: ['Cual opcion es equivalente a la siguiente ecuacion?', '$eq[0]'],
     options: [
-        {
-            text: [],
-        },
-        { text: [] },
-        { text: [] },
-        { text: [] },
+        '$$X=ny \\times c$$',
+        'Otra opcion',
+        'Opcion con texto',
+        'This is a test $$A \\times B$$ Some other test',
     ],
-    equations: [],
+    equations: ['$$Y=mx \\times b$$'],
     imgs: [],
 };
 
-const QuestionsTest = () => {
+const QuestionsTest = ({ question }) => {
     const [data, setData] = useState('This is some test data');
     const [parsedData, setParsedData] = useState([]);
+
+    const [promptedQuestions] = useState(question || questionData);
 
     const [equations, setEquations] = useState('');
     const [parsedEquations, setParsedEquations] = useState([]);
@@ -147,13 +147,31 @@ const QuestionsTest = () => {
                             justifyContent: 'center',
                         }}
                     >
-                        <Latex displayMode={true}>{item}</Latex>
+                        <Latex displayMode={false}>{item}</Latex>
                     </div>
                 </div>
             );
         }
 
         return itemsToRender;
+    };
+
+    const renderHeader = () => {
+        const lines = [];
+
+        for (const line of promptedQuestions.header) {
+            if (line.substr(0, 3) === '$eq') {
+                const ind = getEquationIndex(line);
+                lines.push(
+                    <>
+                        <Latex>{promptedQuestions.equations[ind]}</Latex>
+                    </>
+                );
+            } else {
+                lines.push(<span>{line}</span>);
+            }
+        }
+        return <div className="header-container">{lines}</div>;
     };
 
     return (
@@ -187,8 +205,10 @@ const QuestionsTest = () => {
                         {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
                     </h1>
                 </div>
-                <div className="header">Which of the next is an equation?</div>
-                <div className="options">{renderOptions(a)}</div>
+                <div className="header">{renderHeader()}</div>
+                <div className="options">
+                    {renderOptions(promptedQuestions.options)}
+                </div>
             </div>
         </div>
     );

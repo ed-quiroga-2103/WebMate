@@ -58,7 +58,7 @@ function Students() {
                         className="pushed-element"
                         onClick={() => setIsViewModalOpen(true)}
                     >
-                        Nueva pregunta
+                        Nuevo Estudiante
                     </button>
                 </div>
                 <div className="container">

@@ -1,6 +1,4 @@
 const QuestionsTable = ({ questions, openModal }) => {
-    console.log(questions);
-
     return (
         <table className="questions-table">
             <tr>

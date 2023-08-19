@@ -3,11 +3,13 @@ import questions from '../../api/questions';
 import { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import QuestionsTest from '../QuestionsTest/QuestionsTest';
+import { useNavigate } from 'react-router-dom';
 
 function QuestionAdmin() {
     const [isViewModalOpen, setIsViewModalOpen] = useState(false);
 
     const onViewModalClose = () => setIsViewModalOpen(false);
+    const navigate = useNavigate();
 
     const [questionList, setQuestions] = useState([]);
     useEffect(() => {
@@ -46,7 +48,12 @@ function QuestionAdmin() {
             <div className="container">
                 <div className="row header">
                     <h3>Listado de Preguntas</h3>
-                    <button className="pushed-element">Nueva pregunta</button>
+                    <button
+                        className="pushed-element"
+                        onClick={() => navigate('/questionEditor')}
+                    >
+                        Nueva pregunta
+                    </button>
                 </div>
                 <div className="container">
                     <QuestionsTable

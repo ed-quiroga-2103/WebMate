@@ -9,8 +9,6 @@ const getUsers = async (filters) => {
         return error.response;
     });
 
-    console.log(response.data.students);
-
     return response.data.students ? response.data.students : response.data;
 };
 
