@@ -11,7 +11,7 @@ function Home(){
         <Link className="Link" to="/profile">
           Profile
         </Link>
-        <Link className="Link" to="/login">
+        <Link className="Link" to="/">
           Login
         </Link>
         <Link className="Link" to="/about">

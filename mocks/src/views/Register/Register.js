@@ -81,7 +81,7 @@ function Register() {
             setMessage({ status: true, message: "Succesful" });
             setTimeout(() => {
               window.localStorage.setItem("user", JSON.stringify(res.user));
-              navigate("/login");
+              navigate("/");
             }, 1500);
           } else {
             setMessage({ status: true, message: res.message });
