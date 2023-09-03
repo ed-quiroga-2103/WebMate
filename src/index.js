@@ -51,7 +51,7 @@ root.render(
                         {/* <Route path="/" element={<Home />} /> */}
                         <Route path="/register" element={<Register />} />
                         <Route path="/profile" element={<Profile />} />
-                        <Route path="/login" element={<Login />} />
+                        <Route path="/" element={<Login />} />
                         <Route path="/courses" element={<Courses />} />
                         <Route path="/course" element={<GraphView />} />
                         <Route path="/about" element={<About />} />
@@ -78,7 +78,7 @@ root.render(
                             element={<QuestionEditor />}
                         />
 
-                        <Route path="*" element={<Navigate to="/login" />} />
+                        <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                 </BrowserRouter>
             </MainProvider>
