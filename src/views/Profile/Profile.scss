@@ -19,13 +19,9 @@
 
     &__wrapper {
         min-width: 17.75rem;
-        display: flex;
+        @include flexSpace;
         margin: auto;
         height: 100%;
-
-        flex-direction: column;
-        justify-content: space-between;
-
         @media (min-width: $mobile) {
             height: 90%;
             min-height: 47rem;
@@ -39,9 +35,7 @@
     &__info {
         padding: 1rem;
         height: 80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        @include flexSpace;
         border-radius: 2rem;
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
@@ -67,11 +61,8 @@
         }
 
         &__name {
-            display: flex;
             height: 40%;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            @include flexCenter;
 
             &__fullName {
                 width: 100%;

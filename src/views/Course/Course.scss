@@ -2,7 +2,6 @@
   &__root {
     @include root;
     background-color: $second-color;
-    
     color: $main-color;
     overflow-x: auto;
     overflow-y: auto;
@@ -17,11 +16,8 @@
   }
 
   &__wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    @include flexCenter;
     height: 100vh;
-    justify-content: center;
     margin-right: auto;
     margin-left: auto;
     overflow-x: hidden;

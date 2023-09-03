@@ -17,10 +17,7 @@
     }
 
     &__wrapper {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flexCenter;
         margin-right: auto;
         margin-left: auto;
         overflow-x: hidden;
@@ -47,9 +44,7 @@
     }
 
     &__card {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include flexCenterRow;
         color: $main-color;
         margin-top: 1rem;
         margin-bottom: 1rem;

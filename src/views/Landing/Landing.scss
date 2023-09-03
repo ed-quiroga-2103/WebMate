@@ -17,11 +17,8 @@
     }
 
     &__wrapper {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
+        @include flexCenter;
         height: 100%;
-        justify-content: center;
         margin-right: auto;
         margin-left: auto;
         overflow-x: hidden;
@@ -57,16 +54,12 @@
                 display: none;
             }
             &__firstRow {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flexCenterRow;
                 width: 90%;
                 height: 35%;
             }
             &__secondRow {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flexCenterRow;
                 width: 90%;
                 height: 65%;
             }
@@ -131,18 +124,14 @@
         }
         &__next {
             height: 40%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexCenterRow;
             &__info {
                 font-size: 1.5rem;
             }
         }
         &__average {
             height: 40%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexCenterRow;
             &__grade {
                 font-size: 5rem;
             }

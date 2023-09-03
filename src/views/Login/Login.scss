@@ -9,11 +9,7 @@
       }
     }
     &__create-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  
+      @include flexCenter;
       @media (min-width: $mobile) {
         width: 90%;
         height: 50%;
@@ -35,9 +31,7 @@
         }
       }
       &__create {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenterRow;
         text-decoration: none;
         width: 60%;
         height: 4rem;
@@ -63,11 +57,8 @@
     }
   
     &__section {
+      @include flexCenter;
       background-color: $main-color;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
       border-top-right-radius: 1rem;
       border-top-left-radius: 1rem;
       height: 60%;
@@ -81,10 +72,7 @@
         border-radius: 0;
       }
       &--white {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flexCenter;
         border-bottom-right-radius: 1rem;
         border-bottom-left-radius: 1rem;
         background-color: $second-color;
@@ -106,8 +94,7 @@
       height: calc($tablet * 0.8);
       animation: slide-down 500ms forwards normal;
       background-color: $main-color;
-      box-shadow: rgba(0, 0, 0, 0.3) 0rem 1.1875rem 2.375rem,
-        rgba(0, 0, 0, 0.22) 0rem 0.9375rem 0.75rem;
+      @include shadow;
       border-radius: 2rem;
       flex-direction: column;
       transition: all ease-out 200ms;
@@ -123,30 +110,22 @@
         min-height: $mobile-s;
       }
       &__title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenterRow;
         text-align: center;
         width: 70%;
         padding: 1.5rem;
         border-bottom: 0.03rem solid $second-color;
       }
       &__form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter;
         text-align: center;
-        flex-direction: column;
         width: 90%;
         @media (min-width: $mobile) {
           margin-top: -2rem;
           height: 50%;
         }
         &__container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          @include flexCenter;
           width: 100%;
           margin-bottom: 1rem;
           &__label {

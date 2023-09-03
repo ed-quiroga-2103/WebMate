@@ -85,7 +85,7 @@ function Register() {
             const me = await auth.me();
             localStorage.setItem('me', JSON.stringify(me));
             setLoader(false);
-            navigate('/');
+            navigate('/landing');
         }
     };
 

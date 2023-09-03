@@ -1,24 +1,80 @@
-.App {
-    text-align: center;
-}
-.App-header {
-    background-color: #282c34;
-    display: flex;
-    min-width: $mobile-s;
-    height: calc($tablet * 0.8);
-    animation: slide-down 500ms forwards normal;
-    background-color: $main-color;
-    box-shadow: rgba(0, 0, 0, 0.3) 0rem 1.1875rem 2.375rem,
+.about {
+    &__root {
+      @include root;
+      background-color: $second-color;
+      overflow: scroll;
+      @media (min-width: $mobile) {
+        height: 100vh;
+        overflow: hidden;
+      }
+    }
+   
+    &__body{
+      display: flex;
+      min-width: $mobile-s;
+      height: calc($tablet * 0.8);
+      animation: slide-down 500ms forwards normal;
+      background-color: $main-color;
+      box-shadow: rgba(0, 0, 0, 0.3) 0rem 1.1875rem 2.375rem,
         rgba(0, 0, 0, 0.22) 0rem 0.9375rem 0.75rem;
-    border-radius: 2rem;
-    flex-direction: column;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    text-decoration: none;
-}
-
-.Link {
-    color: white;
-    text-decoration: none;
-}
+      border-radius: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all ease-out 200ms;
+      @media (min-width: $mobile) {
+        width: 80%;
+        height: 80%;
+        min-width: $mobile;
+        min-height: $mobile;
+      }
+      
+      &__titleContainer{
+        height: 20%;
+        width: 90%;
+        @include flexCenterRow;
+        border-bottom: 0.03rem solid $second-color;
+        &__title{
+          width: 100%;
+          font-size: 4rem;
+        }
+      }
+      &__info{
+        height: 60%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        &__col1{
+          width: 50%;
+          height: 90%;
+          @include flexCenter;
+          &__mainText{
+            height: 100%;
+            width: 90%;
+            font-size: 1.25vw;
+            line-height: 1.75rem;
+            text-align: justify;
+          }
+        }
+        &__col2{
+          width: 40%;
+          height: 90%;
+          @include flexCenter;
+          &__subtitle{
+            width: 100%;
+            font-size: 2.5rem;
+            text-align: center;
+          }
+          &_info{
+            width: 100%;
+            font-size: 1.75rem;
+            text-align: center;
+          }
+        }
+  
+      }
+      
+    }
+  }

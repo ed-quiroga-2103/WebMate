@@ -71,7 +71,7 @@ function Login() {
                 JSON.stringify({ user: { email: me.user.email } })
             );
             setLoader(false);
-            navigate('/');
+            navigate('/landing');
         } else {
             setLoginError('Usuario o contrasena incorrectos.');
             setLoader(false);

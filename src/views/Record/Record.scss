@@ -17,11 +17,8 @@
   }
 
   &__wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    @include flexCenter;
     height: 100vh;
-    justify-content: center;
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
@@ -29,8 +26,7 @@
 
       height: 10%;
       width: 90%;
-      display: flex;
-      align-items: center;
+      @include flexCenter;
       &__title{
         margin-left: 30%;
         width: 40%;

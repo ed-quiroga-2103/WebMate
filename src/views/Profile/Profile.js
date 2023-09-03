@@ -15,7 +15,7 @@ function Profile() {
 
     const [grades, setGrades] = useState({});
     const [courses, setCourses] = useState({});
-
+    
     const sortCourses = (grades) => {
         const filteredCourses = {};
 
@@ -64,6 +64,7 @@ function Profile() {
             setMe(meResponse);
             setUser(meResponse.user);
             sortCourses(meResponse.user.grades);
+            
         };
         fetchMe();
     }, []);
@@ -140,7 +141,7 @@ function Profile() {
                                         className={`${base}__info__other__container__email`}
                                     >
                                         Promedio de evaluaciones:{' '}
-                                        {user.averageGrade.toFixed(2)}
+                                        {user.averageGrade!=null ? user.averageGrade.toFixed(2):null}
                                     </p>
                                 </div>
                             </div>

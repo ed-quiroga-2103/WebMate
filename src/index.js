@@ -55,7 +55,7 @@ root.render(
                         <Route path="/courses" element={<Courses />} />
                         <Route path="/course" element={<GraphView />} />
                         <Route path="/about" element={<About />} />
-                        <Route path="/" element={<Landing />} />
+                        <Route path="/landing" element={<Landing />} />
                         <Route path="/quiz" element={<Quiz />} />
                         <Route path="/quizLatex" element={<QuizLatex />} />
                         <Route
@@ -78,7 +78,7 @@ root.render(
                             element={<QuestionEditor />}
                         />
 
-                        <Route path="*" element={<Navigate to="/" />} />
+                        <Route path="*" element={<Navigate to="/login" />} />
                     </Routes>
                 </BrowserRouter>
             </MainProvider>

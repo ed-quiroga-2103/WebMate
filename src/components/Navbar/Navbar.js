@@ -58,7 +58,7 @@ const Navbar = ({ isVisible }) => {
                 <div>
                     <button
                         className="nav-button"
-                        onClick={() => navigate('/')}
+                        onClick={() => navigate('/landing')}
                     >
                         <Home className="home-icon" />
                     </button>
