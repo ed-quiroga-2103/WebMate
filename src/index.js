@@ -32,7 +32,7 @@ axios.interceptors.response.use(
     },
     function (error) {
         if (error.response.status === 403) {
-            window.location.replace('/login');
+            // if (window.location!='/') window.location.replace('/');
         }
 
         return Promise.reject(error);
@@ -50,8 +50,9 @@ root.render(
                     <Routes>
                         {/* <Route path="/" element={<Home />} /> */}
                         <Route path="/register" element={<Register />} />
-                        <Route path="/profile" element={<Profile />} />
                         <Route path="/" element={<Login />} />
+                        
+                        <Route path="/profile" element={<Profile />} />
                         <Route path="/courses" element={<Courses />} />
                         <Route path="/course" element={<GraphView />} />
                         <Route path="/about" element={<About />} />
