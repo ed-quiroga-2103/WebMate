@@ -18,6 +18,7 @@ function App() {
     } else {
         return (
             <>
+                <Navbar />
                 <Outlet />
             </>
         );

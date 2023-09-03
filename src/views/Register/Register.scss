@@ -1,7 +1,10 @@
 .create-account {
     &__root {
       @include root;
-      @include flexCenter;
+      background-color: $second-color;
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
       justify-content: flex-start;
       height: 100vh;
       @media (min-width: $mobile) {
@@ -96,7 +99,9 @@
             width: 100%;
           }
           &__wrapper {
-            @include flexSpace;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             height: 4.5rem;
             color: $second-color;
             background-color: $main-color;

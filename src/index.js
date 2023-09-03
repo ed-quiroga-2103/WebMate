@@ -25,6 +25,8 @@ import Navbar from './components/Navbar/Navbar';
 import axios from 'axios';
 import QuestionAdmin from './views/QuestionAdmin/QuestionAdmin';
 import QuestionEditor from './components/QuestionEditor/QuestionEditor';
+import { elements } from 'chart.js';
+import App from './App';
 
 axios.interceptors.response.use(
     function (response) {
@@ -46,12 +48,10 @@ root.render(
             <MainProvider>
                 <BrowserRouter>
                     <ScrollToTop />
-                    <Navbar />
                     <Routes>
-                        {/* <Route path="/" element={<Home />} /> */}
                         <Route path="/register" element={<Register />} />
                         <Route path="/" element={<Login />} />
-                        
+                        <Route path="" element={<App/>}>
                         <Route path="/profile" element={<Profile />} />
                         <Route path="/courses" element={<Courses />} />
                         <Route path="/course" element={<GraphView />} />
@@ -78,7 +78,7 @@ root.render(
                             path="/questionEditor"
                             element={<QuestionEditor />}
                         />
-
+</Route>
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                 </BrowserRouter>
