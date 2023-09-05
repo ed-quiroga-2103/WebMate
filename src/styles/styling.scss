@@ -31,3 +31,61 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0rem 1.1875rem 2.375rem,
         rgba(0, 0, 0, 0.22) 0rem 0.9375rem 0.75rem;
 }
+
+@mixin preview{
+        display: flex;
+        margin: 1rem;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 6rem;
+        animation: fade-in forwards normal 300ms;
+        @media (min-width: $mobile) {
+          width: 40%;
+          height: 10.9rem;
+        }
+        &__img {
+          border: 0.06rem solid $main-color;
+          padding: 0.5rem;
+          height: 90%;
+          width: auto;
+        }
+}
+
+@mixin label{
+    margin-left: 1rem;
+      width: 35%;
+}
+
+@mixin input{
+    margin-right: 1rem;
+      width: 65%;
+      outline: none;
+      background-color: $main-color;
+      color: $second-color;
+      border: none;
+      border-bottom: 0.03rem solid $second-color;
+  
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      &:focus {
+        border: 0.03rem solid $second-color;
+      }
+      /* Firefox */
+      &[type="number"] {
+        -moz-appearance: textfield;
+      }
+}
+
+@mixin file{
+    width: 65%;
+        &::-webkit-file-upload-button {
+          border-radius: 1rem;
+          border: none;
+          height: 1.5rem;
+          background-color: $second-color;
+        }
+}
