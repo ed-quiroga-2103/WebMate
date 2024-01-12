@@ -83,7 +83,6 @@ export const GraphView = (props) => {
     useEffect(() => {
         const fetchCourse = async () => {
             const response = await courses.getBy.id(id);
-            console.log(response);
 
             setCourse(response);
         };
@@ -113,7 +112,7 @@ export const GraphView = (props) => {
             <GraphSection>
                 <GraphWrapper>
                     <div>
-                        {course ? (
+                        {course && me ? (
                             <Graph2D
                                 onBack={() => navigate('/courses')}
                                 onTest={() => navigate(`/quiz?course=${id}`)}
