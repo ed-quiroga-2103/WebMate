@@ -21,7 +21,7 @@ function QuestionAdmin() {
         fetchQuestions();
 
         return;
-    });
+    },[]);
 
     return (
         <div className="question-admin">

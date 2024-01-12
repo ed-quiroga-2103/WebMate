@@ -22,7 +22,7 @@ function Students() {
         fetchQuestions();
 
         return;
-    });
+    }, []);
 
     return (
         <div className="students-admin">
