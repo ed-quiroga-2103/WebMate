@@ -82,7 +82,7 @@ function Landing() {
                                 <p
                                     className={`${base}__singleCard__average__grade`}
                                 >
-                                    {0 || userState.averageGrade}
+                                    {0 || userState?.averageGrade}
                                 </p>
                                 {average.status ? (
                                     <p
