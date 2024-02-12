@@ -27,7 +27,7 @@ const DataToast = ({ params }) => {
     const navigate = useNavigate();
     console.log(params);
     return (
-        <div>
+        <div className='data-toast'>
             <div className="graph-resource-modal header">
                 <h4>Recursos: {params.name}</h4>
             </div>

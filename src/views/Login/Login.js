@@ -77,54 +77,7 @@ function Login() {
             setLoader(false);
         }
 
-        //         if (res.token) {
-        //             let now = new Date();
-        //             let time = now.getTime();
-        //             let expireTime = time + 1000 * 36000;
-        //             now.setTime(expireTime);
-        //             document.cookie = `token=${
-        //                 res.token
-        //             };expires=${now.toUTCString()};path=/`;
-        //             fetch(`url/user/${res.id}`)
-        //                 .then((res) => res.json())
-        //                 .then((res) => {
-        //                     setMessage({ status: true, message: 'Succesful' });
-        //                     setTimeout(() => {
-        //                         window.localStorage.setItem(
-        //                             'user',
-        //                             JSON.stringify(res.user)
-        //                         );
-        //                         navigate('/home');
-        //                     }, 1500);
-        //                 })
-        //                 .catch((res) => {
-        //                     setMessage({
-        //                         status: true,
-        //                         message: 'Error on logging',
-        //                     });
-        //                     setTimeout(() => {
-        //                         setMessage({ status: false, message: '' });
-        //                         setLoader(false);
-        //                         navigate('/login');
-        //                     }, 1500);
-        //                 });
-        //         } else {
-        //             setMessage({ status: true, message: 'Error on login' });
-        //             setTimeout(() => {
-        //                 setMessage({ status: false, message: '' });
-        //                 setLoader(false);
-        //                 navigate('/login');
-        //             }, 1500);
-        //         }
-        //     })
-        //     .catch((res) => {
-        //         setMessage({ status: true, message: 'Error on login' });
-        //         setTimeout(() => {
-        //             setMessage({ status: false, message: '' });
-        //             setLoader(false);
-        //             navigate('/login');
-        //         }, 1500);
-        //     });
+    
     };
     return (
         <main className={`${base}__root`}>

@@ -2,11 +2,16 @@ import { useEffect, useState } from 'react';
 import QRCode from 'qrcode';
 import { v4 as uuidv4 } from 'uuid';
 
+// const url = 'http://localhost:3000'
+const url = 'https://dev--resilient-granita-883614.netlify.app'
+
+
+
 const NewStudentModal = ({ onClose }) => {
     const [code, setCode] = useState(uuidv4());
 
     const [link, setLink] = useState(
-        `http://localhost:3000/register?code=${code}`
+        `${url}/register?code=${code}`
     );
 
     const generateQRCodeImage = () => {
@@ -23,7 +28,7 @@ const NewStudentModal = ({ onClose }) => {
     });
 
     useEffect(() => {
-        setLink(`http://localhost:3000/register?code=${code}`);
+        setLink(`${url}/register?code=${code}`);
     }, [code]);
 
     const onRefresh = () => {
