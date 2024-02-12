@@ -11,7 +11,7 @@ function Register() {
 
     const [userData, setUserData] = useState({
         firstName: '',
-        lastName:'',
+        lastName: '',
         email: '',
         password: '',
         dni: '',
@@ -59,6 +59,14 @@ function Register() {
                 lastCourse: 'N/A',
             });
 
+
+
+            if (response.message && response.message.includes('code')) {
+                alert("No tienes un enlace de registro valido!")
+                setLoader(false)
+                return;
+            }
+
             localStorage.setItem('token', response.token);
             const me = await auth.me();
             localStorage.setItem('me', JSON.stringify(me));
@@ -69,7 +77,7 @@ function Register() {
 
     console.log(code)
 
-    if(!code){
+    if (!code) {
         alert("No tienes un enlace de registro valido!")
     }
 
@@ -94,33 +102,33 @@ function Register() {
                         <div className='registration-section'>
                             <div className='field'>
                                 <label>Correo</label>
-                                <input onChange={(e)=>{updateUserData('email')(e.target.value)}}/>
+                                <input onChange={(e) => { updateUserData('email')(e.target.value) }} />
                             </div>
                             <div className='field'>
                                 <label>Password</label>
-                                <input  type='password' onChange={(e)=>{updateUserData('password')(e.target.value)}}/>
+                                <input type='password' onChange={(e) => { updateUserData('password')(e.target.value) }} />
                             </div>
                             <div className='field'>
                                 <label>Confirmar Password</label>
-                                <input type='password'onChange={(e)=>{updateUserData('confirmPassword')(e.target.value)}}/>
+                                <input type='password' onChange={(e) => { updateUserData('confirmPassword')(e.target.value) }} />
                             </div>
                         </div>
                         <div className='registration-section'>
                             <div className='field'>
                                 <label>Nombre</label>
-                                <input onChange={(e)=>{updateUserData('firstName')(e.target.value)}}/>
+                                <input onChange={(e) => { updateUserData('firstName')(e.target.value) }} />
                             </div>
                             <div className='field'>
                                 <label>Apellido</label>
-                                <input onChange={(e)=>{updateUserData('lastName')(e.target.value)}}/>
+                                <input onChange={(e) => { updateUserData('lastName')(e.target.value) }} />
                             </div>
                             <div className='field'>
                                 <label>Carrera</label>
-                                <input onChange={(e)=>{updateUserData('major')(e.target.value)}}/>
+                                <input onChange={(e) => { updateUserData('major')(e.target.value) }} />
                             </div>
                             <div className='field'>
                                 <label>Carnet</label>
-                                <input onChange={(e)=>{updateUserData('dni')(e.target.value)}}/>
+                                <input onChange={(e) => { updateUserData('dni')(e.target.value) }} />
                             </div>
                         </div>
                     </div>

@@ -7,6 +7,7 @@ const register = async (params) => {
         data: params,
     }).catch((error) => error.response);
 
+
     return response.data;
 };
 

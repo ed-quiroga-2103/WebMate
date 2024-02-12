@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import QRCode from 'qrcode';
 import { v4 as uuidv4 } from 'uuid';
+import auth from '../../api/auth';
 
 // const url = 'http://localhost:3000'
 const url = 'https://dev--resilient-granita-883614.netlify.app'
@@ -8,31 +9,46 @@ const url = 'https://dev--resilient-granita-883614.netlify.app'
 
 
 const NewStudentModal = ({ onClose }) => {
-    const [code, setCode] = useState(uuidv4());
 
-    const [link, setLink] = useState(
-        `${url}/register?code=${code}`
-    );
+    const [code, setCode] = useState();
 
-    const generateQRCodeImage = () => {
-        return QRCode.toDataURL(code, { type: 'png' }).then((img) => {
+    const generateQRCodeImage = (input) => {
+        return QRCode.toDataURL(input, { type: 'png' }).then((img) => {
             setQr(img);
-            console.log(img);
         });
     };
 
     const [qr, setQr] = useState();
 
+    const createCode = async () => {
+
+        const requestCode = uuidv4()
+        await auth.generateCode({ code: requestCode, generatedBy: 'admin' })
+        generateQRCodeImage(requestCode)
+        setCode(requestCode)
+    }
+
     useEffect(() => {
-        generateQRCodeImage();
-    });
+
+        createCode()
+
+        return;
+    }, [])
+
+
+
+    const [link, setLink] = useState(
+        `${url}/register?code=${code}`
+    );
+
+    
 
     useEffect(() => {
         setLink(`${url}/register?code=${code}`);
     }, [code]);
 
     const onRefresh = () => {
-        setCode(uuidv4());
+        createCode()
     };
 
     const onCopy = () => {
