@@ -99,3 +99,16 @@ code {
         color: #ff0000;
     }
 }
+
+
+.title-w-button{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.contained{
+    width: 90%;
+}

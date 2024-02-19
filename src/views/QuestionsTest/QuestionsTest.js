@@ -94,6 +94,8 @@ const QuestionsTest = ({ question }) => {
             const eqIndex = getEquationIndex(line);
             const imgIndex = getImageIndex(line);
 
+
+
             if (eqIndex) {
                 lines.push(
                     <div
@@ -117,9 +119,11 @@ const QuestionsTest = ({ question }) => {
                         className="question-image"
                     />
                 );
-            } else {
+            }
+            else {
                 lines.push(<span>{line}</span>);
             }
+
         });
 
         return lines;
@@ -158,8 +162,9 @@ const QuestionsTest = ({ question }) => {
 
     const renderHeader = () => {
         const lines = [];
-
+        const regex = new RegExp('\$.+\$', 'g')
         for (const line of promptedQuestions.header) {
+            console.log(line, regex.test(line))
             if (line.substr(0, 3) === '$eq') {
                 const ind = getEquationIndex(line);
                 lines.push(
@@ -167,6 +172,10 @@ const QuestionsTest = ({ question }) => {
                         <Latex>{promptedQuestions.equations[ind]}</Latex>
                     </>
                 );
+            } else if (line.substr(0,1) === '$') {
+                lines.push(<Latex displayMode={true}>
+                    {line}
+                </Latex>)
             } else {
                 lines.push(<span>{line}</span>);
             }
@@ -208,6 +217,14 @@ const QuestionsTest = ({ question }) => {
                 <div className="header">{renderHeader()}</div>
                 <div className="options">
                     {renderOptions(promptedQuestions.options)}
+                </div>
+                <div className='button-bar'>
+                    <button>
+                        Anterior
+                    </button>
+                    <button>
+                        Siguiente
+                    </button>
                 </div>
             </div>
         </div>

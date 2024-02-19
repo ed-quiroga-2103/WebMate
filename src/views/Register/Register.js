@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import auth from '../../api/auth';
 import Loader from '../../components/Loader/Loader';
@@ -75,11 +75,13 @@ function Register() {
         }
     };
 
-    console.log(code)
+    useEffect(()=>{
+        return ()=>{
+            alert("No tienes un enlace de registro valido!")
+        navigate('/login');
+        }
+    },[])
 
-    if (!code) {
-        alert("No tienes un enlace de registro valido!")
-    }
 
     return (
         <main className={`${base}__root`}>

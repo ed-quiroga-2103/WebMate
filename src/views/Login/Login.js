@@ -168,23 +168,6 @@ function Login() {
                         </div>
                     </form>
                 </div>
-                <div className={`${base}__section--white`}>
-                    <div className={`${base}__create-container`}>
-                        <h2 className={`${base}__create-container__title`}>
-                            ¿No tenés cuenta?
-                        </h2>
-                        <p className={`${base}__create-container__desc`}>
-                            Podés crear una cuenta de manera muy sencila y
-                            rápida
-                        </p>
-                        <Link
-                            className={`${base}__create-container__create`}
-                            to="/register"
-                        >
-                            Crear Cuenta
-                        </Link>
-                    </div>
-                </div>
             </div>
         </main>
     );

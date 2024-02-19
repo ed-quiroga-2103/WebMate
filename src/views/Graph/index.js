@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate, Link } from 'react-router-dom';
 import auth from '../../api/auth';
 import courses from '../../api/courses';
+import { Menu, MenuItem, Sidebar, SubMenu } from 'react-pro-sidebar';
 
 const DiagnosticToast = ({ navigate, courseId }) => {
     return (
@@ -23,49 +24,14 @@ const DiagnosticToast = ({ navigate, courseId }) => {
     );
 };
 
-const DataToast = ({ params }) => {
-    const navigate = useNavigate();
-    console.log(params);
-    return (
-        <div className='data-toast'>
-            <div className="graph-resource-modal header">
-                <h4>Recursos: {params.name}</h4>
-            </div>
-            <div className="graph-resource-modal container">
-                {params.resources.map((resource, index) => {
-                    return (
-                        <div key={`${index}-resource`}>
-                            <span>{'>'}</span>
-                            <a
-                                className="graph-resource-modal container_resource"
-                                href={resource.link}
-                            >
-                                {resource.data}
-                            </a>
-                        </div>
-                    );
-                })}
-            </div>
-            <div className="graph-resource-modal button-container">
-                <button
-                    className="graph-resource-modal eval-button"
-                    onClick={() => {
-                        navigate(
-                            `/quiz?course=${params.course.id}&subject=${params.id}`
-                        );
-                        console.log('clicked eval');
-                    }}
-                >
-                    Realizar evaluacion
-                </button>
-            </div>
-        </div>
-    );
-};
+
 
 export const GraphView = (props) => {
     const queryParams = new URLSearchParams(window.location.search);
     const id = queryParams.get('id');
+
+    const [sidePanel, setSidePanel] = useState({})
+    const [sideCollapsed, setSideCollapsed] = useState(true)
 
     const [course, setCourse] = useState(undefined);
 
@@ -108,14 +74,14 @@ export const GraphView = (props) => {
     }, []);
 
     return (
-        <>
+        <div className='graph-container'>
             <GraphSection>
                 <GraphWrapper>
                     <div>
                         {course && me ? (
                             <Graph2D
                                 onBack={() => navigate('/courses')}
-                                onTest={() => navigate(`/quiz?course=${id}`)}
+                                onTest={() => navigate(`/questionsTest?course=${id}`)}
                                 progress={me.user.progress[`${id}`]}
                                 nodeSize={10}
                                 // linkLength={75}
@@ -128,17 +94,9 @@ export const GraphView = (props) => {
                                             result = subject;
                                         }
                                     }
-
-                                    toast(
-                                        <DataToast
-                                            params={{ ...result, course }}
-                                        />,
-                                        {
-                                            position: 'bottom-right',
-                                            autoClose: false,
-                                            closeOnClick: false,
-                                        }
-                                    );
+                                    setSidePanel({ ...result })
+                                    console.log(sidePanel)
+                                    setSideCollapsed(false)
                                 }}
                                 doubleClick={() => {
                                     console.log('double');
@@ -154,7 +112,20 @@ export const GraphView = (props) => {
                     </div>
                 </GraphWrapper>
             </GraphSection>
-            <ToastContainer />
-        </>
+            <Sidebar collapsed={sideCollapsed} collapsedWidth='0' onBackdropClick={() => console.log('click')}>
+                <div className='sidebar'>
+                    <div className='title-w-button'>
+                        <h1>Recursos</h1>
+                        <div>
+                        <button onClick={()=>setSideCollapsed(true)}>x</button>
+                        </div>
+                    </div>
+                    <p className='contained'>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus magna ligula, faucibus non scelerisque sit amet, hendrerit eget ligula. Vestibulum urna massa, sodales tempor enim nec, porttitor luctus sem.
+                    </p>
+                </div>
+                    <Menu>{sidePanel.resources && sidePanel.resources.map((resource)=><MenuItem onClick={()=>window.open(resource.link)}>{resource.data}</MenuItem>)}</Menu>
+            </Sidebar>;
+        </div>
     );
 };
