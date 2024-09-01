@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Matemática Elemental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+     <body>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Matemática Elemental</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Números reales,<br/> potencias y raíces.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Operaciones <br/>combinadas.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Valor absoluto.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Unión, intersección<br/> y pertenencia.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Subconjuntos <br/>e intervalos.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub6</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub7</a></li>
+                </ul>
+             </nav>
+        </header>
+        <!--NO TOCAR NADA DE ARRIBA POR FAVOR-->
+         <!-- TRABAJAR DESDE AQUÍ -->
+                            
+         <h2>Ecuación Radical</h2> <!-- USAR H2 PARA TITULOS DE TEMAS -->
+         <hr class="new2"/>
+         <h3>Definición 1</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <hr class="new1"/>
+         <p>Se llama ecuación radical a aquella ecuación que involucra al menos, 
+            un radical cuyo subradical es una expresión algebraica no constante. </p><br/>  
+         <h4>Ejemplo 1:</h4>
+         <hr class="new1"/>
+         <p>
+            Son ecuaciones radicales:<br/><br/>
+            \(
+            \begin{array}{ll} 
+            a. &ensp;\sqrt[3]{2x+1} & &emsp;&emsp;&emsp; d. &ensp; \sqrt[5]{\dfrac{-x+2}{x+1}}+\sqrt[4]{y}=3\\\\
+            b. &ensp;\sqrt[4]{y^3-2x} = x+5 & &emsp;&emsp;&emsp; e. &ensp; \sqrt{x+6}-2x=\sqrt{x}\\\\
+            c. &ensp; \dfrac{x}{\sqrt{x}+6}=x^2-7x
+            \end{array}                       
+            \)<br/><br/>
+         </p>
+         <h3>Resultado 1</h3>
+         <hr class="new1"/>
+         <p>
+            Sean <i>P(x), Q(x) </i> expresiones algebraicas en una variable x y sea &alpha; un número real.<br/><br/>
+            Si &alpha; es una solución de la ecuación <i>P(x) = Q(x)</i>, 
+            entonces &alpha; es una solución de la ecuación \([P(x)]^n = [Q(x)]^n\), donde <i>n</i> &isin; &Nopf;.<br/><br/>
+            Otra forma de enunciar el resultado anterior es el siguiente:<br/><br/>
+            El conjunto de solución de \(P(x)=Q(x)\), esta contenido en el conjunto solución de \([P(x)]^n = [Q(x)]^n\), donde <i>n</i> &isin; &Nopf;.<br/><br/>
+            El resultado anterior es una consecuencia de la siguiente propiedad de los números reales:<br/>
+         </p>
+         <h3>Propiedad</h3>         
+         <hr class="new1"/>
+         <p>
+            Sean \(a &isin; &Ropf;, b &isin; &Ropf;, n &isin; &Nopf;, &emsp; a = b &emsp; &rArr; a^n = b^n\)<br/><br/>
+            Consideremos el siguiente ejemplo, en el cual se ilustra el resultado anterior.
+         </p>
+         <h4>Ejemplo 2</h4>
+         <hr class="new1"/>
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:
+            <ol type="a">
+                <li>\(2x+1=x+3\)</li><br/>
+                <b>Solución</b><br/><br/>
+                $$2x+1 =x+3$$
+                $$2x+1-x-3=0$$
+                $$x-2=0$$
+                $$x=2$$
+                El conjunto solución de \(2x+1=x+3\) es {2}<br/><br/>
+                <li>\((2x+1)^2=(x+3)^2\)</li><br/>
+                <b>Solución</b><br/><br/>
+                $$4x^2+4x+1 = x^2+6x+9$$
+                $$4x^2+4x+1-x^2-6x-9=0$$
+                $$3x^2-2x-8=0$$
+                $$&Delta; = (-2)^2-4(3)(-8)$$
+                $$&Delta; = 4 + 96 = 100$$
+                $$&alpha; = \dfrac{-(-2)-\sqrt{100}}{2(3)} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-(-2)+\sqrt{100}}{2(3)}$$
+                $$&alpha; = \dfrac{2-10}{6} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{2+10}{6}$$
+                $$&alpha; = \dfrac{-4}{3} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = 2$$
+                El conjunto solución de \((2x+1)^2=(x+3)^2\) es \( \biggl\{  2, \dfrac{-4}{3} \biggr\}  \)<br/><br/>
+            </ol>
+            En el caso anterior podemos observar que 2 es una solución de la ecuación \(2x+1=x+3\) y también es una solución de la ecuación 
+            \((2x+1)^2=(x+3)^2\). Sin embargo, observemos que \(\dfrac{-4}{3}\) es una solución de la ecuación \((2x+1)^2=(x+3)^2\), 
+            pero no es solución de \(2x+1=x+3\), esto quiere decir que {2} &sub; \( \biggl\{  2, \dfrac{-4}{3} \biggr\}  \)<br/><br/>
+         </p>
+         <h4>Observación</h4>
+         <p>
+            Sean <i>P(x)</i> y <i>Q(x)</i> dos expresiones algebraicas en una variable, &alpha; &isin; &Ropf; y <i>n</i> &isin; &Nopf;. 
+            Si &alpha; es una solución de \([P(x)]^n = [Q(x)]^n\) entonces &alpha; no necesariamente es una solución de la ecuación \(P(x) = Q(x)\). <br/><br/>
+            Por ejemplo el caso anterior \(\dfrac{-4}{3}\) es solución de \((2x+1)^2=(x+3)^2\), pero no es solución de \(2x+1=x+3\).<br/><br/>
+         </p>
+         <hr class="new1"/>
+         <h3>Convenio</h3>
+         <hr class="new1"/>
+         <p>
+            Sea \([P(x)]^n = [Q(x)]^n\) una ecuación de variable <i>x</i>, y sea &alpha; un número real tal que &alpha; es una solución de \([P(x)]^n = [Q(x)]^n\),
+            &alpha; es una solución de la ecuación \(P(x) = Q(x)\) si y sólo si, al sustituir <i>x</i> por &alpha; en \(P(x) = Q(x)\), se obtiene una igualdad verdadera.<br/><br/>
+         </p>
+         <h4>Ejemplo 3</h4>
+         <hr class="new1"/>
+         <p>
+            Resuleva cada una de las ecuaciones radicales:<br/>
+            <ol>
+                <li>\(\sqrt{8-x^2}=x\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$\sqrt{8-x^2}=x$$
+                    $$(\sqrt{8-x^2})^2=x^2$$
+                    $$8-x^2=x^2$$
+                    $$8-2x^2=0$$
+                    $$2(4-x^2)=0$$
+                    $$2(2-x)(2+x)=0$$
+                    Entonces: <br/><br/>
+                    $$&ensp;2-x=0 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; 2+x=0$$
+                    $$-x=-2 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; x=-2$$
+                    $$&emsp;x=2 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; x = -2$$
+                    Por lo que x = 2 y x = -2 son las posibles soluciones.<br/><br/>
+                    Determinemos si 2 y -2 son solución de la ecuación \(\sqrt{8-x^2}=x\)<br/><br/>
+                    $$                    
+                    \begin{array}{rr}
+                    x = 2 &emsp;&emsp;&&emsp; x=-2\\
+                    \sqrt{8-(2)^2}= 2 &emsp;&emsp;&&emsp; \sqrt{8-(-2)^2}=-2\\
+                    \sqrt{8-4}=2 &emsp;&emsp;&&emsp; \sqrt{8-4}=-2\\
+                    \sqrt{4} = 2 &emsp;&emsp;&&emsp; \sqrt{4}=-2\\
+                    2=2 &emsp;&emsp;&&emsp; 2 = -2\\
+                    \text{¡Cierto!} &emsp;&emsp;&&emsp; \text{¡Falso!}
+                    \end{array}
+                    $$<br/>
+                    Como con x = 2 se obtiene una igualdad verdadera y con x = -2 no, entonces 2 es solución y -2 no lo es.<br/><br/>
+                    Por lo anterior se concluye que {2} es el conjunto solución de \(\sqrt{8-x^2}=x\).<br/><br/>
+                    Se obtuvo como consecuencia de que \(a = b &rArr; a^n = b^n\), donde \( a &isin; &Ropf;, b &isin; &Ropf;, n &isin; &Nopf;\)<br/><br/>
+                    Además el valor de <i>n</i> se escogió convenientemente igual al indice del radical (es decir <i>n</i> = 2)<br/>
+                </details><br/>
+                <li>\( \sqrt[3]{12x+8} = x+2\)</li><br/>
+                <details>
+                  <summary>Solución</summary>
+                  $$(\sqrt[3]{12x+8})^3= (x+2)^3$$
+                  $$12x+8=(x+2)(x+2)(x+2)$$
+                  $$12x+8 = (x^2+4x+4)(x+2)$$
+                  $$12x+8=x^3+6x^2+12x+8$$
+                  $$0=x^3+6x^2+12x+8-12x-8$$
+                  $$0= x^3+6x^2$$
+                  $$0= x^2(x+6)$$
+                  Entonces:
+                  $$0 = x^2 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; 0=x+6$$
+                  $$0 = x &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; -6 = x$$
+                  $$x = 0 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; x = -6$$
+                  Por lo que x = 0 y x = -6  son posibles soluciones. <br/><br/>
+                  Determinemos si 0 y -6 son solución de la ecuación \( \sqrt[3]{12x+8} = x+2\)<br/><br/>
+                  $$
+                  \begin{array}{rr}
+                  x = 0 &emsp;&emsp;&&emsp; x = -6\\
+                  \sqrt[3]{12(0)+8}=0+2&emsp;&emsp; &&emsp; \sqrt[3]{12(-6)+8}=-6+2\\
+                  \sqrt[3]{0+8}=2&emsp;&emsp; & &emsp; \sqrt[3]{-72+8}=-4\\
+                  \sqrt[3]{8}=2 &emsp;&emsp; & &emsp; \sqrt[3]{-64} = -4\\
+                  \sqrt[3]{2^3}=2&emsp;&emsp;&&emsp; \sqrt[3]{(-4)^3}=-4\\
+                  2=2 &emsp;&emsp;&&emsp;-4=-4\\
+                  \text{¡Cierto!}&emsp;&emsp;&&emsp;\text{¡Cierto!}
+                  \end{array}
+                  $$
+                  Como al sustituir x = 0 ó x = -6 en \( \sqrt[3]{12x+8} = x+2\) obtenemos igualdades verdaderas, entonces 0 y -6 son soluciones de dicha ecuación.<br/><br/>
+                  Por lo anterior se concluye que {0, -6} es el conjunto solución de \( \sqrt[3]{12x+8} = x+2\)
+                </details><br/>
+                <li>\(  \sqrt[4]{x^4-2x-1}=x \)</li><br/>
+                <details>
+                  <summary>Solución</summary>
+                  $$(\sqrt[4]{x^4-2x-1})^4 = x^4$$
+                  $$x^4-2x-1 = x^4$$
+                  $$x^4-2x-1-x^4=0$$
+                  $$-2x-1=0$$
+                  $$-2x = 1$$
+                  $$x = \dfrac{-1}{2}$$
+                  Por lo que \(x = \dfrac{-1}{2}\) es una posible solución. <br/><br/>
+                  Determinemos si \(\dfrac{-1}{2}\) es solución de la ecuación \(  \sqrt[4]{x^4-2x-1}=x \)<br/><br/>
+                  $$x = \dfrac{-1}{2}$$
+                  $$\sqrt[4]{\biggl( \dfrac{-1}{2}\biggr) ^4 - 2\biggl(\dfrac{-1}{2}\biggr)-1} = \dfrac{-1}{2}$$
+                  $$\sqrt[4]{\dfrac{1}{16}-\dfrac{2}{2}-1} = \dfrac{-1}{2}$$
+                  $$\sqrt[4]{\dfrac{1}{16}} = \dfrac{-1}{2}$$
+                  $$\dfrac{1}{2}=\dfrac{-1}{2}$$
+                  $$\text{¡Falso!}$$
+                  Es decir \(\dfrac{-1}{2}\) no es solución de la ecuación.<br/><br/>
+                  Por lo anterior la ecuación \(  \sqrt[4]{x^4-2x-1}=x \) no tiene solución, es decir, su conjunto solución es &empty;<br/><br/>
+                  <b>Nota:</b> Observe que en los ejemplos anteriores, en el proceso de resolución de ecuaciones radicales, 
+                  con el fin de obtener una ecuación polinomial (la cual se puede resolver usando los conceptos estudiados anteriormente), se utilizó el resultado: <br/><br/>
+                  $$a = b &emsp;&rArr; &emsp; a^n=b^n,\text{donde } a &isin; &Ropf;, b &isin; &Ropf;, n &isin; &Nopf;$$
+                </details><br/>
+            </ol>                       
+         </p>
+         <h4>Ejercicios 1</h4>
+         <hr class="new1"/>
+         <p>
+            Resuleva cada una de las siguientes ecuaciones:
+            $$
+            \begin{array}{ll}
+            1. &ensp; x - 3 = \sqrt{x-1} &emsp;&emsp;&&emsp;&emsp; 4.&ensp; \sqrt{5x-1} = 5-x\\
+            2. &ensp;10 \sqrt{x} = x +9 &emsp;&emsp;&&emsp;&emsp; 5.&ensp; -\sqrt{2x-5} = 4 -x\\
+            3. &ensp;\sqrt{x-1} = x &emsp;&emsp;&&emsp;&emsp; 6.&ensp; \sqrt[3]{7-2x^2} = -3
+            \end{array}
+            $$
+            Antes de analizar otro tipo de ecuaciones radicales, veamos el siguiente caso:
+            $$\sqrt{x}+x=3$$
+            Resolviendo la ecuación anterior, usando lo estudiado hasta ahora en ecuaciones radicales.
+            $$\sqrt{x}+x=3$$
+            $$(\sqrt{x}+x)^2 = 3^2$$
+            $$(\sqrt{x})^2 +2x\sqrt{x} +x^2 = 9$$
+            $$x + 2x\sqrt{x}+x^2 = 9$$<br/>
+            Observemos que en esta útima ecuación tenemos todavía radicales, es decir, no hemos obtenido una ecuación polinomial, como sucedía en los ejemplos anteriores.<br/><br/>
+            Así, para resolver ecuaciones del tipo anterior, se recomienda seguir el procedimiento que se enuncia a continuación:<br/><br/>
+            Sean <i>P(x)</i> y <i>Q(x)</i> polinomios (o fracciones racionales) y <i>n</i> &isin; &Nopf;.<br/><br/>
+            Para resolver ecuaciones del tipo:
+            $$\sqrt[n]{P(x)} + Q(x) = R(x)$$
+            se recomienda transformarlas a una ecuación del tipo:
+            $$\sqrt[n]{P(x)} = R(x)- Q(x)$$
+            A partir de la ecuación anterior se obtiene que:
+            $$\bigl[\sqrt[n]{P(x)}\bigr]^n = \bigl[R(x)-Q(x)\bigr]^n$$
+            Lo cual implica que:
+            $$P(x) = \bigl[R(x)-Q(x)\bigr]^n$$
+            Que es una ecuación que se puede resolver por los métodos estudiados anteriormente. <br/><br/>
+         </p>
+         <h4>Ejemplo 4</h4>
+         <hr class ="new1">
+         <p>
+            Resuelva cada una de las siguientes ecuaciones: <br/><br/>
+            <ol>
+               <li>\(\sqrt{x+2} +2x-1=4x\)</li><br/>
+               <details>
+                  <summary>Solución</summary>
+                  $$\sqrt{x+2} = 4x-2x+1$$
+                  $$\sqrt{x+2} = 2x+1$$
+                  $$(\sqrt{x+2})^2 = (2x+1)^2$$
+                  $$x+2 = 4x^2+4x+1$$
+                  $$4x^2+4x+1=x+2$$
+                  $$4x^2+4x+1-x-2=0$$
+                  $$4x^2+3x-1=0$$
+                  $$&Delta; = (3)^2-4(4)(-1)$$
+                  $$&Delta; = 9 + 16$$
+                  $$&Delta; =25$$
+                  $$&alpha; = \dfrac{-3-\sqrt{25}}{8} = -1 &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-3+\sqrt{25}}{8} = \dfrac{1}{4}$$
+                  Posibles soluciones: x=-1 ó x = \(\dfrac{1}{4}\)<br/><br/>
+                  <b>Prueba:</b>
+                  $$
+                  \begin{array}{ll}
+                  x = -1 &emsp;&emsp; & &emsp;&emsp; x = \dfrac{1}{4}\\
+                  \sqrt{-1+2}+2(-1)-1=4(-1) &emsp;&emsp; & &emsp;&emsp; \sqrt{\dfrac{1}{4}+2}+2(\dfrac{1}{4})-1=4(\dfrac{1}{4})\\
+                  \sqrt{1}-2-1 = -4 &emsp;&emsp; & &emsp;&emsp; \sqrt{\dfrac{9}{4}}+\dfrac{1}{2}-1=1\\
+                  1-2-1 = -4 &emsp;&emsp; & &emsp;&emsp; \dfrac{3}{2} + \dfrac{1}{2}-1=1\\
+                  -2 = -4 &emsp;&emsp; & &emsp;&emsp; 2-1 = 1\\
+                  ¡Falso! &emsp;&emsp; & &emsp;&emsp; 1 = 1\\
+                  & &emsp;&emsp; ¡Cierto!
+                  \end{array}
+                  $$
+                  Por lo tanto solo \(\dfrac{1}{4}\) es solución de \(\sqrt{x+2} +2x-1=4x\) y su conjunto solución es \( \Bigl\{ \dfrac{1}{4} \Bigr\} \)
+               </details><br/>
+               <li>\( \sqrt[3]{\dfrac{x^3}{8}+x^2-16}+\dfrac{x}{2}-5 = x-5 \)</li><br/>
+               <details>
+                  <summary>Solución</summary>
+                  $$\sqrt[3]{\dfrac{x^3}{8}+x^2-16} = x - 5 -\dfrac{x}{2}+5$$
+                  $$\sqrt[3]{\dfrac{x^3}{8}+x^2-16} = \dfrac{x}{2}$$
+                  $$\Biggl(\sqrt[3]{\dfrac{x^3}{8}+x^2-16}\Biggr)^3 = \biggl(\dfrac{x}{2}\biggl)^3$$
+                  $$\dfrac{x^3}{8}+x^2-16 = \dfrac{x^3}{8}$$
+                  $$\dfrac{x^3}{8}+x^2-16 - \dfrac{x^3}{8} = 0$$
+                  $$x^2-16 = 0$$
+                  $$(x -4)(x+4) = 0$$
+                  Entonces:
+                  $$x-4=0 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; x+4=0$$
+                  $$x = 4 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; x = -4$$
+                  <b>Prueba</b><br/><br/>
+                  \(x = 4\)<br/><br/>
+                  \( \sqrt[3]{\dfrac{(4)^3}{8}+(4)^2-16} +\dfrac{4}{2}-5 = 4-5 \)<br/><br/>
+                  \(  \sqrt[3]{\dfrac{64}{8}+16-16}+2-5=-1\)<br/><br/>
+                  \(  \sqrt[3]{8} -3 = -1\)<br/><br/>
+                  \( 2-3=-1\)<br/><br/>
+                  \(-1 = -1\)<br/><br/>
+                  ¡Cierto!<br/><br/>
+                  \(x = -4\)<br/><br/>
+                  \( \sqrt[3]{\dfrac{(-4)^3}{8}+(-4)^2-16} +\dfrac{-4}{2}-5 = -4-5 \)<br/><br/>
+                  \(  \sqrt[3]{\dfrac{-64}{8}+16-16}-2-5=-9\)<br/><br/>
+                  \(  \sqrt[3]{-8} -7 = -9\)<br/><br/>
+                  \( -2-7=-9\)<br/><br/>
+                  \(-9 = -9\)<br/><br/>
+                  ¡Cierto!<br/><br/>
+                  Por lo tanto -4 y 4 son soluciones de \( \sqrt[3]{\dfrac{x^3}{8}+x^2-16}+\dfrac{x}{2}-5 = x-5 \) 
+                  y su conjunto solución es {-4, 4}<br/>
+               </details><br/>
+            </ol>
+         </p>
+         <h4>Ejercicios 2</h4>
+         <hr class="new1"/>
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:<br/><br/>
+            \(
+            \begin{array}{ll}
+            a) &ensp; x-3-\sqrt{x-1}=0 &emsp;&emsp; & &emsp;&emsp; d) &ensp; \sqrt{4x+29}-x-2=0\\
+            b) &ensp; \sqrt{6x+25}-x = 3 &emsp;&emsp; & &emsp;&emsp; e) &ensp; \sqrt{6x-9}+x = 0\\
+            c) &ensp; \sqrt{x-12}-4=0 &emsp;&emsp; & &emsp;&emsp; f) &ensp; 2\sqrt{2x+1}=3-x
+            \end{array}<br/>
+            \)
+         </p>
+         <h4>Ejemplo 5</h4>
+         <hr class="new1"/>
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:<br/><br/>
+            <ol>
+               <li>\(\dfrac{\sqrt{x^4-7x^3+5x^2-x+6}}{x}+3 = x\)</li><br/>
+               <details>
+                  <summary>Solución</summary>
+                  $$\dfrac{\sqrt{x^4-7x^3+5x^2-x+6}}{x} = x-3$$
+                  $$\Biggl(\dfrac{\sqrt{x^4-7x^3+5x^2-x+6}}{x}\Biggr)^2 = (x-3)^2$$
+                  $$\dfrac{x^4-7x^3+5x^2-x+6}{x^2} = x^2 -6x+9$$
+                  $$x^4-7x^3+5x^2-x+6 = x^2(x^2-6x+9)$$
+                  $$x^4-7x^3+5x^2-x+6 = x^4-6x^3+9x^2$$
+                  $$x^4-7x^3+5x^2-x+6-x^4+6x^3-9x^2 = 0$$
+                  $$-x^3-4x^2-x+6=0 &emsp;(*)$$
+                  Resolviendo esta ecuación con división sintética tenemos que:<br/><br/>
+                  \(
+                  \begin{array}{llll|r}
+                  -1 & -4 & -1 & 6 & 1\\
+                  & -1 & -5 & -6 &\\
+                  \hline
+                  -1 & -5 & -6 & 0\\
+                  \end{array}
+                  \)<br/><br/>
+                  Por lo que 1 es solución de (*) y podemos expresarla como \((x-1)(-x^2-5x-6) = 0\)<br/><br/>
+                  Resolviendo \(-x^2-5x-6\)<br/><br/>
+                  $$ &alpha; = \dfrac{5-\sqrt{1}}{2(-1)} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{5+\sqrt{1}}{2(-1)}$$
+                  $$ &alpha; = \dfrac{5-1}{-2} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{5+1}{-2}$$
+                  $$ &alpha; = \dfrac{-4}{2} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-6}{2}$$
+                  $$ &alpha; = -2 &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = -3$$
+                  <b>Prueba</b><br/><br/>
+                  <ol>
+                     <ul>&#9679; \(x = 1\)</ul><br/>
+                     $$\dfrac{\sqrt{1^4-7(1)^3+5(1)^2-1+6}}{1}+3 = 1$$
+                     $$\sqrt{1-7+5-1+6}+3 = 1$$
+                     $$\sqrt{4}+3 = 1$$
+                     $$2+3=1$$
+                     $$5=1$$
+                     ¡Falso!<br/><br/>
+                     Por lo tanto 1 no es solución de la ecuación.
+                     <ul>&#9679; \(x = -2\)</ul><br/>
+                     $$\dfrac{\sqrt{(-2)^4-7(-2)^3+5(-2)^2-(-2)+6}}{-2}+3 = -2$$
+                     $$\dfrac{\sqrt{16+56+20+2+6}}{-2}+3 = -2$$
+                     $$\dfrac{\sqrt{100}}{-2} = -2$$
+                     $$\dfrac{10}{-2}+3 = -2$$
+                     $$-5+3 = -2$$
+                     $$-2 = -2$$
+                     ¡Cierto!<br/><br/>
+                     Por lo tanto -2 es solución de la ecuación.<br/><br/>
+                     <ul>&#9679; \(x = -3\)</ul>
+                     $$\dfrac{\sqrt{(-3)^4-7(-3)^3+5(-3)^2-(-3)+6}}{-3}+3 = -3$$
+                     $$\dfrac{\sqrt{81+189+45+3+6}}{-3} +3 = -3$$
+                     $$\dfrac{\sqrt{324}}{-3}+3 = -3$$
+                     $$\dfrac{18}{-3}+3 = -3$$
+                     $$-6 + 3 = -3$$
+                     $$-3=-3$$
+                     ¡Cierto!<br/><br/>
+                     Por lo tanto -3 es solución de la ecuación.<br/><br/>
+                  </ol>
+                  Por lo anterior tenemos que el conjunto solución de la ecuación \(\dfrac{\sqrt{x^4-7x^3+5x^2-x+6}}{x}+3 = x\), 
+                  es {-2, -3}
+               </details><br/>
+               <li>\(-2+3\sqrt{3-x}-x+1=0\)</li><br/>
+               <details>
+                  <summary>Solución</summary>
+                  $$3\sqrt{3-x}=x-1+2$$
+                  $$3\sqrt{3-x}=x+1$$
+                  $$(3\sqrt{3-x})^2=(x+1)^2$$
+                  $$9(3-x)=x^2+2x+1$$
+                  $$27-9x = x^2+2x+1$$
+                  $$x^2+2x+1x = 27-9x$$
+                  $$x^2+2x+1-27+9x=0$$
+                  $$x^2+11x-26=0$$
+                  $$&Delta; = (11)^2-4(1)(-26)$$
+                  $$&Delta; = 121+104$$
+                  $$&Delta; = 225$$
+                  $$&alpha; = \dfrac{-11-\sqrt{225}}{2(1)} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-11-\sqrt{225}}{2(1)}$$
+                  $$&alpha; = \dfrac{-11-15}{2} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-11+15}{2}$$
+                  $$&alpha; = \dfrac{-26}{2} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{4}{2}$$
+                  $$&alpha; = -13 &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; =2$$
+                  <ol>
+                     <li>&#9679; \(x =-13\)</li>
+                     $$-2+3\sqrt{3-(-13)}-(-13)+1=0$$
+                     $$-2+3\sqrt{16}+13+1=0$$
+                     $$-2+3(4)+14=0$$
+                     $$-2+12+14=0$$
+                     $$24 = 0$$
+                     $$¡Falso!$$
+                     Por lo tanto -13 no es solución de la ecuación.<br/><br/>
+                     <li>&#9679; \(x=2\)</li>
+                     $$-2+3\sqrt{3-2}-2+1=0$$
+                     $$-2+3\sqrt{1}-2+1=0$$
+                     $$-2+3(1)-1=0$$
+                     $$-2+3-1=0$$
+                     $$0=0$$
+                     $$¡Cierto!$$
+                     Por lo tanto 2 es solución de la ecuación.<br/><br/>
+                     Por lo anterior tenemos que el conjunto solución de \(-2+3\sqrt{3-x}-x+1=0\) es {2}
+                  </ol>
+               </details><br/>
+            </ol>
+         </p>
+         <h4>Ejercicios 4</h4>
+         <hr class="new1"/>
+         <p>
+            Resuleva cada una de las siguientes ecuaciones: <br/><br/>
+            <ol>
+               <li>\( 2\sqrt{x+\dfrac{5}{4}} +2x = -1 \)</li><br/>
+               <li>\(  -x + \sqrt{-3x+16}+4=0   \)</li><br/>
+               <li>\(  -x+2\sqrt{x+4}+4=0  \)</li><br/>
+               <li>\(  \dfrac{-x+1}{\sqrt{-2x+2}}+x=0   \)</li><br/>
+               <li>\(  x+2\sqrt{x-6} = 5   \)</li><br/>
+               <li>\(  x+4=-3\sqrt{}2+x \)</li><br/>
+            </ol>
+            En el ejemplo siguiente se ilustra el procedimiento a seguir en la resolución de ecuaciones radicares que involucren
+            más de un radical no constante.
+         </p><br/>
+         <h4>Ejemplo 6</h4>
+         <hr class="new1"/>
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:<br/><br/>
+            <ol>
+               <li>\( \sqrt{x-1}+\sqrt{x+4} = 5  \)</li><br/>
+               <details>
+                  <summary>Solución</summary>
+                  $$\sqrt{x-1}=5-\sqrt{x+4}$$
+                  $$(\sqrt{x-1})^2 = (5-\sqrt{x+4})^2$$
+                  $$x-1 = 25-10\sqrt{x+4}+x+4$$
+                  $$x-1-25-x-4=-10\sqrt{x+4}$$
+                  $$-30=-10\sqrt{x+4}$$
+                  $$\dfrac{-30}{-10}=\sqrt{x+4}$$
+                  $$3^2=(\sqrt{x+4})^2$$
+                  $$9 = x+4$$
+                  $$9-4 = x$$
+                  $$x = 5$$
+                  <b>Prueba: \(x = 5\)</b><br/><br/>
+                  $$\sqrt{5-1}+\sqrt{5+4} = 5$$
+                  $$\sqrt{4}+\sqrt{9} = 5$$
+                  $$2 + 3 = 5$$
+                  $$5 = 5$$
+                  $$$¡Cierto!$
+               </details><br/>
+               <li>\(  2\sqrt[3]{x-1}=\sqrt[6]{-128x+65}  \)</li><br/>
+               <details>
+                  <summary>Solución</summary>
+                  $$(2\sqrt[3]{x-1})^6 = (\sqrt[6]{-128x+65} )^6$$
+                  $$64(\sqrt[3]{x-1})^6 = -128x+65$$
+                  $$64\Bigl[(x-1)^{\frac{1}{3}}\Bigr]^6 = -128x+65$$
+                  $$64(x-1)^{\dfrac{6}{3}} = -128x+65$$
+                  $$64(x-1)^2 = 128x+65$$
+                  $$64(x^2-2x+1) = -128+65$$
+                  $$64x^2 -128x+64+128x-65=0$$
+                  $$64x^2-1=0$$
+                  $$(8x-1)(8x+1) = 0$$
+                  $$8x-1 = 0 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; 8x+1 = 0$$
+                  $$8x = 1 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; 8x = -1$$
+                  $$x = \dfrac{1}{8}&emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; x = \dfrac{-1}{8}$$
+                  Por lo que las posibles soluciones son \(x = \dfrac{1}{8} &emsp; &and; &emsp; x = \dfrac{-1}{8}\)<br/><br/>
+                  <ol>
+                     <li>&#9679; \(x = \dfrac{1}{8}\)</li><br/>
+                     $$2\sqrt[3]{\dfrac{1}{8}-1}=\sqrt[6]{-128\dfrac{1}{8}+65}$$
+                     $$2\sqrt[3]{\dfrac{-7}{8}}=\sqrt[6]{-16+65}$$
+                     $$-2 \cdot \dfrac{1}{2}\sqrt[3]{-7}=\sqrt[6]{49}$$
+                     $$-\sqrt[3]{-7}=\sqrt[6]{7^2}$$
+                     $$-\sqrt[3]{-7}=\sqrt[3]{7}$$
+                     $$¡Falso!$$
+                     <li>&#9679; \(x = \dfrac{-1}{8}\)</li><br/>
+                     $$2\sqrt[3]{\dfrac{-1}{8}-1}=\sqrt[6]{-128\dfrac{-1}{8}+65}$$
+                     $$2\sqrt[3]{\dfrac{-9}{8}}=\sqrt[6]{16+65}$$
+                     $$-2 \cdot \dfrac{1}{2}\sqrt[3]{-9}=\sqrt[6]{81}$$
+                     $$-\sqrt[3]{9}=\sqrt[6]{9^2}$$
+                     $$-\sqrt[3]{9}=\sqrt[3]{9}$$
+                     $$¡Falso!$$
+                  </ol><br/>
+                  Por lo anterior la ecuación \(  2\sqrt[3]{x-1}=\sqrt[6]{-128x+65}  \) no tiene solución,
+                  es decir su conjunto solución es &empty;
+               </details><br/>
+            </ol>            
+         </p>
+         <h4>Ejercicios 4</h4>
+         <hr class="new1"/>
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:<br/><br/>
+            \(
+            \begin{array}{ll}
+            a) &ensp;\sqrt{x+2}-\sqrt{x-3} = 1 &emsp;&emsp; & &emsp;&emsp; d)&ensp; (1+\sqrt{x})^2+(1+\sqrt{x})-6=0\\\\
+            b) &ensp; \sqrt[3]{x+1}=\sqrt[6]{3x+7} &emsp;&emsp; & &emsp;&emsp; e)&ensp; \dfrac{\sqrt{x+3}}{\sqrt{x-3}}-2 = \dfrac{\sqrt{x-3}}{\sqrt{x+3}}\\\\
+            c) &ensp; \sqrt{3} &ensp; \sqrt{x-1} = \sqrt{x-1} &emsp;&emsp; & &emsp;&emsp; f) &ensp; \sqrt{x+2} = \sqrt{x} +3
+            \end{array}
+            \)
+         </p>
+      </body>
+</html>

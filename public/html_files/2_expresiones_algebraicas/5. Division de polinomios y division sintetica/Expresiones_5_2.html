@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Matemática Elemental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+     <body>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Matemática Elemental</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Números reales,<br/> potencias y raíces.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Operaciones <br/>combinadas.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Valor absoluto.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Unión, intersección<br/> y pertenencia.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Subconjuntos <br/>e intervalos.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub6</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub7</a></li>
+                </ul>
+             </nav>
+        </header>
+        <!--NO TOCAR NADA DE ARRIBA POR FAVOR-->
+         <!-- TRABAJAR DESDE AQUÍ -->
+                            
+        
+         <hr class="new2"/>
+         <h3>Operaciones con fracciones racionales</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         
+         <p> Para realizar operaciones con fracciones racionales usaremos los procedimientos utilizados para realizar operaciones con números racionales. De este modo: </p>
+         <p> Si \(\dfrac{A(x)}{B(x)} \) y \(\dfrac{C(x)}{B(x)} \) son fracciones racionales, entonces son verdaderas las siguientes igualdades: </p>
+         <p> 1)  \( \dfrac{A(x)}{B(x)}+\dfrac{C(x)}{D(x)}=\dfrac{A(x)\cdot D(x)+C(x)\cdot B(x) }{B(x)\cdot D(x)} \) </p>
+         <p> 2)  \( \dfrac{A(x)}{B(x)}-\dfrac{C(x)}{D(x)}=\dfrac{A(x)\cdot D(x)-C(x)\cdot B(x) }{B(x)\cdot D(x)} \) </p>
+         <p> 3)  \( \dfrac{A(x)}{B(x)}\cdot \dfrac{C(x)}{D(x)}= \dfrac{A(x)\cdot C(x) }{B(x)\cdot D(x)}\) </p>
+         <p> 4) \( \dfrac{A(x)}{B(x)}\div \dfrac{C(x)}{D(x)}=\dfrac{A(x)\cdot D(x)}{B(x)\cdot C(x)}\) </p>
+         <p><strong>Notación:</strong></p>
+         <p> \( \dfrac{A(x)}{B(x)}\div \dfrac{C(x)}{D(x)}=\dfrac{\dfrac{A(x)}{B(x)}}{\dfrac{C(x)}{D(x)}} \) por lo que \(\dfrac{\dfrac{A(x)}{B(x)}}{\dfrac{C(x)}{D(x)}}=\dfrac{A(x)\cdot D(x)}{B(x)\cdot C(x)} \) </p>
+         <h4>Ejemplo 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Sean \(\dfrac{P(x)}{Q(x)}=\dfrac{x^2+5x+6}{x^2-1} \)\(\hspace{0.5cm}\) y \(\hspace{0.5cm}\) \(\dfrac{R(x)}{S(x)}=\dfrac{x^2+2x-3}{3x+6} \) </p>
+         <p>Determine:</p>
+         <p>$$ a) \ \ \dfrac{P(x)}{Q(x)}\cdot \dfrac{R(x)}{S(x)} \hspace{3cm} b)\ \ \dfrac{P(x)}{Q(x)}\div \dfrac{R(x)}{S(x)} $$</p>
+         <p>En cada caso exprese el resultado como una fracción racional en su forma más simple</p>
+
+        <details> <!--Para agregar soluciones a ejercicios-->
+             <summary>Solución</summary> <!--Titulo "Solución"-->
+
+\begin{align*}
+a) \ \ \dfrac{P(x)}{Q(x)}\cdot \dfrac{R(x)}{S(x)}&= \dfrac{(x^2+5x+6)(x^2+2x-3)}{(x^2-1)(3x+6)}\\\\
+&= \dfrac{[(x+3)(x+2)][(x+3)(x-1)]}{[(x-1)(x+1)]\cdot 3(x+2)}\\\\
+&= \dfrac{(x+3)(x+3)}{3(x+1)}\\\\
+\therefore \dfrac{P(x)}{Q(x)}\cdot \dfrac{R(x)}{S(x)}&= \dfrac{(x+3)^2}{3(x+1)}\\\\\\
+\end{align*}
+
+\begin{align*} 
+b)\ \ \dfrac{P(x)}{Q(x)}\div \dfrac{R(x)}{S(x)} &= \dfrac{x^2+5x+6}{x^2-1}\div \dfrac{x^2+2x-3}{3x+6}\\\\
+&= \dfrac{(x^2+5x+6)(3x+6)}{(x^2-1)(x^2+2x-3)}\\\\
+&= \dfrac{[(x+3)(x{2})](3x+6)}{[(x-1)(x+1)][(x+3)(x-1)]}\\\\
+&= \dfrac{3(x+2)(x+2)}{(x-1)(x+1)(x-1)}\\\\
+\therefore \dfrac{P(x)}{Q(x)}\div \dfrac{R(x)}{S(x)} &= \dfrac{3(x+2)^2}{(x-1)^2(x+1)}
+\end{align*}
+
+        </details>    
+        
+        <hr class="new2"/>
+         <h4>Ejemplo 2</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Realice las operaciones indicadas en cada una de las expresiones siguientes y escriba la fracción racional resultante en su forma más simple: </p>
+         <p>$$ a)\ \ \dfrac{3}{x-7}+\dfrac{2}{x+6} \hspace{3cm} b)\ \ \dfrac{x}{x+1}-\dfrac{2x}{1-x^2} $$</p>
+            
+         <details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+
+            \begin{align*} 
+            a)\ \ \dfrac{3}{x-7}+\dfrac{2}{x+6} &= \dfrac{3(x+6)+2(x-7)}{(x-7)(x+6)}\\\\
+            &= \dfrac{3x+18+2x-14}{(x-7)(x+6)}\\\\
+            &= \dfrac{5x+4}{(x-7)(x+6)}\\\\
+\therefore \dfrac{3}{x-7}+\dfrac{2}{x+6} &= \dfrac{5x+4}{(x-7)(x+6)} \\\\\\
+            \end{align*}
+
+            \begin{align*}
+            b)\ \ \dfrac{x}{x+1}-\dfrac{2x}{1-x^2} &= \dfrac{x(1-x^2)-2x(x+1)}{(x+1)(1-x^2)}\\\\
+            &= \dfrac{x-x^3-2x^2-2x}{(x+1)(1-x^2)}\\\\
+            &= \dfrac{-x^3-2x^2-x}{(x+1)(1-x^2)}\\\\
+            &= \dfrac{-x(x^2+2x+1)}{(x+1)(1-x^2)}\\\\
+            &= \dfrac{-x(x+1)^2}{(x+1)(1-x)(1+x)}\\\\
+            &= \dfrac{-x}{(1-x)}\\\\
+            \therefore \dfrac{x}{x+1}-\dfrac{2x}{1-x^2} &= \dfrac{-x}{(1-x)}\\\\\\
+            \end{align*}
+
+            <p> A continuación enunciaremos un resultado que puede ser usado para sumar y restar fracciones racionales </p>
+            <p> Si \(\dfrac{A(x)}{B(x)} \) y \(\dfrac{C(x)}{B(x)} \) son fracciones racionales entonces son verdaderas las siguientes igualdades: </p>
+            <p> i) \(\dfrac{A(x)}{B(x)}+\dfrac{C(x)}{B(x)}=\dfrac{A(x)+C(x)}{B(x)}  \) </p>
+            <p> ii) \(\dfrac{A(x)}{B(x)}-\dfrac{C(x)}{B(x)}=\dfrac{A(x)-C(x)}{B(x)}  \) </p>
+
+            <p><strong>Justificación del resultado:</strong></p>
+            \begin{align*}
+            \dfrac{A(x)}{B(x)}+\dfrac{C(x)}{B(x)} &= \dfrac{A(x)\cdot B(x)+C(x)\cdot B(x)}{B(x)\cdot B(x)}\\
+            &= \dfrac{[A(x)+C(x)]\cdot B(x)}{B(x)\cdot B(x)}\\
+            &= \dfrac{A(x)+C(x)}{B(x)}\\
+            \therefore \dfrac{A(x)}{B(x)}+\dfrac{C(x)}{B(x)} &=\dfrac{A(x)+C(x)}{B(x)} \\\\
+            \end{align*}
+            <p> Para el caso de la resta se tiene una justificación análoga a la anterior </p>
+
+            <p><strong>Nota:</strong> El resultado enunciado anteriormente se generaliza al caso en que se suman o restan tres o más fracciones racionales. </p>
+            <p> En los siguientes ejemplos ilustraremos el uso de este resultado al sumar o restar fracciones racionales. </p>
+
+        </details>
+
+        <hr class="new2"/>
+        <h4>Ejemplo 3</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+        <p> Realice las operaciones indicadas en cada una de las siguientes expresiones y escriba la fracción racional resultante en su forma más simple. </p>
+        <p>$$ a) \ \ \dfrac{8x}{x+2}+\dfrac{-6x+4}{x+2} \hspace{6cm} b) \ \ \dfrac{1+3b}{3ab}+\dfrac{-a+1}{a^2b}-\dfrac{b^2+1}{2ab^2} $$</p> 
+        <p>$$ \hspace{-1.5cm} c) \ \ \dfrac{-3x-5}{x^2-25}+\dfrac{2}{x-5} \hspace{6cm} d) \ \ \dfrac{x}{x^2-1}-\dfrac{x+1}{(x-1)^2} $$</p>
+        <p>$$\hspace{0.4cm} e) \ \ \dfrac{1}{x^2-16}+\dfrac{1}{x^2-5x+4}-\dfrac{2}{x^2+8x+16} \hspace{2cm} f)\ \ \dfrac{1}{x^2-2x}-\dfrac{1}{x^2+2x}-\dfrac{4}{x^3-4x} $$</p>
+        <p>$$\hspace{-7.8cm} g) \ \ \dfrac{2}{x^3-1}-\dfrac{x^2-x+1}{x-1}-\dfrac{x+1}{x^2+x+1} $$</p>
+    
+        <details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+a) \ \ \dfrac{8x}{x+2}+\dfrac{-6x+4}{x+2}&= \dfrac{8x+(-6x)+4}{x+2}\\\\
+&= \dfrac{2x+4}{x+2}\\\\
+&=\dfrac{2(x+2)}{x+2}\\\\
+&= 2\\
+\therefore 
+\dfrac{8x}{x+2}+\dfrac{-6x+4}{x+2}&=2\\\\\\
+\end{align*}
+
+\begin{align*}
+b) \ \ \dfrac{1+3b}{3ab}+\dfrac{-a+1}{a^2b}-\dfrac{b^2+1}{2ab^2} &= \dfrac{1+3b}{3ab}\cdot \dfrac{2ab}{2ab}+\dfrac{-a+1}{a^2b}\cdot \dfrac{6b}{6b}-\dfrac{b^2+1}{2ab^2}\cdot \dfrac{3a}{3a}\\\\
+&= \dfrac{(1+3b)(2ab)}{6a^2b^2}+\dfrac{(-a+1)6b}{6a^2b^2}-\dfrac{(b^2+1)3a}{6a^2b^2}\\\\
+&= \dfrac{(1+3b)2ab+(-a+1)6b-(b^2+1)3a}{6a^2b^2}\\\\
+&= \dfrac{2ab+6ab^2-6ab+6b-3ab^2-3a}{6a^2b^2}\\\\
+&= \dfrac{-4ab+3ab^2+6b-3a}{6a^2b^2}\\\\
+\therefore \dfrac{1+3b}{3ab}+\dfrac{-a+1}{a^2b}-\dfrac{b^2+1}{2ab^2} &=\dfrac{-4ab+3ab^2+6b-3a}{6a^2b^2}\\\\\\
+\end{align*}
+
+\begin{align*}
+c) \ \ \dfrac{-3x-5}{x^2-25}+\dfrac{2}{x-5}&= \dfrac{-3x-5}{(x-5)(x+5)}+\dfrac{2}{x-5}\\\\
+&= \dfrac{-3x-5}{(x-5)(x+5)}+\dfrac{2}{x-5}\cdot \dfrac{x+5}{x+5}\\\\
+&= \dfrac{-3x-5}{(x-5)(x+5)}+\dfrac{2(x+5)}{(x-5)(x+5)}\\\\
+&= \dfrac{-3x-5+2(x+5)}{(x-5)(x+5)}\\\\
+&= \dfrac{-3x-5+2x+10}{(x-5)(x+5)}\\\\
+&= \dfrac{-x+5}{(x-5)(x+5)}\\\\
+&= \dfrac{-1(x-5)}{(x-5){x+5}}\\\\
+&= \dfrac{-1}{x+5}\\\\
+\therefore \dfrac{-3x-5}{x^2-25}+\dfrac{2}{x-5}&=\dfrac{-1}{x+5}\\\\\\
+\end{align*}
+
+\begin{align*}
+d) \ \ \dfrac{x}{x^2-1}-\dfrac{x+1}{(x-1)^2} &= \dfrac{x}{(x-1)(x+1)}-\dfrac{x+1}{(x-1)(x-1)}\\\\
+&= \dfrac{x}{(x-1)(x+1)}\cdot \dfrac{x-1}{x-1}-\dfrac{x+1}{(x-1)(x-1)}\cdot \dfrac{x+1}{x+1}\\\\
+&= \dfrac{x(x+1)}{(x-1)^2(x+1)}-\dfrac{(x+1)^2}{(x-1)^2(x+1)}\\\\
+&= \dfrac{x(x-1)-(x+1)^2}{(x-1)^2(x+1)}\\\\
+&= \dfrac{x^2-x-(x^2+2x+1)}{(x-1)^2(x+1)}\\\\
+&= \dfrac{x^2-x-x^2-2x-1}{(x-1)^2(x+1)}\\\\
+&= \dfrac{-3x-1}{(x-1)^2(x+1)}\\\\
+\therefore \dfrac{x}{x^2-1}-\dfrac{x+1}{(x-1)^2} &= \dfrac{-3x-1}{(x-1)^2(x+1)}\\\\\\
+\end{align*}
+
+\begin{align*}
+e) &\ \ \dfrac{1}{x^2-16}+\dfrac{1}{x^2-5x+4}-\dfrac{2}{x^2+8x+16} &\\\\
+=& \dfrac{1}{(x-4)(x+4)}+\dfrac{1}{(x-1)(x-4)}-\dfrac{2}{(x+4)^2}\\\\
+=& \dfrac{1}{(x-4)(x+4)}\cdot \dfrac{(x-1)(x+4)}{(x-1)(x+4)}+\dfrac{1}{(x-1)(x-4)}\cdot \dfrac{(x+4)^2}{(x+4)^2}-\dfrac{2}{(x+4)^2}\cdot \dfrac{(x-1)(x-4)}{(x-1)(x-4)}\\\\
+=& \dfrac{(x-1)(x+4)+(x+4)^2-2(x-1)(x-4)}{(x-1)(x-4)(x+4)^2}\\\\
+=& \dfrac{x^2+4x-x-4+(x^2+8x+16)-2(x^2-4x-x+4)}{(x-1)(x-4)(x+4)^2}\\\\
+=& \dfrac{x^2+3x-4+x^2+8x+16-2x^2+8x+2x-8}{(x-1)(x-4)(x+4)^2}\\\\
+=& \dfrac{21x+4}{(x-1)(x-4)(x+4)^2}\\\\
+\therefore & \dfrac{1}{x^2-16}+\dfrac{1}{x^2-5x+4}-\dfrac{2}{x^2+8x+16} =\dfrac{21x+4}{(x-1)(x-4)(x+4)^2}\\\\\\
+\end{align*}
+
+\begin{align*}
+f)\ \ \dfrac{1}{x^2-2x}-\dfrac{1}{x^2+2x}-\dfrac{4}{x^3-4x} &= \dfrac{1}{x(x-2)}-\dfrac{1}{x(x+2)}-\dfrac{4}{x(x^2-4)}\\\\
+&= \dfrac{1}{x(x-2)}\cdot \dfrac{x+2}{x+2} -\dfrac{1}{x(x+2)}\cdot \dfrac{x-2}{x-2}-\dfrac{4}{x(x-2)(x+2)}\\\\
+&= \dfrac{x+2}{x(x-2)(x+2)}-\dfrac{x-2}{x(x-2)(x+2)}-\dfrac{4}{x(x-2)(x+2)}\\\\
+&= \dfrac{x+2-x+2-4}{x(x-2)(x+2)}\\\\
+&= \dfrac{0}{x(x-2)(x+2)}\\\\
+&= 0\\\\
+\therefore \dfrac{1}{x^2-2x}-\dfrac{1}{x^2+2x}-\dfrac{4}{x^3-4x} &= 0\\\\\\
+\end{align*}
+
+\begin{align*}
+g) \ \ \dfrac{2}{x^3-1}-\dfrac{x^2-x+1}{x-1}-\dfrac{x+1}{x^2+x+1} &= \dfrac{2}{(x-1)(x^2+x+1)}-\dfrac{x^2-x+1}{x-1}-\dfrac{x+1}{x^2+x+1}\\\\
+&= \dfrac{2}{(x-1)(x^2+x+1)}-\dfrac{x^2-x+1}{x-1}\cdot \dfrac{x^2+x+1}{x^2+x+1}-\dfrac{x+1}{x^2+x+1}\cdot \dfrac{x-1}{x-1}\\\\
+&= \dfrac{2}{(x-1)(x^2+x+1)}-\dfrac{(x^2-x+1)(x2+x+1)}{(x-1)(x^2+x+1)}-\dfrac{(x+1)(x-1)}{(x^2+x+1)(x-1)}\\\\
+&= \dfrac{2-(x^2-x+1)(x2+x+1)-(x+1)(x-1)}{(x-1)(x^1+x+1)}\\\\
+&= \dfrac{2-(x^4+x^3+x^2-x^3-x^2-x+x^2+x+1)-(x^2-1)}{(x-1)(x^2+x+1)}\\\\
+&= \dfrac{2-x^4-x^3-x^2+x^3+x^2+x-x2-x-1-x^2+1}{(x-1)(x^2+x+1)}\\\\
+&= \dfrac{x^4-2x^2+2}{(x-1)(x^2+x+1)}\\\\
+\therefore \dfrac{2}{x^3-1}-\dfrac{x^2-x+1}{x-1}-\dfrac{x+1}{x^2+x+1} &= \dfrac{x^4-2x^2+2}{(x-1)(x^2+x+1)}\\\\\\
+\end{align*}
+</details>
+
+<hr class="new2"/>
+        <h4>Ejemplo 4</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+        <p> Realice las operaciones indicadas en cada una de las siguientes expresiones y escriba la fracción racional resultante en su forma más simple: </p>
+        <p>$$ a)\ \ \dfrac{x-1-\dfrac{12}{x-2}}{x+6+\dfrac{16}{x-2}} \hspace{3cm} b)\ \ \dfrac{\dfrac{3}{3+x}-\dfrac{3}{6+2x}}{\dfrac{3}{3-x}+\dfrac{3}{3+x}} $$</p>
+
+        <details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+
+            \begin{align*} 
+            a)\ \ \dfrac{x-1-\dfrac{12}{x-2}}{x+6+\dfrac{16}{x-2}}&= \dfrac{\dfrac{(x-1)(x-2)-12}{x-2}}{\dfrac{(x+6)(x-2)+16}{x-2}}\\\\
+            &= \dfrac{\dfrac{x^2-2x-x+2-12}{x-2}}{\dfrac{x^2-2x+6x-12+16}{x-2}}\\\\
+            &= \dfrac{\dfrac{x^2-3x-10}{x-2}}{\dfrac{x^2+4x+4}{x-2}}\\\\
+            &= \dfrac{(x^2-3x-10)(x-2)}{(x^2+4x+4)(x-2)}\\\\
+            &= \dfrac{(x-5)(x+2)(x-2)}{(x+2)^2(x-2)}\\\\
+            &= \dfrac{x-5}{x+2}\\\\
+            \therefore \dfrac{x-1-\dfrac{12}{x-2}}{x+6+\dfrac{16}{x-2}}&= \dfrac{x-5}{x+2}
+            \end{align*}
+
+            \begin{align*}
+            b)\ \ \dfrac{\dfrac{3}{3+x}-\dfrac{3}{6+2x}}{\dfrac{3}{3-x}+\dfrac{3}{3+x}} &= \dfrac{\dfrac{6}{2(3+x)}-\dfrac{3}{6+2x}}{\dfrac{3}{3-x}+\dfrac{3}{3+x}}\\\\
+            &= \dfrac{\dfrac{6-3}{2(3+x)}}{\dfrac{3(3+x)+3(3-x)}{(3-x)(3+x)}}\\\\
+            &= \dfrac{\dfrac{3}{2(3+x)}}{\dfrac{9+3x+9-3x}{(3-x)(3+x)}}\\\\
+            &= \dfrac{\dfrac{3}{2(3+x)}}{\dfrac{18}{(3-x)(3+x)}}\\\\
+            &= \dfrac{3(3-x)(3+x)}{2(3+x)\cdot 18}\\\\
+            &= \dfrac{3-x}{12}\\\\
+            \therefore \dfrac{\dfrac{3}{3+x}-\dfrac{3}{6+2x}}{\dfrac{3}{3-x}+\dfrac{3}{3+x}} &=\dfrac{3-x}{12}
+            \end{align*}
+</details>
+
+<hr class="new2"/>
+        <h4>Ejercicios 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+        <p> Realice las operaciones indicadas en cada una de las siguientes expresiones y escriba la fracción racional resultante en su forma más simple </p>
+        <p>$$ 1)\ \ \dfrac{(x^3+1)(x^2-1)}{(x-1)^2(x+1)^3} \hspace{6cm} 2)\ \ \dfrac{x^3-121x}{x^2-49}\div \dfrac{x^2-11x}{x+7} $$</p>
+        <p>$$\hspace{-0.5cm} 3) \ \ \dfrac{y^2-y-6}{2y^2+12y+16}\cdot \dfrac{-y^2-2y+8}{2-y} \hspace{3.4cm} 4)\ \ \dfrac{1}{m^3-8}-\dfrac{1}{(m-2)^3} $$</p>
+        <p>$$\hspace{0.4cm} 5)\ \ \dfrac{1}{(n-1)^2}+\dfrac{1}{n-1}-\dfrac{1}{(n-1)^3}-\dfrac{1}{n} \hspace{2.6cm} 6)\ \ \dfrac{1}{y-1}+\dfrac{2y}{y^2-1}-\dfrac{3y^2}{y^3-1} $$</p>
+        <p>$$\hspace{2cm} 7)\ \ \dfrac{x+1}{x^2-\dfrac{4}{x}-6}-\dfrac{x-4}{x^2-4x+3}+\dfrac{x+4}{x^2+x-2} \hspace{1.4cm} 8)\ \ \left[x+3-\dfrac{5}{x-1} \right]\left[x-2+\dfrac{5}{x+4} \right] $$</p>
+        <p>$$\hspace{-2.7cm} 9)\ \ \left[\dfrac{a+1}{a-1}+\dfrac{a-1}{a+1} \right]\div \left[\dfrac{a+1}{a-1}-\dfrac{a-1}{a+1} \right] \hspace{1.7cm} 10)\ \ \dfrac{\dfrac{10x+4}{x}}{\dfrac{4}{x^2}-25} $$</p>
+        <p>$$ 11)\ \ \dfrac{1-x+\dfrac{x^2}{1+x}}{1-\dfrac{1}{1+x}} \hspace{6cm} 12)\ \ \dfrac{2x^2+2x}{2x}\cdot \dfrac{x^2-3x}{x^2-2x-3} $$</p>
+        <p>$$\hspace{3.8cm} 13)\ \ \dfrac{a^3-27}{a^2-4}\div \dfrac{a^2+3a+9}{a-2} \hspace{4.5cm} 14)\ \ \left(\dfrac{a^2-16a+64}{a^2-64}\cdot \dfrac{a^3-9a^2+8a}{2a^2-128} \right)\div \dfrac{a^2+a}{2}  $$</p>
+        <p>$$\hspace{3.5cm} 15)\ \ \dfrac{n^2-6n}{3n^2-27}+\dfrac{3}{x^2+2x-3}-\dfrac{x}{x^2+5x+6} \hspace{1.5cm} 16)\ \ \dfrac{x}{x^2+x-2}-\dfrac{3}{x^2+2x-3}-\dfrac{x}{x^2+5x+6} $$</p>
+        <p>$$\hspace{-1cm} 17)\ \ \dfrac{2}{r+r^2}-\dfrac{1}{r-r^2}-\dfrac{1-3r}{r-r^3} \hspace{4.1cm} 18)\ \ \dfrac{y^3}{27-y^3}-\dfrac{y}{3-y} $$</p>
+        <p>$$\hspace{4.3cm} 19)\ \ \left(3-\dfrac{6}{x+2} \right)\left(1+\dfrac{1}{x} \right)\div \dfrac{x+1}{2x+4} \hspace{2.6cm} 20)\ \ \left(\dfrac{x+3}{x-1}-x \right)\left(2x+\dfrac{x^2}{x+1} \right)\div \left(\dfrac{2x}{x-1}-x \right) $$</p>
+        <p>$$\hspace{-1.5cm} 21)\ \ \dfrac{\dfrac{3}{x+1}-\dfrac{x-2}{x^2-1}}{\dfrac{2x-1}{x^2+2x-3}} \hspace{5.8cm} 22)\ \ \dfrac{1-\dfrac{7}{x}+\dfrac{12}{x^2}}{x-\dfrac{16}{x}} $$</p>
+        <p> A continuación nuestro objetivo es efectuar operaciones con expresiones algebraicas que involucran potencias enteras negativas y con expresiones algebraicas de varias variables.  </p>
+        <p> Para esto, haremos uso de las propiedades de las potencias, y de los procedimientos que se usan para realizar operaciones con fracciones racionales, como se ilustra en los ejemplos que siguen. </p>
+
+        <hr class="new2"/>
+        <h4>Ejemplo 5</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+        <p> Realice las operaciones indicadas en cada una de las siguientes expresiones y escriba el resultado en su forma más simple </p>
+        <p>$$ a)\ \ \dfrac{a^{-1}+b^{-1}}{a^{-2}-b^{-2}} \hspace{5cm} b)\ \ \dfrac{(x^{-2}-4y^{-2})^{-1}}{x-\dfrac{xy}{y+2x}} $$</p>
+        <p>$$\hspace{4.7cm} c)\ \ \dfrac{x}{y+3}-\dfrac{x^2-1}{xy+3x}-\dfrac{1-6x}{y^2-9} \hspace{1.8cm} d)\ \ \left(\dfrac{1}{x-y}-\dfrac{1}{x+y} \right)\div \left(\dfrac{1}{x-y}+\dfrac{1}{x+y} \right) $$</p>
+        <p>$$\hspace{2cm} e)\ \ \dfrac{\dfrac{x}{y^2}+\dfrac{y}{x^2}}{\dfrac{1}{x^2}-\dfrac{1}{xy}+\dfrac{1}{y^2}}\div \dfrac{x+y}{xy} \hspace{2.3cm} f)\ \ \dfrac{2x^{-6}}{(x+1)^2 x^{-4}-(2x+1) x^{-4}} $$</p>
+
+        <details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+
+\begin{align*}
+a)\ \ \dfrac{a^{-1}+b^{-1}}{a^{-2}-b^{-2}} &= \dfrac{\dfrac{1}{a}+\dfrac{1}{b}}{\dfrac{1}{a^2}-\dfrac{1}{b^2}}\\\\
+&= \dfrac{\dfrac{b+a}{ab}}{\dfrac{b^2-a^2}{a^2b^2}}\\\\
+&= \dfrac{(b+a)a^2b^2}{(b^2-a^2)ab}\\\\
+&= \dfrac{(b+a)a^2b^2}{(b+a)(b-a)ab}\\\\
+&= \dfrac{ab}{b-a}\\\\
+\therefore \dfrac{a^{-1}+b^{-1}}{a^{-2}-b^{-2}} &=\dfrac{ab}{b-a}\\\\\\
+\end{align*}
+
+\begin{align*}
+b)\ \ \dfrac{(x^{-2}-4y^{-2})^{-1}}{x-\dfrac{xy}{y+2x}} &= \dfrac{\left(\dfrac{1}{x^2}-\dfrac{4}{y^2} \right)^{-1}}{\dfrac{x}{1}-\dfrac{xy}{y+2x}}\\\\
+&= \dfrac{\left(\dfrac{y^2-4x^2}{x^2y^2} \right)^{-1}}{\dfrac{x(y+2x)-xy}{y+2x}}\\\\
+&= \dfrac{\dfrac{x^2y^2}{y^2-4x^2}}{\dfrac{xy+2x^2-xy}{y+2x}}\\\\
+&= \dfrac{x^2y^2(y+2x)}{(y^2-4x^2)2x^2}\\\\
+&= \dfrac{x^2y^2(y+2x)}{(y-2x)(y+2x)2x^2}\\\\
+&= \dfrac{y^2}{2(y-2x)}\\\\
+\therefore \dfrac{(x^{-2}-4y^{-2})^{-1}}{x-\dfrac{xy}{y+2x}} &= \dfrac{y^2}{2(y-2x)}
+\end{align*}
+
+\begin{align*}
+c)\ \ \dfrac{x}{y+3}-\dfrac{x^2-1}{xy+3x}-\dfrac{1-6x}{y^2-9} &= \dfrac{x}{y+3}-\dfrac{x^2-1}{x(y+3)}-\dfrac{1-6x}{(y+3)(y-3)}\\\\
+&= \dfrac{x[x(y-3)]-(x^2-1)(y-3)-(1-6x)x}{x(y+3)(y-3)}\\\\
+&= \dfrac{x(xy-3x)-(x^2y-3x^2-y+3)-(x-6x^2)}{x(y+3)(y-3)}\\\\
+&= \dfrac{x^2y-3x^2-x^2y+3x^2+y-3-x+6x^2}{x(y+3)(y-3)}\\\\
+&= \dfrac{6x^2-x+y-3}{x(y+3)(y-3)}\\\\
+\therefore \dfrac{x}{y+3}-\dfrac{x^2-1}{xy+3x}-\dfrac{1-6x}{y^2-9} &=\dfrac{6x^2-x+y-3}{x(y+3)(y-3)}\\\\\\
+\end{align*}
+
+\begin{align*}
+d)\ \ \left(\dfrac{1}{x-y}-\dfrac{1}{x+y} \right)\div \left(\dfrac{1}{x-y}+\dfrac{1}{x+y} \right) &= \left[\dfrac{(x+y)-(x-y)}{(x-y)(x+y)} \right]\div \left[\dfrac{(x+y)+(x-y)}{(x-y)(x+y)} \right]\\\\
+&= \dfrac{x+y-x+y}{(x-y)(x+y)}\div \dfrac{x+y+x-y}{(x-y)(x+y)}\\\\
+&= \dfrac{2y}{(x-y)(x+y)}\div \dfrac{2x}{(x-y)(x+y)}\\\\
+&= \dfrac{2y(x-y)(x+y)}{2x(x-y)(x+y)}\\\\
+&= \dfrac{y}{x}\\\\
+\therefore \left(\dfrac{1}{x-y}-\dfrac{1}{x+y} \right)\div \left(\dfrac{1}{x-y}+\dfrac{1}{x+y} \right) &= \dfrac{y}{x}\\\\\\
+\end{align*}
+
+\begin{align*}
+
+\end{align*}
+
+        </details>
+    </body>
+</html>

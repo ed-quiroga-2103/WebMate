@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Matemática Elemental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+     <body>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Matemática Elemental</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Números reales,<br/> potencias y raíces.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Operaciones <br/>combinadas.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Valor absoluto.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Unión, intersección<br/> y pertenencia.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Subconjuntos <br/>e intervalos.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub6</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub7</a></li>
+                </ul>
+             </nav>
+        </header>
+        <!--NO TOCAR NADA DE ARRIBA POR FAVOR-->
+         <!-- TRABAJAR DESDE AQUÍ -->
+                            
+         <h2>Ecuaciones que involucran fracciones racionales</h2> <!-- USAR H2 PARA TITULOS DE TEMAS -->
+         <hr class="new2"/>
+         <p>
+            Recordemos que una fracción racional es una expresión de la forma \(\dfrac{A(x)}{B(x)}\), con \(A(x)\) y \(B(x)\) polinomios y \(B(x) &ne; 0\).
+         </p>
+         <p>
+            Para resolver ecuaciones que involucran fracciones racionales haremos uso de los procedimientos utilizados en el Capítulo III y subsiguientes, 
+            así como de las siguientes propiedades:
+         </p>
+         <h3>Prpiedad 1</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <hr class="new1"/>
+         <p>
+            Sea \(a &isin; &Ropf;, b &isin; &Ropf;\) y \(c &isin; &Ropf;\) tal que \(b &ne; 0\). Entonces se cumple:<br/>
+            <ol>
+                <li>\(\dfrac{a}{b}=\dfrac{c}{b} &rAarr; a = c\)</li> <br/><br/>
+                <li>\(\dfrac{a}{b} = 0 &rAarr; a = 0\)</li><br/>
+            </ol>
+         </p>
+         <h4>Ejemplo 1</h4>
+         <hr class="new2"/> <!-- Agrega línea de color rojo-->
+         <p>
+            Resuelva cada una de las siguientes ecuaciones: <br/><br/>
+            <ol>
+                <li>\(\dfrac{3}{2x+6}=\dfrac{1}{x+3}\)</li><br/><br/>
+                <b>Solución</b><br/><br/>
+                En este caso debe cumplirse:<br/><br/>
+                \(2x+6 &ne; 0 \text{ y } x + 3 &ne; 0\) es decir \(x &ne; -3\)<br/><br/>
+                Por lo que el dominio de la incógnita es &Ropf; - {-3}<br/><br/>
+                \(\dfrac{3}{2x+6}=\dfrac{1}{x+3}\)<br/><br/>
+                \(\dfrac{3}{2(x+3)}=\dfrac{1}{x+3}\)<br/><br/>
+                \(\dfrac{3}{2(x+3)}=\dfrac{1}{x+3} \cdot \dfrac{2}{2}\)<br/><br/>
+                \(\dfrac{3}{2(x+3)}=\dfrac{2}{2(x+3)} \)&emsp; Aplicando la propiedad 2, apartado 1<br/><br/>
+                Como obtuvimos una igualdad falsa, entonces la ecuación original <b>no</b> tiene solución, es decir su conjunto solución &empty; (ver Regla 2)<br/><br/>
+                <li>\(\dfrac{1}{2x}+\dfrac{1}{2x-1}=\dfrac{4x-1}{2x(2x-1)}\)</li><br/><br/>
+                <b>Solución</b><br/><br/>
+                En este caso debe cumplirse que:<br/><br/>
+                \(2x &ne; 0 \text{ y } 2x - 1&ne;0\), es decir \(x &ne;0 \text{ y } x &ne; \dfrac{6}{x-1}\)<br/><br/>
+                Por lo que el dominio de la incógnita es &Ropf; - \(  \biggl\{  0, \dfrac{1}{2}    \biggr\}    \)<br/><br/>
+                \(\dfrac{1}{2x}+\dfrac{1}{2x-1}=\dfrac{4x-1}{2x(2x-1)}\)<br/><br/>
+                \(\dfrac{1}{2x} \cdot \dfrac{2x-1}{2x-1}+\dfrac{1}{2x-1} \cdot \dfrac{2x}{2x}=\dfrac{4x-1}{2x(2x-1)}\)<br/><br/>
+                \(\dfrac{2x-1+2x}{2x(2x-1)}=\dfrac{4x-1}{2x(2x-1)}\) &emsp; APlicando la propiedad 2, apartado 1.<br/><br/>
+                \(2x-1+2x = 4x-1\)<br/><br/>
+                \(4x-1 = 4x-1\)<br/><br/>
+                \(4x-1-4x+1=0\)<br/><br/>
+                \(0=0\)<br/><br/>
+                Como el resultado es una igualdad verdadera y el dominio de la incógnita es &Ropf; - \(  \biggl\{  0, \dfrac{1}{2}    \biggr\}    \)
+                tenemos que el conjunto solución de la ecuación es &Ropf; - \(  \biggl\{  0, \dfrac{1}{2}    \biggr\}    \) &emsp; (ver Regla 1)<br/><br/>
+                <li>\(\dfrac{2x^2-7x+16}{(x-2)(x+3)} - \dfrac{2}{x-2}-\dfrac{x}{x+3} = 0\)</li><br/><br/>
+                En este caso debe cumplirse que:<br/><br/>
+                \(x-2&ne;0 \text{ y } x + 3 &ne; 0\) es decir que \(x &ne; 2 \text{ y } x &ne; -3\). Por lo que el dominio de la incógnita es &Ropf; - {2, -3} &emsp; (*)<br/><br/>
+                \(\dfrac{2x^2-7x+16}{(x-2)(x+3)} - \dfrac{2}{x-2}-\dfrac{x}{x+3} = 0\)<br/><br/>
+                \(\dfrac{2x^2-7x+16}{(x-2)(x+3)} - \dfrac{2}{x-2} \cdot \dfrac{x+3}{x+3}-\dfrac{x}{x+3} \cdot \dfrac{x-2}{x-2} = 0\)<br/><br/>
+                \(\dfrac{2x^2-7x+16}{(x-2)(x+3)} - \dfrac{2(x+3)}{(x-2)(x+3)} - \dfrac{x(x-2)}{(x+3)(x-2)} =0   \)<br/><br/>
+                \( \dfrac{2x^2-7x+16-2(x+3)-x(x-2)}{(x-2)(x+3)} =0 \)<br/><br/>
+                \( 2x^2-7x+16-2(x+3)-x(x-2)=0 \) &emsp; Aplicando la propiedad 2, apartado 1.<br/><br/>
+                \( 2x^2-7x+16-2x-6-x^2+2x =0\)<br/><br/>
+                \(x^2+5x+10 = 0\)<br/><br/>
+                \(&Delta; = (-7)^2 -4 (1)(10)\)<br/><br/>
+                \(&Delta; = 49 -40\)<br/><br/>
+                \(&Delta; = 9\)<br/><br/>
+                \(&alpha; = \dfrac{-(-7)-\sqrt{9}}{2(1)} &emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp; &beta; = \dfrac{-(-7)+\sqrt{9}}{2(1)}\)<br/><br/>
+                \(&alpha; = \dfrac{7-3}{2} &emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp; &beta; = \dfrac{7+3}{2}\)<br/><br/>
+                \(&alpha; = \dfrac{4}{2} &emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp; &beta; = \dfrac{10}{2}\)<br/><br/>
+                \(&alpha; = 2 &emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp; &beta; = 5\)<br/><br/>
+                Pero, como 2 <b>no</b> es un elemento del dominio de la incógnita [ver(*)], 2 no puede ser solución de la ecuacion original, 
+                por lo tanto el conjunto solución es {5}<br/><br/>
+                <li>\( \dfrac{2}{x+1}+\dfrac{3}{x-1}+ \dfrac{x+3}{x^2-1} = \dfrac{6}{x-1}   \)</li><br/><br/>
+                <b>Solución</b><br/><br/>
+                \( \dfrac{2}{x+1}+\dfrac{3}{x-1}+ \dfrac{x+3}{x^2-1} = \dfrac{6}{x-1}   \)<br/><br/>
+                \( \dfrac{2}{x+1}+\dfrac{3}{x-1}+ \dfrac{x+3}{(x-1)(x+1)} = \dfrac{6}{x-1}   \)<br/><br/>
+                En este caso tiene que cumplirse que: <br/><br/>
+                \(x+1 &ne; 0 \text{ y } x-1 &ne; 0\), es decir que \(x &ne; -1 \text{ y } x&ne;1\)<br/><br/>
+                Por lo que el dominio de la incógnita es &Ropf; - {-1,1}<br/><br/>
+                \( \dfrac{2}{x+1}+\dfrac{3}{x-1}+ \dfrac{x+3}{(x-1)(x+1)} = \dfrac{6}{x-1}   \)<br/><br/>
+                \( \dfrac{2}{x+1} \cdot \dfrac{x-1}{x-1}+\dfrac{3}{x-1} \cdot \dfrac{x+1}{x+1}+ \dfrac{x+3}{(x-1)(x+1)} = \dfrac{6}{x-1} \cdot \dfrac{x+1}{x-1} \)<br/><br/>
+                \( \dfrac{2(x-1)}{(x+1)(x-1)}+\dfrac{3(x+1)}{(x-1)(x+1)}+ \dfrac{x+3}{(x-1)(x+1)} = \dfrac{6(x+1)}{(x-1)(x+1)}   \)<br/><br/>
+                \( \dfrac{2(x-1)+3(x+1)+x+3}{(x-1)(x+1)} = \dfrac {6(x+1)}{(x-1)(x+1)} \)<br/><br/>
+                \(2(x-1)+3(x+1)+x+3 = 6(x+1)\) &emsp; Aplicando la propiedad 1, apartado 1<br/><br>
+                \( 2x -2 + 3x + 3 + x + 3 = 6x + 6\)<br/><br/>
+                \(6x + 4= 6x+6\)<br/><br/>
+                \( -2 = 0\)<br/><br/>
+                Como obtuvimos una igualdad falsa, entonces la ecuación original no tiene solución, es decir su conjunto solución es &empty;
+            </ol>
+         </p>
+         <h4>Ejemplo 2</h4>
+         <hr class="new1"/> <!-- Agrega línea de color rojo-->
+         <p>
+            Resuelva cada una de las siguientes ecuaciones: <br/><br/>
+            <ol>
+                <li>\( \dfrac{1}{x-1} +\dfrac{1}{x^2+x-2}+\dfrac{x+1}{x^3+4x^2+x-6}-\dfrac{x+5}{x^2+2x-3} =0  \)</li><br/><br/>
+                <b>Solución</b><br/><br/>
+                \(  \dfrac{1}{x-1} +\dfrac{1}{x^2+x-2}+\dfrac{x+1}{x^3+4x^2+x-6}-\dfrac{x+5}{x^2+2x-3} = \dfrac{(x+2)(x+3)+x+3+x+1-(x+2)(x+5)}{(x+2)(x+3)(x-1)} \)<br/><br/>
+                <b>Nota:</b>  Los denominadores de las fracciones racionales correspondientes han sido 
+                factorizados usando los métodos de factorización por fórmula general y por división sintética.<br/><br/>
+                En este caso debe cumplirse que:<br/><br/>
+                \( x +2 &ne; 0, x+3&ne; 0 \text{ y } x-1 &ne; 0\), es decir \(x &ne; -2, x &ne; -3 \text{ y } x &ne; 1\)<br/><br/>
+                Por lo que el dominio de la incógnita es &Ropf; - {1, -2, -3}<br/><br/>
+                \(\dfrac{(x+2)(x+3)+x+3+x+1-(x+2)(x+5)}{(x+2)(x+3)(x-1)} = 0\)<br/><br/>
+                \((x+2)(x+3)+x+3+x+1-(x+2)(x+5) = 0\) &emsp; Aplicando la propiedad 2, apartado 1.<br/><br/>
+                \(x^2 +3x+2x+6+x+3+x+1-(x^2+2x+5x+10) = 0\)<br/><br/>
+                \(x^2 +3x+2x+6+x+3+x+1-x^2-2x-5x-10 = 0\)<br/><br/>
+                \(0=0\)<br/><br/>
+                Como obtuvimos una igualdad verdadera, entonces la ecuación original tiene como conjunto solución el dominio de la incógnita, es decir &Ropf; - {1, -2, -3}
+                <br/><br/>
+                <li>\( \dfrac{2x^2-7x+16}{(x-2)(x+3)}-\dfrac{2}{x-2}-\dfrac{x}{x+3}=0  \) &emsp; <b>EJERCICIO REPETIDO</b></li><br/><br/>
+                <b>Solución</b><br/><br/>
+                \( \dfrac{2x^2-7x+16}{(x-2)(x+3)}-\dfrac{2}{x-2}-\dfrac{x}{x+3}\)<br/><br/>
+                En este caso debe cumplirse que:<br/><br/>
+                \(x+3&ne;0 \text{ y } x-2&ne; 0\) es decir \(x&ne;-3,\text{ y } x&ne; 2\)<br/><br/>
+                Por lo que el dominio de la incógnita en &Ropf;-{-3, 2}<br/><br/>
+                \( \dfrac{2x^2-7x+16}{(x-2)(x+3)}-\dfrac{2}{x-2}-\dfrac{x}{x+3}=0 \)<br/><br/>
+                \( \dfrac{2x^2-7x+16}{(x-2)(x+3)}-\dfrac{2}{x-2} \cdot \dfrac{x+3}{x+3}-\dfrac{x}{x+3} \cdot \dfrac{x-2}{x-2}=0 \)<br/><br/>
+                \( \dfrac{2x^2-7x+16}{(x-2)(x+3)}-\dfrac{2(x+3)}{(x-2)(x+3)} -\dfrac{x(x-2)}{(x+3)(x-2)} =0 \)<br/><br/>
+                \(  \dfrac{2x^2-7x+16-2(x+3)-x(x-2)}{(x-2)(x+3)}=0\)<br/><br/>
+                \( 2x^2-7x+16-2(x+3)-x(x-2)=0 \) &emsp; Aplicando la propiedad 2, apartado 1.<br/><br/>
+                \( 2x^2-7x+16-2x-6-x^2+2x =0\)<br/><br/>
+                \(x^2+5x+10 = 0\)<br/><br/>
+                \(&Delta; = (-7)^2 -4 (1)(10)\)<br/><br/>
+                \(&Delta; = 49 -40\)<br/><br/>
+                \(&Delta; = 9\)<br/><br/>
+                \(&alpha; = \dfrac{-(-7)-\sqrt{9}}{2(1)} &emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp; &beta; = \dfrac{-(-7)+\sqrt{9}}{2(1)}\)<br/><br/>
+                \(&alpha; = \dfrac{7-3}{2} &emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp; &beta; = \dfrac{7+3}{2}\)<br/><br/>
+                \(&alpha; = \dfrac{4}{2} &emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp; &beta; = \dfrac{10}{2}\)<br/><br/>
+                \(&alpha; = 2 &emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp; &beta; = 5\)<br/><br/>
+                Pero, como 2 <b>no</b> es un elemento del dominio de la incógnita, 2 no puede ser solución de la ecuacion original, 
+                por lo tanto el conjunto solución es {5}<br/><br/>
+                <li>\( \dfrac{x-\dfrac{x-1}{x+1}}{x-1}-\dfrac{x+\dfrac{x+1}{x-1}}{x+1}-1=0  \)</li><br/><br/>
+                <b>Solución</b><br/><br/>
+                En este caso debe cumplirse que: <br/><br/>
+                \(x+1&ne;0 \text{ y } x-1&ne; 0\), es decir \(x&ne;-1 \text{ y } x&ne;1\)<br/><br/>
+                Por lo que el dominio de la incógnita es &Ropf;-{-1, 1}<br/><br/>
+                \( \dfrac{x-\dfrac{x-1}{x+1}}{x-1}-\dfrac{x+\dfrac{x+1}{x-1}}{x+1}-1=0  \)<br/><br/>
+                \( \dfrac{\dfrac{x(x+1)-(x-1)}{x+1}}{x-1}-\dfrac{\dfrac{x(x-1)+(x+1)}{x-1}}{x+1}-1=0  \)<br/><br/>
+                \( \dfrac{\dfrac{x^2+x-x+1}{x+1}}{x-1}-\dfrac{\dfrac{x^2-x+x+1}{x-1}}{x+1}-1=0  \)<br/><br/>
+                \( \dfrac{\dfrac{x^2+1}{x+1}}{x-1}-\dfrac{\dfrac{x^2+1}{x-1}}{x+1}-1=0  \)<br/><br/>
+                \( \dfrac{x^2+1}{(x+1)(x-1)}-\dfrac{x^2+1}{(x-1)(x+1)}-1=0  \)<br/><br/>
+                \(   \dfrac{x^2+1-(x^2+1)}{(x+1)(x-1)}-1=0\)<br/><br/>
+                \(   \dfrac{0}{(x+1)(x-1)}-1=0\)<br/><br/>
+                \(0-1=0\)<br/><br/>
+                \(-1=0\)<br/><br/>
+                Como obtuvimos una igualdad falsa, entonces la ecuación original no tiene solución, es decir el conjunto solución es &empty;<br/><br/>
+                <li>\(  \dfrac{1}{x+1}+\dfrac{x^2}{x^2+2x+1}-\dfrac{x^2}{x^3+3x^2+3x+1}=1  \)</li><br/><br/>
+                <b>Solución</b><br/><br/>
+                \(\dfrac{1}{x+1}+\dfrac{x^2}{x^2+2x+1}-\dfrac{x^2}{x^3+3x^2+3x+1}=1\)<br/><br/>
+                \(\dfrac{1}{x+1}+\dfrac{x^2}{(x+1)^2}-\dfrac{x^2}{(x+1)^3}=1\) &emsp; (*)<br/><br/>
+                En este caso debe cumplirse que:<br/><br/>
+                \(x+1&ne;0\) es decir \(x&ne;-1\)<br/><br/>
+                Por lo que el dominio de la incógnita es &Ropf;-{-1}<br/><br/>
+                \(\dfrac{1}{x+1}+\dfrac{x^2}{(x+1)^2}-\dfrac{x^2}{(x+1)^3}=1\)<br/><br/>
+                \(\dfrac{1}{x+1} \cdot \dfrac{(x+1)^2}{(x+1)^2}+\dfrac{x^2}{(x+1)^2} \cdot \dfrac{x+1}{x+1}-\dfrac{x^2}{(x+1)^3}=1 \cdot \dfrac{(x+1)^3}{(x+1)^3}\)<br/><br/>
+                \(\dfrac{(x+1)^2}{(x+1)^3}+\dfrac{x^2(x+1)}{(x+1)^3}-\dfrac{x^2}{(x+1)^3}=\dfrac{(x+1)^3}{(x+1)^3}   \)<br/><br/>
+                \( (x+1)^2+x^2(x+1)-x^2=(x+1)^3   \)<br/><br/>
+                \( x^2+2x+1+x^3+x^2-x^2=x^3+3x^2+3x+1 \)<br/><br/>
+                \( x^2+2x+1+x^3+x^2-x^2-x^3-3x^2-3x-1=0\)<br/><br/>
+                \(  -2x^2-x=0\)<br/><br/>
+                \(-x(2x-1)=0\)<br/><br/>
+                \(-x=0 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; 2x-1=0\)<br/><br/>
+                &ensp;\(x=0 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; x = \dfrac{-1}{2}\)<br/><br/>
+                Como \(0 \text{ y } \dfrac{-1}{2}\) pertenecen al dominio de la incógnita, entonces el conjunto solución de la ecuación es \(\biggl\{ 0 \text{ y } \dfrac{-1}{2}\biggr\}\) <br/><br/>
+            </ol>
+         </p> 
+         <h4>Ejercicios 1</h4>
+         <hr class="new1"/> 
+         <p>Resuelva cada una de las siguientes ecuaciones: <br/><br/>
+            <ol>
+                <li>\(\dfrac{2}{x-5}+\dfrac{3x}{x^2-25}=\dfrac{5x+10}{x^2-25}\)</li><br/>
+                <li>\(\dfrac{2x-3}{x-1}=\dfrac{2x+4}{2x+1}-\dfrac{1}{x-1}\)</li><br/>
+                <li>\(\dfrac{4}{3x-3}+\dfrac{1}{2x-2}=\dfrac{1}{2x+2}+\dfrac{1}{x^2-1}\)</li><br/>
+                <li>\(\dfrac{1}{2x}+\dfrac{1}{2x-1} = 0\)</li><br/>
+                <li>\(\dfrac{1+\dfrac{x}{x-1}}{1-\dfrac{x}{x-1}} = -2x+1\)</li><br/><br/>
+            </ol>
+         </p>
+      </body>
+</html>

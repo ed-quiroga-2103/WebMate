@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Matemática Elemental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+     <body>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Matemática Elemental</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Números reales,<br/> potencias y raíces.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Operaciones <br/>combinadas.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Valor absoluto.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Unión, intersección<br/> y pertenencia.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Subconjuntos <br/>e intervalos.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub6</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub7</a></li>
+                </ul>
+             </nav>
+        </header>
+        <!--NO TOCAR NADA DE ARRIBA POR FAVOR-->
+         <!-- TRABAJAR DESDE AQUÍ -->
+                            
+         <h2>Fracciones Racionales en una Variable</h2> <!-- USAR H2 PARA TITULOS DE TEMAS -->
+         <hr class="new2"/>
+         <h3>Definición 1</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Sean \(P(x)\) y \(Q(x)\) dos polinomios en una variable. La expresión \(\dfrac{P(x)}{Q(x)} \) recibe el nombre de <em> fracción racional </em>, \(P(x)\) recibe el nombre de numerador y \(Q(x)\) recibe el nombre de denominador de la fracción. </p>
+
+         <hr class="new2"/>
+         <h4>Ejemplo 0</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+
+         <p>$$ a)\ \ \dfrac{x^2-3x+1}{2x-1} \hspace{2cm} b)\ \ \dfrac{x^2-1}{3x^3-2x^2+x-1} \hspace{2cm} c) \dfrac{1}{x^3+1} $$</p>
+         <p>$$\hspace{1.3cm} d)\ \ \dfrac{x+1}{x+4} \hspace{3.1cm} e)\ \ \dfrac{x^2-9}{x-3} \hspace{4.1cm} f)\ \ \dfrac{x+3(x-1)}{x+3} $$</p>
+
+         <hr class="new2"/>
+         <h3>Simplificación de fracciones racionales</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Diremos que una fracción racional está expresada en su forma más simple cuando el numerador y el denominador de dicha fracción no tienen factores comunes. Para simplificar fracciones racionales haremos uso del siguiente resultado: </p>
+         <p> Si \(P(x), \ Q(x) \) y \(C(x)\) son polinomios entonces se cumple que </p>
+         <p> \( \dfrac{P(x)\cdot C(x)}{Q(x)\cdot C(x)}=\dfrac{P(x)}{Q(x)} \) para todo \(x\) tal que \(C(x) \neq 0 \) </p>
+         
+         <hr class="new2"/>
+         <h4>Ejemplo 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+
+         <p> Simplifique, de ser posible, cada una de las siguientes funciones racionales </p>
+         <p>$$ a)\ \ \dfrac{2x-6}{2x^2-18} \hspace{3cm} b)\ \ \dfrac{x^3-8}{x^2-4} \hspace{3cm} c)\ \ \dfrac{x^2-4}{x^2-4(x-1)} $$</p>
+         <p>$$\hspace{-0.1cm} d) \ \ \dfrac{x^3+2x^2-x-2}{x^2-1} \hspace{1.5cm} e) \ \ \dfrac{x^2-9(x-2)}{x-3(x-2)} \hspace{1.6cm} f)\ \ \dfrac{x^2+x-6}{x^2+7x+12} $$</p>
+
+        <details> <!--Para agregar soluciones a ejercicios-->
+             <summary>Solución</summary> <!--Titulo "Solución"-->
+
+\begin{align*}
+a)\ \ \dfrac{2x-6}{2x^2-18} &= \dfrac{2(x-3)}{2(x^2-9)}\\
+&= \dfrac{2(x-3)}{2(x-3){x+3}}\\
+&= \dfrac{1}{x+3}\\
+\therefore \dfrac{2x-6}{2x^2-18}&=\dfrac{1}{x+3} \ \ \text{si} \ \ x\neq 3\\\\\\
+\end{align*}
+
+\begin{align*}
+b)\ \ \dfrac{x^3-8}{x^2-4} &=\dfrac{(x-2)(x^2+2x+4)}{(x-2)(x+2)}\\
+&= \dfrac{x^2+2x+4}{x+2}\\
+\therefore \dfrac{x^3-8}{x^2-4}&= \dfrac{x^2+2x+4}{x+2} \ \ \text{si}\ \ x \neq 2\\\\\\
+\end{align*}
+
+\begin{align*}
+c)\ \ \dfrac{x^2-4}{x^2-4(x-1)} &= \dfrac{(x-2)(x+2)}{x^2-4x+4}\\
+&= \dfrac{(x-2)(x+2)}{(x-2)(x-2)}\\
+&= \dfrac{(x+2)}{(x-2)}\\
+\therefore \dfrac{x^2-4}{x^2-4(x-1)} &=\dfrac{(x+2)}{(x-2)}\ \  \text{si}\ \ x \neq 2\\\\\\
+\end{align*}
+
+\begin{align*}
+d) \ \ \dfrac{x^3+2x^2-x-2}{x^2-1}&= \dfrac{(x^3+2x^2)-(x+2)}{(x-1)(x+1)}\\
+&= \dfrac{x^2(x+2)-(x+2)}{(x-1)(x+1)}\\
+&= \dfrac{(x+2)(x^2-1)}{(x-1)(x+1)}\\
+&= \dfrac{(x+2)(x+1)(x-1)}{(x-1)(x+2)}\\
+&= x+2\\
+\therefore \dfrac{x^3+2x^2-x-2}{x^2-1}&= x+2\ \ \text{si}\ \ x \neq 1, \ x \neq -1 \\\\\\
+\end{align*}
+
+\begin{align*}
+e) \ \ \dfrac{x^2-9(x-2)}{x-3(x-2)} &= \dfrac{x^2-9x+18}{x-3x+6}\\
+&= \dfrac{(x-6)(x-3)}{-2x+6}\\
+&= \dfrac{(x-6)(x-3)}{-2(x-3)}\\
+&= \dfrac{x-6}{-2}\\
+\therefore \dfrac{x^2-9(x-2)}{x-3(x-2)} &= \dfrac{x-6}{-2}\ \ \text{si} \ \ x \neq 3
+\end{align*}
+
+\begin{align*} 
+f)\ \ \dfrac{x^2+x-6}{x^2+7x+12} &= \dfrac{(x+3)(x-2)}{(x+3)(x+4)}\\
+&= \dfrac{x-2}{x+4}\\
+\therefore \dfrac{x^2+x-6}{x^2+7x+12} &= \dfrac{x-2}{x+4}\ \ \text{si} \ \ x \neq -3
+\end{align*}
+
+        </details>  
+        
+        <hr class="new2"/>
+        <h4>Ejercicios 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+        <p> Simplifique, de ser posible, cada una de las fracciones racionales </p>
+        <p>$$ 1)\ \ \dfrac{(m-2)^2}{m^2-4} \hspace{3cm} 4)\ \ \dfrac{a^3+1}{a^4-a^3+a-1} \hspace{2cm} 7) \ \ \dfrac{x^2+x-6}{(2x-7)^2} $$</p>
+        <p>$$\hspace{1cm} 2)\ \ \dfrac{3x^3+9x^2}{x^2+6x+9} \hspace{2.5cm} 5)\ \ \dfrac{a^3-3a^2+3a-1}{a^2-2a+1} \hspace{1.6cm} 8) \ \ \dfrac{x+1-x^3-x^2}{x^3-x-2x^2+2} $$</p>
+        <p>$$\hspace{-0.5cm} 3)\ \ \dfrac{x^2-4(x-1)}{x^2-4} \hspace{2.2cm} 6)\ \ \dfrac{(x+3)(x+12)}{x+3x+12} \hspace{2.2cm} 9) \dfrac{x^2-25}{x^3-5x} $$</p>
+
+      </body>
+</html>

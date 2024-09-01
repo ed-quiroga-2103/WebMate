@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Matemática Elemental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+     <body>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Matemática Elemental</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Números reales,<br/> potencias y raíces.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Operaciones <br/>combinadas.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Valor absoluto.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Unión, intersección<br/> y pertenencia.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Subconjuntos <br/>e intervalos.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub6</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub7</a></li>
+                </ul>
+             </nav>
+        </header>
+        <!--NO TOCAR NADA DE ARRIBA POR FAVOR-->
+         <!-- TRABAJAR DESDE AQUÍ -->
+                            
+         <h2>Factorización de Polinomios</h2> <!-- USAR H2 PARA TITULOS DE TEMAS -->
+         <hr class="new2"/>
+         <h4>Definición 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <hr class="new1"/>
+         <p> Sea \(P(x) \) un polinomio no constante con coeficientes reales. Si existen polinomios \(A(x)\) y \(B(x)\) no constantes con coeficientes reales tales que \(P(x)=A(x)\cdot B(x)\) entonces decimos que \(P(x)\) es factorizable en el conjunto de los números reales. </p>
+
+         <hr class="new2"/>
+         <h4>Definición 2</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Sea \(A(x) \) y \(P(x) \) polinomios no constantes con coeficientes reales. Si \(P(x)=A(x)\cdot B(x) \) entonces decimos \(A(x) \) y \(B(x)\) son factores de \(P(x) \). </p>
+         
+         <hr class="new2"/>
+         <h4>Definición 3</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Sea \(A(x), \ B(x) \) y \(P(x) \) polinomios no constantes con coeficientes reales. Si \(P(x)=A(x)\cdot B(x) \) entonces decimos que el producto indicado de \(A(x)\) y \(B(x) \) es una factorización de \(P(x)\). </p>
+         
+         <hr class="new2"/>
+         <h4>Ejemplo 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> a) Como \(x^2+2x=x(x+2) \), entonces decimos que \(x(x+2) \) es una factorización de \(x^2+2x\). </p>
+         <p> b) Como \(x^4-1=(x^2+1) \), entonces decimos que \(x^2+1 \) es una factorización de \(x^4-1\) </p>
+         <p><strong>Nota:</strong> Sea \(P(x)\) un polinomio no constante con coeficientes reales; si no existen polinomios \(A(x)\) y \(B(x)\) no constantes con coeficientes reales y tales que \(P(x)=A(x)\cdot B(x) \), entonces decimos que \(P(x) \) no es factorizable en el conjunto de los números reales. </p>
+
+         <hr class="new2"/>
+         <h4>Definición 4</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Sea \(P(x)\) un polinomio no constante con coeficientes reales tal que \(P(x)=A(x)_1\cdot A(x)_2\cdot A(x)_3\cdot ... \cdot A(x)_n \) donde \(A(x)_1\cdot A(x)_2\cdot A(x)_3\cdot ... \cdot A(x)_n \) son polinomios no constantes con coeficientes reales. Decimos que el producto indicado \(A_1\cdot A_2 \cdot A_3 \cdot ... \cdot A_n \) es una factorización completa de \(P(x)\) si cada uno de los polinomios \(A(x)_1\cdot A(x)_2\cdot A(x)_3\cdot ... \cdot A(x)_n \) no es factorizable en el conjunto de los números reales. </p>
+         <hr class="new2"/>
+         <h3>Técnicas de factorización</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> A continuación enfocaremos nuestra atención hacia el estudio de algunas técnicas que se utilizan en la factorización de polinomios. </p>
+         
+         <h3>Factorización por factor común</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> La factorización de polinomios por factor común consiste básicamente en la aplicación de la propiedad distributiva de la multiplicación con respecto a la adición, para esto recordemos que esta propiedad expresa lo siguiente: </p>
+         <p> Si \(a \in &#8477, b \in &#8477, c \in &#8477 \), entonces \(a\cdot (b+c)=a\cdot b + a \cdot c \) </p>
+         <p> Si \(a \in &#8477, \ b \in &#8477, \ b_1 \in &#8477, \ b_2 \in &#8477, b_3 \in &#8477, ..., b_n \in &#8477 \) entonces \(a(b_1+b_2+b_3+...+b_n)=ab_1+ab_2+ab_3+...+ab_n \) y en tal caso decimos que \(a(b_1+b_2+b_3+...+b_n)\) es una factorización de la expresión \(ab_1+ab_2+ab_3+...+ab_n \) y que \(a\) es un factor común de los sumandos \(ab_1,\ ab_2,\ ab_3, \ ..., \ ab_n \) </p>
+
+         <h4>Ejemplo 2</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p>Factorice completamente cada una de las siguientes expresiones</p>
+         <p>$$ \text{a)} \ \ x^2+xy \hspace{2cm} \text{b)} \ \ 6xa-12xy \hspace{2cm} \text{c)} \ \ a^2+a $$</p>
+
+        <details> <!--Para agregar soluciones a ejercicios-->
+             <summary>Solución</summary> <!--Titulo "Solución"-->
+
+            \begin{align*}
+            \text{a)} \ \ x^2+xy &= x\cdot x +xy\\
+            &= x(x+y)\\
+            \therefore x^2+xy &= x(x+y)\\
+            \end{align*}
+            <p> Es decir, la factorización de \(x^2+xy \) es \(x(x+y) \) </p>
+    
+            \begin{align*}
+           \\\\ \text{b)} \ \ 6xa-12xy &= 6xa-6\cdot 3xy\\
+            &= 6x(a-2y)\\
+            \therefore 6xa-12xy &= 6x(a-2y)\\
+            \end{align*}
+            <p> Es decir, la factorización de \(6xa-12xy \) es \(6x(a-2y) \)</p>
+
+            \begin{align*}
+\\\\ \text{c)} \ \ a^2+a &= a\cdot a + a\\
+&= a(a+1)\\
+\therefore a^2+a &= a(a+1)
+            \end{align*}
+            <p> Es decir, la factorización de \(a^2+a \) es \(a(a+1) \) </p>
+
+        </details>           
+            
+        <h4>Ejemplo 3</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+        <p>Factorice completamente cada una de las siguientes expresiones</p>
+        <p>$$ \text{a)} \ \ x^2y^3z+x^3y^2z^2 \hspace{3cm} \text{c)} \ \ a(x-y)+(y-x) $$</p>
+        <p>$$ \hspace{0.3cm} \text{b)} \ \ (3a+15)-b(a+5) \hspace{1.8cm} \text{d)} \ \ 14x^2-28x^3+56x^2y $$</p>
+
+        <details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+
+\begin{align*}
+\text{a)} \ \ x^2y^3z+x^3y^2z^2 &= 	x^2y^2yz + x^2xy^2zz\\
+&= x^2y^2z(y + xz)\\
+\therefore x^2y^3z+x^3y^2z^2 &= x^2y^2z(y + xz)\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{b)} \ \ (3a+15)-b(a+5) &= (3a + 3\cdot 5) - b (a + 5)\\
+&= 3(a + 5) − b(a + 5)\\
+&= (a + 5)(3 − b)\\
+\therefore (3a+15)-b(a+5) &= (a + 5)(3 − b) \\\\\\
+\end{align*}
+
+\begin{align*}
+\text{c)} \ \ a(x-y)+(y-x) &= a(x − y) + (-1)(x −y) \ \ \ \ \ (*)   \\
+&= (x − y)(a − 1)\\
+\therefore a(x-y)+(y-x) &=(x − y)(a − 1)\\\\\\ 
+\end{align*}
+
+\begin{align*}
+\text{d)} \ \ 14x^2-28x^3+56x^2y &= 14x^2 \cdot 1 −14x^2 \cdot 2x + 14x^2 \cdot 4y\\
+&= 14x^2(1 − 2x + 4y)\\
+\therefore 14x^2-28x^3+56x^2y &= 14x^2(1 − 2x + 4y)\\
+\end{align*}
+
+<p>(*) Usando la propiedad distributiva se puede demostrar que \( a-b=(-1)(b-a)\)</p>
+        </details>
+
+        <hr class="new2"/>
+        <h4>Ejercicios 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+        <p> Factorice completamente cada una de las siguientes expresiones: </p>
+        <p>$$ \text{1)} \ \ abc + abc^2 \hspace{3cm} \text{4)} \ \ (2m − 4n) + m(m − 2n) $$</p>
+        <p>$$ \hspace{-1cm} \text{2)} \ \ 9a^2x^2 −18ax^3 \hspace{2.3cm} \text{5)}\ \ x(x − 7) − (7 − x) $$</p>
+        <p>$$ \hspace{-0.1cm} \text{3)} \ \ 6a^2 − 12a(x + 2) \hspace{1.8cm} \text{6)} \ \ (3x + 9y) + d( -x − 3y ) $$</p>
+        <hr class="new2"/>
+
+<h3>Factorización por agrupación</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p>Dado un polinomio en el cual no existe un factor común no constante a todos los sumandos que lo componen, en algunos casos es posible obtener la factorización de dicho polinomio, realizando una "agrupación conveniente" de aquellos sumandos que poseen un factor común.</p>
+
+<h4>Ejemplo 3</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Factorice completamente cada una de las siguientes expresiones </p>
+<p>$$ \text{a)} \ \ 5by − 5y + 2ba−2a \hspace{3cm} \text{c)} \ \ 4a^2x+3bm−4ab−3max $$</p>
+<p>$$ \hspace{0.6cm} \text{b)} \ \ 2x^2−3xy−3y+2x \hspace{2.9cm} \text{d)} \ \ 2am−2an+2a−m+n−1 $$</p>
+
+   <details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+
+\begin{align*}
+\text{a)} \ \ 5by − 5y + 2ba−2a &= (5by−5y)+(2ba−2a)\\
+&= 5y(b−1)+ 2a(b−1)\\
+&= (b−1)(5y+ 2a)\\
+\therefore 5by − 5y + 2ba−2a &= (b−1)(5y+ 2a)\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{b)} \ \ 2x^2−3xy−3y+2x &= 2x^2− 3xy + (- 3y) + 2x\\
+&= 	(2x^2− 3xy) + (- 3y + 2x)\\
+&= x (2x − 3y) + (- 3y + 2x)\\
+&= x (2x−3y) + 1(2x − 3y)\\
+&= (2x− 3y)(x + 1)\\
+\therefore 2x^2−3xy−3y+2x &= (2x− 3y)(x + 1)\\\\\\
+\end{align*} 
+
+\begin{align*}
+\text{c)} \ \ 4a^2x+3bm−4ab−3max &= (4a^2x − 4ab) + (3bm− 3max)\\
+&= 4a (ax − b) + 3m(b − ax)\\
+&= 4a(ax−b) + 3m(- 1)(ax−b)\\
+&= 4a (ax − b) + (- 3m)(ax − b)\\
+&= (ax − b)(4a − 3m)\\
+\therefore 4a^2x+3bm−4ab−3max &= (ax − b)(4a − 3m)\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{d)} \ \ 2am−2an+2a−m+n−1 &= (2am − 2an + 2a) + (- m + n − 1)\\
+&= 2a(m − n + 1) + (- m + n − 1)\\
+&= 2a(m − n + 1) + (- 1)(m − n + 1)\\
+&= (m − n + 1)(2a − 1)\\
+\therefore 2am−2an+2a−m+n−1 &= (m − n + 1)(2a − 1)
+\end{align*}
+
+</details>
+
+<hr class="new2"/>
+<h4>Ejercicios 4</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Factorice completamente cada una de las siguientes expresiones </p>
+<p>$$ \text{1)} \ \ ab + a + b + 1 \hspace{4cm} \text{4)} \ \  2c^2 + 4cd − 3c − 6d $$</p>
+<p>$$\hspace{1.2cm} \text{2)} \ \ 6a^2 − 4ac − 15ab +10bc \hspace{2.2cm} \text{5)} \ \ ax − bx + by + a − ay − b $$</p>
+<p>$$\hspace{0.5cm} \text{3)} \ \ a^3 − a^2c − ba^2 + abc \hspace{3cm} \text{6)} \ \ cax + cby − cbx − cay $$</p>
+
+<hr class="new2"/>
+<h3>Factorización por fórmulas notables</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p>En esta sección enunciamos algunos teoremas en los cuales se establecen ciertas identidades que denominaremos fórmulas notables, y que serán utilizadas para factorizar algunas expresiones algebraicas.</p>
+
+<h4>Teorema 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Si \(a \in &#8477, \ b \in &#8477\) entonces se cumple que \((a + b)^2= a^2 + 2ab + b^2 \) </p>
+<p><strong> Demostración: </strong></p>
+\begin{align*}
+(a + b)^2	&=	(a + b)(a + b)\\
+&= a (a + b) + b (a + b)\\
+&= a \cdot a + a \cdot b + b \ a + b \ b\\
+&= a^2 + ab + ab + b^2\\
+&= a^2 + 2ab + b^2\\
+\therefore (a + b)^2 &= a^2 + 2ab + b^2
+\end{align*}
+<p> Es decir, \((a + b)^2\) es la factorización de \(a^2 + 2ab + b^2\)  </p>
+
+
+<h4>Ejemplo 4</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p>Usando el teorema anterior factorice cada una de las siguientes expresiones</p>
+<p>$$ \text{a)} \ \ x^2+10x+25 \hspace{2cm} \text{b)}\ \ 4x^2+20x+25 \hspace{2cm} \text{c)}\ \ 9a^2+6a+1 $$</p>
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+\text{a)} \ \ x^2+10x+25 &= (x)^2 + 2(x)(5) + 5^2\\
+&= (x + 5)^2\\
+\therefore x^2+10x+25 &= (x + 5)^2\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{b)}\ \ 4x^2+20x+25 &= (2x)^2 + 2(2x)(5) + 5^2\\
+&= (2x + 5)^2\\
+\therefore 4x^2+20x+25 &= (2x + 5)^2\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{c)}\ \ 9a^2+6a+1 &= (3a)^2 + 2(3a)(1) + 1^2\\
+&= (3a + 1)^2\\
+\therefore 9a^2+6a+1 &= (3a + 1)^2
+\end{align*}
+
+</details>
+
+<hr class="new2"/>
+<h4>Ejercicios 5</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p>Factorice completamente cada una de las siguientes expresiones</p>
+<p>$$ \text{1)} \ \ 25x^2+30x+9 \hspace{3cm} \text{3)} \ \ a^3+8ab+16b^2 \hspace{3cm} \text{5)} \ \ \dfrac{c^2}{9}+\dfrac{2c}{d}+\dfrac{9}{d^2} $$</p>
+<p>$$\hspace{0.15cm} \text{2)} \ \ 4r^6+12r^3s^2+9s^4 \hspace{2.5cm} \text{4)} \ \ 2x^2+2\sqrt{2x}+1 \hspace{3cm} \text{6)} \ \ \dfrac{9h^2}{16}+\dfrac{4hk}{3}+\dfrac{64k^2}{81} $$</p>
+
+<hr class="new2"/>
+<h4>Teorema 2 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Si \(a \in &#8477, \ b \in &#8477 \) entonces se cumple que \((a − b)^2 = a^2 − 2ab + b^2\) </p>
+<p><strong> Demostración</strong></p>
+\begin{align*}
+(a − b)^2	&=	(a − b)(a − b)\\
+&= [a + (-b)][a + (-b)]\\
+&= 	a[a + (- b)] + (- b)[a + (- b)]\\
+&= a a + a (-b) + (-ba) + (- b)(- b)\\
+&= 	a^2− ab −ab + b^2\\
+&= a^2− 2ab + b^2\\
+\therefore (a − b)^2 &= a^2− 2ab + b^2
+\end{align*}
+Es decir, \((a - b)^2\) es la factorización de \(a^2 - 2ab + b^2\)
+
+<h4>Ejemplo 5 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p>Usando el teorema anterior factorice cada una de las siguientes expresiones</p>
+<p>$$ \text{a)}  \ \ \dfrac{x^2}{4}-\sqrt{3}x +3 \hspace{2cm} \text{b)} \ \ 9x^2y^2-12xy+4 \hspace{2cm} \text{c)} 3a^2-2\sqrt{6}ab+2b^2 $$</p>
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+\text{a)}  \ \ \dfrac{x^2}{4}-\sqrt{3}x +3 &= \left(\dfrac{x}{2}\right)^2-2\left(\dfrac{x}{2}\right)(\sqrt{3})+(\sqrt{3})^2\\
+&= \left( \dfrac{x}{2}-\sqrt{3} \right)^2\\
+\therefore \dfrac{x^2}{4}-\sqrt{3}x +3 &= \left( \dfrac{x}{2}-\sqrt{3} \right)^2\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{b)} \ \ 9x^2y^2-12xy+4 &= (3xy)^2 − 2(3xy)(2) + (2)^2\\
+&= (3xy − 2)^2\\
+\therefore 9x^2y^2-12xy+4 &= (3xy − 2)^2\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{c)} 3a^2-2\sqrt{6}ab+2b^2 &= (\sqrt{3}a)^2-2(\sqrt{3}a)(\sqrt{2}b)+(\sqrt{2}b)^2\\
+&= (\sqrt{3}a -\sqrt{2}b)^2\\
+\therefore 3a^2-2\sqrt{6}ab+2b^2 &= (\sqrt{3}a -\sqrt{2}b)^2
+\end{align*}
+</details>
+
+<hr class="new2"/>
+<h4>Ejercicios 6 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p>Factorice completamente cada una de las siguientes expresiones</p>
+<p>$$ \text{1)}\ \ 20x^2-2\sqrt{5}xy+\dfrac{y^2}{4} \hspace{2cm} \text{3)} \ \ \dfrac{1}{x^2}+4y^2-\dfrac{4y}{x} \hspace{2cm} \text{5)} \ \ \dfrac{4n^2}{9}-20nm+25m^2$$</p>
+<p>$$ \text{2)} \ \ x^2y^2z^2-z+\dfrac{1}{4x^2y^2} \hspace{2cm} \text{4)} \ \ \dfrac{x^2}{9}-\dfrac{10x}{3}+25 \hspace{2cm} \text{6)} \ \ x^2-2\sqrt{2}xy+2y $$</p>
+<hr class="new2"/>
+
+<h4>Teorema 3 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Si \(a \in &#8477, \ b \in &#8477 \) entonces se cumple que \((a+b)(a-b)=a^2-b^2 \) </p>
+<p><strong>Demostración</strong></p>
+\begin{align*}
+(a+b)(a-b) &= a(a-b)+b(a-b)\\
+&= a[a+(-b)]+b[a+(-b)]\\
+&= a\cdot a + a (- b) + b \cdot a + b(- b)\\
+&= a^2 − ab + ab − b^2\\
+&= a^2-b^2\\
+\therefore (a+b)(a-b) &= a^2-b^2
+\end{align*}
+<p>Es decir, \((a+b)(a-b)\) es la factorización de \(a^2-b^2\)</p>
+
+<h4>Ejemplo 6 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p>Usando el teorema anterior factorice cada una de las siguientes expresiones</p>
+<p>$$ \text{a)}\ \ 4x^2-y^2 \hspace{2cm} \text{b)} \ \ 3x^2-\dfrac{c^2}{25} \hspace{2cm} \text{c)} \ \ (3+2b)^2-(c-4)^2 \hspace{2cm} \text{d)} \ \ 9x^2-12x+4-y^2 $$</p>
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+\text{a)}\ \ 4x^2-y^2 &= (2x)^2− y^2\\
+&= (2x + y)(2x − y)\\
+\therefore 4x^2-y^2 &= (2x + y)(2x − y) \\\\\\
+\end{align*}
+
+\begin{align*}
+\text{b)} \ \ 3x^2-\dfrac{c^2}{25} &= (\sqrt{3}x)^2-\left(\dfrac{c}{5} \right)^2\\
+&= \left(\sqrt{3}x+\dfrac{c}{5} \right)\left(\sqrt{3}x-\dfrac{c}{5} \right)\\
+\therefore 3x^2-\dfrac{c^2}{25} &= \left(\sqrt{3}x+\dfrac{c}{5} \right)\left(\sqrt{3}x-\dfrac{c}{5} \right)\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{c)} \ \ (3+2b)^2-(c-4)^2 &= 	[(3 + 2b) + (c − 4)][(3 + 2b) − (c − 4)]\\
+&= (3 + 2b + c −4)(3 + 2b − c + 4)\\
+&= (2b + c − 1)(2b − c + 7)\\
+\therefore (3+2b)^2-(c-4)^2 &= (2b + c − 1)(2b − c + 7)\\\\\\
+\end{align*} 
+
+\begin{align*}
+\text{d)} \ \ 9x^2-12x+4-y^2 &= (9x^2 − 12x + 4) − y^2\\
+&= [(3x)^2 − 2(3x)(2) + (2)^2] − y^2\\
+&= (3x − 2)^2 − y^2\\
+&= [(3x − 2) + y][(3x − 2) − y]\\
+\therefore 9x^2-12x+4-y^2 &= [(3x − 2) + y][(3x − 2) − y]
+\end{align*}
+
+</details>
+
+<hr class="new2"/>
+<h4>Ejercicios 7 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p>Factorice completamente cada una de las siguientes expresiones</p>
+<p>$$ \text{1)} \ \ 5x^2− 8 \hspace{4.5cm} \text{4)} \ \ (6a + 5b)^2 − (4c + 7d)^2 $$</p>
+<p>$$\hspace{-1.5cm} \text{2)} \ \ 9c^2 −4a^2 − 4ab − b^2 \hspace{2.2cm} \text{5)} \ \ (a + b)^2 − 4c^2 $$</p>
+<p>$$\hspace{-2.3cm} \text{3)} \ \ \dfrac{4}{9}r^2-\dfrac{25}{16}s^2 \hspace{3.7cm} \text{6)} \ \ \dfrac{2}{3}y^2-\dfrac{5}{4} $$</p>
+
+<hr class="new2"/>
+<h4>Teorema 4 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Si \(a \in &#8477, \ b \in &#8477 \) entonces se cumple que \((a + b)(a^2 − ab + b^2) = a^3 + b^3 \) </p>
+
+<p><strong>Demostración:</strong></p>
+\begin{align*}
+(a + b)(a^2 − ab + b^2)	&=	a (a^2 −ab + b^2) + b (a^2 − ab + b^2)\\
+&= a^3 − a^2 b + ab^2 + a^2 b − ab^2 + b^3\\
+&= a^3 + (-a^2b) + a^2b + ab^2 − ab^2 + b3\\
+&= a^3 + (- a^2 b + a^2b) + (ab^2 − ab^2) + b^3\\
+&= a^3+b^3\\
+\therefore (a + b)(a^2 − ab + b^2)	&= a^3+b^3\\
+\end{align*}
+<p> Es decir, \((a + b)(a 2 − ab + b 2) \) es la factorización de \(a3 + b3 \) </p>
+<p> (*) \(a^2-ab+b^2\) no es factorizable en el conjunto de los números reales, lo cual será estudiado posteriormente.  </p>
+
+<h4>Ejemplo 7 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Usando el teorema anterior factorice cada una de las siguientes expresiones </p>
+<p>$$ \text{a)} \ \ 27+p^3 \hspace{2cm} \text{b)} \ \ 8p^3 + 125q^3 \hspace{2cm} \text{c)} \ \ x^3+2 \hspace{2cm} \text{d)} \ \ 5a^3 + 2b^3 $$</p>
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+\text{a)} \ \ 27+p^3 &= (3)^3 + p^3\\
+&= (3 + p)(3^2 − 3p + p^2)\\
+&= (3 + p)(9 − 3p + p^2)\\
+\therefore 27+p^3 &= (3 + p)(9 − 3p + p^2)\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{b)} \ \ 8p^3 + 125q^3 &= (2p)^3 + (5q)^3\\
+&= (2p + 5q)[(2p)^2 − (2p)(5q) + (5q)^2]\\
+&= (2p + 5q)(4p^2 − 10pq + 25q^2)\\
+\therefore 8p^3 + 125q^3 &= (2p + 5q)(4p^2 − 10pq + 25q^2)\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{c)} \ \ x^3+2 &= x^3+(\sqrt[3]{2})^3\\
+&= (x+\sqrt[3]{2})[x^2-x\sqrt[3]{2}+(\sqrt[3]{2})^2]\\
+&= (x+\sqrt[3]{2})(x^2-x\sqrt[3]{2}+\sqrt[3]{4})\\
+\therefore x^3+2 &= (x+\sqrt[3]{2})(x^2-x\sqrt[3]{2}+\sqrt[3]{4}) \\\\\\
+\end{align*} 
+
+\begin{align*}
+\text{d)} \ \ 5a^3 + 2b^3 &= (\sqrt[3]{5}a)^3+(\sqrt[3]{2}b)^3\\
+&= [\sqrt[3]{5}a + \sqrt{2}b][(\sqrt[3]{5}a)^2-\sqrt[3]{5}a\sqrt[3]{2}b+(\sqrt[3]{2}b)^2]\\
+&= (\sqrt[3]{5}a + \sqrt{2}b)(\sqrt[3]{25}a^2-\sqrt[3]{10}ab+\sqrt[3]{4}b^2)\\
+\therefore 5a^3 + 2b^3 &= (\sqrt[3]{5}a + \sqrt{2}b)(\sqrt[3]{25}a^2-\sqrt[3]{10}ab+\sqrt[3]{4}b^2)
+\end{align*}
+
+</details>
+
+<hr class="new2"/>
+<h4>Ejercicios 8 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p>Factorice completamente cada una de las siguientes expresiones</p>
+<p>$$ \text{1)} \ \ x^3+27y^3 \hspace{3cm} \text{3)} \ \ x^3+5 \hspace{3cm} \text{5)} \ \ 7a^3b^3+11 $$</p>
+<p>$$\hspace{0.5cm} \text{2)} \ \ a+a^4 \hspace{3.6cm} \text{4)} \ \ 81a^7 + 24a^3 \hspace{2cm}	\text{6)} \ \ (2a − b)^3 + 8 $$</p>
+
+<hr class="new2"/>
+<h4>Teorema 5 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Si \(a \in &#8477, \ b \in &#8477 \) entonces se cumple que \((a^3 − b^3) = (a − b)(a^2 + ab + b^2) \) </p>
+<p><strong>Demostración:</strong></p>
+\begin{align*}
+(a − b)(a^2 + ab + b^2)	&=	[a + (- b)][a^2 + ab + b^2]\\
+&= a(a2 + ab + b2) + (- b)(a^2 + ab + b^2)\\
+&= a^3 + a^2b + ab^2 − a^2b −ab^2 − b^3\\
+&= a^3 + (a^2b − a^2b) + (ab^2 − ab^2) − b^3\\
+&= a^3 − b^3\\
+\therefore (a − b)(a^2 + ab + b^2)	&= a^3 − b^3
+\end{align*}
+<p> Es decir, \((a − b)(a^2 + ab + b^2) \) es la factorización de \(a^3 − b^3 \) </p>
+<p> (*) \(a^2+ab+b^2 \) no es factorizable en el conjunto de los números reales. </p>
+
+<h4>Ejemplo 8 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Usando el teorema anterior factorice cada una de las siguientes expresiones </p>
+<p>$$ \text{a)} \ \ x^3-8 \hspace{2cm} \text{b)} \ \ a^3-7 \hspace{2cm} \text{c)} \ \ 54x^3-2y^3 \hspace{2cm} \text{d)} \ \ 3a^3b^3-125 $$</p>
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+
+\begin{align*}
+\text{a)} \ \ x^3-8 &= x^3 − 2^3\\
+&= (x − 2)(x^2 + 2x + 2^2)\\
+&= (x − 2)(x^2 + 2x + 4)\\
+\therefore x^3-8 &= (x − 2)(x^2 + 2x + 4)\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{b)} \ \ a^3-7 &= a^3 - (\sqrt[3]{7})^3\\
+&= (a-\sqrt[3]{7})[a^2+a\sqrt[3]{7}+(\sqrt[3]{7})^2]\\
+&= (a-\sqrt[3]{7})(a^2+a\sqrt[3]{7}+\sqrt[3]{49})\\
+\therefore a^3-7 &=(a-\sqrt[3]{7})(a^2+a\sqrt[3]{7}+\sqrt[3]{49})\\\\\\
+\end{align*}
+
+\begin{align*}
+\text{c)} \ \ 54x^3-2y^3 &= 2(27x^3 − y^3)\\
+&= 2[(3x)^3 − y^3]\\
+&= 2[(3x − y)] [(3x)^2 + 3xy + y^2]\\
+&= 2(3x − y)(9x^2 + 3xy + y^2)\\
+\therefore 54x^3-2y^3 &=2(3x − y)(9x^2 + 3xy + y^2)\\\\\\
+\end{align*} 
+
+\begin{align*}
+\text{d)} \ \ 3a^3b^3-125 &= (\sqrt[3]{3}ab)^3-5^3\\
+&= [\sqrt[3]{3}ab-5][(\sqrt[3]{3}ab)^2+\sqrt[3]{3}ab\cdot5 +5^2]\\
+&= (\sqrt[3]{3}ab-5)(\sqrt[3]{9}a^2b^2+5\sqrt[3]{3}ab+25)\\
+\therefore 3a^3b^3-125 &= (\sqrt[3]{3}ab-5)(\sqrt[3]{9}a^2b^2+5\sqrt[3]{3}ab+25)
+\end{align*}
+
+
+</details>
+
+<hr class="new2"/>
+<h4> Ejercicios 9 </h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Factorice completamente cada una de las siguientes expresiones </p>
+<p>$$ \text{1)} \ \ a^3 − 64 + b^3 \hspace{3cm} \text{3)}\ \ a^3 − 11 \hspace{3cm} \text{5)} \ \ 8a^2b^3 − 7 $$</p>
+<p>$$\hspace{0.3cm} \text{2)} \ \ 4a^5 −32a^2b^3 \hspace{3cm} \text{4)} \ \ a^3 − (b − 1)^3 \hspace{2cm} \text{6)}\ \ 16x^5 − 2x^2 $$</p>
+
+
+      </body>
+</html>

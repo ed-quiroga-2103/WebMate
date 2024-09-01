@@ -26,6 +26,8 @@ export const Graph2D = ({
 
     const [graphData, setGraphData] = useState(graphDataInput);
 
+    console.log(graphData)
+
     const [offTicks, setOffTicks] = useState(Infinity);
 
     const [hoverNode, setHoverNode] = useState(null);

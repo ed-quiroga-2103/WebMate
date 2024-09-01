@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Matemática Elemental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+     <body>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Matemática Elemental</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Números reales,<br/> potencias y raíces.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Operaciones <br/>combinadas.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Valor absoluto.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Unión, intersección<br/> y pertenencia.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Subconjuntos <br/>e intervalos.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub6</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub7</a></li>
+                </ul>
+             </nav>
+        </header>
+        <!--NO TOCAR NADA DE ARRIBA POR FAVOR-->
+         <!-- TRABAJAR DESDE AQUÍ -->
+                            
+         <h2>Factorización de polinomios de grados mayor que 2 con coeficientes enteros</h2> <!-- USAR H2 PARA TITULOS DE TEMAS -->
+         <p> A continuación nuestro objetivo es factorizar polinomios de grado mayor que dos, para lo cual se hará uso de la división sintética, factorización de polinomios de segundo grado, teorema del factor y las siguientes preposiciones: </p>
+         <hr class="new2"/>
+         <h4>Preposición 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         
+         <p> Si \(P(x)\) es un polinomio de grado \(n\), entonces \(P(x)\) tiene a lo sumo \(n\) ceros reales. </p>
+         <h4>Ejemplo 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> a) El polinomio \(x^3+1 \) es de grado 3 por lo que tiene a lo sumo 3 ceros reales. </p>
+         <p> b) El polinomio \(2x^4-4x^2-4 \) es de grado 4 por lo que tiene a lo sumo 4 ceros reales. </p>
+
+         <hr class="new2"/>
+         <h4>Propiedad 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Sea \(P(x)\) un polinomio tal que \(P(x)=a_nx^n+a_n-1^{x^{n-1}}+...+a_1x+a_0 \) donde \(a_n,\ a_{n-1},\ ...,a_1,\ \text{y} \ a_0\) son números enteros. Y sean \(c\) y \(d\) números enteros tales que \(\dfrac{c}{d} \) es una fracción canónica. Si \(\dfrac{c}{d} \) es un cero de \(P(x)\) entonces \(a_0\) es divisible por \(c\) y \(a_n\) es divisible por \(d\) </p>
+         <p><strong>Nota:</strong> de la preposición anterior se deduce que todos los ceros racionales de \(P(x)\) están contenidos en el conjunto \(D\), donde: </p>
+         <p>$$ D= \left\{ \dfrac{c}{d} \in &#8474 \ \ \text{tal que}\ \  C\ \ \text{es un divisor de}\ \ a_0 \ \ \text{y} \ \ d \ \ \text{es un divisor de} \ \ a_n \right\} $$</p>
+         <p> Sin embargo, no necesariamente todo elemento de \(D\) es un cero de \(P(x)\). </p>
+         <p> Para aplicar las proposiciones anteriores en la factorización de un polinomio \(P(x)\) con \(P(x)= a_nx^n+a_n-1^{x^{n-1}}+...+a_1x+a_0 \) y \(a_n,\ a_{n-1},\ ...,a_1,\ \text{y} \ a_0\) son números enteros, \(a_n \neq 0, n \in &#8469 , \ n> 2  \) se sigue el siguiente procedimiento: </p>
+         <p> 1) Se determina el conjunto \(D_{a_0}\) donde: </p>
+         <p>$$ D_{a_0}=\left\{C \in &#8484 \ \ \text{tal que}\ \  c \ \ \text{es un divisor de}\  a_0  \right\} $$</p>
+         <p> 2) Se determina el conjunto \(D_{a_n} \), donde: </p>
+         <p>$$ D_{a_n}=\left\{ d \in &#8469 \ \ \text{tal que}\ \ d \ \ \text{es un divisor de}\ \ a_n \right\}  $$</p>
+         <p> 3) Se forma el conjunto D donde: </p>
+         <p>$$ D=\left\{ \dfrac{c}{d} \ \ \text{tal que}\ \ c  \in D_{a_0}\ \ \text{y}\ \ d \in D_{a_n} \right\} $$</p>
+         <p> 4) Entre los elementos de D se busca un \(\alpha\) tal que \(P(\alpha)=0 \) </p>
+         <p> 5) Se efectúa la división de \(P(x) \) por \(x-\alpha \) y se expresa la identidad \(P(x)=(x-\alpha)\cdot C(x) \) donde \(C(x) \) es el cociente que se obtiene al dividir \(P(x)\) por \(x-\alpha \) </p>
+         <p> 6) Si \(C(x)\) de grado mayor que 2 se repiten los pasos 4 y 5 para \(C(x)\) </p>
+         <p> 7) Si \(C(x)\) es de grado 2 se utiliza alguno de los métodos de factorización de polinomios de este tipo </p>
+
+         <hr class="new2"/>
+         <h4>Ejemplo 2</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Factorice \(P(x)\) (si es posible) donde \(P(x)=x^3-4x^2+x+6 \) </p>
+
+        <details> <!--Para agregar soluciones a ejercicios-->
+             <summary>Solución</summary> <!--Titulo "Solución"-->
+             <p> \(D_6=\left\{ 1, - 1, 2, - 2, 3, - 3, 6, - 6 \right\} \hspace{0.5cm}\) (divisores enteros de 6) </p>
+             <p> \(D_1= \left\{ 1 \right\} \hspace{0.5cm}\) (divisores naturales de 1) </p>
+             <p> \(D= \left\{ 1, - 1, 2, - 2, 3, - 3, 6, - 6 \right\} \hspace{0.5cm} \) (cada elemento de \(D\) es el cociente de un elemento de \(D6\) y un elemento de \(D1\)) </p>
+             <p> El siguiente paso es determinar algún \(\alpha , \ \alpha \in D \) tal que \(P(\alpha)=0 \)  </p>
+             <p> Calculemos \(P(-1)\) por división sintética: </p>
+             \begin{array}{rrrr|ll} 
+1 & -4 & 1 & 6 & - 1 \\ 
+& -1 & 5 & -6 &  \\ 
+\hline 
+1 & -5 & 6 & 0 \\ 
+\end{array}
+
+<p> De aquí se tiene que \(P(-1)=0\) y además \(x^3-4x^2+x+6=(x+1)(x^2-5x+6) \)  </p>
+<p> Como \(x^2-5x+6 \) es de grado 2, podemos utilizar alguno de los métodos de factorización estudiados para este tipo de polinomio. </p>
+<p> Por fórmula general para \(x^2-5x+6 \) se tiene que  </p>
+ \begin{align*}
+ \Delta & = (-5)^2-4(1)(6)\\
+ & =25-24\\
+ & =1
+ \end{align*}
+
+ <p> De este modo </p>
+ <p>$$ \alpha =\dfrac{5-\sqrt{1}}{2} \hspace{2cm} \beta =\dfrac{5+\sqrt{1}}{2} $$</p>
+ <p>$$ \hspace{-1cm} \alpha =\dfrac{4}{2} \hspace{3.1cm} \beta =\dfrac{6}{2} $$</p>
+ <p>$$\hspace{-1.2cm} \alpha =2 \hspace{3.3cm} \beta =3 $$</p>
+
+ <p> Por lo que \(x^2-5x+6=(x-2)(x-3)\) y como \(x^3-4x+6=(x+1)(x^2-5x+6) \) entonces \( x^3-4x+6=(x+1)(x-2)(x-3) \) </p>
+        </details>           
+         
+        <hr class="new2"/>
+         <h4>Ejemplo 3</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Factorice \(P(x)\) tal que \(P(x)=2x^4-4x^2-6x-4 \) </p>
+         <details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+        
+            <p> \(D_4=\left\{ 1, - 1, 2, - 2, 4, - 4 \right\} \ \ \) (Divisores enteros de -4)  </p>
+            <p> \(D_2 = \left\{ 1, 2 \right\}\ \ \) (Divisores naturales de 2) </p>
+            <p> \(D=\left\{1,-1,2,-2, 4, -4, \dfrac{1}{2}, \dfrac{-1}{2} \right\} \) </p>
+            <p> El paso siguiente es determinar algún \(\alpha \in D \), tal que \(P(\alpha)=0 \) </p>
+            <p> Calculamos \(P(1)\) por división sintética  </p>
+            \begin{array}{rrrrr|ll} 
+2 & 0 & -4 & -6 & -4 & 1 \\ 
+ & 2 & 2 & -2 & -8 & \\ 
+\hline 
+2 & 2 & -2 & -8 & -12 \\ 
+\end{array}
+<p> Como \(P(1)=-12, \ x-1\) no es un factor de \(P(x)\) </p>
+<p> Calculemos \(P(-1)\) por división sintética </p>
+\begin{array}{rrrrr|ll} 
+2 & 0 & -4 & -6 & -4 & -1 \\ 
+ & -2 & 2 & 2 & 4 & \\ 
+\hline 
+2 & -2 & -2 & -4 & 0 \\ 
+\end{array}
+<p> De aquí se tiene que \(P(-1)=0\) y además \( 2x^4-4x^2-6x-4=(x+1)(2x^3-2x^2-2x-4)\ \ \)(*) </p>
+<p> Sea \(C(x)=2x^3-2x^2-2x-4 \) que es un polinomio de grado 3, debemos encontrar un \(\beta, \ \beta \in D \) tal que \(C(\beta)=0\) </p>
+<p> Calculemos \(C(2)\) por división sintética </p>
+
+\begin{array}{rrrr|ll} 
+2 & -2 & -2 & -4 &  2 \\ 
+ & 4 & 4 & 4 &  \\ 
+\hline 
+2 & 2 & 2 & 0  \\ 
+\end{array}
+
+<p> De aquí se tiene que \(C(2)=0\) y además \(2x^3-2x^2-2x-4=(x-2)(x^2+2x+2)\ \ \)(**) </p>
+<p> Como \( 2x^2+2x+2\) es de grado 2, podemos utilizar alguno de los métodos de factorización estudiados para polinomios de este tipo. </p>
+<p> Por fórmula general para \(2x^2+2x+2 \) se tiene que </p>
+\begin{align*} 
+\Delta &= (2)^2-4(2)(2)\\
+&= 4-16\\
+&= -12
+\end{align*}
+
+<p> Como \(\Delta < 0 \) entonces \(2x^2+2x+2 \) no es factorizable en el conjunto de los números reales. </p>
+<p> Así, por (*) y (**) se tiene que \( 2x^4− 4x^2 −6x − 4 = (x + 1)(2x^3 − 2x^2 − 2x − 4) \) </p>
+<p> \( \therefore 2x^4-4x^2-6x-4=(x+1)(x-2)(2x^2+2x+2) \) </p>
+</details> 
+
+<hr class="new2"/>
+         <h4>Ejemplo 4</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+
+         <p> Factorice \(P(x)\) donde \(P(x)=x^4-2x^3-4x^2+8x \) </p>
+
+         <details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+ 
+            <p> Factorizando \(P(x)\) por factor común se tiene que \(P(x)=x(x^3-2x^2-4x+8)\ \ \)(*) </p>
+            <p> Sea \(P_1(x)=x^3-2x^2-4x+8 \) para \(P_1(x)\) se tiene que </p>
+            <p> \(D_8=\left\{1, -1, 2, -2, 4, -4, 8, -8\right\} \) </p>
+            <p> \( D_1=\left\{1\right\} \) </p>
+            <p> \( D=\left\{1, -1, 2, -2, 4, -4, 8, -8 \right\} \) </p>
+            <p> Calculando \(P_1(1) \) y \(P_1(-1) \) se tiene que \(P_1(1)=3 \) y \(P_1(-1)=9 \)  </p>
+            <p> Calculemos \(P_1(2)\) por división sintética </p>
+            \begin{array}{rrrr|ll} 
+1 & -2 & -4 & -8 &  2 \\ 
+ & 2 & 0 & -8 &  \\ 
+\hline 
+1 & 0 & -4 & 0  \\ 
+\end{array}
+
+<p> De aquí se tiene que \(P_1(2)=0\) y además \( x^3-2x^2-4x+8=(x-2)(x^2-4) \) y como \(x^2-4=(x-2)(x+2) \) entonces \( x^3-2x^2-4x+8=(x-2)(x-2)(x+2)\ \ \)(**) </p>
+<p> Así, por (*) y (**) se tiene que \(x^3-2x^2-4x+8=(x-2)(x-2)(x+2) \) </p>
+<p> \(\therefore x^4-2x^3-4x^2+8x=x(x-2)(x-2)(x+2) \) </p>
+        </details>
+
+        <hr class="new2"/>
+         <h4>Ejemplo 5</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Factorice \(P(x)\) donde \(P(x)=x^3+4x^2+4x+3 \) </p>
+
+         <details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+
+           
+            <p> \(D_3=\left\{ 1,-1,3,-3 \right\} \) </p>
+            <p> \( D_1=\left\{ 1 \right\} \) </p>
+            <p> \( D=\left\{1,-1,3,-3 \right\} \) </p>
+            <p> Calculando \(P(1), \ P(-1), \ P(-3) \) y \(P(-3)\) se tiene que </p>
+            <p> \( P(1)=12 \hspace{2cm} P(-1)=2 \hspace{2cm} P(3)=78 \hspace{2cm} P(-3)=0 \) </p>
+            <p> Dividiendo \(P(x)\) por \((x+3)\) usando división sintética se obtiene que  </p>
+            \begin{array}{rrrr|ll} 
+            1 & 4 & 4 & 3 &  -3 \\ 
+            & -3 & -3 & -3 &  \\ 
+           \hline 
+           1 & 1 & 1 & 0  \\ 
+           \end{array}
+
+           <p> Y por lo tanto \(x^3+4x2+4x+3=(x+3)(x^2+x+1) \) </p>
+           <p> Factorice, de ser posible, \(x^2+x+1 \). Para esto se tiene </p>
+        \begin{align*}
+\Delta &= (1)^2-4(1)(1)\\
+&= 1-4\\
+&= -3
+        \end{align*}
+        <p> Como \(\Delta < 0 \) entonces \( x^2+x+1 \) no es factorizable en el conjunto de los números reales </p>
+        <p> \( \therefore x^3+4x^2+4x+3=(x+3)(x^2+x+1) \) </p>
+</details>
+
+<hr class="new2"/>
+         <h4>Ejemplo 6</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Factorice \(P(x)\) donde \(P(x)=x^4-8x^2-9 \) </p>
+
+
+         <details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+            <p>\(D_{-9}=\left\{ 1,-1,3,-3,9,-9 \right\} \)</p>
+            <p> \( D_1=\left\{ 1 \right\} \) </p>
+            <p> \(D = \left\{ 1,-1,3,-3,9,-9\right\}\) </p>
+            <p> Calculando \(P(1)\) y \(P(-1)\) se tiene que \(P(1)=-16\) y \(P(-1)=-16\) </p>
+            <p> Calculemos \(P(3)\) por división sintética </p>
+            \begin{array}{rrrrr|ll} 
+            1 & 0 & -8 & 0 & -9 & 3 \\ 
+            & 3 & 9 & 3 & 9&  \\ 
+           \hline 
+           1 & 3 & 1 & 3 & 0 &   \\ 
+           \end{array}
+           <p> De aquí se tiene que \(P_1(-3)=0 \) y además \( x^4-8x^2-9=(x-3)(x^3+3x^2+x+3) \) </p>
+           <p> Sea \(P_1(x)=x^3+3x^2+x+3 \) </p>
+           <p> Como 1 y -1 no son ceros de \(P(x)\) tampoco lo son de \(P_1(x)\) por lo que los posibles ceros de \(P_1(x) \) sería los elementos restantes de D </p>
+           <p> Calculando \(P_1(3)\) se tiene que \(P_1(3)=60 \) </p>
+           <p> Calculemos \(P_1(-3) \) por división sintética </p>
+
+             \begin{array}{rrrr|ll} 
+1 & 3 & 1 & 3 &  -3 \\ 
+ & -3 & 0 & -3 &  \\ 
+\hline 
+1 & 0 & 1 & 0  \\ 
+\end{array}
+
+<p> De aquí se tiene que \(P_1(-3)=0 \) y además \(x^3+3x^2+x+3=(x+3)(x^2+1) \) </p>
+<p> Factoricemos de ser posible \(x^2+1 \). Se tiene que </p>
+\begin{align*}
+\Delta &= 0^2-4(1)(1)\\
+&= -4
+\end{align*}
+<p> Como \(\Delta < 0 \), entonces \(x^2+1 \) no es factorizable en el conjunto de los números reales. </p>
+<p> De este modo \(x^3 + 3x^2 + x + 3 = (x + 3)(x^2 + 1) \) </p>
+<p> \(\therefore x^4−8x^2 −9=(x − 3)(x + 3) (x^2+1) \) </p>
+</details>
+
+<hr class="new2"/>
+         <h4>Ejercicios 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Factorice, de ser posible, cada uno de los siguientes polinomios \(P(x)\) que se definen a continuación </p>
+         <p>$$ 1) \ \ P(x) = x^3 − 4x^2 + x + 6 \hspace{2cm} 5) \ \ P(x) = 2x^3 − x^2 − 18x + 9 $$</p>
+         <p>$$ 2) P(x) = x^3 + 2x^2 + x + 2 \hspace{2.2cm} 6) P(x) = 2x^4 − 5x^3 + 4x^2 − x	 $$</p>
+         <p>$$\hspace{0.85cm} 3)\ \  P(x) = x^3 − 12x + 16 \hspace{2.5cm} 7)\ \ P(x) = x^4− 4x^3 − 3x^2 + 4x− 4 $$</p>
+         <p>$$ 4)\ \ 	P(x) = 6x^3 + 23x^2 + 9x − 18 \hspace{1.2cm} 8) \ \ P(x) = 5x^3 + 9x^2 − 7x + 1 $$</p>
+
+      </body>
+</html>

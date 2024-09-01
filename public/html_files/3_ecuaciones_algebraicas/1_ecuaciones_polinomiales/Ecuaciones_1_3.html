@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Matemática Elemental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+     <body>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Matemática Elemental</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Números reales,<br/> potencias y raíces.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Operaciones <br/>combinadas.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Valor absoluto.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Unión, intersección<br/> y pertenencia.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Subconjuntos <br/>e intervalos.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub6</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub7</a></li>
+                </ul>
+             </nav>
+        </header>
+        <!--NO TOCAR NADA DE ARRIBA POR FAVOR-->
+         <!-- TRABAJAR DESDE AQUÍ -->
+                            
+         <h2>Ecuaciones en las cuales uno de sus miembros es un polinomio de grado mayor o igual que tres</h2> <!-- USAR H2 PARA TITULOS DE TEMAS -->
+         <hr class="new2"/>
+         <p>
+            En la resolución de este tipo de ecuaciones haremos uso de los conceptos de factorización, 
+            además de los procedimientos usados para resolver ecuaciones cuadráticas
+         </p>
+         <h4>Ejemplo</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <hr class="new1"/>
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:<br/>
+            <ol>
+                <li>\(x^3 - 5x = 0\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$x^3 - 5x = 0$$
+                    $$x(x^2 - 5) = 0$$
+                    $$x (x - \sqrt{5}) (x + \sqrt{5}) = 0$$
+                    Entonces:
+                    $$x = 0 &emsp;&emsp; &#8744;&emsp;&emsp;&emsp;  x - \sqrt{5} = 0 &emsp;&emsp; &#8744;&emsp;&emsp;&emsp;  x + \sqrt{5} = 0$$
+                    $$x = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = \sqrt{5} &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = -\sqrt{5}$$
+                    Por lo que el conjunto solución es \(\bigl\{  0, - \sqrt{5},  \sqrt{5}   \bigr\}\)
+                </details><br/>
+                <li>\(x^3 + 2x^2 - 9 - 18 = 0\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$x^3 + 2x^2 - 9 - 18 = 0$$
+                    $$(x^3 + 2x^2) + (-9x - 18) = 0$$
+                    $$x^2(x + 2) - 9(x + 2) = 0$$
+                    $$(x + 2) (x^2 - 9) = 0$$
+                    $$(x + 2) (x + 3)(x - 3) = 0$$
+                    Entonces:
+                    $$x + 2 = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x + 3 = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x - 3 = 0$$
+                    $$x = -2 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = -3 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = 3$$
+                    Por lo que el conjunto solución es {-3, -2, 3}
+                </details><br/>
+                <li>\(x^3 - 2x^2 + x = 0\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$x^3 - 2x^2 + x = 0$$
+                    $$x(x^2 -2x + 1) = 0$$
+                    $$x(x - 1)^2 = 0$$
+                    Entonces:
+                    $$x = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x - 1 = 0$$
+                    $$x = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = 1$$
+                    Por lo que el conjunto solución es {0, 1}
+                </details>
+            </ol>
+         </p>
+         <h4>Ejercicios</h4>
+         <hr class="new2"/> <!-- Agrega línea de color rojo-->
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:
+            <ol type = "a">
+                <li>\(x^4 + 5x^2 = 0\)</li><br/>
+                <li>\(8x^3 - 8x^2 + 2x = 0\)</li><br/>
+                <li>\(x^4 - 3x^2 = x - 3\)</li><br/>
+            </ol>
+            Nuestro objetivo en los ejemplos siguientes es mostrar el uso de la división sintética, como un procedimiento que se pude utilizar
+            para resolver ecuaciones (con soluciones racionales, en las cuales uno de sus miembros es un polinomio de grado mayor que dos con coeficientes enteros).
+         </p>    
+         <h4>Ejemplo 2</h4>
+         <hr class="new2"/>
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:<br/><br/>
+            1. \(2x^3 + 3x^2 - 3x - 2 = 0\)<br/><br/>
+            Haciendo \(P(x) = 2x^3 + 3x^2 - 3x - 2\)
+            <ol type = "a">
+                <li>\(D_{-2} =\){-1, 1, 2, -2} (divisores enteros de -2)</li><br/>
+                <li>\(D_2 =\){1, 2} (divisores enteros de 2)</li><br/>
+                <li>\(D =\) {-1, 1, \(\dfrac{-1}{2}, \dfrac{1}{2}\), 2, -2} (cada elemento de <I>D</I> es un posible cero racional de <I>P(x)</I>)</li><br/>
+                <li>Calculemos <I>P</I>(-1)<br/><br/>
+                    \(
+                    \begin{array}{rrrr|l} 
+                    2 & 3 & -3 & -2  & -1  \\ 
+                    & -2 & -1 &  4 &    \\ 
+                    \hline     
+                    2 & 1 & -4 & 2
+                    \end{array}         
+                    \)
+                    &emsp; Como <I>P</I>(-1) = 2 entonces -1 no es cero de <I>P(x)</I>
+                </li><br/>
+                <li>Calculemos <I>P</I>(1)<br/><br/>
+                    \(
+                    \begin{array}{rrrr|l} 
+                    2 & 3 & -3 & -2  & -1  \\ 
+                    & 2 & 5 &  2 &    \\ 
+                    \hline     
+                    2 & 5 & 2 & 0
+                    \end{array}                       
+                    \)<br/>
+                    \(\underbrace{&emsp;&emsp;&emsp;&emsp;}\)<br/>
+                    \(2x^2 + 5x + 2\)<br/><br/>
+                    Como <I>P</I>(1) = 0 entonces se tiene que: <br/><br/>
+                    $$2x^3 + 3x^2 - 3x - 2 = (x - 1)(2x^2 + 5x + 2)$$
+                    Por lo que: <br/><br/>
+                    $$2x^3 + 3x^2 -3x -2 = 0$$
+                    $$(x - 1) (2x^2 +5x +2) = 0$$
+                    Entonces: 
+                    $$x - 1 = 0 &emsp;&emsp; &#8744; &emsp;&emsp; 2x^2 + 5x + 2 = 0$$<br><br/>
+                    (Es decir x = 1 es una solución de <I>P(x)</I> = 0.) &ensp;&ensp; (*)
+
+                </li><br/>
+                <li>Resolvamos \(2x^2 + 5x + 2 = 0\)<br/><br/>
+                    $$&#8710; = 5^2 - 4(2)(2)$$
+                    $$&#8710; = 25 - 16 &#8658; &#8710; = 9$$
+                    $$&alpha; = \dfrac{-5 - \sqrt{9}}{2(2)} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-5 + \sqrt{9}}{2(2)}$$
+                    $$&alpha; = \dfrac{-5 - 3}{4} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-5 +3}{4}$$
+                    $$&alpha; = \dfrac{-8}{4} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-2}{4}$$
+                    $$&alpha; = -2 &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-1}{2} &emsp;(**)$$ 
+                    &there4; El conjunto solución de \(2x^3 + 3x^2 - 3x - 2 = 0\) es \(\biggl\{  -2, -1,  \dfrac{-1}{2}   \biggr\}\) por (*) y (**)
+                </li>                         
+            </ol>
+            2. \(x^3 +7x^2 +13x + 6 = 0\)<br/><br/>
+            Haciendo <I>P(x)</I> = \(x^3 +7x^2 +13x + 6\)
+            <ol type = "a">
+                <li>\(D_6 =\) {-1, 1, 2 -2, 3, -3, 6, -6} (Divisores enteros de 6)</li><br/>
+                <li>\(D_1 =\)  {1} (Divisores naturales de 1)</li><br/>
+                <li>\(D =\) {-1, 1, 2, -2, 3, -3, 6, -6} (posibles ceros racionales de <I>P(x)</I>)</li><br/>
+                <li>Verifique que: \(P(-1) = -1, P(1) = 27, P(2) = 68 \) es decir -1, 1, 2 no son ceros de <I>P(x)</I></li><br/>
+                <li>
+                    Calculemos <I>P(-2)</I><br/><br/>
+                    \(
+                    \begin{array}{rrrr|l} 
+                    1 & 7 & 13 & 6 & -2  \\ 
+                    & -2 & -10 & -6 &    \\ 
+                    \hline     
+                    1 & 5 & 3 & 0
+                    \end{array}                       
+                    \)<br/>
+                    \(\underbrace{&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}\)<br/>
+                    \(x^2+5x+3\)<br/><br/>
+                    Como \(P(-2) = 0\), entonces se tiene que:<br/>
+                    $$x^3 +7x^2 +13x + 6 = (x + 2)(x^2 + 5x + 3)$$
+                    Por lo que:
+                    $$x^3 +7x^2 +13x + 6 = 0$$
+                    $$(x + 2)(x^2 + 5x + 3) = 0$$
+                    Entonces: <br/>
+                    $$x + 2 = 0 &emsp;&emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp;&emsp; x^2 + 5x + 3 = 0$$
+                    $$x = -2 &emsp;&emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp;&emsp; x^2 + 5x + 3 = 0$$
+                    (Es decir x = -2 es una solución de <I>P(x) = 0</I>) &emsp; (*)<br/>
+                </li>
+                <li>Resolvamos \(x^2 + 5x + 3 = 0\)
+                    $$&#8710; = 5^2 - 4(1)(3)$$
+                    $$&#8710; = 25 - 12 = 13$$
+                    $$&alpha; = \dfrac{-5 + \sqrt{13}}{2(1)} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-5 - \sqrt{13}}{2(1)}$$
+                    $$&alpha; = \dfrac{-5 + \sqrt{13}}{2} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-5 - \sqrt{13}}{2} &emsp; (**)$$
+                    &there4; El conjutno solución de \(x^3 +7x^2 +13x + 6 = 0\) es \(\biggl\{  -2, \dfrac{-5 + \sqrt{13}}{2}, \dfrac{-5 - \sqrt{13}}{2}   \biggr\}\) por (*) y (**)
+                </li>
+                
+            </ol>
+            <hr width="10%" color="black" align="left" />
+            En los casos resueltos anteriormente se puede notar que en la resolución de las ecuaciones se manifiesta el siguiente resultado:
+         </p>
+         <hr class="new1"/>
+         <h3>Resultado</h3>
+         <hr class="new1"/>
+         <p>
+            Sea P(x) un polinomio y  un cero de P(x), es decir P() = 0, entonces  es una solución de la ecuación P(x) = 0. 
+             Veamos como se usa este resultado en la solución de ecuaciones:
+         </p>
+         <h4>Ejemplo</h4>
+         <hr class="new1"/>
+         <p>Resolver:<br/><br/>
+            1. \(-6x^3 + 7x^2 - 1 = 0\)
+            Haciendo \(P(x) = -6x^3 + 7x^2 - 1\)
+            <ol type = "a">
+                <li>\(D_{-1} = \{-1, 1\}\) (divisores enteros de -1)</li><br/>
+                <li>\(D_{-6} = \{1, 2, 3, 6\}\) (divisores naturales de -6)</li><br/>
+                <li>\(D = \biggl\{-1, 1, \dfrac{-1}{2}, \dfrac{1}{2}, \dfrac{-1}{3}, \dfrac{1}{3}, \dfrac{-1}{6}, \dfrac{1}{6} \biggr\}\) 
+                    (posibles ceros raciones de <I>P(x)</I> y por el resultado anterior posibles soluciones de \(P(x)= 0 \))
+                </li><br/>
+                <li>Verifique que: \(P(-1) = 12, P(-1) &ne; 0\), por lo que -1 no es solución de la ecuación \(P(x) = 0\)</li><br/>
+                <li>
+                    Calculemos \(P(1)\)<br/><br/>
+                    \(
+                    \begin{array}{rrrr|l} 
+                    -6 & 7 & 0 & -1 & 1  \\ 
+                    & -6 & 1 & 1 &    \\ 
+                    \hline     
+                    -6 & 1 & 1 & 0
+                    \end{array}                       
+                    \)<br/>
+                    \(\underbrace{&emsp;&emsp;&emsp;&emsp;&emsp;}\)<br/>
+                    \(-6x^2 + x + 1\)<br/><br/>
+                    Como \(P(1) = 0\), entonces 1 es una solución de \(P(x) = 0\) y \(-6x^3 + 7x^2 - 1 = (x - 1)(-6x^2 + x + 1)\) &ensp; (*)
+                </li><br/>
+                <li>Resolvamos \(-6x^2 + x + 1 = 0\)</li><br/>
+                $$&#8710; = 1^2 - 4(-6)(1)$$
+                $$&#8710; = 1 + 24 = 25$$
+                $$&alpha; = \dfrac{-1 - \sqrt{25}}{2(-6)}&emsp;&emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp;&emsp; &beta; =  \dfrac{-1 + \sqrt{25}}{2(-6)}$$
+                $$&alpha; = \dfrac{-1 - 5}{-12}&emsp;&emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp;&emsp; &beta; =  \dfrac{-1 + 5}{-12}$$
+                $$&alpha; = \dfrac{-6}{-12}&emsp;&emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp;&emsp; &beta; =  \dfrac{4}{-12}$$
+                &emsp;$$&alpha; = \dfrac{1}{2}&emsp;&emsp;&emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp;&emsp;&emsp; &beta; =  \dfrac{-1}{3} &emsp; (**)$$
+                El conjunto solución de \(-6x^3 + 7x^2 - 1 = 0\) es \(\biggl\{1, \dfrac{-1}{3}, \dfrac{1}{2}, \biggr\}\) por (*) y (**)
+            </ol>
+            2. \(3x^4 - 8x^3 + 9x^2 -8x - 4 = 0\)<br/><br/>
+            Haciendo \(P(x) = 3x^4 - 8x^3 + 9x^2 -8x - 4\)<br/><br/>
+            <ol type = "a">
+                <li>\(D_{-4} = \{-1, 1, 2, -2, 4, -4\}\) (divisores enteros de -4)</li><br/>
+                <li>\(D_{3} = \{1, 3\}\) (divisores naturales de 3)</li><br/>
+                <li>\(D = \biggl\{-1, 1, 2, -2, 4, -4, \dfrac{1}{3}, \dfrac{-1}{3}, \dfrac{2}{3}, \dfrac{-2}{3}, \dfrac{4}{3}, \dfrac{-4}{3} \biggr\}\) 
+                    (posibles soluciones de \(P(x)= 0 \))
+                </li><br/>
+                <li>
+                    Calculemos \(P(\dfrac{-1}{3})\)<br/><br/>
+                    \(
+                    \begin{array}{rrrrr|l} 
+                    3 & -8 & 9 & -8 & -4 & \dfrac{-1}{3}  \\ 
+                    & -1 & 3 & -4 & 4   \\ 
+                    \hline     
+                    3 & -9 & 12 & -12 & 0
+                    \end{array}                       
+                    \)<br/>
+                    \(\underbrace{&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}\)<br/>
+                    \(3x^3 - 9x^2+12x-12\)<br/><br/>
+                    Como \(P(\dfrac{-1}{3}) = 0\), entonces \(\dfrac{-1}{3}\) es una solución de \(P(x) = 0\) además se cumple que: <br/><br/>
+                     \(3x^4 - 8x^3 + 9x^2 -8x - 4 = (x - \dfrac{-1}{3})(3x^3 - 9x^2+12x-12 )\) &ensp; (*)
+                </li><br/>
+                <li>Resolvamos \(3x^3 - 9x^2+12x-12 =0\)</li><br/>
+                Haciendo \(Q(x) = 3x^3 - 9x^2 +12x - 12\)<br/><br/>
+                Recuerde que los posibles ceros racionales de <i>Q(x)</i>, es decir las posibles soluciones racionales de <i>Q(x)</i> = 0 son elementos de <i>D</i>.<br/><br/>
+                <li>Verifique que \(D = \biggl\{     \dfrac{-1}{3}, \dfrac{1}{3}, \dfrac{2}{3}, \dfrac{-2}{3}, \dfrac{4}{3}, \dfrac{-4}{3}, 1, -1        \biggr\}  \)
+                    no contiene ceros racionales de <I>Q(x)</I>
+                </li><br/>
+                <li>Calculemos \(Q(x)\)<br/><br/>
+                    \(
+                    \begin{array}{rrrr|l} 
+                    3 & -9 & 12 & -12 & 2 \\ 
+                    & 6 & -6 & 12   \\ 
+                    \hline     
+                    3 & -3 & 6 & 0
+                    \end{array}                       
+                    \)<br/>
+                    \(\underbrace{&emsp;&emsp;&emsp;&emsp;&emsp;}\)<br/>
+                    \(3x^2 - 3x + 6\)<br/><br/>
+                    Como \(Q(2) = 0\), entonces 2 es una solución de \(Q(x) = 0\) y por lo tanto también es solución de \(P(x) = 0\): <br/><br/>
+                </li><br/>
+                <li>Resolvamos \(3x^2 - 3x + 6 = 0\)<br/><br/>
+                    $$&#8710; = (-3)^2 - 4(3)(6)$$
+                    $$&#8710; = 9 - 72$$
+                    $$&#8710; = -63$$
+                    Como &#8710; < 0 entonces \(3x^2 - 3x + 6\) no tiene soluciones reales, por lo tanto el conjunto solución 
+                    de \(3x^4 - 8x^3 + 9x^2 -8x - 4 = 0\) es \( \biggl\{     \dfrac{-1}{3},2       \biggr\}  \)
+                </li><br/>
+            </ol>
+         </p>
+         <h4>Ejemplo</h4>
+         <hr class="new1"/>
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:<br/><br/>
+            1. \(x^3 + 16x^2 -7x+10 = -x^3 + (4x+1)^2\)<br/><br/>
+            <b>Solución</b><br/><br/>
+            <b>NOTA:</b> En la resolución de este ejemplo omitiremos el cálculo de las divisiones, así como de los posibles ceros de los polinomios correspondientes.
+            $$x^3 + 16x^2 -7x+10 = -x^3 + (4x+1)^2$$
+            $$&rArr; x^3 +16x^2-7x+10 = -x^3 +16x^2 +8x + 1$$
+           $$&rArr; 2x^3-15x+9 = 0$$
+            Haciendo \(P(x) = 2x^3-15x+9\)
+            <ol type="a">
+                <li>Calculemos \(P(-3)\)<br/><br/>
+                    \(
+                    \begin{array}{rrrr|l} 
+                    2 & 0 & -15 & 9 & -3 \\ 
+                    & -6 & 18 & -9   \\ 
+                    \hline     
+                    2 & -6 & 3 & 0
+                    \end{array}                       
+                    \)<br/>
+                    \(\underbrace{&emsp;&emsp;&emsp;&emsp;&emsp;}\)<br/>
+                    \(2x^2 - 6x + 3\)<br/><br/>
+                    \(2x^2-15x+9 = (x+3)(2x^2 - 6x + 3)\)<br/><br/>
+                    Como <i>P</i>(-3) = 0, entonces -3 es una solución de \(P(x) = 0\) &emsp; (*)
+                </li><br/>
+                <li>
+                    Resolvamos ahora \(2x^2 - 6x + 3 = 0\)
+                    $$&Delta; = (-6)^2 - 4(2)(3)$$
+                    $$&Delta; = 36 - 24 = 12$$
+                    $$&alpha; = \dfrac{-(-6) - \sqrt{12}}{2(2)} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{-(-6) + \sqrt{12}}{2(2)}$$
+                    $$&alpha; = \dfrac{6 - \sqrt{12}}{4} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{6 + \sqrt{12}}{4}$$
+                    $$&alpha; = \dfrac{6 - \sqrt{4 \cdot 3}}{4} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{6 + \sqrt{4 \cdot 3}}{4}$$
+                    $$&alpha; = \dfrac{6 - 2\sqrt{3}}{4} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{6 + 2\sqrt{3}}{4}$$
+                    $$&alpha; = \dfrac{3 - \sqrt{3}}{2} &emsp;&emsp;&emsp; &and; &emsp;&emsp;&emsp; &beta; = \dfrac{3 + \sqrt{3}}{2} &emsp; (**)$$
+                    Por (*) y (**) el conjunto solución de \(2x^3-15x+9 = 0\) y por lo tanto también el de \(x^3 + 16x^2 -7x+10 = -x^3 + (4x+1)^2\) es
+                    \( \biggl\{  -3, \dfrac{3-\sqrt{3}}{2}, \dfrac{3+\sqrt{3}}{2}   \biggr\}  \)
+                </li>
+            </ol>
+            2. \(x^4 +5x^3-4x^2-20x = 0\)<br/><br/>
+            <b>Solución</b>
+            $$x^4 +5x^3-4x^2-20x = 0$$
+            $$x(x^3+5x^2-4x+20) = 0$$
+            Entonces: 
+            $$x = 0 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; x^3+5x^2-4x+20 = 0 $$
+            Por lo que 0 es una solución de \(x^4 +5x^3-4x^2-20x = 0\) &emsp; (*)<br/>
+            <ol type = "a">
+                <li>Resolvamos \(x^3+5x^2-4x+20 = 0\)<br/><br/>
+                Sea \(P(x) = x^3+5x^2-4x+20\)<br/><br/>
+                i) Calculemos <i>P</i>(-5)<br/><br/>
+                \(
+                    \begin{array}{rrrr|l} 
+                    1 & 5 & -4 & -20 & -5 \\ 
+                    & -5 & 0 & 20  \\ 
+                    \hline     
+                    1 & 0 & -4 & 0
+                    \end{array}                       
+                    \)<br/>
+                    \(\underbrace{&emsp;&emsp;&emsp;&emsp;&emsp;}\)<br/>
+                    \(&emsp;x^2 - 4\)<br/><br/>
+                    \(x^3+5x^2-4x+20 = (x + 5)(x^2 - 4)\)<br/><br/>
+                    Como \(P(-5) = 0\), entonces -5 es una solución de <i>P</i>(x) = 0 y por lo tanto una solución de \(x^4 +5x^3-4x^2-20x = 0\) &emsp; (**)<br><br/>
+                    ii) Resolvamos \(x^2 -4 = 0\)
+                    $$x^2-4 = 0$$
+                    $$(x-2)(x+2) = 0$$
+                    Entonces:
+                    $$x - 2 = 0 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; x + 2 = 0 $$
+                    $$x = 2 &emsp;&emsp;&emsp; &or; &emsp;&emsp;&emsp; x = -2 &emsp; (***)$$
+                    Por (*), (**) y (***) el conjunto solución de \(x^4 +5x^3-4x^2-20x = 0\) es {\( -5, -2, 2  \)}
+                </li>
+            </ol><br/>
+         </p>
+         <h4>Ejercicios</h4>
+         <hr class="new1"/>
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:<br/><br/>
+            \(
+            \begin{array}{ll} 
+            1. &emsp; x^3+12x^2+36x = 0 & &emsp;&emsp;&emsp;6. &emsp; 2x^5 - 8x^4-3x+12 = 0 \\ 
+            2. &emsp; -5x^3+2x + 3 = 0 & &emsp;&emsp;&emsp;7. &emsp; x^5-2x^4-10x^3+20x^2+9x-18=0\\ 
+            3. &emsp; -x^4+7x^2+6x = 0 & &emsp;&emsp;&emsp;8. &emsp; x^4-15x^2-10x +24 = 0\\
+            4. &emsp; 3x^3-x^2+15x-5 = 0 &&emsp;&emsp;&emsp;9. &emsp; x^4+22x^2-75 = 0\\
+            5. &emsp; x^4 + x^3 = x^3 -5x + 6 & 
+            \end{array}                       
+            \)<br/><br/><br/>
+            Recordemos que se definió el conjunto solución de una ecuación, como aquel conjunto que está contenido en el dominio de la incógnita 
+            y que consta de los números reales que al ser sustituidos en la ecuación, da como resultado una identidad numérica.<br/><br/>
+
+            En los ejemplos anteriores no determinamos explícitamente el dominio de la incógnita, debido a que en estos casos el dominio 
+            de la incógnita era el conjunto de los números reales. En esta sección nos interesa estudiar ecuaciones de las cuales el dominio 
+            de la incógnita puede ser un subconjunto propio de &Ropf;.<br/><br/>
+
+            Pero, antes de empezar el estudio de este tipo de ecuaciones, es necesario tener presente las dos reglas siguientes.
+         </p>
+         <hr class="new1"/>
+         <h3>Regla 1</h3>
+         <hr class="new1"/>
+         <p>Si en el proceso de la resolución de una ecuación se obtiene una igualdad verdadera,
+             entonces el conjunto solución de la ecuación original es el dominio de la incógnita.</p>
+        <hr class="new1"/>
+        <h3>Regla 2</h3>
+        <hr class="new1"/>
+        <p>Si en el proceso de la resolución de una ecuación se obtiene una igualdad falsa, 
+            entonces el conjunto solución de la ecuación original es el conjunto vacío.</p><br/>
+        <h4>REjemplo</h4>
+        <hr class="new1"/>
+        <p>
+            Resuelva cada una de las siguientes ecuaciones:<br/><br/>
+            1. \(x-2-\dfrac{(x-2)(x-1)}{(x-1)} = 0\)<br/><br/>
+            <b>Solución</b><br/><br/>
+            El dominio de la incógnita es &Ropf; -{1}
+            $$x-2-\dfrac{(x-2)(x-1)}{(x-1)} = 0$$
+            $$x-2-(x-2) = 0$$
+            $$x-2-x+2=0$$
+            $$0=0$$
+            Como el resultado es una igualdad verdadera y \(x &ne; 1\) entonces el conjunto solución es el dominio de la incógnita es decir &Ropf; -{1} &emsp; (Ver Regla 1)<br/><br/>
+            2. x+1=x<br/><br/>
+            El dominio de la incógnita es &Ropf; 
+            $$x+1=x$$
+            $$1=0$$
+            Como el resultado es una igualdad falsa entonces el conjunto solución es &empty; &emsp;(Ver Regla 2)<br/><br/>
+            3. \(3(x-2)+4(5-x) = -x + 14\)<br/><br/>
+            <b>Solución</b><br/><br/>
+            El dominio de la incógnita es &Ropf; 
+            $$3(x-2)+4(5-x) = -x + 14$$
+            $$3x-6+20-4x = -x +14$$
+            $$-x +14 = -x+14$$
+            $$-x +14+x+14 = 0$$
+            $$0=0$$
+            Como el resultado es una igualdad verdadera, entonces el conjunto solución es el dominio de la incógnita, es decir &Ropf; &emsp; (Ver Regla 1)
+        </p>
+      </body>
+</html>

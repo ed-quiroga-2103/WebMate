@@ -9,6 +9,8 @@ import auth from '../../api/auth';
 import courses from '../../api/courses';
 import { Menu, MenuItem, Sidebar, SubMenu } from 'react-pro-sidebar';
 
+import {test} from '../../assets/test_maps/test_map'
+
 const DiagnosticToast = ({ navigate, courseId }) => {
     return (
         <div
@@ -48,7 +50,9 @@ export const GraphView = (props) => {
 
     useEffect(() => {
         const fetchCourse = async () => {
-            const response = await courses.getBy.id(id);
+            const response = test//await courses.getBy.id(id);
+
+            console.log(response)
 
             setCourse(response);
         };
@@ -72,6 +76,12 @@ export const GraphView = (props) => {
             showedDiagnostic = true;
         }
     }, []);
+
+
+    const resourceOnClick = (path)=>{
+        const ref = btoa(path) // Deprecated but simple, works.
+        window.open(`/content?ref=${ref}`)
+    }
 
     return (
         <div className='graph-container'>
@@ -124,7 +134,7 @@ export const GraphView = (props) => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus magna ligula, faucibus non scelerisque sit amet, hendrerit eget ligula. Vestibulum urna massa, sodales tempor enim nec, porttitor luctus sem.
                     </p>
                 </div>
-                    <Menu>{sidePanel.resources && sidePanel.resources.map((resource)=><MenuItem onClick={()=>window.open(resource.link)}>{resource.data}</MenuItem>)}</Menu>
+                    <Menu>{sidePanel.resources && sidePanel.resources.map((resource)=><MenuItem onClick={()=>resourceOnClick(resource.path)}>{resource.data}</MenuItem>)}</Menu>
             </Sidebar>;
         </div>
     );

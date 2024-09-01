@@ -21,12 +21,12 @@ import Admin from './views/Admin/Admin';
 import Record from './views/Record/Record';
 import Students from './views/Students/Students';
 import QuizMaker from './views/QuizMaker/QuizMaker';
-import Navbar from './components/Navbar/Navbar';
 import axios from 'axios';
 import QuestionAdmin from './views/QuestionAdmin/QuestionAdmin';
 import QuestionEditor from './components/QuestionEditor/QuestionEditor';
 import { elements } from 'chart.js';
 import App from './App';
+import Content from './views/Content';
 
 axios.interceptors.response.use(
     function (response) {
@@ -49,6 +49,7 @@ root.render(
                 <BrowserRouter>
                     <ScrollToTop />
                     <Routes>
+                        <Route path="/content" element={<Content />} />
                         <Route path="/register" element={<Register />} />
                         <Route path="/" element={<Login />} />
                         <Route path="" element={<App/>}>

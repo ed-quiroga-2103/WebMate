@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Matemática Elemental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+     <body>
+        <!--NO TOCAR NADA DE ARRIBA POR FAVOR-->
+         <!-- TRABAJAR DESDE AQUÍ -->
+                            
+         <h2>Algoritmos de las operaciones definidas en los números reales </h2> <!-- USAR H2 PARA TITULOS DE TEMAS -->
+         <hr class="new2"/>
+         <h3>Adición de números racionales </h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <hr class="new1"/>
+         <p> <h4>Caso 1</h4>
+            Algoritmos de la adición para números racionales representados por fracciones de igual denominador:</p>
+         <p>Si: \(\dfrac{a}{b}\) \(\in\) \(\mathbb{Q}\) y \(\dfrac{c}{b}\) \(\in\) \(\mathbb{Q}\) entonces \(\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b}\)</p>
+         <p>En general:</p>
+         <p>Si \(\dfrac{a_1}{b_1} \in \mathbb{Q}, \dfrac{a_2}{b_2} \in \mathbb{Q},...,\dfrac{a_n}{b_n} \in \mathbb{Q}\) entonces </p>
+         <p> \(\dfrac{a_1}{b}+\dfrac{a_2}{b}+\dfrac{a_3}{b}+...+\dfrac{a_n}{b}=\dfrac{a_1+a_2+a_3+...+a_n}{b}\) </p>
+         <hr class="new1"/>
+         <p> <h4>Ejemplo</h4></p>
+         <p> Escriba la fracción canónica correspondiente a: </p>
+         <p>  $$\text{a)}\dfrac{3}{7}+\dfrac{2}{7}+\dfrac{6}{7} \hspace{2cm} \text{b)} \dfrac{5}{4}+\dfrac{12}{4}+\dfrac{-3}{4}$$ </p>
+
+        <details> <!--Para agregar soluciones a ejercicios-->
+             <summary>Solución</summary> <!--Titulo "Solución"-->
+
+             \begin{align*}
+             \text{a)} \hspace{0.2cm} \dfrac{3}{7}+\dfrac{2}{7}+\dfrac{6}{7} & = \dfrac{3+2+6}{7} \\\\
+             &= \dfrac{11}{7}
+             \end{align*} 
+
+             <p>Como m.m.c.\((11,7)=1\), \(\dfrac{11}{7}\) es la fracción canónica correspondiente a \(\dfrac{3}{7}+\dfrac{2}{7}+\dfrac{6}{7}\)</p>
+            
+             \begin{align*}
+             \text{b)}\hspace{0.2cm}  \dfrac{5}{4}+\dfrac{12}{4}+\dfrac{-3}{4} & = \dfrac{5+12+-3}{4} \\\\
+             &= \dfrac{17-3}{4}\\\\
+             &= \dfrac{14}{4}\\\\
+             &= \dfrac{14 \div 2}{4 \div 2}\\\\
+             &= \dfrac{7}{2}
+             \end{align*} 
+
+             Como m.m.c.\((7,2)=1\), \(\dfrac{7}{2}\) es la fracción canónica correspondiente a \(\dfrac{5}{4}+\dfrac{12}{4}+\dfrac{-3}{4} \)
+        </details>           
+        <hr class="new1"/>
+        <p> <h4>Ejercicios</h4></p>
+        <p> Escriba la fracción canónica correspondiente a: </p>
+
+        $$ \text{1)} \hspace{0.2cm} \dfrac{4}{3}+\dfrac{1}{3} \hspace{5cm} \text{3)} \hspace{0.2cm} \dfrac{3}{13}+\dfrac{2}{13}+\dfrac{-4}{13} $$
+        $$ \hspace{0.2cm} \text{2)} \hspace{0.2cm} \dfrac{11}{5}+\dfrac{-6}{5}+\dfrac{-30}{5}+\dfrac{1}{5} \hspace{2cm} \text{4)} \hspace{0.2cm} \dfrac{-1}{11}+\dfrac{-3}{11}+\dfrac{-2}{11} $$
+
+        <hr class="new1"/>
+
+        <p> <h4>Caso 2</h4></p>
+        <p> Algoritmo de la adición para números racionales representados por fracciones cuyos denominadores no son iguales entre sí: </p>
+        <p> \(i)\) Se determina el mínimo denominador común de las fracciones dadas. </p>
+        <p> \(ii)\) Se representa cada uno de los números racionales dados, por medio de una fracción cuyo denominador sea el número obtenido en \((i)\).</p> 
+        <p> \(iii)\) Se procede como en el caso 1. </p> 
+     
+        <hr class="new1"/>
+        <p> <h4>Ejemplo</h4></p>
+        <p> Escriba la fracción canónica correspondiente a: </p>
+        $$ \text{a)} \hspace{0.2cm} \dfrac{5}{6}+\dfrac{7}{15} \hspace{2cm} \text{b)} \hspace{0.2cm} \dfrac{18}{7}+\dfrac{-3}{2} $$
+
+        <details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+            <p> \(\text{a)} \hspace{0.2cm} \dfrac{5}{6}+\dfrac{7}{15}\) </p>
+            
+            El mínimo denominador común de \(6\) y \(5\) es \(30\), por lo que:
+
+            \begin{align*}
+            \dfrac{5}{6}+\dfrac{7}{15} & = \dfrac{5 \cdot 5}{6 \cdot 5}+\dfrac{7 \cdot 2}{15 \cdot 2} \\\\
+            &= \dfrac{25}{30}+\dfrac{14}{30}\\\\
+            &= \dfrac{25+14}{30}\\\\
+            &= \dfrac{39}{30}\\\\
+            &= \dfrac{39 \div 3}{30 \div 3}\\\\
+            &= \dfrac{13}{10}
+            \end{align*} 
+
+            <p> Es decir \(\hspace{0.2cm}\) \(\dfrac{5}{6}+\dfrac{7}{15}=\dfrac{13}{10}\) </p>
+            <p> \(\text{b)} \hspace{0.2cm} \dfrac{18}{7}+\dfrac{-3}{2}\) </p>
+            <p> El mínimo demoninador común de \(7\) y \(2\) es \(14\), por lo que: </p>
+            \begin{align*}
+            \dfrac{18}{7}+\dfrac{-3}{2} & = \dfrac{18 \cdot 2}{7 \cdot 2}+\dfrac{-3 \cdot 7}{2 \cdot 7} \\\\
+            &= \dfrac{36}{14}+\dfrac{-21}{14}\\\\
+            &= \dfrac{36-21}{14}\\\\
+            &= \dfrac{15}{14}
+            \end{align*} 
+            <p> Es decir \(\hspace{0.2cm}\) \(\dfrac{18}{7}+\dfrac{-3}{2}=\dfrac{15}{14}\) </p>
+       </details>  
+
+       <hr class="new1"/>
+       <p> <h4>Ejercicios</h4></p>
+       <p> Escriba la fracción canónica correspondiente a: </p>
+
+       $$ \text{1)} \hspace{0.2cm} \dfrac{2}{3}+\dfrac{3}{5}+\dfrac{7}{9} \hspace{5cm} \text{6)} \hspace{0.2cm} \dfrac{5}{8}+\dfrac{-1}{8}+\dfrac{-5}{7} $$
+       $$ \hspace{1.25cm} \text{2)} \hspace{0.2cm} \dfrac{7}{8}+\dfrac{11}{2}+\dfrac{-19}{6}+\dfrac{3}{4} \hspace{3.3cm} \text{7)} \dfrac{5}{12}+\dfrac{7}{8}+\dfrac{-5}{24}+\dfrac{-25}{6} $$
+       $$ \hspace{0.4cm} \text{3)} \hspace{0.2cm} 5+\dfrac{3}{5} \hspace{6.1cm} \text{8)} \dfrac{-6}{13}+\dfrac{2}{13}+\dfrac{-11}{13} $$
+       $$ \text{4)} \hspace{0.2cm} -1+\dfrac{7}{9} \hspace{5.7cm} \text{9)} \hspace{0.2cm} 1+\dfrac{9}{7}+\dfrac{-12}{14} $$
+       $$ \hspace{0.8cm} \text{5)} \hspace{0.2cm} \dfrac{-4}{3}+\dfrac{-2}{7} \hspace{5.3cm} \text{10)} \hspace{0.2cm} \dfrac{5}{4}+-3+\dfrac{6}{5}+2 $$ 
+
+       <hr class="new1"/>
+       <h3> Teorema 1 </h3>
+       <hr class="new1"/>
+       <p> Sean \(\dfrac{a}{b} \in \mathbb{Q}\) y \(\dfrac{c}{d} \in \mathbb{Q}\)   entonces:  \(\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{a \cdot d + c \cdot b}{b \cdot d}\) </p>
+       <p> <h4>Prueba</h4></p>
+       \begin{align*}
+            \dfrac{a}{b}+\dfrac{c}{d} & = \dfrac{a \cdot d}{b \cdot d}+\dfrac{c \cdot b}{d \cdot b} \\\\
+            &= \dfrac{a \cdot d+c \cdot b}{b \cdot d}
+            \end{align*} 
+
+            <p>Es decir \(\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{a \cdot d + c \cdot b}{b \cdot d}\)</p>
+            <hr class="new1"/>
+            <h4> Ejemplo </h4>
+            <p>Determine la fracción canónica correspondiente a:</p>
+            $$ \text{a)} \hspace{0.2cm} \dfrac{7}{6}+\dfrac{-3}{4} \hspace{2cm} \text{b)} \hspace{0.2cm} \dfrac{-3}{10}+\dfrac{-11}{6} \hspace{2cm} \text{c)} \hspace{0.2cm} \dfrac{5}{8}+\dfrac{2}{7} $$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+            <summary>Solución</summary> <!--Titulo "Solución"-->
+
+            \begin{align*}
+            \text{a)} \hspace{0.2cm} \dfrac{7}{6}+\dfrac{-3}{4} & = \dfrac{7 \cdot 4 + (-3) \cdot 6}{6 \cdot 4} \\\\
+            &= \dfrac{24 + -18}{24}\\\\
+            &= \dfrac{28-18}{24}\\\\
+            &= \dfrac{10}{28}\\\\
+            &= \dfrac{10 \div 2}{24 \div 2}\\\\
+            &= \dfrac{5}{12}
+            \end{align*}   
+
+            Entonces \(\dfrac{7}{6}+\dfrac{-3}{4}=\dfrac{5}{12}\)
+
+            \begin{align*}
+            \text{b)} \hspace{0.2cm} \dfrac{-3}{10}+\dfrac{-11}{6} & = \dfrac{(-3) \cdot 6 + (-11) \cdot 10}{10 \cdot 6} \\\\
+            &= \dfrac{-18 + -110}{60}\\\\
+            &= \dfrac{-128}{60}\\\\
+            &= \dfrac{-128 \div 4}{60 \div 4}\\\\
+            &= \dfrac{-32}{15}
+            \end{align*}   
+
+            Entonces \(\dfrac{-3}{10}+\dfrac{-11}{6}=\dfrac{-32}{15}\)
+
+            \begin{align*}
+            \text{c)} \hspace{0.2cm} \dfrac{5}{8}+\dfrac{2}{7} & = \dfrac{5 \cdot 7 + 2 \cdot 8}{8 \cdot 7} \\\\
+            &= \dfrac{35 + 16}{56}\\\\
+            &= \dfrac{51}{56}
+            \end{align*}   
+            
+            Entonces \(\dfrac{5}{8}+\dfrac{2}{7}=\dfrac{51}{56}\)
+ 
+</details> 
+
+<h4> Nota </h4>
+<p> El procedimiento para sumar números racionales, dado en el teorema anterior se puede generalizar para más de dos sumandos, sin embargo, para estos casos se recomienda utilizar el procedimiento enunciado en el caso 2. </p>
+
+<hr class="new1"/>
+<h3> Sustracción de números racionales </h3>
+<hr class="new1"/>
+
+<p> Recordemos que si \(p \in \mathbb{R}\) y \(q \in \mathbb{R}\) entonces \(p-q=p+(-q)\) </p>
+<p> En particular, si \(\dfrac{a}{b} \in \mathbb{Q}\) y \(\dfrac{c}{d} \in \mathbb{Q}\) entonces \(\dfrac{a}{b}-\dfrac{c}{d}=\dfrac{a}{b}+-\dfrac{c}{d}\) </p>
+<hr class="new1"/>
+<h4> Ejemplo </h4>
+<p> Escriba la fracción canónica correspondiente a: </p>
+$$ \text{a)} \hspace{0.2cm} \dfrac{6}{7}-\dfrac{3}{4} \hspace{2cm} \text{b)} \hspace{0.2cm} \dfrac{5}{6}-\dfrac{2}{6} \hspace{2cm} \text{c)} \hspace{0.2cm} \dfrac{3}{12}-\dfrac{5}{6}-\dfrac{7}{8} $$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+    \begin{align*}
+    \text{a)} \hspace{0.2cm} \dfrac{6}{7}-\dfrac{3}{4} & = \dfrac{6}{7}+\dfrac{-3}{4}\\\\
+    &= \dfrac{6 \cdot 4 + (-3) \cdot 7}{7 \cdot 4}\\\\
+    &= \dfrac{24-21}{28}\\\\
+    &= \dfrac{3}{28}
+    \end{align*}   
+    
+    Por lo tanto \(\dfrac{6}{7}-\dfrac{3}{4}=\dfrac{3}{28}\)
+
+    \begin{align*}
+    \text{b)} \hspace{0.2cm} \dfrac{5}{6}-\dfrac{2}{6} & = \dfrac{5}{6}+\dfrac{-2}{6}\\\\
+    &= \dfrac{5+-2}{6}\\\\
+    &= \dfrac{5-2}{6}\\\\
+    &= \dfrac{3}{6}\\\\
+    &= \dfrac{3 \div 3}{6 \div 3}\\\\
+    &= \dfrac{1}{2}
+    \end{align*}  
+
+Por lo tanto \(\dfrac{5}{6}-\dfrac{2}{6}=\dfrac{1}{2}\)
+
+    \begin{align*}
+    \text{c)} \hspace{0.2cm} \dfrac{3}{12}-\dfrac{5}{6}-\dfrac{7}{8} & = \dfrac{3}{12}+\dfrac{-5}{6}+\dfrac{-7}{8}\\\\
+    &= \dfrac{3 \cdot 2}{12 \cdot 2}+\dfrac{-5 \cdot 4}{6 \cdot 4}+\dfrac{-7 \cdot 3}{8 \cdot 3} \\\\
+    &= \dfrac{6}{24}+\dfrac{-20}{24}+\dfrac{-21}{24}\\\\
+    &= \dfrac{6-20-21}{24}\\
+    &= \dfrac{-35}{24}
+    \end{align*} 
+    
+    Por lo tanto \(\dfrac{3}{12}-\dfrac{5}{6}-\dfrac{7}{8}=\dfrac{-35}{24}\)
+    
+    <p> Nota: En el ejercicio c se usó que m.m.c.\((12,6,8)=24\) </p>
+</details>
+<hr class="new1"/>
+<h4> Ejercicios </h4>
+<p> Escriba la fracción correspondiente a: </p>
+
+$$ \text{1)} \hspace{0.2cm} \dfrac{5}{2}-\dfrac{81}{2} \hspace{2cm} \text{4)} \hspace{0.2cm} \dfrac{58}{9}-\dfrac{28}{9}+\dfrac{7}{5} \hspace{2cm} \text{7)} \hspace{0.2cm} \dfrac{4}{38}-\dfrac{6}{19}+1 $$
+$$ \hspace{-0.45cm} \text{2)} \hspace{0.2cm} \dfrac{3}{125}-\dfrac{4}{400} \hspace{1.6cm} \text{5)} \hspace{0.2cm} \dfrac{11}{42}-\dfrac{5}{49}-\dfrac{6}{70} \hspace{1.8cm} \text{8)} \hspace{0.2cm} 4-\dfrac{7}{5}-\dfrac{1}{6} $$
+$$ \text{3)} \hspace{0.2cm} \dfrac{5}{8}-\dfrac{7}{4}+6 \hspace{1.8cm} \text{6)} \hspace{0.2cm} \dfrac{-1}{2}-\dfrac{1}{3}-\dfrac{1}{6} \hspace{2.2cm} \text{9)} \hspace{0.2cm} -3+\dfrac{7}{9}+4 $$
+<hr class="new1"/>
+
+<h3> Multiplicación de números racionales </h3>
+<hr class="new1"/>
+<p> Si \(\dfrac{a}{b} \in \mathbb{Q}\) y \(\dfrac{c}{d} \in \mathbb{Q}\) entonces se tiene que: \(\dfrac{a}{c} \cdot \dfrac{c}{d} = \dfrac{a \cdot c}{b \cdot d}\) </p>
+<p> En general: </p>
+<p> Si \(\dfrac{a_1}{b_1} \in \mathbb{Q}\), \(\dfrac{a_2}{b_2} \in \mathbb{Q}\),...,\(\dfrac{a_n}{b_n} \in \mathbb{Q}\) entonces: </p>
+<p> \(\dfrac{a_1}{b_1} \cdot \dfrac{a_2}{b_2}\cdot ... \cdot \dfrac{a_n}{b_n} = \dfrac{a_1 \cdot a_2 \cdot ... \cdot a_n}{b_1 \cdot b_2 \cdot ... \cdot b_n}\) </p>
+
+<hr class="new1"/>
+<h4> Ejemplo 1 </h4>
+<p> Escriba la fracción canónica correspondiente a: </p>
+$$ \text{a)} \hspace{0.2cm} \dfrac{-3}{5} \cdot \dfrac{2}{7} \hspace{1.5cm} \text{b)} \hspace{0.2cm} 2\cdot \dfrac{11}{9} \hspace{1.5cm} \text{c)} \hspace{0.2cm} \dfrac{-6}{4} \cdot \dfrac{-7}{9} \hspace{1.5cm} \text{d)} \hspace{0.2cm} \dfrac{-2}{3}\cdot \dfrac{1}{4} $$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+
+    \begin{align*}
+    \text{a)} \hspace{0.2cm} \dfrac{-3}{5}\cdot \dfrac{2}{7} & = \dfrac{-3\cdot 2}{5 \cdot 7} \\\\
+    &= \dfrac{-6}{35}
+    \end{align*} 
+
+    Así \(\hspace{0.2cm} \dfrac{-3}{5}\cdot \dfrac{2}{7}=\dfrac{-6}{35}\)
+
+    \begin{align*}
+    \text{b)} \hspace{0.2cm} 2\cdot \dfrac{11}{9} & = \dfrac{2}{1}\cdot \dfrac{11}{9} \\\\
+    &= \dfrac{-2\cdot 11}{1 \cdot 9}\\\\
+    &= \dfrac{22}{9}
+    \end{align*} 
+
+    Así \(\hspace{0.2cm} 2\cdot \dfrac{11}{9}=\dfrac{22}{9}\)
+
+    \begin{align*}
+    \text{c)} \hspace{0.2cm} \dfrac{-6}{4}\cdot \dfrac{-7}{9} & \dfrac{(.6)\cdot (-7)}{4 \cdot 9}\\\\
+    &= \dfrac{42}{36}\\\\
+    &= \dfrac{42 \div 6}{36 \div 6}\\\\
+    &= \dfrac{7}{6}
+    \end{align*}
+
+    Así \(\hspace{0.2cm} \dfrac{-6}{4}\cdot \dfrac{-7}{9}=\dfrac{7}{6}\)
+
+\begin{align*}
+\text{d)} \hspace{0.2cm} \dfrac{-2}{3}\cdot \dfrac{1}{4} & = \dfrac{(-2)\cdot 1}{3 \cdot 4}\\\\
+&= \dfrac{-2}{12}\\\\
+&= \dfrac{-2 \div 2}{12 \div 2}\\\\
+&= \dfrac{-1}{6}
+\end{align*}
+
+Así \(\hspace{0.2cm} \dfrac{-2}{3}\cdot \dfrac{1}{4}=\dfrac{-1}{6}\)
+</details>
+
+<h4> Ejemplo 2 </h4>
+$$ \text{a)} \hspace{0.2cm} \dfrac{-7}{6}\cdot \dfrac{3}{5}\cdot 2 \hspace{2cm} \text{b)} \hspace{0.2cm} \dfrac{-2}{9}\cdot \dfrac{1}{6}\cdot \dfrac{3}{2} $$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+\text{a)} \hspace{0.2cm} \dfrac{-7}{6}\cdot \dfrac{3}{5}\cdot 2 &= \dfrac{-7\cdot 3\cdot 2}{6\cdot 5 \cdot 1}\\\\
+&= \dfrac{-42}{30}\\\\
+&= \dfrac{-42 \div 6}{30 \div 6}\\\\
+&= \dfrac{-7}{5}
+\end{align*}
+
+Entonces \(\dfrac{-7}{6}\cdot \dfrac{3}{5}\cdot 2=\dfrac{-7}{5}\)
+
+\begin{align*}
+\dfrac{-2}{9}\cdot \dfrac{1}{6}\cdot \dfrac{3}{2} &= \dfrac{-2 \cdot 1\cdot 3}{9\cdot 6\cdot 2}\\\\
+&= \dfrac{-6}{108}\\\\
+&= \dfrac{-6 \div 6}{108 \div 6}\\\\
+&= \dfrac{-1}{18}
+\end{align*}
+
+Entonces \(\dfrac{1}{6}\cdot \dfrac{3}{2}=\dfrac{-1}{18}\)
+</details>
+
+<hr class="new1"/>
+<h3> División de números racionales </h3>
+<hr class="new1"/>
+<p> Sean \(\dfrac{a}{b} \in \mathbb{Q}\) y \(\dfrac{c}{d} \in \mathbb{Q}\). Entonces se cumple que \(\dfrac{a}{b}\div \dfrac{c}{d}= \dfrac{a\cdot d}{b \cdot c}\) </p>
+<hr class="new1"/>
+<h4> Ejemplo </h4>
+<p> Determine la fracción canónica correspondiente a: </p>
+$$ \text{a)} \hspace{0.2cm} \dfrac{-3}{5}\div \dfrac{4}{3} \hspace{2cm} \text{b)} \hspace{0.2cm} \dfrac{-5}{4}\div 6 \hspace{2cm} \text{c)} \hspace{0.2cm} 3\div \dfrac{7}{6} $$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+\text{a)} \hspace{0.2cm} \dfrac{-3}{5}\div \dfrac{4}{3} &= \dfrac{-3\cdot 3}{5\cdot 4}\\\\
+&= \dfrac{-9}{20}
+\end{align*}
+
+Por lo tanto \( \dfrac{-3}{5}\div \dfrac{4}{3}=\dfrac{-9}{20}\)
+
+\begin{align*}
+\text{b)} \hspace{0.2cm} \dfrac{-5}{4}\div 6 &= \dfrac{-5}{4}\div \dfrac{-6}{1}\\\\
+&= \dfrac{(-5)\cdot 1}{4\cdot (-6)}\\\\
+&= \dfrac{-5}{-24}\\\\
+&= \dfrac{5}{24}
+\end{align*}
+
+Por lo tanto \(\dfrac{-5}{4}\div 6=\dfrac{5}{24}\)
+
+\begin{align*}
+\text{c)} \hspace{0.2cm} 3\div \dfrac{7}{6} &= \dfrac{3}{1}\div \dfrac{7}{6}\\\\
+&= \dfrac{3\cdot 6}{1\cdot 7}\\\\
+&= \dfrac{18}{7}
+\end{align*}
+
+Por lo tanto \(3\div \dfrac{7}{6}=\dfrac{18}{7}\)
+</details>
+<hr class="new1"/>
+<p> Recordemos que si \(a \in \mathbb{R}, b \in \mathbb{R}\) y \(b \neq 0\) entonces \(a\div b= \dfrac{a}{b}\) </p>
+<p> En particular, si \(\dfrac{a}{b} \in \mathbb{Q}, \dfrac{c}{d} \in \mathbb{Q}\) y \(\dfrac{c}{d} \neq 0\) entonces \(\dfrac{a}{b}\div \dfrac{c}{d}=\dfrac{\dfrac{a}{b}}{\dfrac{c}{d}}\) \(\hspace{1cm}\)  \((1)\) </p>
+<p> Además, por el algoritmo de la división se sabe que \(\dfrac{a}{b}\div \dfrac{c}{d}=\dfrac{a\cdot d}{b\cdot d}\) \(\hspace{0.7cm}\) \((2)\) </p>
+<p> De este modo, de \((1)\) y \((2)\) obtenemos que \(\dfrac{\dfrac{a}{b}}{\dfrac{c}{d}}=\dfrac{a\cdot d}{b\cdot c} \) </p>
+
+<hr class="new1"/>
+<h4> Ejemplo </h4>
+$$ \text{a)} \hspace{0.2cm} \dfrac{\frac{-5}{4}}{\frac{7}{6}} \hspace{2cm} \text{b)} \hspace{0.2cm} \dfrac{3}{\frac{2}{7}} \hspace{2cm} \text{c)} \hspace{0.2cm} \dfrac{\frac{-13}{4}}{6} $$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+\text{a)} \hspace{0.2cm} \dfrac{\frac{-5}{4}}{\frac{7}{6}} &= \dfrac{-5\cdot 6}{4 \cdot 7}\\\\
+&= \dfrac{-30}{28}\\\\
+&= \dfrac{-30 \div 2}{28\div 2}\\\\
+&= \dfrac{-15}{4}
+\end{align*}
+
+<p> Por lo tanto \(\dfrac{\frac{-5}{4}}{\frac{7}{6}}=\dfrac{-15}{4}\) </p>
+
+\begin{align*}
+\text{b)} \hspace{0.2cm} \dfrac{3}{\frac{2}{7}} &= \dfrac{\frac{3}{1}}{\frac{2}{7}}\\\\
+&= \dfrac{3\cdot 7}{1\cdot 2}\\\\
+&= \dfrac{21}{2}
+\end{align*}
+<p> Por lo tanto \(\dfrac{3}{\frac{2}{7}}\)= \(\dfrac{21}{2}\)</p>
+
+\begin{align*}
+\text{c)} \hspace{0.2cm}  \dfrac{\frac{-13}{4}}{6} &= \dfrac{\frac{-13}{4}}{\frac{6}{1}}\\\\
+&= \dfrac{-13\cdot 1}{4\cdot 6}\\\\
+&= \dfrac{-13}{24}
+\end{align*}
+
+<p> Por lo tanto \(\dfrac{\frac{-13}{4}}{6}=\dfrac{-13}{24}\) </p>
+</details>
+
+<hr class="new1"/>
+<h4> Ejercicios </h4>
+<p> Escriba la fracción canónica correspondiente a: </p>
+$$ \text{1)}  \hspace{0.2cm} \dfrac{-2}{3}\div 4 \hspace{2cm} \text{3)} \hspace{0.2cm} \dfrac{7}{9}\div \dfrac{-5}{4} \hspace{2cm} \text{5)} \hspace{0.2cm} \dfrac{3}{\frac{1}{2}} \hspace{2cm} \text{7)} \hspace{0.2cm} \dfrac{\frac{-7}{6}}{4}$$
+$$ \hspace{0.3cm} \text{2)} \hspace{0.2cm} -6\div \dfrac{-2}{3} \hspace{1.5cm} \text{4)} \hspace{0.2cm} \dfrac{6}{4}\div \dfrac{1}{5} \hspace{2.2cm} \text{6)} \hspace{0.2cm} \dfrac{1}{\frac{5}{4}} \hspace{2.2cm} \text{8)} \hspace{0.2cm} \dfrac{\frac{-13}{3}}{2} $$
+<hr class="new1"/>
+<h3> Operaciones combinadas</h3>
+<hr class="new1"/>      
+<p> Cuando una expresión involucra varias operaciones, con el fin de evitar ambigüedad, las operaciones deben realizarse considerando los siguientes convenios: </p>
+<p> <u>Convenio 1</u></p>
+<p> En una expresión que no involucra paréntesis deben realizarse primero todas las multiplicaciones y divisiones, en orden, de izquierda a derecha. Luego, se realizan todas las adiciones y sustracciones en orden de izquierda a derecha. </p>
+<p><u> Convenio 2 </u></p>
+<p> En una expresión que involucra paréntesis deben realizarse primero las operaciones indicadas dentro del paréntesis, para luego seguir el orden indicado en el convenio 1. </p>
+<hr class="new1"/> 
+<h4> Ejemplos </h4>
+$$ \text{a)} \hspace{0.2cm} \dfrac{4}{3}\cdot \dfrac{7}{9}-\dfrac{1}{36} \hspace{2cm} \text{c)} \hspace{0.2cm} \dfrac{1}{5}+\dfrac{6}{5}\div \dfrac{2}{3} \hspace{2cm} \text{e)} \dfrac{7}{12}\div \dfrac{-14}{3}\div \dfrac{-5}{4} $$
+$$ \hspace{0.2cm} \text{b)} \hspace{0.2cm} \left[\dfrac{1}{5}+\dfrac{6}{5}\right]\div \dfrac{2}{3} \hspace{1.5cm} \text{d)} \hspace{0.2cm} \dfrac{-8}{5}\cdot \dfrac{3}{4}\div \dfrac{3}{10} \hspace{1.6cm} \text{f)} \hspace{0.2cm} \dfrac{-5}{4}\div 2\cdot \dfrac{8}{15}\div \dfrac{1}{3}$$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+
+\begin{align*}
+\text{a)} \hspace{0.2cm} \dfrac{4}{3}\cdot \dfrac{7}{9}-\dfrac{1}{36} &= \dfrac{28}{27}-\dfrac{1}{36}\\\\
+&= \dfrac{112-3}{108}\\\\
+&= \dfrac{109}{108}
+\end{align*}
+
+Entonces \(\dfrac{4}{3}\cdot \dfrac{7}{9}-\dfrac{1}{36}=\dfrac{109}{108}\)
+
+\begin{align*}
+\text{b)} \hspace{0.2cm} \left[\dfrac{1}{5}+\dfrac{6}{5}\right]\div \dfrac{2}{3} &= \dfrac{1+6}{5}\div \dfrac{2}{3}\\\\
+&= \dfrac{7}{5}\cdot \dfrac{3}{2}\\\\
+&= \dfrac{21}{10}
+\end{align*}
+
+Entonces \(\left[\dfrac{1}{5}+\dfrac{6}{5}\right]\div \dfrac{2}{3}=\dfrac{21}{10}\)
+
+\begin{align*}
+\text{c)} \hspace{0.2cm} \dfrac{1}{5}+\dfrac{6}{5}\div \dfrac{2}{3} &= \dfrac{1}{5}+\dfrac{6}{5}\cdot \dfrac{3}{2}\\\\
+&= \dfrac{1}{5}+\dfrac{3}{5}\cdot \dfrac{3}{1}\\\\
+&= \dfrac{1}{5}+\dfrac{9}{5}\\\\
+&= \dfrac{1+9}{5}\\\\
+&= \dfrac{10}{5}\\\\
+&= 2
+\end{align*}
+
+Entonces \(\dfrac{1}{5}+\dfrac{6}{5}\div \dfrac{2}{3}=2\)
+
+\begin{align*}
+\text{d)} \hspace{0.2cm} \dfrac{-8}{5}\cdot \dfrac{3}{4}\div \dfrac{3}{10} &= \dfrac{-2}{5}\cdot \dfrac{3}{1}\div \dfrac{3}{10}\\\\
+&= \dfrac{-6}{5}\div{3}{10}\\\\
+&= \dfrac{-6}{5}\cdot \dfrac{10}{3}\\\\
+&= \dfrac{-2}{1}\cdot \dfrac{2}{1}\\\\
+&= 4
+\end{align*}
+
+Entonces \(\dfrac{-8}{5}\cdot \dfrac{3}{4}\div \dfrac{3}{10}=4\)
+
+\begin{align*}
+\text{e)} \hspace{0.2cm} \dfrac{7}{12}\div \dfrac{-14}{3}\div \dfrac{-5}{4} &= \dfrac{7}{12}\cdot \dfrac{3}{-14} \div \dfrac{-5}{4}\\\\
+&= \dfrac{7}{12}\cdot \dfrac{-3}{14}\div \dfrac{-5}{4}\\\\
+&= \dfrac{1}{4}\cdot \dfrac{-1}{2}\div \dfrac{-5}{4}\\\\
+&= \dfrac{-1}{8}\div \dfrac{-5}{4}\\\\
+&= \dfrac{-1}{8}\cdot \dfrac{4}{-5}\\\\
+&= \dfrac{-1}{8}\cdot \dfrac{-4}{5}\\\\
+&= \dfrac{-1}{2}\cdot \dfrac{-1}{5}\\\\
+&= \dfrac{1}{10}
+\end{align*}
+
+Entonces \(\dfrac{7}{12}\div \dfrac{-14}{3}\div \dfrac{-5}{4}=\dfrac{1}{10}\)
+
+\begin{align*}
+\text{f)} \hspace{0.2cm} \dfrac{-5}{4}\div 2\cdot \dfrac{8}{15}\div \dfrac{1}{3} &= \dfrac{-5}{4}\cdot \dfrac{1}{2} \cdot \dfrac{8}{15}\div \dfrac{1}{3}\\\\
+&= \dfrac{-5}{8}\cdot \dfrac{8}{15}\div \dfrac{1}{3}\\\\
+&= \dfrac{-1}{1}\cdot \dfrac{1}{3}\div \dfrac{1}{3}\\\\\
+&= \dfrac{-1}{3}\div \dfrac{1}{3}\\\\
+&= \dfrac{-1}{3}\cdot \dfrac{3}{1}\\\\
+&= \dfrac{-3}{3}\\\\
+&= -1
+\end{align*}
+
+Entonces \(\dfrac{-5}{4}\div 2\cdot \dfrac{8}{15}\div \dfrac{1}{3}=-1\)
+</details>
+<hr class="new1"/> 
+<h4> Ejercicios </h4>
+$$ \text{1)} \hspace{0.2cm} \dfrac{1}{2}\div \dfrac{3}{4}\div \dfrac{3}{2} \hspace{4cm} \text{6)} \hspace{0.2cm} \dfrac{5}{6}\div \left[\dfrac{2}{3}\cdot \dfrac{6}{5} \right]$$
+$$ \hspace{2cm} \text{2)} \hspace{0.2cm} \left[\dfrac{1}{3}+\dfrac{1}{15}\right] \div \dfrac{1}{6}\hspace{3.2cm} \text{7)} \hspace{0.2cm} \left[7+\dfrac{25}{8}\right] \div \left[14+\dfrac{25}{4}\right]$$
+$$ \hspace{2cm} \text{3)} \hspace{0.2cm} \left[4-\dfrac{1}{3} \right]\div \dfrac{11}{6} \hspace{3.5cm} \text{8)} \hspace{0.2cm} \left[60-\dfrac{1}{8} \right]\div \left[30-\dfrac{1}{16} \right]$$
+$$ \hspace{2.3cm} \text{4)} \hspace{0.2cm} \dfrac{5}{6}\div \dfrac{2}{3}\div \dfrac{6}{5} \hspace{4cm} \text{9)} \hspace{0.2cm} 2\cdot \dfrac{3}{5}-4\cdot 3+2\div (3-5)$$
+$$ \text{5)} \hspace{0.2cm} 2\cdot \dfrac{3}{5}+\dfrac{3}{2}\cdot 4-1 \hspace{6cm}$$
+<hr class="new1"/> 
+<h4> Ejemplo 1 </h4>
+<p> Determine la fracción canónica correspondiente a: </p>
+
+$$ 1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{2-\left[\dfrac{3}{4}-1+\dfrac{2}{5}\left(-10+\dfrac{15}{4} \right)-1 \right] \right\}$$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+&1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{2-\left[\dfrac{3}{4}-1+\dfrac{2}{5}\left(-10+\dfrac{15}{4} \right)-1 \right] \right\}\\\\
+&= 1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{2-\left[\dfrac{3}{4}-1+\dfrac{2}{5}\left(\dfrac{-40+15}{4} \right)-1 \right] \right\}\\\\
+&= 1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{2-\left[\dfrac{3}{4}-1+\dfrac{2}{5}\left(\dfrac{-25}{4} \right)-1 \right] \right\}\\\\
+&= 1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{2-\left[\dfrac{3}{4}-1+\dfrac{1}{1}\left(\dfrac{-5}{2} \right)-1 \right] \right\}\\\\
+&= 1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{2-\left[\dfrac{3}{4}-1-\dfrac{5}{2}-1 \right] \right\}\\\\
+&= 1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{2-\left[\dfrac{3-4-10-4}{4} \right] \right\}\\\\
+&= 1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{2-\left[\dfrac{-15}{4} \right] \right\}\\\\
+&= 1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{2+\dfrac{15}{4} \right\}\\\\
+&= 1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{\dfrac{8+15}{4} \right\}\\\\
+&= 1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\dfrac{23}{4}\\\\
+&= 1-\dfrac{2}{1}\cdot \dfrac{-1}{1}-\dfrac{23}{4}\\\\
+&= 1+\dfrac{2}{1}-\dfrac{23}{4}\\\\
+&= \dfrac{4+8-23}{4}\\\\
+&= \dfrac{-11}{4}
+\end{align*}
+
+Por lo tanto \(1-\dfrac{8}{3}\cdot \dfrac{-3}{4}-\left\{2-\left[\dfrac{3}{4}-1+\dfrac{2}{5}\left(-10+\dfrac{15}{4} \right)-1 \right] \right\}=\dfrac{-11}{4}\)
+</details>
+
+<h4> Ejemplo 2 </h4>
+<p> Determine la fracción canónica correspondiente a: </p>
+$$ -\dfrac{18}{5}+6\left\{\dfrac{-5}{3} -\left[ \dfrac{14}{3}-\left(\dfrac{7}{21}+\dfrac{14}{3} \right) \right]+\dfrac{1}{12} \right\} $$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+& -\dfrac{18}{5}+6\left\{\dfrac{-5}{3} -\left[ \dfrac{14}{3}-\left(\dfrac{7}{21}+\dfrac{14}{3} \right) \right]+\dfrac{1}{12} \right\}\\\\
+&= -\dfrac{18}{5}+6\left\{\dfrac{-5}{3} -\left[ \dfrac{14}{3}-\left(\dfrac{7+98}{21} \right) \right]+\dfrac{1}{12} \right\}\\\\
+&= -\dfrac{18}{5}+6\left\{\dfrac{-5}{3} -\left[ \dfrac{14}{3}-\dfrac{15}{5} \right]+\dfrac{1}{12} \right\}\\\\
+&= -\dfrac{18}{5}+6\left\{\dfrac{-5}{3} -\left[ \dfrac{-1}{3} \right]+\dfrac{1}{12} \right\}\\\\
+&= -\dfrac{18}{5}+6\left\{\dfrac{-5}{3} +\dfrac{1}{3}+\dfrac{1}{12} \right\}\\\\
+&= -\dfrac{18}{5}+6\left\{\dfrac{-20+4+1}{12}\right\}\\\\
+&= -\dfrac{18}{5}+6\left\{\dfrac{-15}{12}\right\}\\\\
+&= -\dfrac{18}{5}+6\left\{\dfrac{-5}{4}\right\}\\\\
+&= -\dfrac{18}{5}-\dfrac{30}{4}\\\\
+&= \dfrac{-72-50}{20}\\\\
+&= \dfrac{-122}{20}\\\\
+&= \dfrac{-61}{5}\\\\
+\end{align*}
+
+Por lo tanto \(-\dfrac{18}{5}+6\left\{\dfrac{-5}{3} -\left[ \dfrac{14}{3}-\left(\dfrac{7}{21}+\dfrac{14}{3} \right) \right]+\dfrac{1}{12} \right\}=\dfrac{-61}{5}\)
+</details>
+
+<h4> Ejemplo 3 </h4>
+$$ \text{a)} \hspace{0.2cm} \dfrac{\frac{1}{4}+\frac{1}{3}}{8} \hspace{3cm} \text{b)} \hspace{0.2cm} \dfrac{\frac{2}{5}}{\frac{2}{3}-\frac{5}{6}} $$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+\begin{align*}
+\text{a)} \hspace{0.2cm} \dfrac{\frac{1}{4}+\frac{1}{3}}{8} &= \dfrac{\frac{3+4}{12}}{8}\\\\
+&= \dfrac{\frac{7}{12}}{\frac{8}{1}}\\\\
+&= \dfrac{7 \cdot 1}{12 \cdot 8}\\\\
+&= \dfrac{7}{96}
+\end{align*}
+
+Por lo tanto \(\dfrac{\frac{1}{4}+\frac{1}{3}}{8}=\dfrac{7}{96}\)
+
+\begin{align*}
+\text{b)} \hspace{0.2cm} \dfrac{\frac{2}{5}}{\frac{2}{3}-\frac{5}{6}} &= \dfrac{\frac{2}{5}}{\frac{4-5}{6}}\\\\
+&= \dfrac{\frac{2}{5}}{\frac{-1}{6}}\\\\
+&= \dfrac{2 \cdot 6}{5 \cdot (-1)}\\\\\
+&= \dfrac{12}{-5}\\\\
+&= \dfrac{-12}{5}
+\end{align*}
+
+Por lo tanto \(\dfrac{\frac{2}{5}}{\frac{2}{3}-\frac{5}{6}}=\dfrac{-12}{5}\)
+</details>
+
+<h4> Ejemplo 4 </h4>
+<p> Determine la fracción canónica correspondiente a: </p>
+$$ \text{a)} \hspace{0.2cm} \dfrac{\frac{1}{2}\div \frac{3}{4}\div \frac{3}{2}}{(1-\frac{1}{3}\div (1-\frac{1}{5}))} \hspace{3cm} \text{b)} \hspace{0.2cm} \dfrac{\frac{-3}{2}\cdot 2 -3}{3-2\div (1+\frac{1}{4})} $$
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+    \begin{align*}
+    \text{a)} \hspace{0.2cm} \dfrac{\frac{1}{2}\div \frac{3}{4}\div \frac{3}{2}}{(1-\frac{1}{3}\div (1-\frac{1}{5}))} &= \dfrac{(\frac{1}{2}\cdot \frac{4}{3})\div \frac{3}{2}}{(\frac{3-1}{3})\div (\frac{5-1}{5})}\\\\
+    &= \dfrac{(\frac{1}{1}\cdot \frac{2}{3})\div \frac{3}{2}}{\frac{2}{3}\div \frac{4}{5}}\\\\
+    &= \dfrac{\frac{2}{3}\div \frac{3}{2}}{\frac{2}{3}\cdot \frac{5}{4}}\\\\
+    &= \dfrac{\frac{2}{3}\cdot \frac{2}{3}}{\frac{1}{3}\cdot \frac{5}{2}}\\\\
+    &= \dfrac{\frac{4}{9}}{\frac{5}{6}}\\\\
+    &= \dfrac{4 \cdot 6}{9 \cdot 5}\\\\
+    &= \dfrac{4 \cdot 2}{3\cdot 5}\\\\
+    &= \dfrac{8}{15}
+    \end{align*}
+
+    Entonces \( \dfrac{\frac{1}{2}\div \frac{3}{4}\div \frac{3}{2}}{(1-\frac{1}{3}\div (1-\frac{1}{5}))}=\dfrac{8}{15}\)
+
+    \begin{align*}
+    \text{b)} \hspace{0.2cm} \dfrac{\frac{-3}{2}\cdot 2 -3}{3-2\div (1+\frac{1}{4})} &= \dfrac{\frac{-3}{2}\cdot \frac{2}{1} -3}{3-2\div (\frac{4+1}{4})}\\\\
+    &= \dfrac{\frac{-3}{1}\cdot \frac{1}{1} -3}{3-2\div \frac{5}{4}}\\\\
+    &= \dfrac{-3 -3}{3-\frac{2}{1} \cdot \frac{4}{5}}\\\\
+    &= \dfrac{-6}{3-\frac{8}{5}}\\\\
+    &= \dfrac{-6}{\frac{15-8}{5}}\\\\
+    &= \dfrac{-6}{\frac{7}{5}}\\\\
+    &= \dfrac{\frac{-6}{1}}{\frac{7}{5}}\\\\
+    &= \dfrac{(-6)\cdot 5}{1 \cdot 7}\\\\
+    &= \dfrac{-30}{7}
+    \end{align*}
+
+    Entonces \(\dfrac{\frac{-3}{2}\cdot 2 -3}{3-2\div (1+\frac{1}{4})}=\dfrac{-30}{7}\)
+
+</details>
+
+</body>
+</html>

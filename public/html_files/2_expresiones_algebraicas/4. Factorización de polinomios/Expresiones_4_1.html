@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Matemática Elemental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+     <body>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Matemática Elemental</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Números reales,<br/> potencias y raíces.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Operaciones <br/>combinadas.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Valor absoluto.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Unión, intersección<br/> y pertenencia.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Subconjuntos <br/>e intervalos.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub6</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub7</a></li>
+                </ul>
+             </nav>
+        </header>
+        <!--NO TOCAR NADA DE ARRIBA POR FAVOR-->
+         <!-- TRABAJAR DESDE AQUÍ -->
+                            
+         <h2>Factorización de polinomios en una variable</h2> <!-- USAR H2 PARA TITULOS DE TEMAS -->
+         <hr class="new2"/>
+         <h3>Factorización de polinomios de grado 2</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> En esta sección se abordarán dos métodos que serán utilizados para factorizar polinomios de una variable de grado 2 de la forma \(ax^2+bx+c \): </p>
+         <h3>Completación de cuadrados</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p>Este procedimiento nos permitirá obtener a partir de una expresión de la forma \(x^2+bx+x \), una expresión de la forma \(\left(x+\dfrac{b}{2} \right)^2+k \)</p>
+         <hr class="new2"/>
+         <h4>Teorema 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Si \(b\) y \(c\) son constantes reales y \(x\) es una variable real, entonces se cumple la siguiente igualdad: </p>
+         <p>$$ x^2+bx+c=\left(x+\dfrac{b}{2} \right)^2-\dfrac{b^2}{4}+c $$</p>
+         <p><strong>Demostración:</strong></p>
+         \begin{align*}
+         \left(x+\dfrac{b}{2} \right)^2-\dfrac{b^2}{4}+c &= \left[x^2+2(x)\left(\dfrac{b}{2}\right)+\left(\dfrac{b}{2}\right)^2 \right]-\dfrac{b^2}{4}+c\\
+         &= \left[x^2+bx+\dfrac{b^2}{4} \right]-\dfrac{b^2}{4}+c\\
+         &= x^2+bx+\dfrac{b^2}{4} -\dfrac{b^2}{4}+c\\
+         &= x^2+bx+c\\\\
+         \therefore x^2+bx+c &= \left(x+\dfrac{b}{2} \right)^2-\dfrac{b^2}{4}+c\\\\
+         \end{align*}
+
+         <p> De este modo, usando el polinomio anterior se tiene que, por ejemplo: </p>
+         <p>a)   \( \ \ x^2+6x+5=\left(x+\dfrac{6}{2} \right)^2 - \dfrac{6^2}{4}+5\)</p>
+         <p>b) \( \ \ x^2-3x+2=x^2+(-3)x+2=\left(x+\dfrac{-3}{2} \right)^2-\dfrac{(-3)^2}{4}+2 \) </p>
+         <p>c) \(\ \ x^2-8x-7=x^2+(-8x)-7=\left(x+\dfrac{-8}{2} \right)^2-\dfrac{(-8)^2}{4}+-7 \) </p>
+         <p>d) \(\ \ x^2+x-1=x^2+x+(-1)=\left(x+\dfrac{1}{2} \right)^2-\dfrac{1^2}{4}+-1 \)  </p>
+         <hr class="new2"/>
+         <h3>Factorización por completación de cuadrados</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <h4>Ejemplo 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Usando la completación de cuadrados factorice cada una de las siguientes expresiones </p>
+         <p>$$ \text{a)} \ \ x^2+5x+4 \hspace{2cm} \text{b)} \ \ x^2+4x+2 \hspace{2cm} \text{c)} \ \ 4x^2+8x-5 \hspace{2cm} \text{d)} \ \ 3x^2-7x+2 $$</p>
+
+        <details> <!--Para agregar soluciones a ejercicios-->
+             <summary>Solución</summary> <!--Titulo "Solución"-->
+            \begin{align*}
+            \text{a)} \ \ x^2+5x+4 &= \left(x+\dfrac{5}{2}\right)^2-\dfrac{5^2}{4}+4\\
+            &= \left(x+\dfrac{5}{2}\right)^2-\dfrac{25}{4}+\dfrac{16}{4}\\
+            &= \left(x+\dfrac{5}{2}\right)^2-\dfrac{9}{4}\\
+            &= \left[ \left(x+\dfrac{5}{2} \right)-\dfrac{3}{2} \right] \left[ \left(x+\dfrac{5}{2} \right)+\dfrac{3}{2} \right] \\
+            &= \left(x+\dfrac{5}{2} -\dfrac{3}{2}\right)\left(x+\dfrac{5}{2} +\dfrac{3}{2}\right)\\
+            &= \left(x+\dfrac{2}{2} \right)\left(x+\dfrac{8}{2} \right)\\
+            &= (x+1)(x+4)\\
+            \therefore x^2+5x+4 &= (x+1)(x+4)\\
+            \end{align*}
+            <p> Es decir, \((x+1)(x+4)\) es la factorización de \( x^2+5x+4\)</p>
+
+\begin{align*}
+\\ \text{b)} \ \ x^2+4x+2 &= \left(x+\dfrac{4}{2} \right)^2-\dfrac{4^2}{4}+2\\
+&= (x+2)^2-\dfrac{16}{4}+2\\
+&= (x+2)^2-4+2\\
+&= (x+2)^2-\left(\sqrt{2}\right)^2\\
+&= \left[(x+2)-\sqrt{2}\right]\left[(x+2)+\sqrt{2}\right]\\
+&= \left(x+2-\sqrt{2}\right)\left(x+2+\sqrt{2}\right)\\
+\therefore x^2+4x+2 &= \left(x+2-\sqrt{2}\right)\left(x+2+\sqrt{2}\right)\\
+\end{align*}
+<p> Es decir, \(\left(x+2-\sqrt{2}\right)\left(x+2+\sqrt{2}\right)\) es la factorización de \( x^2+4x+2\) </p>
+
+\begin{align*}
+\\ \text{c)} \ \ 4x^2+8x-5 &= 4\left(x^2+2x-\dfrac{5}{4} \right)\\
+&= 4\left[\left(x+\dfrac{2}{2} \right)^2-\dfrac{2^2}{4}-\dfrac{5}{4} \right]\\
+&= 4\left[(x+1)^2-\dfrac{4}{4}-\dfrac{5}{4} \right]\\
+&= 4\left[(x+1)^2-\dfrac{9}{4} \right]\\
+&= 4\left[(x+1)^2-\left(\dfrac{3}{2}\right)^2 \right]\\
+&= 4\left[(x+1)-\dfrac{3}{2} \right]\left[(x+1)+\dfrac{3}{2} \right]\\
+&= 4\left(x+1-\dfrac{3}{2} \right)\left(x+1+\dfrac{3}{2} \right)\\
+&= 4\left(x-\dfrac{1}{2} \right)\left(x+\dfrac{5}{2} \right)\\
+\therefore 4x^2+8x-5 &= 4\left(x-\dfrac{1}{2} \right)\left(x+\dfrac{5}{2} \right)\\
+\end{align*}
+<p> Es decir, \(4\left(x-\dfrac{1}{2} \right)\left(x+\dfrac{5}{2} \right)\) es la factorización de \( 4x^2+8x-5\) </p>   
+
+\begin{align*}
+\\ \text{d)} \ \ 3x^2-7x+2 &= 3\left(x^2+\dfrac{7}{3}x +\dfrac{2}{3} \right)\\
+&= 3\left[ \left( x-\dfrac{\frac{7}{3}}{2}\right)^2 -\dfrac{(\frac{-7}{3})^2}{4} + \dfrac{2}{3} \right]\\
+&= 3\left[\left( x-\dfrac{7}{6} \right)^2 -\dfrac{\frac{49}{9}}{4}+\dfrac{2}{3}  \right]\\
+&= 3\left[\left( x-\dfrac{7}{6} \right)^2 -\dfrac{49}{36}+\dfrac{2}{3} \right]\\
+&= 3\left[\left(x-\dfrac{7}{6}\right)^2-\dfrac{49}{36}+\dfrac{24}{36}  \right]\\
+&= 3\left[\left(x-\dfrac{7}{6}  \right)^2-\dfrac{25}{36}  \right]\\
+&= 3\left[\left(x-\dfrac{7}{6}  \right)^2-\left(\dfrac{5}{6}\right)^2 \right]\\
+&= 3\left( x-\dfrac{7}{6}-\dfrac{5}{6} \right)\left( x-\dfrac{7}{6}+\dfrac{5}{6} \right)\\
+&= 3\left( x-\dfrac{12}{6} \right)\left( x-\dfrac{2}{6} \right)\\
+&= 3\left( x-2 \right)\left( x-\dfrac{1}{3} \right)\\
+\therefore 3x^2-7x+2 &= 3\left( x-2 \right)\left( x-\dfrac{1}{3} \right)\\
+\end{align*}
+<p> Es decir, \(3\left( x-2 \right)\left( x-\dfrac{1}{3} \right)\) es la factorización de \( 3x^2-7x+2\) </p>   
+        </details>           
+            
+        <hr class="new2"/>
+        <h4>Ejercicios 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+        <p> Usando la completación de cuadrados facorice cada una de las siguientes expresiones </p>
+        <p>$$ \text{1)} \ \ x^2+x-6 \hspace{3cm} \text{3)} \ \ 2x^2-5x+2 \hspace{3cm} \text{5)} \ \ 2x^2-12x-15 $$</p>
+        <p>$$ \hspace{-0.3cm} \text{2)}\ \ x^2-4x+1 \hspace{2.8cm} \text{4)} \ \ -2x^2+x+1 \hspace{2.7cm} \text{6)} \ \ 2x^2-3x-3 $$</p>
+
+        <hr class="new2"/>
+         <h3>Fórmula General</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> La fórmula general es un procedimiento que se usa para factorizar polinomios de la forma \(ax^2+bx+c \), con \(a,b\) y \(c\) constantes reales y \(a \neq 0\) </p>
+         <hr class="new2"/>
+         <h4>Teorema 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p><strong>Teorema del facor</strong></p>
+         <p>Sea \(P(x)\) un polinomio de grado \(n,&#8805 1\ n&#88051 \) y sea \(a \in &#8477 \)  </p>
+         <p> i) Si \(\alpha\) es un cero de \(P(x)\), \(P(\alpha)=0 \), entonces \(x-\alpha\) es un factor de \(P(x)\). </p>
+         <p> ii) Si \(x-\alpha\) es un factor de \(P(x)\) entonces \(\alpha\) es un cero de \(P(x)\) </p>
+
+         <p><strong>Demostración:</strong></p>
+         <p> <strong>i)</strong> Supongamos que \(\alpha\) es un cero de \(P(x)\), debemos demostrar que \(x-\alpha\) es un factor de \(P(x)\) </p>
+         <p> Por el algoritmo de la división existen únicos polinomios \(Q(x) \) y \(R(x)\) donde \(R(x)\) es una constante real tal que </p>
+         <p> \( P (x) = (x −\alpha) \cdot Q (x) + R (x) \) ; sustituyendo \(x\) por \(\alpha\) se tiene que</p>
+         <p> \(\Longrightarrow P (\alpha) = (\alpha − \alpha ) \cdot Q (\alpha) +  R(x)\) </p>
+         <p> \(\Longrightarrow P (\alpha) = 0· Q(\alpha)  +  R(x) \) </p>
+         <p> \(\Longrightarrow P(\alpha)=R(x) \) pero como \(P(\alpha)=0\) entonces \(R(x)=0\) y se cumple que:</p>
+            <p>\(P(\alpha)=(x-\alpha)\) de donde se tiene que \(x-\alpha\) es un factor de \(P(x) \) </p>
+
+
+         <p> <strong>ii)</strong> Supongamos que \(x −\alpha\)  es un factor de \(P (x)\), debemos demostrar que \(\alpha\) es un cero de \(P (x)\), o sea \(P (\alpha) = 0\) </p>
+         <p> Si \(x-\alpha\) es un factor de \(P(x)\) entonces existe un polinomio \(Q(x)\) tal que </p>
+         <p> \(\Longrightarrow P (x) = (x −alpha )  Q (x)\); sustituyendo \(x\) por \(\alpha\) se tiene que </p>
+         <p> \(\Longrightarrow P (\alpha) = (\alpha −\alpha )  Q (\alpha)\) </p>
+         <p> \(\Longrightarrow P (\alpha) = 0 · Q (\alpha) \) </p>
+         <p> \(\Longrightarrow P(x)=0 \); que es lo que se quería demostrar </p>
+
+         <hr class="new2"/>
+         <h4>Ejemplo 2</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <p> Sea \(P(x)\) tal que \(P(x)?x^3-2x+1\), observe que \(P(1)=1^3-2(1)+1\), osea \(P(1)=0\), por lo que \(x-1\) debe ser un factor de \(P(x)\). En efecto, realizando la división de \(P(x)\) por \(x-1\) se tiene que  </p>
+         \begin{array}{rrrr|ll} 
+1 & 0 & -2 & 1 & 1 \\ 
+ & 1 & 1 &-1 &   \\ 
+\hline 
+& -1 & -1 & 0 \\ 
+\end{array}
+<p> Por lo tanto \(x^3-2x+1=(x − 1)(x^2 + x − 1) \) y se cumple que \(x-1\) es un factor de \(P(x)\) </p>
+<h4>Consecuencias del teorema anterior</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Sea \(P(x) \) tal que \(P(x)ax^2+bx+c \) con \(a \neq 0 \). Si \(P(x)\) no tiene ceros reales, entonces \(P(x)\) no es factorizable en \( &#8477\)  </p>
+
+<hr class="new2"/>
+<h4>Definición 1</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Sea \(P(x)\) un polinomio tal que \(P(x) = ax^2 + bx + c \) con \(a, \ b\) y \(c\) constantes reales y \(a \neq 0 \), el número \(b^2-4ac \), recibe el nombre de <em>discriminante de P(x)</em> </p>
+<p><strong>Notación:</strong></p>
+<p> El discriminante de \(ax^2 + bx + c\), con \(a \neq 0\) se denota por el símbolo \(\Delta\), o sea, \(\Delta =b^2-4ac \) </p>
+
+<hr class="new2"/>
+<h4>Ejemplo 3</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Calcule el discriminante de cada uno de los siguientes polinomios </p>
+<p>$$ \text{a)} \ \ 4x^2+5x+8 \hspace{3cm} \text{b)}\ \ x^2-x-2 \hspace{3cm} \text{c)} 4x^2-4x+1 $$</p>
+<p>$$\hspace{0.7cm} \text{d)} \ \ 4x^2-2x \hspace{3.7cm} \text{e)} \ \ 3x^2+5 \hspace{3.6cm} \text{f)}\ \ -2x^2+7x-3  $$</p>
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+    \begin{align*}
+    \text{a)} \ \ 4x^2+5x+8 &\Longrightarrow \Delta =5^2-4(4)(8)\\
+    &\Longrightarrow \Delta =25-128\\
+    &\Longrightarrow \Delta =-103\\\\
+    \end{align*}
+    
+    \begin{align*}
+    \text{b)}\ \ x^2-x-2 &\Longrightarrow \Delta = (-1)^2-4(1)(-2)\\
+    & \Longrightarrow \Delta = 1+8\\
+    & \Longrightarrow \Delta = 9\\\\
+    \end{align*}
+
+    \begin{align*}
+    \text{c)} 4x^2-4x+1 &\Longrightarrow \Delta =(-4)^2-4(4)(1)\\
+    &\Longrightarrow \Delta = 16-16\\
+    &\Longrightarrow \Delta =0\\\\
+    \end{align*}
+
+    \begin{align*}
+    \text{d)} \ \ 4x^2-2x &\Longrightarrow \Delta =(-2)^2-4(4)(0)\\
+    &\Longrightarrow \Delta =4-0\\
+    &\Longrightarrow \Delta =4\\\\
+    \end{align*}
+
+    \begin{align*}
+    \text{e)} \ \ 3x^2+5 &\Longrightarrow \Delta = (0)^2-4(3)(5)\\
+    &\Longrightarrow \Delta= 0-60\\
+    &\Longrightarrow \Delta =-60\\\\
+    \end{align*} 
+
+    \begin{align*}
+    \text{f)}\ \ -2x^2+7x-3 &\Longrightarrow \Delta = 7^2-4(-2)(-3)\\
+    &\Longrightarrow \Delta = 49-24\\
+    &\Longrightarrow Delta= 25
+    \end{align*}
+
+</details> 
+
+<hr class="new2"/>
+<h4>Ejercicios 2</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Calcule el discriminante de cada uno de los siguientes polinomios </p>
+<p>$$ \text{1)}\ \  -3x^2+3x-\dfrac{3}{2} \hspace{3cm} \text{3)} \ \ x^2+4 \hspace{3cm} \text{5)}\ \ \dfrac{1}{2}x^2+x+\dfrac{3}{4} $$</p>
+<p>$$ \hspace{-0.1cm} \text{2)}\ \ 9x^2-30x+25 \hspace{3.2cm} \text{4)} \ \ 12x-x^2 \hspace{2.6cm} \text{6)} \ \ 5x-2x^2+4 $$</p>
+
+<hr class="new2"/>
+<h4>Teorema 2</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Sea \(P(x)\) un polinomio tal que \(P(x)=ax^2+bx+c \) con \(a \neq 0 \) y \(\Delta =b^2-4ac \) </p>
+<p> i) Si \(\Delta < 0 \) entonces \(P(x)\) no es factorizable en el conjunto de los números reales. </p>
+<p> ii) Si \(\Delta = 0 \) entonces \(P(x)\) es factorizable en el conjunto de los números reales y su factorización viene dada por \(ax^2+b+c=\left(x+\dfrac{b}{2a} \right)^2 \). </p>
+<p> iii) Si \(\Delta > 0 \) entonces \(P(x)\) es factorizable en el conjunto de los números reales y su factorización está dada por \(ax^2+bx+c=a(x-\alpha)(x-\beta) \) tal que \(\alpha = \dfrac{-b-\sqrt{\Delta}}{2a} \) y \(\beta = \dfrac{-b+\sqrt{\Delta}}{2a} \) </p>
+
+<p><strong>Demostración:</strong></p>
+\begin{align*}
+P(x) &= ax^2+bx+c\\
+&= a\left[x^2+\dfrac{b}{a}x+\dfrac{c}{a} \right]\\
+&= a\left[x^2+\dfrac{b}{a}x+\dfrac{b^2}{4a^2}-\dfrac{b^2}{4a^2}+\dfrac{c}{a} \right]\\
+&= a\left[x^2+\dfrac{b}{a}x+\left(\dfrac{b}{2a} \right)^2-\left(\dfrac{b^2}{4a^2}-\dfrac{c}{a} \right) \right]\\
+&= a\left[\left(x+\dfrac{b}{2a} \right)^2-\left(\dfrac{b^2-4ac}{4a^2} \right) \right]\\
+&=a\left[\left(x+\dfrac{b}{2a} \right)^2-\left(\dfrac{\Delta}{4a^2} \right) \right] (*) \\
+\end{align*}
+<p> A partir de aquí se consideran los tres siguientes casos:</p>
+<p> i) Si \(\Delta < 0\) entonces \(-\dfrac{\Delta}{4a^2}> 0 \), por lo que \(P(x) \neq 0, \ &#8704 x \in &#8477 \) </p>
+<p> Desde aquí se deduce que \(P(x)\) no tiene ceros reales y por lo tanto \(P(x)\) no es factorizable </p>
+<p> ii) Si \(\Delta =0 \) entonces por (*) </p>
+\begin{align*}
+P(x) &= a\left[\left(x+\dfrac{b}{2a} \right)^2-\left(\dfrac{0}{4a^2} \right) \right]\\
+&= a\left[\left(x+\dfrac{b}{2a} \right)^2-0 \right]\\
+&=a\left( x+\dfrac{b}{2a} \right)^2 \\
+\end{align*}
+<p> Es decir, si \(\Delta =0\) entonces \(ax^2+bx+c= a\left( x+\dfrac{b}{2a} \right)^2\) </p>
+<p> iii) Si \(\Delta >0 \) entonces en base a (*) se tiene que </p>
+ \begin{align*} 
+P(x) &=a\left[\left(x+\dfrac{b}{2a} \right)^2-\left(\dfrac{\Delta}{4a^2} \right) \right]\\
+&=a\left[\left(x+\dfrac{b}{2a} \right)^2-\left(\sqrt{\dfrac{\Delta}{4a^2}} \right)^2 \right]\\
+&=a\left[\left(x+\dfrac{b}{2a} \right)+\sqrt{\dfrac{\Delta}{4a^2}} \right]\left[\left(x+\dfrac{b}{2a} \right)-\sqrt{\dfrac{\Delta}{4a^2}} \right]\\
+&= a\left[x+\dfrac{b+\sqrt{\Delta}}{2a} \right]\left[x+\dfrac{b-\sqrt{\Delta}}{2a} \right]\\
+&= a\left[x-\left(\dfrac{-b-\sqrt{\Delta}}{2a}\right) \right]\left[x-\left(\dfrac{-b+\sqrt{\Delta}}{2a}\right) \right]\\
+&= a(x-\alpha)(x-\beta)\ \  \text{donde}\ \ \alpha = \dfrac{-b-\sqrt{\Delta}}{2a}  y \beta = \dfrac{-b+\sqrt{\Delta}}{2a} 
+ \end{align*}
+ <p> Es decir, si \(\Delta > 0 \ \  \text{entonces} \ \ ax^2+bx+c=a(x-\alpha)(x-\beta) \ \  \text{tal que} \ \ \alpha = \dfrac{-b-\sqrt{\Delta}}{2a} \ \ \text{y} \ \ \beta = \dfrac{-b+\sqrt{\Delta}}{2a} \)  </p>
+
+ <hr class="new2"/>
+<h4>Ejemplo 4</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Factorice (si es posible) cada una de las siguientes expresiones </p>
+<p>$$ \text{a)} \ \ -2x^2+3x-4 \hspace{3cm} \text{b)} \ \ x^2+4 \hspace{3cm} \text{c)} \ \ -4x^2+20x-25 $$</p>
+<p>$$ \hspace{-1.3cm} \text{d)} \ \ -2x^2-6x \hspace{3.8cm} \text{e)} \ \ 2x^2+5x-3 \hspace{1.8cm} \text{f)} \ \ x^2-x-3 $$</p>
+
+<details> <!--Para agregar soluciones a ejercicios-->
+    <summary>Solución</summary> <!--Titulo "Solución"-->
+
+\begin{align*} 
+\text{a)} \ \ -2x^2+3x-4 &\Longrightarrow \Delta = 3^3-4(-2)(-4)\\
+&\Longrightarrow \Delta = 9-32\\
+&\Longrightarrow \Delta =-23\\
+\end{align*}
+<p> Como \(\Delta < 0 \) entonces \(-2x^2+3x-4\) no es factorizable en el conjunto de los números reales </p>
+
+\begin{align*}
+\\\\ \text{b)} \ \ x^2+4 &\Longrightarrow \Delta = 0^2-4(1)(4)\\
+&\Longrightarrow \Delta = 0-16\\
+&\Longrightarrow \Delta =-16\\
+\end{align*}
+<p> Como \(\Delta < 0 \) entonces \(x^2+4\) no es factorizable en el conjunto de los números reales </p>
+
+\begin{align*} 
+\\\\ \text{c)} \ \ -4x^2+20x-25 &\Longrightarrow \Delta = 20^2-4(-4)(-25)\\
+&\Longrightarrow \Delta = 400-400\\
+&\Longrightarrow \Delta = 0
+ \end{align*}
+ <p> Como \(\Delta =0\) entonces </p>
+ \begin{align*}
+ -4x^2+20x-25 &= -4\left(x+\dfrac{-20}{2\cdot 4} \right)^4\\
+&= -4\left(x-\dfrac{20}{8} \right)^2\\
+&= -4\left(x-\dfrac{5}{2} \right)\\
+\therefore -4x^2+20x-25 &= -4\left(x-\dfrac{5}{2} \right)
+ \end{align*}
+
+ \begin{align*}
+ \\\\ \text{d)} \ \ -2x^2-6x &\Longrightarrow \Delta = (-6)^2-4(-2)(0)\\
+ &\Longrightarrow \Delta =36
+  \end{align*}
+  <p> Como \(\Delta >0\) entonces \(− 2x^2 − 6x = − 2(x −\alpha )(x − \beta)\) con </p>
+  <p>$$ \alpha = \dfrac{-(-6)-\sqrt{36}}{2(-2)} \hspace{1cm}  \beta = \dfrac{-(-6)+\sqrt{36}}{2(-2)} $$</p>
+  <p>$$\hspace{-1.6cm} \alpha = \dfrac{6-6}{-4} \hspace{2.5cm} \beta = \dfrac{6+6}{-4} $$</p>
+  <p>$$\hspace{-1cm} \alpha= 0 \hspace{3.5cm} \beta = -3 $$</p>
+  <p>$$ \therefore -2x^2-6x = -2(x-0)(x+3) = -2x(x+3) $$</p>
+  <p><strong>Nota:</strong> La expresión \(-2x^2-6x \) se puede factorizar en un menor número de pasos usando la factorización por factor común </p>
+
+  \begin{align*} 
+  \\\\ \text{e)} \ \ 2x^2+5x-3 &\Longrightarrow \Delta = 5^2-4(2)(-3)\\
+  &\Longrightarrow \Delta = 25+24\\
+  &\Longrightarrow \Delta =49
+  \end{align*}
+  <p> Como \(\Delta > 0 \) entonces \(2x^2 + 5x − 3 = 2(x −\alpha )(x −\beta)\) con </p>
+  <p>$$ \alpha = \dfrac{-5-\sqrt{49}}{2(2)} \hspace{1cm} \beta =\dfrac{-5+\sqrt{49}}{2(2)} $$</p>
+  <p>$$\hspace{-0.6cm} \alpha = \dfrac{-5-7}{4} \hspace{1.5cm} \beta =\dfrac{-5+7}{4} $$</p>
+  <p>$$\hspace{-1.7cm} \alpha =3 \hspace{2.7cm} \beta =\dfrac{1}{2} $$</p>
+  <p>$$ \therefore 2x^2+5x-3 = 2(x+3)(x-\dfrac{1}{2}) $$</p>
+
+  \begin{align*}
+\\\\ \text{f)} \ \ x^2-x-3 &\Longrightarrow \Delta= (-1)^2-4(1)(-3)\\
+&\Longrightarrow \Delta = 1+12\\
+&\Longrightarrow \Delta =13
+  \end{align*}
+  <p> Como \(\Delta > 0\) entonces \(x^2 − x − 3 = 1(x −\alpha)(x −\beta) \) con </p>
+  <p>$$ \alpha =\dfrac{-(-1)-\sqrt{13}}{2(1)} \hspace{1cm} \beta =\dfrac{-(-1)+\sqrt{13}}{2(1)} $$</p>
+  <p>$$\hspace{-0.8cm} \alpha =\dfrac{1-\sqrt{13}}{2} \hspace{2cm} \beta = \dfrac{1+\sqrt{13}}{2} $$</p>
+  <p>$$ \therefore x^2-x-3= \left( x-\dfrac{1-\sqrt{13}}{2} \right)\left( x-\dfrac{1+\sqrt{13}}{2} \right) $$</p>
+</details> 
+
+<hr class="new2"/>
+<h4>Ejercicios 3</h4><!-- USAR H3 PARA TITULOS DE TEMAS -->
+<p> Factorice (si es posible) cada una de las siguientes expresiones </p>
+<p>$$ \text{1)}\ \ 6x^2-13x+6 \hspace{2cm} \text{2)} \ \ 2x^2-\sqrt{3}x+1 \hspace{2cm} \text{3)}\ \ x^2+x+1 $$</p>
+<p>$$\hspace{0.45cm} \text{4)}\ \ -3x^2+7x+20 \hspace{1.5cm} \text{5)}\ \ -2x^2-5x-3 \hspace{1.8cm} \text{6)} \ \ \dfrac{1}{4}x^2+x+1 $$</p>
+
+
+      </body>
+</html>

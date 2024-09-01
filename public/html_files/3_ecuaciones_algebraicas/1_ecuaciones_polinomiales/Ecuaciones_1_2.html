@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Matemática Elemental</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+     <body>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Matemática Elemental</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Números reales,<br/> potencias y raíces.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Operaciones <br/>combinadas.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#"> Valor absoluto.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Unión, intersección<br/> y pertenencia.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Subconjuntos <br/>e intervalos.</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub6</a></li> 
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#">Sub7</a></li>
+                </ul>
+             </nav>
+        </header>
+        <!--NO TOCAR NADA DE ARRIBA POR FAVOR-->
+         <!-- TRABAJAR DESDE AQUÍ -->
+                            
+         <h2>Ecuación Cuadrática</h2> <!-- USAR H2 PARA TITULOS DE TEMAS -->
+         <hr class="new2"/>
+         <h3>Definición 1</h3><!-- USAR H3 PARA TITULOS DE TEMAS -->
+         <hr class="new1"/>
+         <p>
+            Sean \(a, b, c\) y \(d\) constantes reales con \(a &ne; 0\). 
+            Se llama ecuación cuadrática o ecuación de segundo grado con una incógnita a toda ecuación que se puede llevar
+            a la forma:
+            $$ax^2 + bx +c = d$$<br/>
+         </p>
+         <h4>Ejemplo 1</h4>
+         <hr class="new2"/> <!-- Agrega línea de color rojo-->
+         <p>
+            <ol>
+                <li>\(3x^2 - x + 1 = 0\)</li><br/>
+
+                <li>\(4x^2 - 1 = 3\)</li><br/>
+
+                <li>\(6x^2 + 4x = -1\)</li><br/>
+
+                <li>\(x^2 + x +1 = 9\)</li><br/>
+            </ol>
+            <br/>
+        </p>
+        <p>
+            Ahora veamos algunos ejemplos resueltos, donde se ilustran algunas técnicas que pueden usar para resolver ecuaciones cuadráticas
+            y algunas ecuaciones que se pueden transformar a la forma cuadrática.
+        </p>
+         <h4>Ejemplo 2</h4>
+        <hr class="new2"/> 
+        <p>
+            Resuelva cada una de las siguientes ecuaciones:
+            <ol>
+                <li>\(x^2 + 3x = 0\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$x^2 +3x = 0$$ <br/>
+                    $$x (x + 3) = 0$$<br/>
+                    $$x = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp;x + 3 = 0$$<br/>
+                    $$x = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp;x = -3$$<br/>
+                    Por lo tanto el conjunto solución es {0, 3}
+                    </details><br/>
+                <li>\(x^2 - 1 = 0\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$x^2 - 1 = 0$$<br/>
+                    $$(x + 1)(x - 1) = 0$$<br/>
+                    $$x + 1 = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x - 1 = 0$$<br/>
+                    $$x = -1 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = 1$$<br/>
+                    Por lo tanto el conjunto solución es {-1, 1}
+                </details><br/>
+                <li>\(x^2 - 6x + 9 = 0\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$x^2 - 6x + 9 = 0$$<br/>
+                    $$(x - 3)^2 = 0$$<br/>
+                    $$(x - 3)(x - 3) = 0$$
+                    $$x - 3 = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x - 3 = 0$$
+                    $$x = 3 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = 3$$
+                    Por lo tanto el conjunto solución es {3}
+                </details><br/>
+                <li>\(x^2 - 9 = -1\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$x^2 - 9 = -1$$<br/>
+                    $$x^2 - 9 + 1 = 0$$<br/>
+                    $$x^2 - 8 = 0$$<br/>
+                    $$x^2 - (\sqrt{8})^2 = 0$$<br/>
+                    $$(x - \sqrt{8})(x + \sqrt{8}) = 0$$<br/>
+                    $$x - \sqrt{8} = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x + \sqrt{8} = 0$$
+                    $$x = \sqrt{8} &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = -\sqrt{8}$$
+                    Por lo tanto el conjunto solución es {\(-\sqrt{8}, \sqrt{8}\)}
+                </details><br/>
+                <li>\(x^2 + 2x - 3 = 5x - 3\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$x^2 + 2x - 3 = 5x - 3$$
+                    $$x^2 + 2x - 3 - 5x + 3 = 0$$
+                    $$x^2 - 3x = 0$$
+                    $$x(x - 3) = 0$$
+                    $$x = 0&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x - 3 = 0$$
+                    $$x = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = 3$$
+                    Por lo tanto el conjunto solución es {0, 3}
+                </details><br/>
+                <li>\(4x^2 + 2x = -2x - 1\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$4x^2 + 2x = -2x -1$$
+                    $$4x^2 + 2x + 2x + 1 = 0$$
+                    $$4x^2 + 4x + 1 = 0$$
+                    $$(2x + 1)^2 = 0$$
+                    $$(2x + 1)(2x + 1) = 0$$
+                    $$2x + 1 = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; 2x + 1 = 0$$
+                    $$2x = -1 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; 2x = -1$$
+                    $$x = \dfrac {-1}{2} &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = \dfrac{-1}{2}$$
+                    Por lo que el conjunto solución es \(\Bigl\{\dfrac{-1}{2}\Bigr\}\)
+                </details><br/>
+            </ol>
+        </p>
+        <h4>Ejercicios 1</h4>
+        <hr class="new1"/>
+        <p>
+            Resuelva cada una de las siguientes ecuaciones:
+            <ol type="a">
+                <li>\(2x^2 - 3 =\)</li><br/>
+                <li>\(3x^2 + 27x = 0\)</li><br/>
+                <li>\(x^2 + 10x + 25\)</li><br/>
+                <li>\(x^2 + 10x = 2x^2 - 5x\)</li><br/>
+                <li>\(x^2 + 6x - 3 = -x^2 + 10x - 5\)</li><br/>
+                <li>\(x^2 + \dfrac{1}{9} = \dfrac{2}{3}x\)</li><br/>
+            </ol>
+            <hr width="10%" color="black" align="left" /><br/>
+            Observe que dentro del proceso de resolución de las ecuaciones anteriores hemos usado, según el caso, 
+            de los métodos de factorización: factor común y fórmula notable, esto por las características particulares que presentaban
+            las expresiones alebraicas involucradas en cada una de las ecuaciones.<br/><br/>
+            A continuación estudiaremos un procedimiento, que nos permite, es general resolver cualquier ecuación de la forma \(ax^2 + bx + c = d\) con 
+            \(a, b, c\) y \(d\) constantes reales con \(a &ne; 0\). 
+        </p>
+         <hr class="new1"/> 
+         <h3>Teorema 1</h3>
+         <hr class="new1"/> 
+         <p>
+            Sean \(a, b, c\) constantes reales con \(a &ne; 0\), tal que \(ax^2 + bx + c = 0\) y \(&#8710; = b^2 - 4ac\):
+            <ol>
+                <li> Si &#8710; < 0 entonces la ecuación \(ax^2 + bx + c = 0\) no tiene solución en el conjunto de los números reales, 
+                    es decir el conjunto solución de \(ax^2 + bx + c = 0\) es &empty;</li>
+                <li> Si &#8710; = 0 entonces la ecuación \(ax^2 + bx + c = 0\) tiene una única solución,
+                    la cual viene dada por \(\dfrac{-b}{2a}\), es decir el conjunto solución de \(ax^2 + bx + c = 0\) es \(\Bigl\{\dfrac{-b}{2a}\Bigr\}\)</li>
+                <li>Si &#8710; > 0 entonces la ecuación \(ax^2 + bx + c = 0\) tiene dos soluciones, las cuales vienen dadas por:<br/>
+                    $$\dfrac{-b - \sqrt{&#8710;}}{2a}&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp;\dfrac{-b + \sqrt{&#8710;}}{2a}$$
+                    Por lo que el conjunto solución de \(ax^2 + bx + c = 0\) es \(\Biggl\{ \dfrac{-b - \sqrt{&#8710;}}{2a}, \dfrac{-b + \sqrt{&#8710;}}{2a}\Biggr\}\)
+                </li>
+            </ol><br/>
+            <hr width="10%" color="black" align="left" />
+            Demostración: <br/>
+            <ol>
+                <li>
+                    Si &#8710; < 0 entonces \(ax^2 + bx + c = 0\) no es factorizable en &#8477;, es decir \(ax^2 + bx + c &ne; 0\), &#8704; x &#8712; &#8477;<br/>
+                    Por lo que \(ax^2 + bx + c = 0\) no tiene solución en &#8477;, o equivalente su conjunto solución es &empty;
+                </li><br/>
+                <li>
+                    Si  &#8710; = 0 entonces:
+                    $$ax^2 + bx + c = a\biggl( x + \dfrac{b}{2a} \biggr)^2$$
+                    Por lo que:
+                    $$ax^2 + bx + c = 0$$
+                    $$a\biggl( x + \dfrac{b}{2a} \biggr)^2 = 0$$
+                    $$a\biggl( x + \dfrac{b}{2a} \biggr)\biggl( x + \dfrac{b}{2a} \biggr) = 0$$
+                    Luego como a &ne; 0, debe darse que:
+                    $$x + \dfrac{b}{2a} = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x + \dfrac{b}{2a} = 0$$
+                    $$x = \dfrac{-b}{2a} &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = \dfrac{-b}{2a}$$
+                    Por lo que:<br/>
+                    Si &#8710; = 0 entonces el conjunto solución de \(ax^2 + bx + c = 0\) es \(\Bigl\{\dfrac{-b}{2a}\Bigr\}\)
+                </li>
+                <li>
+                    Si &#8710; = 0 entonces la ecuación \(ax^2 + bx + c = a(x - &alpha;)(x - &beta;)\) con &alpha; = \(\dfrac{-b - \sqrt{&#8710;}}{2a}\)
+                    y &beta; = \(\dfrac{-b + \sqrt{&#8710;}}{2a}\)<br/><br/>
+                    Así tenemos que:
+                    $$ax^2 + bx + c = 0$$
+                    $$a(x - &alpha;)(x - &beta;) = 0$$
+                    Luego como a &ne; 0, debe darse que:<br/>
+                    $$x - &alpha; = 0 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x - &beta; = 0$$
+                    $$ x = &alpha; &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; x = &beta;$$
+                    y como &alpha; = \(\dfrac{-b - \sqrt{&#8710;}}{2a}\) y &beta; = \(\dfrac{-b + \sqrt{&#8710;}}{2a}\)<br/><br/>
+                    entonces \( x = \dfrac{-b - \sqrt{&#8710;}}{2a}\)&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; \(x = \dfrac{-b + \sqrt{&#8710;}}{2a}\)<br/><br/>
+                    Por lo que: <br/><br/>
+                    Si &#8710; > 0 el conjunto solución de \(ax^2 + bx + c = 0\) es \(\Biggl\{ \dfrac{-b - \sqrt{&#8710;}}{2a}, \dfrac{-b + \sqrt{&#8710;}}{2a}\Biggr\}\)
+                </li>
+                
+            </ol><br/>
+         </p>
+         <h4>Ejemplo 3</h4>
+         <hr class="new1"/> 
+         <p>
+            Resuelva las siguientes ecuaciones:
+            <ol type = "a">
+                <li>\(2x^2 + 5x - 12 = 0\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$2x^2 + 5x - 12 = 0$$
+                    $$&#8710; = 5^2 - 4(2)(-12)$$
+                    $$&#8710; = 25 - (8)(-12)$$
+                    $$&#8710; = 25 + 96$$
+                    $$&#8710; = 121$$
+                    Como &#8710; > 0, entonces la ecuación correspondiente tiene dos soluciones:
+                    $$&alpha; = \dfrac{-5 - \sqrt{121}}{2(2)}&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{-5 + \sqrt{121}}{2(2)}$$
+                    $$&alpha; = \dfrac{-5 - 11}{4}&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{-5 + 11}{4}$$
+                    $$&alpha; = \dfrac{-16}{4}&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{6}{4}$$
+                    $$&alpha; = -4 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{3}{2}$$
+                    Por lo que el conjunto solución es \(\biggl\{ -4, \dfrac{3}{2}\biggr\}\)
+                </details><br/>
+                <li>\(-x^2 - x + 1 = 0\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$-x^2 - x + 1 = 0$$
+                    $$&#8710; = (-1)^2 - 4(-1)(1)$$
+                    $$&#8710; = 1 - (-4)$$
+                    $$&#8710; = 1 + 4$$
+                    $$&#8710; = 5$$
+                    Como &#8710; > 0, entonces la ecuación correspondiente tiene dos soluciones:
+                    $$&alpha; = \dfrac{-(-1) - \sqrt{5}}{2(-1)}&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{-(-1) + \sqrt{5}}{2(-1)}$$
+                    $$&alpha; = \dfrac{1 - \sqrt{5}}{-2}&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{1 + \sqrt{5}}{-2}$$
+                    $$&alpha; = \dfrac{-1 + \sqrt{5}}{-2}&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{-1 - \sqrt{5}}{-2}$$
+                    Por lo que el conjunto solución es \(\biggl\{  \dfrac{-1 + \sqrt{5}}{-2}, \dfrac{-1 - \sqrt{5}}{-2}   \biggr\}\)
+                </details><br/>
+                <li>\(2x^2 - 3x + 2 = 0\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$2x^2 - 3x + 2 = 0$$
+                    $$&#8710; = (-3)^2 - 4(2)(2)$$
+                    $$&#8710; = 9 - 4(4)$$
+                    $$&#8710; = 9 - 16$$
+                    $$&#8710; = -7$$
+                    Como &#8710; < 0, entonces la ecuación correspondiente no tiene solución en &#8477;, por lo que el conjunto solución es &empty;
+                </details><br/>
+                <li>\(x^2 - 1 = x - 2\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$x^2 - 1 = x - 2$$
+                    $$x^2 - 1 - x + 2 = 0$$
+                    $$x^2 - x + 1 = 0$$
+                    $$&#8710; = (-1)^2 - 4(1)(1)$$
+                    $$&#8710; = 1 - 4$$
+                    $$&#8710; = -3 $$
+                    Como &#8710; < 0, entonces la ecuación correspondiente no tiene solución en &#8477;, por lo que el conjunto solución es &empty;
+                </details><br/>
+                <li>\(3x^2 + 3x + 3 = x + 4\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$3x^2 + 3x + 3 = x + 4$$
+                    $$3x^2 + 3x + 3 - x - 4 = 0$$
+                    $$3x^2 + 2x - 1 = 0$$
+                    $$&#8710; = (2)^2 - 4(3)(-1)$$
+                    $$&#8710; = 4 + 12$$
+                    $$&#8710; = 16$$
+                    Como &#8710; > 0, entonces la ecuación correspondiente tiene dos soluciones:
+                    $$&alpha; = \dfrac{(-2) - \sqrt{16}}{2(3)}&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{(-2) + \sqrt{16}}{2(3)}$$
+                    $$&alpha; = \dfrac{-2 - 4}{6}&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{-2 + 4}{6}$$
+                    $$&alpha; = \dfrac{-6}{6}&emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{2}{6}$$
+                    $$&alpha; = -1 &emsp;&emsp;&emsp; &#8744; &emsp;&emsp;&emsp; &beta; = \dfrac{1}{3}$$
+                    Por lo que el conjunto solución es \(\biggl\{  -1, \dfrac{1}{3}   \biggr\}\)
+                </details><br/>
+                <li>\(-2x^2 + 5x - 4 = -x^2 - x + 5\)</li><br/>
+                <details>
+                    <summary>Solución</summary>
+                    $$-2x^2 + 5x - 4 = -x^2 - x + 5$$
+                    $$-2x^2 + 5x - 4 + x^2 + x - 5 = 0$$
+                    $$-x^2 + 6x - 9 = 0$$
+                    $$&#8710; = (6)^2 - 4(-1)(-9)$$
+                    $$&#8710; = 36 - 36$$
+                    $$&#8710; = 0$$
+                    Como &#8710; = 0, entonces la ecuación correspondiente tiene una solución:
+                    $$&alpha; = \dfrac{-6}{2(-1)}$$
+                    $$&alpha; = 3$$
+                    Por lo que el conjunto solución es {3}
+                </details><br/>                
+            </ol>
+         </p>
+         <h4>Ejercicios 2</h4>
+         <hr class="new1"/> 
+         <p>
+            Resuelva cada una de las siguientes ecuaciones:<br/><br/>
+            a) \(-5x^2 + x - 1 = 0\) &emsp;&emsp;&emsp; f) \(4x^2 - 7x - 2 = 0\)<br/><br/>
+            b) \(x^2 - 12x + 35 = 0\)&emsp;&emsp;&emsp; g) \(x^2 - 2x + 1 = -x^2 - 2x + 5\)<br/><br/>
+            c) \(9x^2 - 6x + 1 = 0\)&ensp;&emsp;&emsp;&emsp; h) \(x^2 - 2x = x + 3\)<br/><br/>
+            d) \(3x^2 + 4x = 0\)&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; i) \(x^2 = -x^2 + 2x - 5 = 0\)<br/><br/>
+            e) \(5x^2 - 3 = 0\)
+
+
+            
+         </p>
+      </body>
+</html>

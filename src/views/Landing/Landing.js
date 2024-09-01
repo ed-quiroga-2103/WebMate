@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import average from '../../assets/average.json';
 import next from '../../assets/next.json';

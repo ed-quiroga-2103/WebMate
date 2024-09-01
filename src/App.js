@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import useBreakPoint from './hooks/useBreakPoint';
 import Navbar from './components/Navbar/Navbar';

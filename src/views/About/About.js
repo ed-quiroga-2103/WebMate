@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import next from '../../assets/next.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
